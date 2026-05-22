@@ -249,7 +249,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-20T22:20:24.279Z",
-    "mergedAt": "2026-05-22T16:40:04.666Z",
+    "mergedAt": "2026-05-22T16:55:48.926Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2026,14 +2026,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-43520",
-    "cveId": "CVE-2025-43520",
+    "id": "CVE-2025-31277",
+    "cveId": "CVE-2025-31277",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
-    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
+    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
+    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2049,7 +2049,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T16:40:04.666Z",
+    "mergedAt": "2026-05-22T16:55:48.926Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2067,7 +2067,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00197
+    "epss": 0.00265
   },
   {
     "id": "CVE-2026-20131",
@@ -11049,7 +11049,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00067
+    "epss": 0.00057
   },
   {
     "id": "CVE-2026-40379",
@@ -14265,43 +14265,6 @@
     "epss": 0.00136
   },
   {
-    "id": "CVE-2026-45036",
-    "cveId": "CVE-2026-45036",
-    "aliases": [
-      "CVE-2026-45036"
-    ],
-    "title": "Tabby auto-confirms ZMODEM detection on terminal output, leading to shell command execution from displayed file content under fish, bash, and zsh",
-    "summary": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.233, Tabby before 1.0.233 automatically confirms ZMODEM protocol detection on all terminal session output without user interaction, enabling shell command execution when a user displays attacker-controlled content. The ZModemMiddleware in tabby-terminal consumes all session output through a Zmodem.Sentry, and when a ZMODEM ZRQINIT header is detected, unconditionally calls detection.confirm() and writes a fixed ZRINIT response ( **\\x18B0100000023be50\\r\\n\\x11) back into the active PTY as input. When the process that triggered the detection (e.g., cat) exits, the injected bytes are consumed by the user's shell as a command line. Under fish (default configuration), the ** prefix triggers recursive glob expansion against the current directory, allowing an attacker-placed executable at a matching nested path (e.g., d/xB0100000023be50) to be executed by relative pathname without relying on PATH. Under bash and zsh, a secondary xterm.js terminal color-query feedback (OSC 10) can be combined in the same file to inject a slash-containing command word that similarly bypasses PATH resolution. An attacker can exploit this by providing a crafted file (e.g., in a cloned Git repository) that a user displays with cat, achieving code execution with no interaction beyond viewing the file. This vulnerability is fixed in 1.0.233.",
-    "severity": "high",
-    "cvss": 7,
-    "cvssVector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-15T16:47:17.974Z",
-    "modifiedAt": "2026-05-20T15:42:57.726Z",
-    "mergedAt": "2026-05-22T16:40:00.133Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-45036",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45036.json",
-        "fetchedAt": "2026-05-22T16:40:00.133Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00016
-  },
-  {
     "id": "CVE-2024-12802",
     "cveId": "CVE-2024-12802",
     "aliases": [
@@ -16062,6 +16025,43 @@
     "epss": 0.00344
   },
   {
+    "id": "CVE-2026-45036",
+    "cveId": "CVE-2026-45036",
+    "aliases": [
+      "CVE-2026-45036"
+    ],
+    "title": "Tabby auto-confirms ZMODEM detection on terminal output, leading to shell command execution from displayed file content under fish, bash, and zsh",
+    "summary": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.233, Tabby before 1.0.233 automatically confirms ZMODEM protocol detection on all terminal session output without user interaction, enabling shell command execution when a user displays attacker-controlled content. The ZModemMiddleware in tabby-terminal consumes all session output through a Zmodem.Sentry, and when a ZMODEM ZRQINIT header is detected, unconditionally calls detection.confirm() and writes a fixed ZRINIT response ( **\\x18B0100000023be50\\r\\n\\x11) back into the active PTY as input. When the process that triggered the detection (e.g., cat) exits, the injected bytes are consumed by the user's shell as a command line. Under fish (default configuration), the ** prefix triggers recursive glob expansion against the current directory, allowing an attacker-placed executable at a matching nested path (e.g., d/xB0100000023be50) to be executed by relative pathname without relying on PATH. Under bash and zsh, a secondary xterm.js terminal color-query feedback (OSC 10) can be combined in the same file to inject a slash-containing command word that similarly bypasses PATH resolution. An attacker can exploit this by providing a crafted file (e.g., in a cloned Git repository) that a user displays with cat, achieving code execution with no interaction beyond viewing the file. This vulnerability is fixed in 1.0.233.",
+    "severity": "high",
+    "cvss": 7,
+    "cvssVector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-15T16:47:17.974Z",
+    "modifiedAt": "2026-05-20T15:42:57.726Z",
+    "mergedAt": "2026-05-22T16:40:00.133Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-45036",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45036.json",
+        "fetchedAt": "2026-05-22T16:40:00.133Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00016
+  },
+  {
     "id": "CVE-2026-46333",
     "cveId": "CVE-2026-46333",
     "aliases": [
@@ -16678,7 +16678,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00062
+    "epss": 0.00057
   },
   {
     "id": "CVE-2026-34341",
@@ -28598,41 +28598,6 @@
     ]
   },
   {
-    "id": "CVE-2026-45038",
-    "cveId": "CVE-2026-45038",
-    "aliases": [
-      "CVE-2026-45038"
-    ],
-    "title": "Tabby: Dragging and Dropping a File into Tabby Can Lead to Code Execution",
-    "summary": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.233, since Tabby does not escape control characters from file paths when dragging and dropping a file into it, code execution can be achieved. This vulnerability is fixed in 1.0.233.",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-15T16:48:12.110Z",
-    "modifiedAt": "2026-05-20T15:42:12.319Z",
-    "mergedAt": "2026-05-22T16:40:00.133Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-45038",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45038.json",
-        "fetchedAt": "2026-05-22T16:40:00.133Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00012
-  },
-  {
     "id": "CVE-2026-44919",
     "cveId": "CVE-2026-44919",
     "aliases": [
@@ -29458,6 +29423,41 @@
     ],
     "tags": [],
     "epss": 0.00026
+  },
+  {
+    "id": "CVE-2026-45038",
+    "cveId": "CVE-2026-45038",
+    "aliases": [
+      "CVE-2026-45038"
+    ],
+    "title": "Tabby: Dragging and Dropping a File into Tabby Can Lead to Code Execution",
+    "summary": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.233, since Tabby does not escape control characters from file paths when dragging and dropping a file into it, code execution can be achieved. This vulnerability is fixed in 1.0.233.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-15T16:48:12.110Z",
+    "modifiedAt": "2026-05-20T15:42:12.319Z",
+    "mergedAt": "2026-05-22T16:40:00.133Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-45038",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45038.json",
+        "fetchedAt": "2026-05-22T16:40:00.133Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00012
   },
   {
     "id": "h-4e5dd989c4de",
