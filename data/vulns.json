@@ -77,7 +77,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:20.771Z",
-    "mergedAt": "2026-05-22T13:47:28.053Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "osv",
@@ -208,14 +208,14 @@
     "epss": 0.91018
   },
   {
-    "id": "CVE-2010-0249",
-    "cveId": "CVE-2010-0249",
+    "id": "CVE-2010-0806",
+    "cveId": "CVE-2010-0806",
     "aliases": [
       "CVE-2010-0249",
       "CVE-2010-0806"
     ],
     "title": "Microsoft Internet Explorer Use-After-Free Vulnerability",
-    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -231,7 +231,7 @@
     "kev": true,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T14:12:34.145Z",
+    "mergedAt": "2026-05-22T15:13:42.282Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -249,7 +249,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.87253
+    "epss": 0.88677
   },
   {
     "id": "CVE-2026-41091",
@@ -1960,14 +1960,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-43520",
-    "cveId": "CVE-2025-43520",
+    "id": "CVE-2025-31277",
+    "cveId": "CVE-2025-31277",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
-    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
+    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
+    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -1983,7 +1983,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T14:12:34.146Z",
+    "mergedAt": "2026-05-22T15:13:42.282Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2001,7 +2001,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00197
+    "epss": 0.00265
   },
   {
     "id": "CVE-2026-20131",
@@ -2809,24 +2809,6 @@
         "package": "next",
         "versions": ">=13.0.0 <13.5.9",
         "fixedIn": "13.5.9"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=14.0.0 <14.2.25",
-        "fixedIn": "14.2.25"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.0.0 <15.2.3",
-        "fixedIn": "15.2.3"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=12.0.0 <12.3.5",
-        "fixedIn": "12.3.5"
       }
     ],
     "stackMatch": {
@@ -2839,7 +2821,7 @@
     "priority": 71,
     "publishedAt": "2025-03-21T15:20:12.000Z",
     "modifiedAt": "2026-03-04T15:06:29.993Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.676Z",
     "sources": [
       {
         "source": "osv",
@@ -2875,12 +2857,6 @@
         "package": "next",
         "versions": ">=13.4.13 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -2893,7 +2869,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:55:15.000Z",
     "modifiedAt": "2026-05-14T20:50:45.445Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.676Z",
     "sources": [
       {
         "source": "osv",
@@ -2929,12 +2905,6 @@
         "package": "next",
         "versions": ">=12.2.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -2947,7 +2917,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:53:51.000Z",
     "modifiedAt": "2026-05-14T20:48:35.793Z",
-    "mergedAt": "2026-05-22T13:47:27.984Z",
+    "mergedAt": "2026-05-22T15:13:41.673Z",
     "sources": [
       {
         "source": "osv",
@@ -2980,12 +2950,6 @@
         "package": "next",
         "versions": ">=13.0.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -2998,7 +2962,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T14:50:27.000Z",
     "modifiedAt": "2026-05-13T03:44:29.651Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.676Z",
     "sources": [
       {
         "source": "osv",
@@ -3033,12 +2997,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -3051,7 +3009,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:26:29.000Z",
     "modifiedAt": "2026-05-06T15:29:21.690Z",
-    "mergedAt": "2026-05-22T13:47:27.987Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -3088,12 +3046,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -3106,7 +3058,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:25:47.000Z",
     "modifiedAt": "2026-05-06T15:29:22.420Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -3144,12 +3096,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -3162,7 +3108,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:20:58.000Z",
     "modifiedAt": "2026-05-06T15:29:21.321Z",
-    "mergedAt": "2026-05-22T13:47:27.987Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -3210,7 +3156,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:18:38.000Z",
     "modifiedAt": "2026-05-12T17:16:38.232Z",
-    "mergedAt": "2026-05-22T13:47:27.987Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -3243,12 +3189,6 @@
         "package": "next",
         "versions": ">=13.0.0 <15.5.15",
         "fixedIn": "15.5.15"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0-beta.0 <16.2.3",
-        "fixedIn": "16.2.3"
       }
     ],
     "stackMatch": {
@@ -3261,7 +3201,7 @@
     "priority": 67,
     "publishedAt": "2026-04-10T15:35:47.000Z",
     "modifiedAt": "2026-04-16T23:29:14.079Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.677Z",
     "sources": [
       {
         "source": "osv",
@@ -3326,7 +3266,7 @@
     "priority": 67,
     "publishedAt": "2026-04-01T23:51:12.000Z",
     "modifiedAt": "2026-04-02T17:29:57.498Z",
-    "mergedAt": "2026-05-22T13:47:27.988Z",
+    "mergedAt": "2026-05-22T15:13:41.680Z",
     "sources": [
       {
         "source": "osv",
@@ -3400,7 +3340,7 @@
     "priority": 66,
     "publishedAt": "2019-07-10T19:45:23.000Z",
     "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-22T13:47:27.988Z",
+    "mergedAt": "2026-05-22T15:13:41.680Z",
     "sources": [
       {
         "source": "osv",
@@ -3437,12 +3377,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.13.5",
         "fixedIn": "1.13.5"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.30.3",
-        "fixedIn": "0.30.3"
       }
     ],
     "stackMatch": {
@@ -3455,7 +3389,7 @@
     "priority": 65,
     "publishedAt": "2026-02-09T17:46:14.000Z",
     "modifiedAt": "2026-05-08T14:03:50.604Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -3504,7 +3438,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.830Z",
-    "mergedAt": "2026-05-22T13:47:28.053Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "osv",
@@ -3560,7 +3494,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.837Z",
-    "mergedAt": "2026-05-22T13:47:28.054Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "osv",
@@ -3615,7 +3549,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:22.348Z",
-    "mergedAt": "2026-05-22T13:47:28.055Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "osv",
@@ -3671,7 +3605,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:20.780Z",
-    "mergedAt": "2026-05-22T13:47:28.054Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "osv",
@@ -3727,7 +3661,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T16:21:19.000Z",
     "modifiedAt": "2026-05-14T20:47:46.572Z",
-    "mergedAt": "2026-05-22T13:47:28.014Z",
+    "mergedAt": "2026-05-22T15:13:41.673Z",
     "sources": [
       {
         "source": "osv",
@@ -3769,12 +3703,6 @@
         "package": "next",
         "versions": ">=15.0.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -3787,7 +3715,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:56:24.000Z",
     "modifiedAt": "2026-05-14T20:50:54.621Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.677Z",
     "sources": [
       {
         "source": "osv",
@@ -3823,12 +3751,6 @@
         "package": "next",
         "versions": ">=15.4.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -3841,7 +3763,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:54:08.000Z",
     "modifiedAt": "2026-05-14T20:47:43.284Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.674Z",
     "sources": [
       {
         "source": "osv",
@@ -3885,7 +3807,7 @@
     "priority": 55,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.424Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "packagist",
@@ -3922,12 +3844,6 @@
         "package": "next",
         "versions": ">=13.4.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -3940,7 +3856,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:57:12.000Z",
     "modifiedAt": "2026-05-14T20:51:12.557Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.676Z",
     "sources": [
       {
         "source": "osv",
@@ -3976,12 +3892,6 @@
         "package": "next",
         "versions": ">=13.0.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -3994,7 +3904,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:38.000Z",
     "modifiedAt": "2026-05-14T20:51:25.401Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.677Z",
     "sources": [
       {
         "source": "osv",
@@ -4030,12 +3940,6 @@
         "package": "next",
         "versions": ">=10.0.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -4048,7 +3952,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:05.000Z",
     "modifiedAt": "2026-05-14T20:51:26.606Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.677Z",
     "sources": [
       {
         "source": "osv",
@@ -4084,12 +3988,6 @@
         "package": "next",
         "versions": ">=14.2.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -4102,7 +4000,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:54:46.000Z",
     "modifiedAt": "2026-05-14T20:52:45.704Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.678Z",
     "sources": [
       {
         "source": "osv",
@@ -4150,7 +4048,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:45.000Z",
     "modifiedAt": "2026-05-06T15:29:22.982Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -4186,12 +4084,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -4204,7 +4096,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:17.000Z",
     "modifiedAt": "2026-05-06T15:29:25.469Z",
-    "mergedAt": "2026-05-22T13:47:27.987Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -4240,12 +4132,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -4258,7 +4144,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:34:32.000Z",
     "modifiedAt": "2026-05-06T15:29:21.389Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -4294,12 +4180,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -4312,7 +4192,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:33:25.000Z",
     "modifiedAt": "2026-05-06T15:29:22.484Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -4348,12 +4228,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -4366,7 +4240,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:26:57.000Z",
     "modifiedAt": "2026-05-06T15:29:25.221Z",
-    "mergedAt": "2026-05-22T13:47:27.987Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -4403,12 +4277,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -4421,7 +4289,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:25:22.000Z",
     "modifiedAt": "2026-05-06T15:29:24.391Z",
-    "mergedAt": "2026-05-22T13:47:27.988Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -4458,12 +4326,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -4476,7 +4338,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:21:39.000Z",
     "modifiedAt": "2026-05-06T15:29:25.530Z",
-    "mergedAt": "2026-05-22T13:47:27.987Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -4525,7 +4387,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:19:33.000Z",
     "modifiedAt": "2026-05-06T15:29:23.367Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.678Z",
     "sources": [
       {
         "source": "osv",
@@ -4563,12 +4425,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.0",
         "fixedIn": "1.15.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.0",
-        "fixedIn": "0.31.0"
       }
     ],
     "stackMatch": {
@@ -4581,7 +4437,7 @@
     "priority": 52,
     "publishedAt": "2026-04-10T19:47:16.000Z",
     "modifiedAt": "2026-05-20T00:30:10.353Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -4618,12 +4474,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.0",
         "fixedIn": "1.15.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.0",
-        "fixedIn": "0.31.0"
       }
     ],
     "stackMatch": {
@@ -4636,7 +4486,7 @@
     "priority": 52,
     "publishedAt": "2026-04-09T17:32:19.000Z",
     "modifiedAt": "2026-05-08T13:46:43.000Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.678Z",
     "sources": [
       {
         "source": "osv",
@@ -4702,7 +4552,7 @@
     "priority": 52,
     "publishedAt": "2026-04-01T23:50:27.000Z",
     "modifiedAt": "2026-04-02T17:29:51.565Z",
-    "mergedAt": "2026-05-22T13:47:27.988Z",
+    "mergedAt": "2026-05-22T15:13:41.680Z",
     "sources": [
       {
         "source": "osv",
@@ -4738,12 +4588,6 @@
         "package": "next",
         "versions": ">=12.0.0 <12.0.5",
         "fixedIn": "12.0.5"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=0.9.9 <11.1.3",
-        "fixedIn": "11.1.3"
       }
     ],
     "stackMatch": {
@@ -4756,7 +4600,7 @@
     "priority": 51,
     "publishedAt": "2021-12-07T21:12:09.000Z",
     "modifiedAt": "2026-03-13T22:00:36.554Z",
-    "mergedAt": "2026-05-22T13:47:27.984Z",
+    "mergedAt": "2026-05-22T15:13:41.673Z",
     "sources": [
       {
         "source": "osv",
@@ -4804,7 +4648,7 @@
     "priority": 51,
     "publishedAt": "2021-09-01T18:24:22.000Z",
     "modifiedAt": "2026-03-13T22:00:20.154Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.676Z",
     "sources": [
       {
         "source": "osv",
@@ -4861,7 +4705,7 @@
     "priority": 51,
     "publishedAt": "2020-09-02T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:14:38.594Z",
-    "mergedAt": "2026-05-22T13:47:28.053Z",
+    "mergedAt": "2026-05-22T15:13:41.718Z",
     "sources": [
       {
         "source": "osv",
@@ -4938,7 +4782,7 @@
     "priority": 51,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:03.504Z",
-    "mergedAt": "2026-05-22T13:47:28.052Z",
+    "mergedAt": "2026-05-22T15:13:41.716Z",
     "sources": [
       {
         "source": "osv",
@@ -4982,12 +4826,6 @@
         "package": "tinymce",
         "versions": ">=0 <4.9.7",
         "fixedIn": "4.9.7"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "tinymce",
-        "versions": ">=5.0.0 <5.1.4",
-        "fixedIn": "5.1.4"
       }
     ],
     "stackMatch": {
@@ -5000,7 +4838,7 @@
     "priority": 51,
     "publishedAt": "2020-01-30T21:22:15.000Z",
     "modifiedAt": "2026-03-13T22:01:20.067Z",
-    "mergedAt": "2026-05-22T13:47:27.988Z",
+    "mergedAt": "2026-05-22T15:13:41.681Z",
     "sources": [
       {
         "source": "osv",
@@ -5049,7 +4887,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:22.410Z",
-    "mergedAt": "2026-05-22T13:47:28.053Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "osv",
@@ -5105,7 +4943,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:21.667Z",
-    "mergedAt": "2026-05-22T13:47:28.054Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "osv",
@@ -5156,7 +4994,7 @@
     "priority": 47,
     "publishedAt": "2026-03-31T03:15:49.000Z",
     "modifiedAt": "2026-04-07T14:52:30.013Z",
-    "mergedAt": "2026-05-22T13:47:27.988Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -5191,12 +5029,6 @@
         "package": "next",
         "versions": ">=12.2.0 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -5209,7 +5041,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T16:12:07.000Z",
     "modifiedAt": "2026-05-14T20:48:38.453Z",
-    "mergedAt": "2026-05-22T13:47:27.984Z",
+    "mergedAt": "2026-05-22T15:13:41.673Z",
     "sources": [
       {
         "source": "osv",
@@ -5245,12 +5077,6 @@
         "package": "next",
         "versions": ">=13.4.6 <15.5.16",
         "fixedIn": "15.5.16"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=16.0.0 <16.2.5",
-        "fixedIn": "16.2.5"
       }
     ],
     "stackMatch": {
@@ -5263,7 +5089,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T15:56:48.000Z",
     "modifiedAt": "2026-05-14T20:52:41.365Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.678Z",
     "sources": [
       {
         "source": "osv",
@@ -5300,12 +5126,6 @@
         "package": "axios",
         "versions": ">=1.0.0 <1.15.1",
         "fixedIn": "1.15.1"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "axios",
-        "versions": ">=0 <0.31.1",
-        "fixedIn": "0.31.1"
       }
     ],
     "stackMatch": {
@@ -5318,7 +5138,7 @@
     "priority": 45,
     "publishedAt": "2026-05-05T00:18:03.000Z",
     "modifiedAt": "2026-05-06T15:29:21.463Z",
-    "mergedAt": "2026-05-22T13:47:27.987Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -5362,7 +5182,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5408,7 +5228,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5454,7 +5274,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5500,7 +5320,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5546,7 +5366,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5592,7 +5412,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5638,7 +5458,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5684,7 +5504,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5730,7 +5550,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5776,7 +5596,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5822,7 +5642,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5868,7 +5688,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5914,7 +5734,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -5960,7 +5780,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6006,7 +5826,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6052,7 +5872,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6098,7 +5918,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6144,7 +5964,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6190,7 +6010,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6236,7 +6056,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6282,7 +6102,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6328,7 +6148,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.423Z",
+    "mergedAt": "2026-05-22T15:13:41.715Z",
     "sources": [
       {
         "source": "packagist",
@@ -6380,7 +6200,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:28.053Z",
+    "mergedAt": "2026-05-22T15:13:41.718Z",
     "sources": [
       {
         "source": "packagist",
@@ -6432,7 +6252,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.424Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "packagist",
@@ -6477,7 +6297,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.424Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "packagist",
@@ -6523,7 +6343,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.424Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "packagist",
@@ -6649,7 +6469,7 @@
     "priority": 38,
     "publishedAt": "2026-04-08T15:51:48.000Z",
     "modifiedAt": "2026-05-05T16:10:10.879Z",
-    "mergedAt": "2026-05-22T13:47:27.987Z",
+    "mergedAt": "2026-05-22T15:13:41.679Z",
     "sources": [
       {
         "source": "osv",
@@ -6685,12 +6505,6 @@
         "package": "next",
         "versions": ">=16.0.0-beta.0 <16.1.7",
         "fixedIn": "16.1.7"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=9.5.0 <15.5.13",
-        "fixedIn": "15.5.13"
       }
     ],
     "stackMatch": {
@@ -6703,7 +6517,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:15.000Z",
     "modifiedAt": "2026-03-19T17:59:01.302Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.677Z",
     "sources": [
       {
         "source": "osv",
@@ -6739,12 +6553,6 @@
         "package": "next",
         "versions": ">=16.0.0-beta.0 <16.1.7",
         "fixedIn": "16.1.7"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=10.0.0 <15.5.14",
-        "fixedIn": "15.5.14"
       }
     ],
     "stackMatch": {
@@ -6757,7 +6565,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:06.000Z",
     "modifiedAt": "2026-03-20T14:59:12.698Z",
-    "mergedAt": "2026-05-22T13:47:27.984Z",
+    "mergedAt": "2026-05-22T15:13:41.673Z",
     "sources": [
       {
         "source": "osv",
@@ -6805,7 +6613,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:16:49.000Z",
     "modifiedAt": "2026-03-19T18:48:06.587Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.677Z",
     "sources": [
       {
         "source": "osv",
@@ -6853,7 +6661,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T15:30:14.000Z",
     "modifiedAt": "2026-03-19T18:31:23.523Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.677Z",
     "sources": [
       {
         "source": "osv",
@@ -6891,82 +6699,6 @@
         "package": "next",
         "versions": ">=16.0.0-beta.0 <16.1.5",
         "fixedIn": "16.1.5"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.0.0-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.0.1-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.0.2-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.0.3-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.0.4-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.1.1-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.2.0-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.2.1-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.2.2-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.3.0-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.3.1-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.4.0-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.4.2-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.5.1-canary.0"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.6.0-canary.0 <15.6.0-canary.61",
-        "fixedIn": "15.6.0-canary.61"
       }
     ],
     "stackMatch": {
@@ -6979,7 +6711,7 @@
     "priority": 36,
     "publishedAt": "2026-01-28T15:20:55.000Z",
     "modifiedAt": "2026-04-08T21:16:40.797Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.675Z",
     "sources": [
       {
         "source": "osv",
@@ -7036,7 +6768,7 @@
     "priority": 36,
     "publishedAt": "2021-11-15T10:47:04.000Z",
     "modifiedAt": "2026-03-13T21:59:52.395Z",
-    "mergedAt": "2026-05-22T13:47:28.053Z",
+    "mergedAt": "2026-05-22T15:13:41.718Z",
     "sources": [
       {
         "source": "osv",
@@ -7108,7 +6840,7 @@
     "priority": 36,
     "publishedAt": "2021-10-23T11:11:11.000Z",
     "modifiedAt": "2026-03-13T22:14:23.582Z",
-    "mergedAt": "2026-05-22T13:47:28.053Z",
+    "mergedAt": "2026-05-22T15:13:41.718Z",
     "sources": [
       {
         "source": "osv",
@@ -7180,7 +6912,7 @@
     "priority": 36,
     "publishedAt": "2021-10-09T12:10:44.000Z",
     "modifiedAt": "2026-03-13T22:00:11.423Z",
-    "mergedAt": "2026-05-22T13:47:28.053Z",
+    "mergedAt": "2026-05-22T15:13:41.718Z",
     "sources": [
       {
         "source": "osv",
@@ -7243,7 +6975,7 @@
     "priority": 36,
     "publishedAt": "2021-08-12T14:51:14.000Z",
     "modifiedAt": "2026-03-13T22:00:08.038Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.678Z",
     "sources": [
       {
         "source": "osv",
@@ -7299,7 +7031,7 @@
     "priority": 36,
     "publishedAt": "2021-06-17T15:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:16.333Z",
-    "mergedAt": "2026-05-22T13:47:28.052Z",
+    "mergedAt": "2026-05-22T15:13:41.716Z",
     "sources": [
       {
         "source": "osv",
@@ -7395,7 +7127,7 @@
     "priority": 36,
     "publishedAt": "2021-05-12T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:14.858Z",
-    "mergedAt": "2026-05-22T13:47:28.052Z",
+    "mergedAt": "2026-05-22T15:13:41.716Z",
     "sources": [
       {
         "source": "osv",
@@ -7452,7 +7184,7 @@
     "priority": 36,
     "publishedAt": "2020-10-08T19:28:07.000Z",
     "modifiedAt": "2026-03-13T22:14:13.665Z",
-    "mergedAt": "2026-05-22T13:47:27.986Z",
+    "mergedAt": "2026-05-22T15:13:41.678Z",
     "sources": [
       {
         "source": "osv",
@@ -7508,7 +7240,7 @@
     "priority": 36,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:15:59.230Z",
-    "mergedAt": "2026-05-22T13:47:28.052Z",
+    "mergedAt": "2026-05-22T15:13:41.716Z",
     "sources": [
       {
         "source": "osv",
@@ -7584,7 +7316,7 @@
     "priority": 36,
     "publishedAt": "2019-07-19T16:13:07.000Z",
     "modifiedAt": "2026-03-13T21:56:22.446Z",
-    "mergedAt": "2026-05-22T13:47:27.988Z",
+    "mergedAt": "2026-05-22T15:13:41.680Z",
     "sources": [
       {
         "source": "osv",
@@ -7621,7 +7353,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T17:00:00.000Z",
     "modifiedAt": "2026-05-21T17:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.335Z",
+    "mergedAt": "2026-05-22T15:13:41.721Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -7659,7 +7391,7 @@
     "priority": 34,
     "publishedAt": "2026-05-19T04:54:17.000Z",
     "modifiedAt": "2026-05-19T04:54:17.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -7695,7 +7427,7 @@
     "priority": 34,
     "publishedAt": "2026-05-18T23:01:00.000Z",
     "modifiedAt": "2026-05-18T23:01:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.291Z",
+    "mergedAt": "2026-05-22T15:13:41.721Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -7733,7 +7465,7 @@
     "priority": 34,
     "publishedAt": "2026-05-18T14:22:26.000Z",
     "modifiedAt": "2026-05-18T14:22:26.000Z",
-    "mergedAt": "2026-05-22T13:47:20.471Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "hackernews",
@@ -7771,7 +7503,7 @@
     "priority": 34,
     "publishedAt": "2026-05-18T08:57:26.000Z",
     "modifiedAt": "2026-05-18T08:57:26.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -7809,7 +7541,7 @@
     "priority": 29,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -7822,6 +7554,84 @@
       "exploited",
       "general"
     ]
+  },
+  {
+    "id": "CVE-2026-43967",
+    "cveId": "CVE-2026-43967",
+    "aliases": [
+      "CVE-2026-43967"
+    ],
+    "title": "Inefficient Algorithmic Complexity vulnerability in absinthe-graphql absinthe allows unauthenticated denial of service via quadratic fragment-name uniqueness validation. 'Elixir.Absinthe.Phase.Docume",
+    "summary": "Inefficient Algorithmic Complexity vulnerability in absinthe-graphql absinthe allows unauthenticated denial of service via quadratic fragment-name uniqueness validation. 'Elixir.Absinthe.Phase.Document.Validation.UniqueFragmentNames':run/2 iterates over all fragments and for each one calls duplicate?/2, which evaluates Enum.count(fragments, &(&1.name == name)) — a full linear scan of the fragment list. The result is O(N²) comparisons per document, where N is the number of fragment definitions supplied by the caller. Because input.fragments is built directly from the GraphQL query body, N is fully attacker-controlled. A minimum-size fragment definition is roughly 16 bytes, so a ~1 MB document carries ~60,000 fragments and forces ~3.6 × 10⁹ comparisons inside this single validation phase. No authentication, schema knowledge, or special configuration is required. This issue affects absinthe: from 1.2.0 before 1.10.2.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-407"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 40,
+      "packages": [
+        "graphql"
+      ],
+      "reason": "topic-mention"
+    },
+    "priority": 29,
+    "publishedAt": "2026-05-08T16:16:12.910Z",
+    "modifiedAt": "2026-05-13T15:57:03.607Z",
+    "mergedAt": "2026-05-22T15:13:35.626Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-43967",
+        "url": "https://cna.erlef.org/cves/CVE-2026-43967.html",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00051
+  },
+  {
+    "id": "CVE-2026-42793",
+    "cveId": "CVE-2026-42793",
+    "aliases": [
+      "CVE-2026-42793"
+    ],
+    "title": "Allocation of Resources Without Limits or Throttling vulnerability in absinthe-graphql absinthe allows unauthenticated denial of service via atom table exhaustion when parsing attacker-controlled Grap",
+    "summary": "Allocation of Resources Without Limits or Throttling vulnerability in absinthe-graphql absinthe allows unauthenticated denial of service via atom table exhaustion when parsing attacker-controlled GraphQL SDL. Multiple Blueprint.Draft.convert/2 implementations in Absinthe's SDL language modules call String.to_atom/1 on attacker-controlled names from parsed GraphQL SDL documents, including directive names, field names, type names, and argument names. Because atoms are never garbage-collected and the BEAM atom table has a fixed limit (default 1,048,576), each unique name permanently consumes one slot. An attacker can exhaust the atom table by submitting SDL documents containing enough unique names, causing the Erlang VM to abort with system_limit and taking down the entire node. Any application that passes attacker-controlled GraphQL SDL through Absinthe's parser is exposed — for example, a schema-upload endpoint, a federation gateway that ingests remote SDL, or any developer tool that runs the parser over user-supplied documents. This issue affects absinthe: from 1.5.0 before 1.10.2.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-770"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 40,
+      "packages": [
+        "graphql"
+      ],
+      "reason": "topic-mention"
+    },
+    "priority": 29,
+    "publishedAt": "2026-05-08T16:16:12.550Z",
+    "modifiedAt": "2026-05-13T15:57:03.607Z",
+    "mergedAt": "2026-05-22T15:13:35.626Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-42793",
+        "url": "https://cna.erlef.org/cves/CVE-2026-42793.html",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.0002
   },
   {
     "id": "CVE-2026-27977",
@@ -7859,7 +7669,7 @@
     "priority": 28,
     "publishedAt": "2026-03-17T15:29:48.000Z",
     "modifiedAt": "2026-03-25T19:49:01.129Z",
-    "mergedAt": "2026-05-22T13:47:27.985Z",
+    "mergedAt": "2026-05-22T15:13:41.677Z",
     "sources": [
       {
         "source": "osv",
@@ -7915,7 +7725,7 @@
     "priority": 26,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:08.748Z",
-    "mergedAt": "2026-05-22T13:47:28.052Z",
+    "mergedAt": "2026-05-22T15:13:41.716Z",
     "sources": [
       {
         "source": "osv",
@@ -7959,7 +7769,7 @@
     "priority": 20,
     "publishedAt": "2026-05-22T13:14:40.000Z",
     "modifiedAt": "2026-05-22T13:14:40.000Z",
-    "mergedAt": "2026-05-22T13:47:20.286Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -9452,6 +9262,82 @@
     "epss": 0.00041
   },
   {
+    "id": "CVE-2025-71211",
+    "cveId": "CVE-2025-71211",
+    "aliases": [
+      "CVE-2025-71211"
+    ],
+    "title": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations. This vulnerability is similar in s",
+    "summary": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations. This vulnerability is similar in scope to CVE-2025-71210 but affects a different executable. Please note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required. For this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied.",
+    "severity": "critical",
+    "cvss": 9.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 20,
+    "publishedAt": "2026-05-21T14:16:43.663Z",
+    "modifiedAt": "2026-05-21T15:05:28.023Z",
+    "mergedAt": "2026-05-22T15:13:35.626Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2025-71211",
+        "url": "https://success.trendmicro.com/en-US/solution/KA-0022458",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00431
+  },
+  {
+    "id": "CVE-2026-5433",
+    "cveId": "CVE-2026-5433",
+    "aliases": [
+      "CVE-2026-5433"
+    ],
+    "title": "Honeywell Control Network Module (CNM) contains command injection vulnerability in the web interface. An attacker could exploit this vulnerability via command delimiters, potentially resulting in Remo",
+    "summary": "Honeywell Control Network Module (CNM) contains command injection vulnerability in the web interface. An attacker could exploit this vulnerability via command delimiters, potentially resulting in Remote Code Execution (RCE).",
+    "severity": "critical",
+    "cvss": 9.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 20,
+    "publishedAt": "2026-05-21T09:16:30.270Z",
+    "modifiedAt": "2026-05-21T15:26:35.653Z",
+    "mergedAt": "2026-05-22T15:13:35.626Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-5433",
+        "url": "https://process.honeywell.com/",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.0026
+  },
+  {
     "id": "h-062df95e7052",
     "aliases": [
       "https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html"
@@ -9474,7 +9360,7 @@
     "priority": 20,
     "publishedAt": "2026-05-21T03:44:11.000Z",
     "modifiedAt": "2026-05-21T03:44:11.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -9486,6 +9372,46 @@
     "tags": [
       "general"
     ]
+  },
+  {
+    "id": "CVE-2026-4698",
+    "cveId": "CVE-2026-4698",
+    "aliases": [
+      "CVE-2026-4698"
+    ],
+    "title": "JIT miscompilation in the JavaScript Engine: JIT component. This vulnerability was fixed in Firefox 149, Firefox ESR 115.34, Firefox ESR 140.9, Thunderbird 149, and Thunderbird 140.9.",
+    "summary": "JIT miscompilation in the JavaScript Engine: JIT component. This vulnerability was fixed in Firefox 149, Firefox ESR 115.34, Firefox ESR 140.9, Thunderbird 149, and Thunderbird 140.9.",
+    "severity": "critical",
+    "cvss": 9.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-843",
+      "CWE-843"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 17,
+    "publishedAt": "2026-03-24T13:16:05.783Z",
+    "modifiedAt": "2026-04-13T15:17:39.170Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-4698",
+        "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2020906",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00046
   },
   {
     "id": "CVE-2026-34930",
@@ -9516,7 +9442,7 @@
     "priority": 16,
     "publishedAt": "2026-05-21T14:16:45.463Z",
     "modifiedAt": "2026-05-21T15:05:28.023Z",
-    "mergedAt": "2026-05-22T13:47:28.041Z",
+    "mergedAt": "2026-05-22T15:13:41.713Z",
     "sources": [
       {
         "source": "nvd",
@@ -9544,7 +9470,8 @@
     "id": "CVE-2026-34927",
     "cveId": "CVE-2026-34927",
     "aliases": [
-      "CVE-2026-34927"
+      "CVE-2026-34927",
+      "CVE-2025-71213"
     ],
     "title": "An origin validation vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations. Please note: an attacker must first obtain the ability to e",
     "summary": "An origin validation vulnerability in the Apex One/SEP agent could allow a local attacker to escalate privileges on affected installations. Please note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
@@ -9567,17 +9494,200 @@
     "priority": 16,
     "publishedAt": "2026-05-21T14:16:45.333Z",
     "modifiedAt": "2026-05-21T15:05:28.023Z",
-    "mergedAt": "2026-05-22T13:47:20.246Z",
+    "mergedAt": "2026-05-22T15:13:41.713Z",
     "sources": [
       {
         "source": "nvd",
         "externalId": "CVE-2026-34927",
         "url": "https://success.trendmicro.com/en-US/solution/KA-0023430",
         "fetchedAt": "2026-05-22T13:47:20.246Z"
+      },
+      {
+        "source": "nvd",
+        "externalId": "CVE-2025-71213",
+        "url": "https://success.trendmicro.com/en-US/solution/KA-0022458",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
       }
     ],
     "tags": [],
     "epss": 0.00013
+  },
+  {
+    "id": "CVE-2025-71212",
+    "cveId": "CVE-2025-71212",
+    "aliases": [
+      "CVE-2025-71212"
+    ],
+    "title": "A link following vulnerability in the Trend Micro Apex One scan engine could allow a local attacker to escalate privileges on affected installations. Please note: an attacker must first obtain the",
+    "summary": "A link following vulnerability in the Trend Micro Apex One scan engine could allow a local attacker to escalate privileges on affected installations. Please note: an attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.",
+    "severity": "high",
+    "cvss": 7.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-59"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 16,
+    "publishedAt": "2026-05-21T14:16:43.777Z",
+    "modifiedAt": "2026-05-21T15:05:28.023Z",
+    "mergedAt": "2026-05-22T15:13:35.626Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2025-71212",
+        "url": "https://success.trendmicro.com/en-US/solution/KA-0022458",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00028
+  },
+  {
+    "id": "CVE-2026-24218",
+    "cveId": "CVE-2026-24218",
+    "aliases": [
+      "CVE-2026-24218"
+    ],
+    "title": "NVIDIA DGX OS contains a vulnerability in the factory provisioning process, where the cloning of a base image causes identical SSH host keys to be deployed across multiple systems. The sharing of cry",
+    "summary": "NVIDIA DGX OS contains a vulnerability in the factory provisioning process, where the cloning of a base image causes identical SSH host keys to be deployed across multiple systems. The sharing of cryptographic identifiers across all similarly provisioned systems enables host impersonation or attacker-in-the-middle attacks. A successful exploit of this vulnerability might lead to code execution, data tampering, escalation of privileges, information disclosure, and denial of service.",
+    "severity": "high",
+    "cvss": 8.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-321"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 16,
+    "publishedAt": "2026-05-20T20:16:36.620Z",
+    "modifiedAt": "2026-05-21T15:26:35.653Z",
+    "mergedAt": "2026-05-22T15:13:35.626Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-24218",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24218",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00019
+  },
+  {
+    "id": "CVE-2026-42831",
+    "cveId": "CVE-2026-42831",
+    "aliases": [
+      "CVE-2026-40363",
+      "CVE-2026-42831"
+    ],
+    "title": "Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.",
+    "summary": "Heap-based buffer overflow in Microsoft Office allows an unauthorized attacker to execute code locally.",
+    "severity": "high",
+    "cvss": 8.4,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-12T18:17:15.217Z",
+    "modifiedAt": "2026-05-19T18:38:59.530Z",
+    "mergedAt": "2026-05-22T15:13:41.706Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-40363",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40363",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      },
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-42831",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-42831",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00062
+  },
+  {
+    "id": "CVE-2026-28847",
+    "cveId": "CVE-2026-28847",
+    "aliases": [
+      "CVE-2026-28847",
+      "CVE-2026-28940",
+      "CVE-2026-28955"
+    ],
+    "title": "The issue was addressed with improved memory handling. This issue is fixed in Safari 26.5, iOS 18.7.9 and iPadOS 18.7.9, iOS 26.5 and iPadOS 26.5, macOS Tahoe 26.5, tvOS 26.5, visionOS 26.5, watchOS 2",
+    "summary": "The issue was addressed with improved memory handling. This issue is fixed in Safari 26.5, iOS 18.7.9 and iPadOS 18.7.9, iOS 26.5 and iPadOS 26.5, macOS Tahoe 26.5, tvOS 26.5, visionOS 26.5, watchOS 26.5. Processing maliciously crafted web content may lead to an unexpected process crash.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-119"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-11T21:18:56.570Z",
+    "modifiedAt": "2026-05-14T14:32:50.940Z",
+    "mergedAt": "2026-05-22T15:13:41.705Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-28847",
+        "url": "https://support.apple.com/en-us/127110",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      },
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-28940",
+        "url": "https://support.apple.com/en-us/127110",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      },
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-28955",
+        "url": "https://support.apple.com/en-us/127110",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00042
   },
   {
     "id": "CVE-2026-43060",
@@ -9654,6 +9764,279 @@
     "epss": 0.00037
   },
   {
+    "id": "CVE-2026-40170",
+    "cveId": "CVE-2026-40170",
+    "aliases": [
+      "CVE-2026-40170"
+    ],
+    "title": "ngtcp2 is a C implementation of the IETF QUIC protocol. In versions prior to 1.22.1, ngtcp2_qlog_parameters_set_transport_params() serializes peer transport parameters into a fixed 1024-byte stack buf",
+    "summary": "ngtcp2 is a C implementation of the IETF QUIC protocol. In versions prior to 1.22.1, ngtcp2_qlog_parameters_set_transport_params() serializes peer transport parameters into a fixed 1024-byte stack buffer without bounds checking. When qlog is enabled, a remote peer can send sufficiently large transport parameters during the QUIC handshake to cause writes beyond the buffer boundary, resulting in a stack buffer overflow. This affects deployments that enable the qlog callback and process untrusted peer transport parameters. This issue has been fixed in version 1.22.1. If developers are unable to immediately upgrade, they can disable the qlog on client.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-121"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 13,
+    "publishedAt": "2026-04-16T22:16:38.220Z",
+    "modifiedAt": "2026-05-21T19:35:19.783Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-40170",
+        "url": "https://github.com/ngtcp2/ngtcp2/commit/708a7640c1f48fb8ffb540c4b8ea5b4c1dfb8ee5",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00017
+  },
+  {
+    "id": "CVE-2026-23246",
+    "cveId": "CVE-2026-23246",
+    "aliases": [
+      "CVE-2026-23246"
+    ],
+    "title": "In the Linux kernel, the following vulnerability has been resolved: wifi: mac80211: bounds-check link_id in ieee80211_ml_reconfiguration link_id is taken from the ML Reconfiguration element (control",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: wifi: mac80211: bounds-check link_id in ieee80211_ml_reconfiguration link_id is taken from the ML Reconfiguration element (control & 0x000f), so it can be 0..15. link_removal_timeout[] has IEEE80211_MLD_MAX_NUM_LINKS (15) elements, so index 15 is out-of-bounds. Skip subelements with link_id >= IEEE80211_MLD_MAX_NUM_LINKS to avoid a stack out-of-bounds write.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 13,
+    "publishedAt": "2026-03-18T11:16:16.570Z",
+    "modifiedAt": "2026-04-02T15:16:26.923Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-23246",
+        "url": "https://git.kernel.org/stable/c/162d331d833dc73a3e905a24c44dd33732af1fc5",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00021
+  },
+  {
+    "id": "CVE-2026-26134",
+    "cveId": "CVE-2026-26134",
+    "aliases": [
+      "CVE-2026-26134"
+    ],
+    "title": "Integer overflow or wraparound in Microsoft Office allows an authorized attacker to elevate privileges locally.",
+    "summary": "Integer overflow or wraparound in Microsoft Office allows an authorized attacker to elevate privileges locally.",
+    "severity": "high",
+    "cvss": 7.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-190",
+      "CWE-416",
+      "CWE-190"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 13,
+    "publishedAt": "2026-03-10T18:18:42.803Z",
+    "modifiedAt": "2026-03-13T17:06:18.123Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-26134",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26134",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00047
+  },
+  {
+    "id": "CVE-2026-26110",
+    "cveId": "CVE-2026-26110",
+    "aliases": [
+      "CVE-2026-26110"
+    ],
+    "title": "Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.",
+    "summary": "Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.",
+    "severity": "high",
+    "cvss": 8.4,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-843"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 13,
+    "publishedAt": "2026-03-10T18:18:39.480Z",
+    "modifiedAt": "2026-03-13T16:20:04.433Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-26110",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26110",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.0007
+  },
+  {
+    "id": "CVE-2026-24285",
+    "cveId": "CVE-2026-24285",
+    "aliases": [
+      "CVE-2026-24285"
+    ],
+    "title": "Use after free in Windows Win32K allows an authorized attacker to elevate privileges locally.",
+    "summary": "Use after free in Windows Win32K allows an authorized attacker to elevate privileges locally.",
+    "severity": "high",
+    "cvss": 7,
+    "cvssVector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 13,
+    "publishedAt": "2026-03-10T18:18:18.370Z",
+    "modifiedAt": "2026-03-13T19:25:11.460Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-24285",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24285",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00044
+  },
+  {
+    "id": "CVE-2022-0778",
+    "cveId": "CVE-2022-0778",
+    "aliases": [
+      "CVE-2022-0778"
+    ],
+    "title": "The BN_mod_sqrt() function, which computes a modular square root, contains a bug that can cause it to loop forever for non-prime moduli. Internally this function is used when parsing certificates that",
+    "summary": "The BN_mod_sqrt() function, which computes a modular square root, contains a bug that can cause it to loop forever for non-prime moduli. Internally this function is used when parsing certificates that contain elliptic curve public keys in compressed form or explicit elliptic curve parameters with a base point encoded in compressed form. It is possible to trigger the infinite loop by crafting a certificate that has invalid explicit curve parameters. Since certificate parsing happens prior to verification of the certificate signature, any process that parses an externally supplied certificate may thus be subject to a denial of service attack. The infinite loop can also be reached when parsing crafted private keys as they can contain explicit elliptic curve parameters. Thus vulnerable situations include: - TLS clients consuming server certificates - TLS servers consuming client certificates - Hosting providers taking certificates or private keys from customers - Certificate authorities parsing certification requests from subscribers - Anything else which parses ASN.1 elliptic curve parameters Also any other applications that use the BN_mod_sqrt() where the attacker can control the parameter values are vulnerable to this DoS issue. In the OpenSSL 1.0.2 version the public key is not parsed during initial parsing of the certificate which makes it slightly harder to trigger the infinite loop. However any operation which requires the public key from the certificate will trigger the infinite loop. In particular the attacker can use a self-signed certificate to trigger the loop during verification of the certificate signature. This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0. It was addressed in the releases of 1.1.1n and 3.0.2 on the 15th March 2022. Fixed in OpenSSL 3.0.2 (Affected 3.0.0,3.0.1). Fixed in OpenSSL 1.1.1n (Affected 1.1.1-1.1.1m). Fixed in OpenSSL 1.0.2zd (Affected 1.0.2-1.0.2zc).",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-835"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 12,
+    "publishedAt": "2022-03-15T17:15:08.513Z",
+    "modifiedAt": "2026-04-14T10:16:21.510Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2022-0778",
+        "url": "http://packetstormsecurity.com/files/167344/OpenSSL-1.0.2-1.1.1-3.0-BN_mod_sqrt-Infinite-Loop.html",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.06863
+  },
+  {
+    "id": "CVE-2026-5434",
+    "cveId": "CVE-2026-5434",
+    "aliases": [
+      "CVE-2026-5434"
+    ],
+    "title": "Honeywell Control Network Module (CNM) contains insertion of sensitive information into an unintended directory. An attacker could exploit this vulnerability through probing system files, potentially",
+    "summary": "Honeywell Control Network Module (CNM) contains insertion of sensitive information into an unintended directory. An attacker could exploit this vulnerability through probing system files, potentially resulting in unintended access to protected data.",
+    "severity": "medium",
+    "cvss": 5.9,
+    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-538"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 10,
+    "publishedAt": "2026-05-21T09:16:30.410Z",
+    "modifiedAt": "2026-05-21T15:26:35.653Z",
+    "mergedAt": "2026-05-22T15:13:35.626Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-5434",
+        "url": "https://process.honeywell.com/",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00031
+  },
+  {
     "id": "h-2291f865e52e",
     "aliases": [
       "https://www.bleepingcomputer.com/news/security/trend-micro-warns-of-apex-one-zero-day-exploited-in-attacks/"
@@ -9676,7 +10059,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T13:39:19.000Z",
     "modifiedAt": "2026-05-22T13:39:19.000Z",
-    "mergedAt": "2026-05-22T13:47:20.286Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -9712,7 +10095,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T13:09:18.000Z",
     "modifiedAt": "2026-05-22T13:09:18.000Z",
-    "mergedAt": "2026-05-22T13:47:20.286Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -9748,7 +10131,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T12:00:42.000Z",
     "modifiedAt": "2026-05-22T12:00:42.000Z",
-    "mergedAt": "2026-05-22T13:47:20.286Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -9784,7 +10167,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T11:38:12.000Z",
     "modifiedAt": "2026-05-22T11:38:12.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -9820,7 +10203,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T09:01:20.000Z",
     "modifiedAt": "2026-05-22T09:01:20.000Z",
-    "mergedAt": "2026-05-22T13:47:20.286Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -9856,7 +10239,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T08:50:18.000Z",
     "modifiedAt": "2026-05-22T08:50:18.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -9892,7 +10275,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T05:36:18.000Z",
     "modifiedAt": "2026-05-22T05:36:18.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -9941,6 +10324,41 @@
     "epss": 0.00042
   },
   {
+    "id": "CVE-2026-4929",
+    "cveId": "CVE-2026-4929",
+    "aliases": [
+      "CVE-2026-4929"
+    ],
+    "title": "Simple Hierarchical Select (SHS) for Drupal 7 contains cross-site scripting risk due to improper output escaping of term-derived text. Confirmed affected paths include field formatter output (shs_fiel",
+    "summary": "Simple Hierarchical Select (SHS) for Drupal 7 contains cross-site scripting risk due to improper output escaping of term-derived text. Confirmed affected paths include field formatter output (shs_field_formatter_view) and term-tree child-term data generation (shs_term_get_children). Malicious taxonomy term names can be rendered unsafely depending on output context. This affects versions from 7.x-1.0 through (and including) 7.x-1.10.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-21T22:16:48.420Z",
+    "modifiedAt": "2026-05-21T22:16:48.420Z",
+    "mergedAt": "2026-05-22T15:13:35.626Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-4929",
+        "url": "https://d7es.tag1.com/security-advisories/simple-hierarchical-select-moderately-critical-cross-site-scripting",
+        "fetchedAt": "2026-05-22T15:13:35.626Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00042
+  },
+  {
     "id": "h-7b4713e593b8",
     "aliases": [
       "https://www.bleepingcomputer.com/news/security/google-accidentally-exposed-details-of-unfixed-chromium-flaw/"
@@ -9963,7 +10381,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T18:13:50.000Z",
     "modifiedAt": "2026-05-21T18:13:50.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -9999,7 +10417,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T15:11:08.000Z",
     "modifiedAt": "2026-05-21T15:11:08.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10035,7 +10453,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:17:09.000Z",
     "modifiedAt": "2026-05-21T14:17:09.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10071,7 +10489,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:00:10.000Z",
     "modifiedAt": "2026-05-21T14:00:10.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10107,7 +10525,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:00:00.000Z",
     "modifiedAt": "2026-05-21T14:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10143,7 +10561,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T13:58:33.000Z",
     "modifiedAt": "2026-05-21T13:58:33.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10179,7 +10597,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T13:09:51.000Z",
     "modifiedAt": "2026-05-21T13:09:51.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10215,7 +10633,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.730Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -10252,7 +10670,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.730Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -10289,7 +10707,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.730Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -10326,7 +10744,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.730Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -10363,7 +10781,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.731Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -10400,7 +10818,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T11:52:14.000Z",
     "modifiedAt": "2026-05-21T11:52:14.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10436,7 +10854,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T11:00:00.000Z",
     "modifiedAt": "2026-05-21T11:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10472,7 +10890,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T10:55:57.000Z",
     "modifiedAt": "2026-05-21T10:55:57.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10508,7 +10926,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T10:30:00.000Z",
     "modifiedAt": "2026-05-21T10:30:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10544,7 +10962,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T07:49:48.000Z",
     "modifiedAt": "2026-05-21T07:49:48.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10580,7 +10998,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T07:35:53.000Z",
     "modifiedAt": "2026-05-21T07:35:53.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10616,7 +11034,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T06:54:01.000Z",
     "modifiedAt": "2026-05-21T06:54:01.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10652,7 +11070,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T04:27:01.000Z",
     "modifiedAt": "2026-05-21T04:27:01.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10688,7 +11106,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T21:36:24.000Z",
     "modifiedAt": "2026-05-20T21:36:24.000Z",
-    "mergedAt": "2026-05-22T13:47:20.287Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "bleepingcomputer",
@@ -10724,7 +11142,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T21:07:38.000Z",
     "modifiedAt": "2026-05-20T21:07:38.000Z",
-    "mergedAt": "2026-05-22T14:02:52.881Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -10760,7 +11178,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T17:06:54.000Z",
     "modifiedAt": "2026-05-20T17:06:54.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10796,7 +11214,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T14:36:44.000Z",
     "modifiedAt": "2026-05-20T14:36:44.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10832,7 +11250,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T12:51:43.000Z",
     "modifiedAt": "2026-05-20T12:51:43.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10868,7 +11286,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T11:58:00.000Z",
     "modifiedAt": "2026-05-20T11:58:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10904,7 +11322,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T11:38:43.000Z",
     "modifiedAt": "2026-05-20T11:38:43.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10940,7 +11358,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T10:30:00.000Z",
     "modifiedAt": "2026-05-20T10:30:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -10976,7 +11394,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T05:12:06.000Z",
     "modifiedAt": "2026-05-20T05:12:06.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11012,7 +11430,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T16:38:12.000Z",
     "modifiedAt": "2026-05-19T16:38:12.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11048,7 +11466,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T14:56:26.000Z",
     "modifiedAt": "2026-05-19T14:56:26.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11084,7 +11502,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.731Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -11121,7 +11539,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.731Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -11158,7 +11576,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.731Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -11195,7 +11613,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.732Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -11232,7 +11650,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.732Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -11269,7 +11687,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T11:30:00.000Z",
     "modifiedAt": "2026-05-19T11:30:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11305,7 +11723,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T10:44:45.000Z",
     "modifiedAt": "2026-05-19T10:44:45.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11341,7 +11759,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T09:23:15.000Z",
     "modifiedAt": "2026-05-19T09:23:15.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11377,7 +11795,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T07:49:23.000Z",
     "modifiedAt": "2026-05-19T07:49:23.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11413,7 +11831,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T05:28:06.000Z",
     "modifiedAt": "2026-05-19T05:28:06.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11447,7 +11865,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T00:00:00.000Z",
     "modifiedAt": "2026-05-19T00:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.291Z",
+    "mergedAt": "2026-05-22T15:13:41.721Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -11484,7 +11902,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T17:21:18.000Z",
     "modifiedAt": "2026-05-18T17:21:18.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11520,7 +11938,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T13:50:17.000Z",
     "modifiedAt": "2026-05-18T13:50:17.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11556,7 +11974,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T13:00:00.000Z",
     "modifiedAt": "2026-05-18T13:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11592,7 +12010,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T11:23:41.000Z",
     "modifiedAt": "2026-05-18T11:23:41.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11628,7 +12046,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T10:54:05.000Z",
     "modifiedAt": "2026-05-18T10:54:05.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11664,7 +12082,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T08:57:34.000Z",
     "modifiedAt": "2026-05-18T08:57:34.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11700,7 +12118,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T06:46:37.000Z",
     "modifiedAt": "2026-05-18T06:46:37.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11736,7 +12154,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T06:00:00.000Z",
     "modifiedAt": "2026-05-18T06:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.335Z",
+    "mergedAt": "2026-05-22T15:13:41.721Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -11772,7 +12190,7 @@
     "priority": 8,
     "publishedAt": "2026-05-17T11:57:53.000Z",
     "modifiedAt": "2026-05-17T11:57:53.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11808,7 +12226,7 @@
     "priority": 8,
     "publishedAt": "2026-05-17T07:13:33.000Z",
     "modifiedAt": "2026-05-17T07:13:33.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11844,7 +12262,7 @@
     "priority": 8,
     "publishedAt": "2026-05-16T15:20:48.000Z",
     "modifiedAt": "2026-05-16T15:20:48.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11880,7 +12298,7 @@
     "priority": 8,
     "publishedAt": "2026-05-15T17:10:25.000Z",
     "modifiedAt": "2026-05-15T17:10:25.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11892,6 +12310,45 @@
     "tags": [
       "general"
     ]
+  },
+  {
+    "id": "CVE-2026-25180",
+    "cveId": "CVE-2026-25180",
+    "aliases": [
+      "CVE-2026-25180"
+    ],
+    "title": "Out-of-bounds read in Microsoft Graphics Component allows an unauthorized attacker to disclose information locally.",
+    "summary": "Out-of-bounds read in Microsoft Graphics Component allows an unauthorized attacker to disclose information locally.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-125"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 7,
+    "publishedAt": "2026-03-10T18:18:34.097Z",
+    "modifiedAt": "2026-03-13T17:40:01.323Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-25180",
+        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25180",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00041
   },
   {
     "id": "h-f7eaf678ca1b",
@@ -11916,7 +12373,7 @@
     "priority": 6,
     "publishedAt": "2026-05-22T11:55:24.000Z",
     "modifiedAt": "2026-05-22T11:55:24.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11952,7 +12409,7 @@
     "priority": 6,
     "publishedAt": "2026-05-22T05:47:33.000Z",
     "modifiedAt": "2026-05-22T05:47:33.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -11988,7 +12445,7 @@
     "priority": 6,
     "publishedAt": "2026-05-20T08:28:26.000Z",
     "modifiedAt": "2026-05-20T08:28:26.000Z",
-    "mergedAt": "2026-05-22T13:47:20.315Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12024,7 +12481,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T14:00:00.000Z",
     "modifiedAt": "2026-05-15T14:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.881Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -12060,7 +12517,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T13:35:04.000Z",
     "modifiedAt": "2026-05-15T13:35:04.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12096,7 +12553,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T11:00:00.000Z",
     "modifiedAt": "2026-05-15T11:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12132,7 +12589,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T10:54:44.000Z",
     "modifiedAt": "2026-05-15T10:54:44.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12168,7 +12625,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T06:19:04.000Z",
     "modifiedAt": "2026-05-15T06:19:04.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12204,7 +12661,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T05:28:03.000Z",
     "modifiedAt": "2026-05-15T05:28:03.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12240,7 +12697,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T17:45:20.000Z",
     "modifiedAt": "2026-05-14T17:45:20.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12276,7 +12733,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T17:22:43.000Z",
     "modifiedAt": "2026-05-14T17:22:43.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12312,7 +12769,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T16:07:46.000Z",
     "modifiedAt": "2026-05-14T16:07:46.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12348,7 +12805,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T14:00:37.000Z",
     "modifiedAt": "2026-05-14T14:00:37.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12387,7 +12844,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.971Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12443,7 +12900,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.972Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12489,7 +12946,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.971Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12544,7 +13001,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12581,7 +13038,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12618,7 +13075,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12655,7 +13112,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12692,7 +13149,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.739Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12729,7 +13186,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.739Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12766,7 +13223,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.740Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12803,7 +13260,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.740Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12840,7 +13297,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:52.740Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -12877,7 +13334,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T11:40:14.000Z",
     "modifiedAt": "2026-05-14T11:40:14.000Z",
-    "mergedAt": "2026-05-22T13:47:20.316Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "thehackernews",
@@ -12911,7 +13368,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T00:00:00.000Z",
     "modifiedAt": "2026-05-13T00:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.896Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
     "sources": [
       {
         "source": "project-zero",
@@ -12950,7 +13407,7 @@
     "priority": 6,
     "publishedAt": "2026-05-11T19:16:29.477Z",
     "modifiedAt": "2026-05-13T15:57:03.607Z",
-    "mergedAt": "2026-05-22T13:47:20.246Z",
+    "mergedAt": "2026-05-22T15:13:41.702Z",
     "sources": [
       {
         "source": "nvd",
@@ -12983,7 +13440,7 @@
     "priority": 6,
     "publishedAt": "2026-05-11T08:00:00.000Z",
     "modifiedAt": "2026-05-11T08:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.291Z",
+    "mergedAt": "2026-05-22T15:13:41.721Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -13018,7 +13475,7 @@
     "priority": 6,
     "publishedAt": "2026-05-10T14:00:00.000Z",
     "modifiedAt": "2026-05-10T14:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:53.291Z",
+    "mergedAt": "2026-05-22T15:13:41.722Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -13031,6 +13488,41 @@
       "frontend",
       "nextjs"
     ]
+  },
+  {
+    "id": "CVE-2026-43073",
+    "cveId": "CVE-2026-43073",
+    "aliases": [
+      "CVE-2026-43073"
+    ],
+    "title": "In the Linux kernel, the following vulnerability has been resolved: x86-64: rename misleadingly named '__copy_user_nocache()' function This function was a masterclass in bad naming, for various hist",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: x86-64: rename misleadingly named '__copy_user_nocache()' function This function was a masterclass in bad naming, for various historical reasons. It claimed to be a non-cached user copy. It is literally _neither_ of those things. It's a specialty memory copy routine that uses non-temporal stores for the destination (but not the source), and that does exception handling for both source and destination accesses. Also note that while it works for unaligned targets, any unaligned parts (whether at beginning or end) will not use non-temporal stores, since only words and quadwords can be non-temporal on x86. The exception handling means that it _can_ be used for user space accesses, but not on its own - it needs all the normal \"start user space access\" logic around it. But typically the user space access would be the source, not the non-temporal destination. That was the original intention of this, where the destination was some fragile persistent memory target that needed non-temporal stores in order to catch machine check exceptions synchronously and deal with them gracefully. Thus that non-descriptive name: one use case was to copy from user space into a non-cached kernel buffer. However, the existing users are a mix of that intended use-case, and a couple of random drivers that just did this as a performance tweak. Some of those random drivers then actively misused the user copying version (with STAC/CLAC and all) to do kernel copies without ever even caring about the exception handling, _just_ for the non-temporal destination. Rename it as a first small step to actually make it halfway sane, and change the prototype to be more normal: it doesn't take a user pointer unless the caller has done the proper conversion, and the argument size is the full size_t (it still won't actually copy more than 4GB in one go, but there's also no reason to silently truncate the size argument in the caller). Finally, use this now sanely named function in the NTB code, which mis-used a user copy version (with STAC/CLAC and all) of this interface despite it not actually being a user copy at all.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-05T16:16:16.650Z",
+    "modifiedAt": "2026-05-06T13:08:07.970Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-43073",
+        "url": "https://git.kernel.org/stable/c/14b9194db4a28421a4dbe5d6e519efbaa7c5f3cd",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00024
   },
   {
     "id": "CVE-2026-43059",
@@ -13103,6 +13595,117 @@
     "epss": 0.00032
   },
   {
+    "id": "CVE-2026-32688",
+    "cveId": "CVE-2026-32688",
+    "aliases": [
+      "CVE-2026-32688"
+    ],
+    "title": "Allocation of Resources Without Limits or Throttling vulnerability in elixir-plug plug_cowboy allows unauthenticated remote denial of service via atom table exhaustion. Plug.Cowboy.Conn.conn/1 in lib",
+    "summary": "Allocation of Resources Without Limits or Throttling vulnerability in elixir-plug plug_cowboy allows unauthenticated remote denial of service via atom table exhaustion. Plug.Cowboy.Conn.conn/1 in lib/plug/cowboy/conn.ex calls String.to_atom/1 on the value returned by :cowboy_req.scheme/1. For HTTP/2 connections, cowlib passes the client-supplied :scheme pseudo-header value through verbatim without validation. Each unique value permanently allocates a new entry in the BEAM atom table. Since atoms are never garbage-collected and the atom table has a fixed limit (default 1,048,576), an unauthenticated attacker can exhaust the table by sending HTTP/2 requests with unique :scheme values, causing the Erlang VM to abort with system_limit and taking down the entire node. This vulnerability does not affect HTTP/1.1, where cowboy derives the scheme from the listener type rather than from a client-supplied header. This issue affects plug_cowboy: from 2.0.0 before 2.8.1.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-770"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-04-27T14:16:47.340Z",
+    "modifiedAt": "2026-04-27T18:57:20.293Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-32688",
+        "url": "https://cna.erlef.org/cves/CVE-2026-32688.html",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00131
+  },
+  {
+    "id": "CVE-2026-32145",
+    "cveId": "CVE-2026-32145",
+    "aliases": [
+      "CVE-2026-32145"
+    ],
+    "title": "Allocation of Resources Without Limits or Throttling vulnerability in gleam-wisp wisp allows a denial of service via multipart form body parsing. The multipart_body function bypasses configured max_b",
+    "summary": "Allocation of Resources Without Limits or Throttling vulnerability in gleam-wisp wisp allows a denial of service via multipart form body parsing. The multipart_body function bypasses configured max_body_size and max_files_size limits. When a multipart boundary is not present in a chunk, the parser takes the MoreRequiredForBody path, which appends the chunk to the output but passes the quota unchanged to the recursive call. Only the final chunk containing the boundary is counted via decrement_quota. The same pattern exists in multipart_headers, where MoreRequiredForHeaders recurses without calling decrement_body_quota. An unauthenticated attacker can exhaust server memory or disk by sending arbitrarily large multipart form submissions in a single HTTP request. This issue affects wisp: from 0.2.0 before 2.2.2.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-770"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 5,
+    "publishedAt": "2026-04-02T11:16:21.870Z",
+    "modifiedAt": "2026-04-06T17:17:09.707Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-32145",
+        "url": "https://cna.erlef.org/cves/CVE-2026-32145.html",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00026
+  },
+  {
+    "id": "CVE-2026-28809",
+    "cveId": "CVE-2026-28809",
+    "aliases": [
+      "CVE-2026-28809"
+    ],
+    "title": "XML External Entity (XXE) vulnerability in esaml (and its forks) allows an attacker to cause the system to read local files and incorporate their contents into processed SAML documents, and potentiall",
+    "summary": "XML External Entity (XXE) vulnerability in esaml (and its forks) allows an attacker to cause the system to read local files and incorporate their contents into processed SAML documents, and potentially perform SSRF via crafted SAML messages. esaml parses attacker-controlled SAML messages using xmerl_scan:string/2 before signature verification without disabling XML entity expansion. On Erlang/OTP versions before 27, Xmerl allows entities by default, enabling pre-signature XXE attacks. An attacker can cause the host to read local files (e.g., Kubernetes-mounted secrets) into the SAML document. If the attacker is not a trusted SAML SP, signature verification will fail and the document is discarded, but file contents may still be exposed through logs or error messages. This issue affects all versions of esaml, including forks by arekinath, handnot2, and dropbox. Users running on Erlang/OTP 27 or later are not affected due to Xmerl defaulting to entities disabled.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-611"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 5,
+    "publishedAt": "2026-03-23T11:16:24.343Z",
+    "modifiedAt": "2026-04-06T17:17:09.377Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-28809",
+        "url": "https://cna.erlef.org/cves/CVE-2026-28809.html",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00065
+  },
+  {
     "id": "CVE-2026-1524",
     "cveId": "CVE-2026-1524",
     "aliases": [
@@ -13128,7 +13731,7 @@
     "priority": 5,
     "publishedAt": "2026-03-11T17:16:54.477Z",
     "modifiedAt": "2026-03-12T21:08:22.643Z",
-    "mergedAt": "2026-05-22T13:47:20.246Z",
+    "mergedAt": "2026-05-22T15:13:41.700Z",
     "sources": [
       {
         "source": "nvd",
@@ -13165,7 +13768,7 @@
     "priority": 5,
     "publishedAt": "2026-03-11T17:16:54.160Z",
     "modifiedAt": "2026-03-12T21:08:22.643Z",
-    "mergedAt": "2026-05-22T13:47:20.246Z",
+    "mergedAt": "2026-05-22T15:13:41.700Z",
     "sources": [
       {
         "source": "nvd",
@@ -13176,5 +13779,40 @@
     ],
     "tags": [],
     "epss": 0.00091
+  },
+  {
+    "id": "CVE-2025-71066",
+    "cveId": "CVE-2025-71066",
+    "aliases": [
+      "CVE-2025-71066"
+    ],
+    "title": "In the Linux kernel, the following vulnerability has been resolved: net/sched: ets: Always remove class from active list before deleting in ets_qdisc_change zdi-disclosures@trendmicro.com says: The",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: net/sched: ets: Always remove class from active list before deleting in ets_qdisc_change zdi-disclosures@trendmicro.com says: The vulnerability is a race condition between `ets_qdisc_dequeue` and `ets_qdisc_change`. It leads to UAF on `struct Qdisc` object. Attacker requires the capability to create new user and network namespace in order to trigger the bug. See my additional commentary at the end of the analysis. Analysis: static int ets_qdisc_change(struct Qdisc *sch, struct nlattr *opt, struct netlink_ext_ack *extack) { ... // (1) this lock is preventing .change handler (`ets_qdisc_change`) //to race with .dequeue handler (`ets_qdisc_dequeue`) sch_tree_lock(sch); for (i = nbands; i = q->nstrict && q->classes[i].qdisc->q.qlen) list_del_init(&q->classes[i].alist); qdisc_purge_queue(q->classes[i].qdisc); } WRITE_ONCE(q->nbands, nbands); for (i = nstrict; i nstrict; i++) { if (q->classes[i].qdisc->q.qlen) { // (2) the class is added to the q->active list_add_tail(&q->classes[i].alist, &q->active); q->classes[i].deficit = quanta[i]; } } WRITE_ONCE(q->nstrict, nstrict); memcpy(q->prio2band, priomap, sizeof(priomap)); for (i = 0; i nbands; i++) WRITE_ONCE(q->classes[i].quantum, quanta[i]); for (i = oldbands; i nbands; i++) { q->classes[i].qdisc = queues[i]; if (q->classes[i].qdisc != &noop_qdisc) qdisc_hash_add(q->classes[i].qdisc, true); } // (3) the qdisc is unlocked, now dequeue can be called in parallel // to the rest of .change handler sch_tree_unlock(sch); ets_offload_change(sch); for (i = q->nbands; i classes[i].qdisc); // (5) If we call .dequeue between (4) and (5), we will have // a strong UAF and we can control RIP q->classes[i].qdisc = NULL; WRITE_ONCE(q->classes[i].quantum, 0); q->classes[i].deficit = 0; gnet_stats_basic_sync_init(&q->classes[i].bstats); memset(&q->classes[i].qstats, 0, sizeof(q->classes[i].qstats)); } return 0; } Comment: This happens because some of the classes have their qdiscs assigned to NULL, but remain in the active list. This commit fixes this issue by always removing the class from the active list before deleting and freeing its associated qdisc Reproducer Steps (trimmed version of what was sent by zdi-disclosures@trendmicro.com) ``` DEV=\"${DEV:-lo}\" ROOT_HANDLE=\"${ROOT_HANDLE:-1:}\" BAND2_HANDLE=\"${BAND2_HANDLE:-20:}\" # child under 1:2 PING_BYTES=\"${PING_BYTES:-48}\" PING_COUNT=\"${PING_COUNT:-200000}\" PING_DST=\"${PING_DST:-127.0.0.1}\" SLOW_TBF_RATE=\"${SLOW_TBF_RATE:-8bit}\" SLOW_TBF_BURST=\"${SLOW_TBF_BURST:-100b}\" SLOW_TBF_LAT=\"${SLOW_TBF_LAT:-1s}\" cleanup() { tc qdisc del dev \"$DEV\" root 2>/dev/null } trap cleanup EXIT ip link set \"$DEV\" up tc qdisc del dev \"$DEV\" root 2>/dev/null || true tc qdisc add dev \"$DEV\" root handle \"$ROOT_HANDLE\" ets bands 2 strict 2 tc qdisc add dev \"$DEV\" parent 1:2 handle \"$BAND2_HANDLE\" \\ tbf rate \"$SLOW_TBF_RATE\" burst \"$SLOW_TBF_BURST\" latency \"$SLOW_TBF_LAT\" tc filter add dev \"$DEV\" parent 1: protocol all prio 1 u32 match u32 0 0 flowid 1:2 tc -s qdisc ls dev $DEV ping -I \"$DEV\" -f -c \"$PING_COUNT\" -s \"$PING_BYTES\" -W 0.001 \"$PING_DST\" \\ >/dev/null 2>&1 & tc qdisc change dev \"$DEV\" root handle \"$ROOT_HANDLE\" ets bands 2 strict 0 tc qdisc change dev \"$DEV\" root handle \"$ROOT_HANDLE\" ets bands 2 strict 2 tc -s qdisc ls dev $DEV tc qdisc del dev \"$DEV\" parent ---truncated---",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 4,
+    "publishedAt": "2026-01-13T16:16:05.960Z",
+    "modifiedAt": "2026-04-15T00:35:42.020Z",
+    "mergedAt": "2026-05-22T15:13:35.625Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2025-71066",
+        "url": "https://git.kernel.org/stable/c/062d5d544e564473450d72e6af83077c2b2ff7c3",
+        "fetchedAt": "2026-05-22T15:13:35.625Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00068
   }
 ]

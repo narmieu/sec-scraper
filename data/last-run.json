@@ -1,13 +1,94 @@
 {
-  "startedAt": "2026-05-22T14:12:33.599Z",
-  "finishedAt": "2026-05-22T14:12:34.947Z",
-  "durationMs": 1348,
+  "startedAt": "2026-05-22T15:13:34.618Z",
+  "finishedAt": "2026-05-22T15:13:43.186Z",
+  "durationMs": 8568,
   "stats": {
-    "newCount": 1312,
+    "newCount": 1518,
     "updatedCount": 312,
     "droppedCount": 0,
     "alertCount": 0
   },
-  "sources": {},
+  "sources": {
+    "osv": {
+      "ok": true,
+      "fetched": 207,
+      "durationMs": 6962
+    },
+    "nvd": {
+      "ok": true,
+      "fetched": 71,
+      "durationMs": 995
+    },
+    "packagist": {
+      "ok": true,
+      "fetched": 144,
+      "durationMs": 467
+    },
+    "hackernews": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 428
+    },
+    "thehackernews": {
+      "ok": true,
+      "fetched": 50,
+      "durationMs": 425
+    },
+    "bleepingcomputer": {
+      "ok": true,
+      "fetched": 15,
+      "durationMs": 320
+    },
+    "nextjs-releases": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1108
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 328
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1592
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 1032
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 1432
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 584
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 1004
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 4,
+      "durationMs": 962
+    },
+    "mastodon-cve": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 598
+    },
+    "mastodon-zeroday": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 617
+    }
+  },
   "errors": []
 }
