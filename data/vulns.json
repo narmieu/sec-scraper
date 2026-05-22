@@ -37,7 +37,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00253
   },
   {
     "id": "CVE-2026-46633",
@@ -130,7 +131,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.93617
+    "epss": 0.92526
   },
   {
     "id": "CVE-2009-1537",
@@ -167,7 +168,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.74066
+    "epss": 0.5549
   },
   {
     "id": "CVE-2009-3459",
@@ -204,17 +205,17 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.90515
+    "epss": 0.91018
   },
   {
-    "id": "CVE-2010-0249",
-    "cveId": "CVE-2010-0249",
+    "id": "CVE-2010-0806",
+    "cveId": "CVE-2010-0806",
     "aliases": [
       "CVE-2010-0249",
       "CVE-2010-0806"
     ],
     "title": "Microsoft Internet Explorer Use-After-Free Vulnerability",
-    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -230,7 +231,7 @@
     "kev": true,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:51.759Z",
+    "mergedAt": "2026-05-22T14:02:54.369Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -248,7 +249,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.88223
+    "epss": 0.88677
   },
   {
     "id": "CVE-2026-41091",
@@ -285,7 +286,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.12101
+    "epss": 0.06551
   },
   {
     "id": "CVE-2026-45498",
@@ -322,7 +323,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.02271
+    "epss": 0.02772
   },
   {
     "id": "CVE-2026-42897",
@@ -359,7 +360,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.10026
+    "epss": 0.06288
   },
   {
     "id": "CVE-2026-20182",
@@ -396,7 +397,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.69191
+    "epss": 0.77324
   },
   {
     "id": "CVE-2026-42208",
@@ -433,7 +434,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.43191
+    "epss": 0.54262
   },
   {
     "id": "CVE-2026-6973",
@@ -470,7 +471,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.06129
+    "epss": 0.04907
   },
   {
     "id": "CVE-2026-0300",
@@ -507,7 +508,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.14433
+    "epss": 0.04353
   },
   {
     "id": "CVE-2026-31431",
@@ -544,7 +545,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.0257
+    "epss": 0.02421
   },
   {
     "id": "CVE-2026-41940",
@@ -581,7 +582,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.88634
+    "epss": 0.84371
   },
   {
     "id": "CVE-2024-1708",
@@ -618,7 +619,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.8481
+    "epss": 0.85437
   },
   {
     "id": "CVE-2026-32202",
@@ -655,7 +656,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.07888
+    "epss": 0.12965
   },
   {
     "id": "CVE-2025-29635",
@@ -692,7 +693,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.53802
+    "epss": 0.19949
   },
   {
     "id": "CVE-2024-7399",
@@ -729,7 +730,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.82267
+    "epss": 0.72929
   },
   {
     "id": "CVE-2024-57728",
@@ -766,7 +767,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.58822
+    "epss": 0.52426
   },
   {
     "id": "CVE-2024-57726",
@@ -803,7 +804,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.4537
+    "epss": 0.42677
   },
   {
     "id": "CVE-2026-39987",
@@ -840,7 +841,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.8426
+    "epss": 0.82174
   },
   {
     "id": "CVE-2026-33825",
@@ -877,7 +878,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.06378
+    "epss": 0.08116
   },
   {
     "id": "CVE-2026-20122",
@@ -914,7 +915,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.01592
+    "epss": 0.01315
   },
   {
     "id": "CVE-2026-20133",
@@ -951,7 +952,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.01356
+    "epss": 0.0189
   },
   {
     "id": "CVE-2025-2749",
@@ -988,7 +989,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.04902
+    "epss": 0.04767
   },
   {
     "id": "CVE-2023-27351",
@@ -1025,7 +1026,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.86957
+    "epss": 0.86798
   },
   {
     "id": "CVE-2025-48700",
@@ -1062,7 +1063,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.18757
+    "epss": 0.1501
   },
   {
     "id": "CVE-2026-20128",
@@ -1099,7 +1100,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00088
+    "epss": 0.00069
   },
   {
     "id": "CVE-2025-32975",
@@ -1136,7 +1137,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.46502
+    "epss": 0.35056
   },
   {
     "id": "CVE-2024-27199",
@@ -1173,7 +1174,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.90931
+    "epss": 0.91681
   },
   {
     "id": "CVE-2026-34197",
@@ -1210,7 +1211,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.75807
+    "epss": 0.72497
   },
   {
     "id": "CVE-2009-0238",
@@ -1247,7 +1248,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.74913
+    "epss": 0.7286
   },
   {
     "id": "CVE-2026-32201",
@@ -1284,7 +1285,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.08708
+    "epss": 0.09439
   },
   {
     "id": "CVE-2012-1854",
@@ -1321,7 +1322,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.04639
+    "epss": 0.04015
   },
   {
     "id": "CVE-2025-60710",
@@ -1358,7 +1359,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.29871
+    "epss": 0.22899
   },
   {
     "id": "CVE-2023-21529",
@@ -1395,7 +1396,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.31783
+    "epss": 0.32329
   },
   {
     "id": "CVE-2023-36424",
@@ -1432,7 +1433,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.10917
+    "epss": 0.11201
   },
   {
     "id": "CVE-2020-9715",
@@ -1469,7 +1470,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.77499
+    "epss": 0.75863
   },
   {
     "id": "CVE-2026-21643",
@@ -1506,7 +1507,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.6745
+    "epss": 0.62516
   },
   {
     "id": "CVE-2026-34621",
@@ -1543,7 +1544,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.12155
+    "epss": 0.10391
   },
   {
     "id": "CVE-2026-1340",
@@ -1580,7 +1581,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.70676
+    "epss": 0.65911
   },
   {
     "id": "CVE-2026-35616",
@@ -1617,7 +1618,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.49255
+    "epss": 0.43209
   },
   {
     "id": "CVE-2026-3502",
@@ -1654,7 +1655,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.02577
+    "epss": 0.02504
   },
   {
     "id": "CVE-2026-5281",
@@ -1691,7 +1692,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.01066
+    "epss": 0.00503
   },
   {
     "id": "CVE-2026-3055",
@@ -1765,7 +1766,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.08155
+    "epss": 0.06781
   },
   {
     "id": "CVE-2026-33634",
@@ -1802,7 +1803,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.17652
+    "epss": 0.33493
   },
   {
     "id": "CVE-2026-33017",
@@ -1845,7 +1846,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.43645
+    "epss": 0.23243
   },
   {
     "id": "CVE-2025-32432",
@@ -1882,7 +1883,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.92647
+    "epss": 0.92897
   },
   {
     "id": "CVE-2025-54068",
@@ -1919,7 +1920,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.58072
+    "epss": 0.34342
   },
   {
     "id": "CVE-2025-43510",
@@ -1959,14 +1960,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-43520",
-    "cveId": "CVE-2025-43520",
+    "id": "CVE-2025-31277",
+    "cveId": "CVE-2025-31277",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
-    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
+    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
+    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -1982,7 +1983,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:51.759Z",
+    "mergedAt": "2026-05-22T14:02:54.369Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2000,7 +2001,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00171
+    "epss": 0.00265
   },
   {
     "id": "CVE-2026-20131",
@@ -2037,7 +2038,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.0172
+    "epss": 0.01139
   },
   {
     "id": "CVE-2025-66376",
@@ -2111,7 +2112,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.05286
+    "epss": 0.05616
   },
   {
     "id": "CVE-2025-47813",
@@ -2185,7 +2186,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00943
+    "epss": 0.03241
   },
   {
     "id": "CVE-2026-3909",
@@ -2481,7 +2482,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00027
+    "epss": 0.00029
   },
   {
     "id": "CVE-2021-30952",
@@ -2629,7 +2630,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00227
+    "epss": 0.00213
   },
   {
     "id": "CVE-2022-20775",
@@ -2666,7 +2667,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00419
+    "epss": 0.00259
   },
   {
     "id": "CVE-2026-20127",
@@ -2703,7 +2704,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.5895
+    "epss": 0.44295
   },
   {
     "id": "CVE-2026-25108",
@@ -2781,7 +2782,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.09488
+    "epss": 0.312
   },
   {
     "id": "CVE-2025-29927",
@@ -2848,7 +2849,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.92118
+    "epss": 0.92306
   },
   {
     "id": "CVE-2026-44578",
@@ -2902,7 +2903,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.04476
+    "epss": 0.05039
   },
   {
     "id": "CVE-2026-44573",
@@ -3060,7 +3061,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00134
+    "epss": 0.0004
   },
   {
     "id": "CVE-2026-42035",
@@ -3115,7 +3116,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00108
+    "epss": 0.00032
   },
   {
     "id": "CVE-2026-42043",
@@ -3338,6 +3339,80 @@
     "epss": 0.00044
   },
   {
+    "id": "CVE-2019-10744",
+    "cveId": "CVE-2019-10744",
+    "aliases": [
+      "CVE-2019-10744"
+    ],
+    "title": "Prototype Pollution in lodash",
+    "summary": "Prototype Pollution in lodash",
+    "details": "Versions of `lodash` before 4.17.12 are vulnerable to Prototype Pollution. The function `defaultsDeep` allows a malicious user to modify the prototype of `Object` via `{constructor: {prototype: {...}}}` causing the addition or modification of an existing property that will exist on all objects. ## Recommendation Update to version 4.17.12 or later.",
+    "severity": "critical",
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "npm",
+      "generic"
+    ],
+    "cwe": [
+      "CWE-1321",
+      "CWE-20"
+    ],
+    "affected": [
+      {
+        "ecosystem": "npm",
+        "package": "lodash",
+        "versions": ">=0 <4.17.12",
+        "fixedIn": "4.17.12"
+      },
+      {
+        "ecosystem": "npm",
+        "package": "lodash-es",
+        "versions": ">=0 <4.17.14",
+        "fixedIn": "4.17.14"
+      },
+      {
+        "ecosystem": "npm",
+        "package": "lodash-amd",
+        "versions": ">=0 <4.17.13",
+        "fixedIn": "4.17.13"
+      },
+      {
+        "ecosystem": "npm",
+        "package": "lodash.defaultsdeep",
+        "versions": ">=0 <4.6.1",
+        "fixedIn": "4.6.1"
+      },
+      {
+        "ecosystem": "generic",
+        "package": "lodash-rails",
+        "versions": ">=0 <4.17.12",
+        "fixedIn": "4.17.12"
+      }
+    ],
+    "stackMatch": {
+      "score": 60,
+      "packages": [
+        "lodash"
+      ],
+      "reason": "direct-dep"
+    },
+    "priority": 66,
+    "publishedAt": "2019-07-10T19:45:23.000Z",
+    "modifiedAt": "2026-03-14T09:41:05.242Z",
+    "mergedAt": "2026-05-22T13:47:27.988Z",
+    "sources": [
+      {
+        "source": "osv",
+        "externalId": "GHSA-jf85-cpcp-j695",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10744",
+        "fetchedAt": "2026-05-22T13:47:27.988Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.14845
+  },
+  {
     "id": "CVE-2026-25639",
     "cveId": "CVE-2026-25639",
     "aliases": [
@@ -3390,7 +3465,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00067
+    "epss": 0.00044
   },
   {
     "id": "CVE-2026-46640",
@@ -3503,80 +3578,6 @@
     "tags": [
       "backend"
     ]
-  },
-  {
-    "id": "CVE-2019-10744",
-    "cveId": "CVE-2019-10744",
-    "aliases": [
-      "CVE-2019-10744"
-    ],
-    "title": "Prototype Pollution in lodash",
-    "summary": "Prototype Pollution in lodash",
-    "details": "Versions of `lodash` before 4.17.12 are vulnerable to Prototype Pollution. The function `defaultsDeep` allows a malicious user to modify the prototype of `Object` via `{constructor: {prototype: {...}}}` causing the addition or modification of an existing property that will exist on all objects. ## Recommendation Update to version 4.17.12 or later.",
-    "severity": "critical",
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "npm",
-      "generic"
-    ],
-    "cwe": [
-      "CWE-1321",
-      "CWE-20"
-    ],
-    "affected": [
-      {
-        "ecosystem": "npm",
-        "package": "lodash",
-        "versions": ">=0 <4.17.12",
-        "fixedIn": "4.17.12"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "lodash-es",
-        "versions": ">=0 <4.17.14",
-        "fixedIn": "4.17.14"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "lodash-amd",
-        "versions": ">=0 <4.17.13",
-        "fixedIn": "4.17.13"
-      },
-      {
-        "ecosystem": "npm",
-        "package": "lodash.defaultsdeep",
-        "versions": ">=0 <4.6.1",
-        "fixedIn": "4.6.1"
-      },
-      {
-        "ecosystem": "generic",
-        "package": "lodash-rails",
-        "versions": ">=0 <4.17.12",
-        "fixedIn": "4.17.12"
-      }
-    ],
-    "stackMatch": {
-      "score": 60,
-      "packages": [
-        "lodash"
-      ],
-      "reason": "direct-dep"
-    },
-    "priority": 61,
-    "publishedAt": "2019-07-10T19:45:23.000Z",
-    "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-22T13:47:27.988Z",
-    "sources": [
-      {
-        "source": "osv",
-        "externalId": "GHSA-jf85-cpcp-j695",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10744",
-        "fetchedAt": "2026-05-22T13:47:27.988Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.03194
   },
   {
     "id": "CVE-2026-46634",
@@ -3742,7 +3743,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.0004
+    "epss": 0.00053
   },
   {
     "id": "CVE-2026-44579",
@@ -3796,7 +3797,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00058
+    "epss": 0.00019
   },
   {
     "id": "CVE-2026-44574",
@@ -3850,7 +3851,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00033
+    "epss": 0.00011
   },
   {
     "id": "CVE-2026-47730",
@@ -3949,7 +3950,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00035
+    "epss": 0.00011
   },
   {
     "id": "CVE-2026-44580",
@@ -4590,7 +4591,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00037
+    "epss": 0.00063
   },
   {
     "id": "CVE-2025-62718",
@@ -4645,7 +4646,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00061
+    "epss": 0.00069
   },
   {
     "id": "CVE-2026-2950",
@@ -5272,7 +5273,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.0002
+    "epss": 0.00009
   },
   {
     "id": "CVE-2026-42040",
@@ -6712,7 +6713,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00031
+    "epss": 0.0004
   },
   {
     "id": "CVE-2026-27980",
@@ -7593,7 +7594,45 @@
       }
     ],
     "tags": [],
-    "epss": 0.00207
+    "epss": 0.00213
+  },
+  {
+    "id": "h-b77627a0b21c",
+    "aliases": [
+      "6jEQvtyNrxoxhmH9OfOBvX"
+    ],
+    "title": "Announcing Claude Compliance API support with Cloudflare CASB",
+    "summary": "Cloudflare now integrates with the Claude Compliance API, so that security teams can monitor Claude Enterprise activity directly in the Cloudflare Dashboard.",
+    "details": "Cloudflare now integrates with the Claude Compliance API, so that security teams can monitor Claude Enterprise activity directly in the Cloudflare Dashboard.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 40,
+      "packages": [
+        "claude"
+      ],
+      "reason": "topic-mention"
+    },
+    "priority": 34,
+    "publishedAt": "2026-05-21T17:00:00.000Z",
+    "modifiedAt": "2026-05-21T17:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.335Z",
+    "sources": [
+      {
+        "source": "cloudflare-blog",
+        "externalId": "6jEQvtyNrxoxhmH9OfOBvX",
+        "url": "https://blog.cloudflare.com/casb-anthropic-integration/",
+        "fetchedAt": "2026-05-22T14:02:53.335Z"
+      }
+    ],
+    "tags": [
+      "general"
+    ]
   },
   {
     "id": "h-f3ef7d8a52aa",
@@ -7631,6 +7670,43 @@
     ],
     "tags": [
       "general"
+    ]
+  },
+  {
+    "id": "h-41f43220f644",
+    "aliases": [],
+    "title": "Run Claude Managed Agents with Vercel Sandbox",
+    "summary": "You can now run with .Claude Managed AgentsVercel SandboxClaude Managed Agents handles the model, harness, tools, and session state. Self-hosting lets you bring the execution environment, so an agent's tool calls run on your existing Vercel infrastructure with your private APIs, internal services, and customer data.Each agent session runs in its own isolated Firecracker microVM, using the same infrastructure that powers 1B+ Vercel deployments with enterprise-grade security, availability, and performance.What you get:Follow the for a reference implementation and learn more in the . step-by-step",
+    "details": "You can now run with .Claude Managed AgentsVercel SandboxClaude Managed Agents handles the model, harness, tools, and session state. Self-hosting lets you bring the execution environment, so an agent's tool calls run on your existing Vercel infrastructure with your private APIs, internal services, and customer data.Each agent session runs in its own isolated Firecracker microVM, using the same infrastructure that powers 1B+ Vercel deployments with enterprise-grade security, availability, and performance.What you get:Follow the for a reference implementation and learn more in the . step-by-step guideVercel Sandbox docsRead more from Anthropic, including the model, harness, tools, and session stateA managed agent loopthat spawns a sandbox per sessionA Vercel function control plane per session, with millisecond startupFirecracker microVM isolation at the firewall, so secrets never enter the sandboxCredential brokering with a domain allowlistDeny-by-default egress to your private network and cloud workloadsLow-latency connectivity",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 40,
+      "packages": [
+        "claude"
+      ],
+      "reason": "topic-mention"
+    },
+    "priority": 34,
+    "publishedAt": "2026-05-18T23:01:00.000Z",
+    "modifiedAt": "2026-05-18T23:01:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.291Z",
+    "sources": [
+      {
+        "source": "vercel-changelog",
+        "externalId": "https://vercel.com/changelog/run-claude-managed-agents-with-vercel-sandbox",
+        "url": "https://vercel.com/changelog/run-claude-managed-agents-with-vercel-sandbox",
+        "fetchedAt": "2026-05-22T14:02:53.291Z"
+      }
+    ],
+    "tags": [
+      "frontend",
+      "nextjs"
     ]
   },
   {
@@ -7705,6 +7781,45 @@
       }
     ],
     "tags": [
+      "general"
+    ]
+  },
+  {
+    "id": "h-2c275507b440",
+    "aliases": [
+      "/node/24867"
+    ],
+    "title": "Siemens gWAP",
+    "summary": "View CSAF Summary Siemens gPROMS Web Applications Publisher (gWAP) is affected by a remote code execution vulnerability introduced through a third-party component, namely the Axios HTTP client library. The vulnerability stems from a specific \"Gadget\" attack chain that allows prototype pollution in other third-party libraries, potentially allowing an attacker to execute arbitrary code. Siemens has released a new version for gWAP and recommends to update to the latest version. The following versions of Siemens gWAP are affected: gWAP vers:intdot/&lt;3.1.1&nbsp; CVSS Vendor Equipment Vulnerabilit",
+    "details": "View CSAF Summary Siemens gPROMS Web Applications Publisher (gWAP) is affected by a remote code execution vulnerability introduced through a third-party component, namely the Axios HTTP client library. The vulnerability stems from a specific \"Gadget\" attack chain that allows prototype pollution in other third-party libraries, potentially allowing an attacker to execute arbitrary code. Siemens has released a new version for gWAP and recommends to update to the latest version. The following versions of Siemens gWAP are affected: gWAP vers:intdot/&lt;3.1.1&nbsp; CVSS Vendor Equipment Vulnerabilities v3 8 Siemens Siemens gWAP Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting') Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-40175 Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0 and 0.3.1, the Axios library is vulnerable to a specific \"Gadget\" attack chain that allows Prototype Pollution in any third-party dependency to be escalated into Remote Code Execution (RCE) or Full Cloud Compromise (via AWS IMDSv2 bypass). This vulnerability is fixed in 1.15.0 and 0.3.1. View CVE Details Affected Products Siemens gWAP Vendor:Siemens Product Version:gWAP Product Status:known_affected Remediations Vendor fixUpdate to V3.1.1 or later versionhttps://support.sw.siemens.com/product/284395347/ Relevant CWE: CWE-113 Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting') Metrics CVSS Version Base Score Base Severity Vector String 3.1 8 HIGH CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H Acknowledgments Siemens ProductCERT reported this vulnerability to CISA. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages orga",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 40,
+      "packages": [
+        "axios"
+      ],
+      "reason": "topic-mention"
+    },
+    "priority": 29,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24867",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-01",
+        "fetchedAt": "2026-05-22T14:02:52.738Z"
+      }
+    ],
+    "tags": [
+      "exploited",
       "general"
     ]
   },
@@ -9333,7 +9448,8 @@
         "fetchedAt": "2026-05-22T13:47:20.246Z"
       }
     ],
-    "tags": []
+    "tags": [],
+    "epss": 0.00041
   },
   {
     "id": "h-062df95e7052",
@@ -9421,7 +9537,8 @@
         "fetchedAt": "2026-05-22T13:47:20.246Z"
       }
     ],
-    "tags": []
+    "tags": [],
+    "epss": 0.00007
   },
   {
     "id": "CVE-2026-34927",
@@ -9459,7 +9576,8 @@
         "fetchedAt": "2026-05-22T13:47:20.246Z"
       }
     ],
-    "tags": []
+    "tags": [],
+    "epss": 0.00013
   },
   {
     "id": "CVE-2026-43060",
@@ -9819,7 +9937,8 @@
         "fetchedAt": "2026-05-22T13:47:20.246Z"
       }
     ],
-    "tags": []
+    "tags": [],
+    "epss": 0.00042
   },
   {
     "id": "h-7b4713e593b8",
@@ -10070,6 +10189,191 @@
       }
     ],
     "tags": [
+      "general"
+    ]
+  },
+  {
+    "id": "h-5df1c0008008",
+    "aliases": [
+      "/node/24917"
+    ],
+    "title": "ABB Terra AC Wallbox",
+    "summary": "View CSAF Summary ABB is aware of vulnerabilities in the product versions listed as affected in the advisory. An attacker who successfully exploited this vulnerability could cause the pollution of heap memory which potentially takes remote control of the product and performs a write operation to the flash memory to alter the firmware behavior. The following versions of ABB Terra AC Wallbox are affected: Terra AC wallbox (JP) &lt;=1.8.33, 1.8.36 (CVE-2025-10504, CVE-2025-12142, CVE-2025-12143) CVSS Vendor Equipment Vulnerabilities v3 6.1 ABB ABB Terra AC Wallbox Heap-based Buffer Overflow, Buff",
+    "details": "View CSAF Summary ABB is aware of vulnerabilities in the product versions listed as affected in the advisory. An attacker who successfully exploited this vulnerability could cause the pollution of heap memory which potentially takes remote control of the product and performs a write operation to the flash memory to alter the firmware behavior. The following versions of ABB Terra AC Wallbox are affected: Terra AC wallbox (JP) &lt;=1.8.33, 1.8.36 (CVE-2025-10504, CVE-2025-12142, CVE-2025-12143) CVSS Vendor Equipment Vulnerabilities v3 6.1 ABB ABB Terra AC Wallbox Heap-based Buffer Overflow, Buffer Copy without Checking Size of Input ('Classic Buffer Overflow'), Stack-based Buffer Overflow Background Critical Infrastructure Sectors: Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2025-10504 There is potential risk to pollute the memory when developing apps which has used to communicate with charger according to self-defined protocol if developers don’t strictly follow the field length which has not been validated in firmware. View CVE Details Affected Products ABB Terra AC Wallbox Vendor:ABB Product Version:ABB Terra AC wallbox (JP) &lt;=1.8.33 Product Status:fixed, known_affected Remediations Vendor fixThe problem is corrected in the following product version; apply the following update depending on product variant: Terra AC wallbox (JP) 1.8.36 ABB recommends that customers apply the update at earliest convenience. MitigationTo attack with this kind of message, hackers must hijack Bluetooth first and then can send messages. Because the communication messages between BLE and charger have been encrypted. In theory, there is no way to attack the charger. Relevant CWE: CWE-122 Heap-based Buffer Overflow Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.1 MEDIUM CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H/E:P/RL:O/RC:C CVE-2025-12142 There is potential risk of polluting the BSS memory when developing apps which are used to communicate with charger via Bluetooth according to self-defined protocol if developers configure an unexpected length of bin files. View CVE Details Affected Products ABB Terra AC Wallbox Vendor:ABB Product Version:ABB Terra AC wallbox (JP) &lt;=1.8.33 Product Status:fixed, known_affected Remediations Vendor fixThe problem is corrected in the following product version; apply the following update depending on product variant: Terra AC wallbox (JP) 1.8.36 ABB recommends that customers apply the update at earliest convenience. MitigationTo attack with this kind of message, hackers must hijack Bluetooth first and then can send messages. Because the communication messages between BLE and charger have been encrypted. In theory, there is no way to attack the charger. Relevant CWE: CWE-120 Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.1 MEDIUM CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H/E:P/RL:O/RC:C CVE-2025-12143 There is potential risk of polluting the stack memory when developing a customized OCPP key of “Ran-domDelay“ in backend and configuring an unexpected number in the field. View CVE Details Affected Products ABB Terra AC Wallbox Vendor:ABB Product Version:ABB Terra AC wallbox (JP) &lt;=1.8.33 Product Status:fixed, known_affected Remediations Vendor fixThe problem is corrected in the following product version; apply the following update depending on product variant: Terra AC wallbox (JP) 1.8.36 ABB recommends that customers apply the update at earliest convenience. MitigationTo attack with this kind of message, hackers must hijack Bluetooth first and then can send messages. Because the communication messages between BLE and charger have been encrypted. In theory, there is no way to attack the charger. Relevant CWE: CWE-121 Stack-based Buffer Overflow Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.1 MEDIUM CVSS:3.1/AV:",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-21T12:00:00.000Z",
+    "modifiedAt": "2026-05-21T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.730Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24917",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-05",
+        "fetchedAt": "2026-05-22T14:02:52.730Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-8772439648e9",
+    "aliases": [
+      "/node/24913"
+    ],
+    "title": "Hitachi Energy GMS600",
+    "summary": "View CSAF Summary Hitachi Energy is aware of the vulnerability, CVE-2022-4304 in the OSS component OpenSSL, that affects the GMS600 versions that are listed below. An attacker successfully exploiting this vulnerability could send trial messages to the server and record the time taken to process them. After a sufficiently large number of messages the attacker could recover the pre-master secret used for the original connection and thus be able to decrypt the application data sent over that connection. For immediate mitigation /workaround information, please refer to the General Mitigation Facto",
+    "details": "View CSAF Summary Hitachi Energy is aware of the vulnerability, CVE-2022-4304 in the OSS component OpenSSL, that affects the GMS600 versions that are listed below. An attacker successfully exploiting this vulnerability could send trial messages to the server and record the time taken to process them. After a sufficiently large number of messages the attacker could recover the pre-master secret used for the original connection and thus be able to decrypt the application data sent over that connection. For immediate mitigation /workaround information, please refer to the General Mitigation Factors/Workarounds The following versions of Hitachi Energy GMS600 are affected: GMS600 vers:GMS600/&gt;=1.3.0|&lt;=1.3.1 (CVE-2022-4304) CVSS Vendor Equipment Vulnerabilities v3 5.9 Hitachi Energy Hitachi Energy GMS600 Observable Discrepancy Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2022-4304 A timing-based side channel exists in the OpenSSL RSA Decryption implementation which could be sufficient to recover a plaintext across a network in a Bleichenbacher style attack. To achieve a successful decryption an attacker would have to be able to send a very large number of trial messages for decryption. The vulnerability affects all RSA padding modes: PKCS#1 v1.5, RSA-OEAP and RSASVE. For example, in a TLS connection, RSA is commonly used by a client to send an encrypted pre-master secret to the server. An attacker that had observed a genuine connection between a client and a server could use this flaw to send trial messages to the server and record the time taken to process them. After a sufficiently large number of messages the attacker could recover the pre-master secret used for the original connection and thus be able to decrypt the application data sent over that connection. View CVE Details Affected Products Hitachi Energy GMS600 Vendor:Hitachi Energy Product Version:GMS600 versions 1.3.0 and 1.3.1 Product Status:known_affected Remediations Vendor fixUpgrade to version 1.3.2 Relevant CWE: CWE-203 Observable Discrepancy Metrics CVSS Version Base Score Base Severity Vector String 3.1 5.9 MEDIUM CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N Acknowledgments Hitachi Energy Internal Team reported this vulnerability to CISA Notice The information in this document is subject to change without notice and should not be construed as a commitment by Hitachi Energy. Hitachi Energy provides no warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, for the information contained in this document, and assumes no responsibility for any errors that may appear in this document. In no event shall Hitachi Energy or any of its suppliers be liable for direct, indirect, special, incidental or consequential damages of any nature or kind arising from the use of this document, or from the use of any hardware or software described in this document, even if Hitachi Energy or its suppliers have been advised of the possibility of such damages. This document and parts hereof must not be reproduced or copied without written permission from Hitachi Energy and the contents hereof must not be imparted to a third party nor used for any unauthorized purpose. All rights to registrations and trademarks reside with their respective owners. Support For additional information and support please contact your product provider or Hitachi Energy service organization. For contact information, see https://www.hitachienergy.com/contact-us/ for Hitachi Energy contact-centers. General Mitigation Factors Recommended security practices and firewall configurations such as enforcing ingress IP allowlisting and applying traffic rate limiting in accordance with the operational security policy can help protect a process control network from attacks that originate from outside the network. Such practices include th",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-21T12:00:00.000Z",
+    "modifiedAt": "2026-05-21T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.730Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24913",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-01",
+        "fetchedAt": "2026-05-22T14:02:52.730Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-53a4f928ef13",
+    "aliases": [
+      "/node/24915"
+    ],
+    "title": "ABB B&R Automation Studio",
+    "summary": "View CSAF Summary ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is available that replaces an outdated third-party component. Although no successful exploitation was observed during testing of the affected B&amp;R products, the identified vulnerabilities could present potential attack vectors that might enable unauthorized access, data exposure, or remote code execution. The following versions of ABB B&amp;R Automation Studio are affected: B&amp;R Automation Studio &lt;6.5, 6.5 (CVE-2025-6965, CVE-2025-3277, CVE-2023-7104, CVE-2022-3573",
+    "details": "View CSAF Summary ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is available that replaces an outdated third-party component. Although no successful exploitation was observed during testing of the affected B&amp;R products, the identified vulnerabilities could present potential attack vectors that might enable unauthorized access, data exposure, or remote code execution. The following versions of ABB B&amp;R Automation Studio are affected: B&amp;R Automation Studio &lt;6.5, 6.5 (CVE-2025-6965, CVE-2025-3277, CVE-2023-7104, CVE-2022-35737, CVE-2020-15358, CVE-2020-13632, CVE-2020-13631, CVE-2020-13630, CVE-2020-13435, CVE-2020-13434, CVE-2020-11656, CVE-2020-11655, CVE-2019-19646, CVE-2019-19645, CVE-2019-8457, CVE-2018-20506, CVE-2018-20505, CVE-2018-20346, CVE-2018-8740, CVE-2017-10989, CVE-2016-6153, CVE-2015-6607, CVE-2015-5895, CVE-2015-3717, CVE-2015-3416) CVSS Vendor Equipment Vulnerabilities v3 9.8 ABB ABB B&amp;R Automation Studio Numeric Truncation Error, Heap-based Buffer Overflow, Improper Restriction of Operations within the Bounds of a Memory Buffer, Out-of-bounds Write, NULL Pointer Dereference, Incorrect User Management, Use After Free, Integer Overflow or Wraparound, Improper Check for Unusual or Exceptional Conditions, Uncontrolled Recursion, Out-of-bounds Read, Improper Input Validation, Exposure of Sensitive Information to an Unauthorized Actor, Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') Background Critical Infrastructure Sectors: Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2025-6965 There exists a vulnerability in SQLite versions before 3.50.2 where the number of aggregate terms could exceed the number of columns available. This could lead to a memory corruption issue. View CVE Details Affected Products ABB B&amp;R Automation Studio Vendor:ABB Product Version:ABB B&amp;R Automation Studio &lt;6.5 Product Status:fixed, known_affected Remediations Vendor fixThe problem is corrected in the following product versions: B&amp;R Automation Studio 6.5 B&amp;R recommends that customers apply the update at earliest convenience. The process to install updates is described in the user manual. The step to identify the installed product version is described in the user manual. MitigationRefer to section “General security recommendations” for advice on how to keep your system secure. Relevant CWE: CWE-197 Numeric Truncation Error Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.8 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C CVE-2025-3277 An integer overflow vulnerability exists in SQLite's concat_ws() function that can lead to a massive heap buffer overflow. When triggered, the integer overflow results in a truncated size value being used for buffer allocation, while the original untruncated size is used for writing the resulting string, causing a heap buffer overflow of approximately 4GB. View CVE Details Affected Products ABB B&amp;R Automation Studio Vendor:ABB Product Version:ABB B&amp;R Automation Studio &lt;6.5 Product Status:fixed, known_affected Remediations Vendor fixThe problem is corrected in the following product versions: B&amp;R Automation Studio 6.5 B&amp;R recommends that customers apply the update at earliest convenience. The process to install updates is described in the user manual. The step to identify the installed product version is described in the user manual. MitigationRefer to section “General security recommendations” for advice on how to keep your system secure. Relevant CWE: CWE-122 Heap-based Buffer Overflow Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.8 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:O/RC:C CVE-2023-7104 A vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the ",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-21T12:00:00.000Z",
+    "modifiedAt": "2026-05-21T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.730Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24915",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-03",
+        "fetchedAt": "2026-05-22T14:02:52.730Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-f9751d784a18",
+    "aliases": [
+      "/node/24916"
+    ],
+    "title": "ABB B&R Automation Runtime",
+    "summary": "View CSAF Summary An update is available that resolves a vulnerability identified by B&amp;Rs internal security analysis in the product versions listed as affected in this advisory. An attacker who successfully exploited these vulnerabilities could take over a remote session or execute code in the context of the user’s browser session. The following versions of ABB B&amp;R Automation Runtime are affected: Automation Runtime &lt;6.4, 6.4 (CVE-2025-3449, CVE-2025-3448, CVE-2025-11498) CVSS Vendor Equipment Vulnerabilities v3 6.1 B&amp;R ABB B&amp;R Automation Runtime Generation of Predictable Nu",
+    "details": "View CSAF Summary An update is available that resolves a vulnerability identified by B&amp;Rs internal security analysis in the product versions listed as affected in this advisory. An attacker who successfully exploited these vulnerabilities could take over a remote session or execute code in the context of the user’s browser session. The following versions of ABB B&amp;R Automation Runtime are affected: Automation Runtime &lt;6.4, 6.4 (CVE-2025-3449, CVE-2025-3448, CVE-2025-11498) CVSS Vendor Equipment Vulnerabilities v3 6.1 B&amp;R ABB B&amp;R Automation Runtime Generation of Predictable Numbers or Identifiers, Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'), Improper Neutralization of Formula Elements in a CSV File Background Critical Infrastructure Sectors: Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2025-3449 A Generation of Predictable Numbers or Identifiers vulnerability in the SDM component of B&amp;R Automation Runtime versions before 6.4 may allow an unauthenticated network-based attacker to take over already established sessions. View CVE Details Affected Products ABB B&amp;R Automation Runtime Vendor:B&amp;R Product Version:Automation Runtime &lt;6.4 Product Status:fixed, known_affected Remediations Vendor fixThe problem is corrected in Automation Runtime 6.4. The System Diagnostic Manager (SDM) is disabled by default in Automation Runtime 6 and is not intended be enabled on active systems located outside properly secured production networks or in facilities lacking adequate physical and logical access controls to prevent any form of unauthorized interaction. For customers who use SDM on their systems, B&amp;R recommends applying the update based on risk assessment at the earliest convenience. The process to install updates is described in the user manual. The step to identify the installed product version is described in the user manual. Relevant CWE: CWE-340 Generation of Predictable Numbers or Identifiers Metrics CVSS Version Base Score Base Severity Vector String 3.1 4.2 MEDIUM CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N/E:F/RL:O/RC:C CVE-2025-3448 Reflected cross-site scripting (XSS) vulnerabilities exist in System Diagnostics Manager (SDM) of B&amp;R Automation Runtime versions before 6.4 that enables a remote attacker to execute arbitrary JavaScript code in the context of the attacked user’s browser session View CVE Details Affected Products ABB B&amp;R Automation Runtime Vendor:B&amp;R Product Version:Automation Runtime &lt;6.4 Product Status:fixed, known_affected Remediations Vendor fixThe problem is corrected in Automation Runtime 6.4. The System Diagnostic Manager (SDM) is disabled by default in Automation Runtime 6 and is not intended be enabled on active systems located outside properly secured production networks or in facilities lacking adequate physical and logical access controls to prevent any form of unauthorized interaction. For customers who use SDM on their systems, B&amp;R recommends applying the update based on risk assessment at the earliest convenience. The process to install updates is described in the user manual. The step to identify the installed product version is described in the user manual. Relevant CWE: CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.1 MEDIUM CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N/E:F/RC:C CVE-2025-11498 An Improper Neutralization of Formula Elements in a CSV File vulnerability exists in System Diagnostics Manager (SDM) of B&amp;R Automation Runtime versions before 6.4 enabling a remote attacker to inject formula data into a generated CSV file. The exploitation of this vulnerability requires the attack-er to create a malicious link. The user would need to click on this link, after which the resulting CSV file additionally needs to be manu",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-21T12:00:00.000Z",
+    "modifiedAt": "2026-05-21T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.730Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24916",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-04",
+        "fetchedAt": "2026-05-22T14:02:52.730Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-ddda992f74c1",
+    "aliases": [
+      "/node/24914"
+    ],
+    "title": "ABB B&R PCs",
+    "summary": "View CSAF Summary ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is now available that addresses and remediates the vulnerability. A network attacker could exploit the vulnerabilities to execute remote code, initiate DoS attacks, conduct DNS cache poisoning, or extract sensitive information. The following versions of ABB B&amp;R PCs are affected: APC4100 &lt;1.09, 1.09 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) APC910 &lt;=1.25 (CVE-2023",
+    "details": "View CSAF Summary ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is now available that addresses and remediates the vulnerability. A network attacker could exploit the vulnerabilities to execute remote code, initiate DoS attacks, conduct DNS cache poisoning, or extract sensitive information. The following versions of ABB B&amp;R PCs are affected: APC4100 &lt;1.09, 1.09 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) APC910 &lt;=1.25 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) C80 &lt;1.14, 1.14 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) MPC3100 &lt;1.24, 1.24 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) PPC1200 &lt;1.14, 1.14 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) PPC900 &lt;2.16, 2.16 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) APC2200 &lt;1.35, 1.35 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) PPC2200 &lt;1.35, 1.35 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) APC3100 &lt;1.45, 1.45 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) PPC3100 &lt;1.45, 1.45 (CVE-2023-45229, CVE-2023-45230, CVE-2023-45231, CVE-2023-45232, CVE-2023-45233, CVE-2023-45234, CVE-2023-45235, CVE-2023-45236, CVE-2023-45237) CVSS Vendor Equipment Vulnerabilities v3 8.3 ABB ABB B&amp;R PCs Out-of-bounds Read, Improper Restriction of Operations within the Bounds of a Memory Buffer, Loop with Unreachable Exit Condition ('Infinite Loop'), Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG) Background Critical Infrastructure Sectors: Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2023-45229 EDK2's Network Package is susceptible to an out-of-bounds read vulnerability when processing the IA_NA or IA_TA option in a DHCPv6 Advertise message. This vulnerability can be exploited by an attacker to gain unauthorized access and potentially lead to a loss of Confidentiality. View CVE Details Affected Products ABB B&amp;R PCs Vendor:ABB Product Version:ABB APC4100 &lt;1.09, ABB APC910 &lt;=1.25, ABB C80 &lt;1.14, ABB MPC3100 &lt;1.24, ABB PPC1200 &lt;1.14, ABB PPC900 &lt;2.16, ABB APC2200 &lt;1.35, ABB PPC2200 &lt;1.35, ABB APC3100 &lt;1.45, ABB PPC3100 &lt;1.45 Product Status:fixed, known_affected Remediations Vendor fixThe problems are corrected in the following product versions: - APC4100 1.09 - APC910 No patch will be released (Please refer to the mitigation measures specified in this advisory). - C80 1.14 - MPC3100 1.24 - PPC1200 1.14 - PPC900 2.16 - APC2200 1.35 - PPC2200 1.35 - APC3100 1.45 - PPC3100 1.45 B&amp;R recommends that customers apply the update at earliest convenience. The process to install updates is described in the user manual. The step to identify the installed product version is described in the user manual. MitigationDeactivate the vulnerable component - The vulnerabilities exist in the Preboot eXecution Environment (PXE) of the UEFI firmware. If this functionality is not needed, it is recommended to disable it in the UEFI settings, thus making the vulnerabilities not exploitable. Limit accessibility - If PXE function",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-21T12:00:00.000Z",
+    "modifiedAt": "2026-05-21T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.731Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24914",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-02",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      }
+    ],
+    "tags": [
+      "exploited",
       "general"
     ]
   },
@@ -10391,6 +10695,42 @@
         "externalId": "https://www.bleepingcomputer.com/news/security/ukraine-identifies-infostealer-operator-tied-to-28-000-stolen-accounts/",
         "url": "https://www.bleepingcomputer.com/news/security/ukraine-identifies-infostealer-operator-tied-to-28-000-stolen-accounts/",
         "fetchedAt": "2026-05-22T13:47:20.287Z"
+      }
+    ],
+    "tags": [
+      "general"
+    ]
+  },
+  {
+    "id": "h-450c4c607ad5",
+    "aliases": [
+      "https://github.blog/?p=96242"
+    ],
+    "title": "Investigating unauthorized access to GitHub-owned repositories",
+    "summary": "If any impact is discovered, customers will be notified via established incident response and notification channels. The post Investigating unauthorized access to GitHub-owned repositories appeared first on The GitHub Blog.",
+    "details": "If any impact is discovered, customers will be notified via established incident response and notification channels. The post Investigating unauthorized access to GitHub-owned repositories appeared first on The GitHub Blog.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-20T21:07:38.000Z",
+    "modifiedAt": "2026-05-20T21:07:38.000Z",
+    "mergedAt": "2026-05-22T14:02:52.881Z",
+    "sources": [
+      {
+        "source": "github-security-lab",
+        "externalId": "https://github.blog/?p=96242",
+        "url": "https://github.blog/security/investigating-unauthorized-access-to-githubs-internal-repositories/",
+        "fetchedAt": "2026-05-22T14:02:52.881Z"
       }
     ],
     "tags": [
@@ -10722,6 +11062,191 @@
     ]
   },
   {
+    "id": "h-bb1e4f0c8a66",
+    "aliases": [
+      "/node/24890"
+    ],
+    "title": "Siemens RUGGEDCOM APE1808 Devices",
+    "summary": "View CSAF Summary A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. Siemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications. [1] https://security.paloaltonetwor",
+    "details": "View CSAF Summary A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. Siemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications. [1] https://security.paloaltonetworks.com/ The following versions of Siemens RUGGEDCOM APE1808 Devices are affected: RUGGEDCOM APE1808 vers:all/* (CVE-2026-0300) CVSS Vendor Equipment Vulnerabilities v3 10 Siemens Siemens RUGGEDCOM APE1808 Devices Out-of-bounds Write Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-0300 A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. View CVE Details Affected Products Siemens RUGGEDCOM APE1808 Devices Vendor:Siemens Product Version:RUGGEDCOM APE1808 Product Status:known_affected Remediations MitigationDisable Response Pages in the Interface Management Profile attached to every L3 interface in any zone where untrusted/internet traffic can ingress. Keep Response Pages enabled only on interfaces in trust/internal zones where legitimate users' browsers ingress MitigationDisable User-ID™ Authentication Portal if not required MitigationRestrict access to the User-ID Authentication Portal to trusted internal IP addresses only Vendor fixContact customer support to receive patch and update information Relevant CWE: CWE-787 Out-of-bounds Write Metrics CVSS Version Base Score Base Severity Vector String 3.1 10 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Acknowledgments Siemens ProductCERT reported this vulnerability to CISA. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. CISA reminds organizations to ",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.731Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24890",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-336d10ec29e2",
+    "aliases": [
+      "/node/24889"
+    ],
+    "title": "ABB CoreSense HM and CoreSense M10",
+    "summary": "View CSAF Summary An update is available that resolves vulnerability in the product versions listed as affected in this advisory. A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. The following versions of ABB CoreSense HM and CoreSense M10 are affected: CoreSense™ HM &lt;=2.3.1, 2.3.4 (CVE-2025-3465) CoreSense™ M10 &lt;=1.4.1.12, 1.4.1.31 (CVE-2025-3465) CVSS Vendor Equipment Vulnerabilities v3 7.1 ABB ABB CoreSens",
+    "details": "View CSAF Summary An update is available that resolves vulnerability in the product versions listed as affected in this advisory. A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. The following versions of ABB CoreSense HM and CoreSense M10 are affected: CoreSense™ HM &lt;=2.3.1, 2.3.4 (CVE-2025-3465) CoreSense™ M10 &lt;=1.4.1.12, 1.4.1.31 (CVE-2025-3465) CVSS Vendor Equipment Vulnerabilities v3 7.1 ABB ABB CoreSense HM and CoreSense M10 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') Background Critical Infrastructure Sectors: Food and Agriculture, Commercial Facilities, Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2025-3465 A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. View CVE Details Affected Products ABB CoreSense HM and CoreSense M10 Vendor:ABB Product Version:CoreSense™ HM&lt;=2.3.1, CoreSense™ M10&lt;=1.4.1.12 Product Status:fixed, known_affected Remediations Vendor fixThe vulnerabilities are corrected in the following version: CoreSense™ HM v2.3.4 &amp; CoreSense™ M10 v1.4.1.31 ABB recommends that customers apply the update at the earliest convenience. Relevant CWE: CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.1 HIGH CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Acknowledgments ABB reported this vulnerability to CISA. Notice The information in this document is subject to change without notice and should not be construed as a commitment by ABB. ABB provides no warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, for the information contained in this document, and assumes no responsibility for any errors that may appear in this document. In no event shall ABB or any of its suppliers be liable for direct, indirect, special, incidental or consequential damage of any nature or kind arising from the use of this document, or from the use of any hardware or software described in this document, even if ABB or its suppliers have been advised of the possibility of such damage. This document and parts hereof must not be reproduced or copied without written permission from ABB, and the contents hereof must not be imparted to a third party nor used for any unauthorized purpose. All rights to registrations and trademarks reside with their respective owners. Mitigating factors The path traversal vulnerability is only exploitable when the attacker has local access to the machine hosting the web application (i.e., access to localhost). To mitigate this vulnerability, the affected products should be configured to restrict local access to authorized users only, ensuring that untrusted users cannot interact with the application directly on the host system. ABB has restricted file downloads to a specific directory designated solely for downloadable content. Strict input validation and path sanitization are implemented to ensure that only legitimate file paths within this directory can be accessed. Refer to section “General Security Recommendations” for further advise on how to keep your system secure. Frequently Asked Questions What causes the vulnerability? The vulnerability is caused by unchecked input data in the file parameter in the CoreSense products. What might an attacker use the vulnerability to do? An attacker who successfully exploited this vulnerability can allow unauthenticated users to gain access to restricted directories and can lead to complete system compromise and exposure of sensitive",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.731Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24889",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-01",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-d55b731bc1f4",
+    "aliases": [
+      "/node/24891"
+    ],
+    "title": "ScadaBR",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to perform unauthenticated remote code execution. The following versions of ScadaBR are affected: ScadaBR 1.2.0 (CVE-2026-8602, CVE-2026-8603, CVE-2026-8604, CVE-2026-8605) CVSS Vendor Equipment Vulnerabilities v3 9.1 ScadaBR ScadaBR Missing Authentication for Critical Function, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'), Cross-Site Request Forgery (CSRF), Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Critical Manufacturing, Dams",
+    "details": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to perform unauthenticated remote code execution. The following versions of ScadaBR are affected: ScadaBR 1.2.0 (CVE-2026-8602, CVE-2026-8603, CVE-2026-8604, CVE-2026-8605) CVSS Vendor Equipment Vulnerabilities v3 9.1 ScadaBR ScadaBR Missing Authentication for Critical Function, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'), Cross-Site Request Forgery (CSRF), Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Critical Manufacturing, Dams, Chemical, Energy, Water and Wastewater Countries/Areas Deployed: Worldwide Company Headquarters Location: Brazil Vulnerabilities Expand All + CVE-2026-8602 In ScadaBR version 1.2.0, a Missing Authentication for Critical Function vulnerability could allow an unauthenticated attacker to send a HTTP GET requests to the SCADA system and inject arbitrary sensor readings. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-306 Missing Authentication for Critical Function Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.1 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H CVE-2026-8603 In ScadaBR version 1.2.0, an OS Command Injection vulnerability could allow an attacker to execute commands as root on the SCADA system. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') Metrics CVSS Version Base Score Base Severity Vector String 3.1 8.8 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H CVE-2026-8604 In ScadaBR version 1.2.0, a CSRF vulnerability could allow an attacker to trigger any authenticated action through a victim's session by luring any logged-in user to a malicious webpage. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-352 Cross-Site Request Forgery (CSRF) Metrics CVSS Version Base Score Base Severity Vector String 3.1 8.8 HIGH CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H CVE-2026-8605 In ScadaBR version 1.2.0, a Use of Hard-Coded Credentials vulnerability could allow an attacker to access the SCADA system as admin. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-798 Use of Hard-coded Credentials Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.1 MEDIUM CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Acknowledgments Arad Inbar, Nir Somech, Ben Grinberg, Daniel Lubel, Erez Cohen, and Adiel Sol of DREAM reported these vulnerabilities to CISA Leg",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.731Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24891",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-03",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-21a4b339a955",
+    "aliases": [
+      "/node/24893"
+    ],
+    "title": "Kieback & Peter DDC Building Controllers",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to take control of the victim's browser. The following versions of Kieback &amp; Peter DDC Building Controllers are affected: DDC4002 &lt;=1.12.14 (CVE-2026-4293) DDC4100 &lt;=1.12.14 (CVE-2026-4293) DDC4200 &lt;=1.12.14 (CVE-2026-4293) DDC4200-L &lt;=1.12.14 (CVE-2026-4293) DDC4400 &lt;=1.12.14 (CVE-2026-4293) DDC4002e &lt;=1.23.4 (CVE-2026-4293) DDC4200e &lt;=1.23.4 (CVE-2026-4293) DDC4400e &lt;=1.23.4 (CVE-2026-4293) DDC4020e &lt;=1.23.4 (CVE-2026-4293) DDC4040e &lt;=1.23.4 (CVE-2026-4293) DDC520 &lt;=1.",
+    "details": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to take control of the victim's browser. The following versions of Kieback &amp; Peter DDC Building Controllers are affected: DDC4002 &lt;=1.12.14 (CVE-2026-4293) DDC4100 &lt;=1.12.14 (CVE-2026-4293) DDC4200 &lt;=1.12.14 (CVE-2026-4293) DDC4200-L &lt;=1.12.14 (CVE-2026-4293) DDC4400 &lt;=1.12.14 (CVE-2026-4293) DDC4002e &lt;=1.23.4 (CVE-2026-4293) DDC4200e &lt;=1.23.4 (CVE-2026-4293) DDC4400e &lt;=1.23.4 (CVE-2026-4293) DDC4020e &lt;=1.23.4 (CVE-2026-4293) DDC4040e &lt;=1.23.4 (CVE-2026-4293) DDC520 &lt;=1.24.1 (CVE-2026-4293) CVSS Vendor Equipment Vulnerabilities v3 5.3 Kieback &amp; Peter Kieback &amp; Peter DDC Building Controllers Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Background Critical Infrastructure Sectors: Commercial Facilities, Communications, Financial Services, Food and Agriculture, Government Services and Facilities, Healthcare and Public Health, Information Technology Countries/Areas Deployed: Austria, China, France, Germany, United Arab Emirates Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-4293 The affected products are vulnerable to cross-site scripting (XSS), enabling JavaScript to be executed by the victim's browser, which allows the attacker to control the browser. View CVE Details Affected Products Kieback &amp; Peter DDC Building Controllers Vendor:Kieback &amp; Peter Product Version:Kieback &amp; Peter DDC4002: &lt;=1.12.14, Kieback &amp; Peter DDC4100: &lt;=1.12.14, Kieback &amp; Peter DDC4200: &lt;=1.12.14, Kieback &amp; Peter DDC4200-L: &lt;=1.12.14, Kieback &amp; Peter DDC4400: &lt;=1.12.14, Kieback &amp; Peter DDC4002e: &lt;=1.23.4, Kieback &amp; Peter DDC4200e: &lt;=1.23.4, Kieback &amp; Peter DDC4400e: &lt;=1.23.4, Kieback &amp; Peter DDC4020e: &lt;=1.23.4, Kieback &amp; Peter DDC4040e: &lt;=1.23.4, Kieback &amp; Peter DDC520: &lt;=1.24.1 Product Status:known_affected Remediations MitigationKieback &amp; Peter DDC Building Controllers are developed and designed for use in closed building automation networks. The system is protected by a multi-level perimeter against attacks, especially from outside, by dividing it into operational technology (OT) zones with firewalls. Building automation systems (BA systems) in general should not be directly accessible from untrusted networks, especially from the Internet, but should be protected by consistently applying the defense-in-depth strategy. This concept is supported by organizational measures in the building as part of a safety management system. In order to achieve safety, measures are required at all levels. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: These devices must be operated in a strictly separate OT environment. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Only trusted individuals should be granted network access to the DDC web portal. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Access to the web portal should be disabled in the device configuration if not required. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Users should be informed that only links from trusted sources should be used to access the web service. Vendor fixFor the DDC520, DDC4002e, DDC4200e, DDC4400e, DDC4020e, and DDC4040e controllers, Kieback &amp; Peter recommends the following safety measure: Restrict network access to the device Vendor fixFor the DDC520, DDC4002e, DDC4200e, DDC4400e, DDC4020e, and DDC4040e controllers, Kieback &amp; Peter recomm",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.732Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24893",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-05",
+        "fetchedAt": "2026-05-22T14:02:52.732Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-ca054a90fd7d",
+    "aliases": [
+      "/node/24892"
+    ],
+    "title": "ZKTeco CCTV Cameras",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in information disclosure, including capture of camera account credentials. The following versions of ZKTeco CCTV Cameras are affected: SSC335-GC2063-Face-0b77 Solution CVSS Vendor Equipment Vulnerabilities v3 9.1 ZKTeco ZKTeco CCTV Cameras Authentication Bypass Using an Alternate Path or Channel Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-8598 An undocumented configuration export port i",
+    "details": "View CSAF Summary Successful exploitation of this vulnerability could result in information disclosure, including capture of camera account credentials. The following versions of ZKTeco CCTV Cameras are affected: SSC335-GC2063-Face-0b77 Solution CVSS Vendor Equipment Vulnerabilities v3 9.1 ZKTeco ZKTeco CCTV Cameras Authentication Bypass Using an Alternate Path or Channel Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-8598 An undocumented configuration export port is accessible on some models of ZKTeco CCTV cameras. This port does not require authentication and exposes critical information about the camera such as open services and camera account credentials. View CVE Details Affected Products ZKTeco CCTV Cameras Vendor:ZKTeco Product Version:ZKTeco SSC335-GC2063-Face-0b77 Solution: &lt;V5.0.1.2.20260421 Product Status:known_affected Remediations MitigationZKTeco has patched this vulnerability in firmware version V5.0.1.2.20260421. ZKTeco recommends that users upgrade to firmware version V5.0.1.2.20260421 or later at their earliest opportunity. MitigationPlease see the security advisory from ZKTeco here: https://www.zkteco.com/en/announcement/23 for further information.https://www.zkteco.com/en/announcement/23 Relevant CWE: CWE-288 Authentication Bypass Using an Alternate Path or Channel Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.1 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Acknowledgments Souvik Kandar reported this vulnerability to CISA Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability. Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet. Locate control system networks and remote devices behind firewalls and isolating them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents. No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time. Revision History Initial Release Date: 2026-05-19 Date Revision Summary 2026-05-19 1 Initial Publication Legal Notice and Terms of Use",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.732Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24892",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-04",
+        "fetchedAt": "2026-05-22T14:02:52.732Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
     "id": "h-3ba003cb7f92",
     "aliases": [
       "https://thehackernews.com/2026/05/the-new-phishing-click-how-oauth.html"
@@ -10899,6 +11424,41 @@
     ],
     "tags": [
       "general"
+    ]
+  },
+  {
+    "id": "h-accea5ccede3",
+    "aliases": [],
+    "title": "Flat Rate CDN in Limited Beta",
+    "summary": "Flat Rate CDN is now available in Limited Beta for Pro teams. It replaces usage-based CDN pricing with a fixed monthly fee.Viral posts, unfiltered bots, or misconfigured routes can turn a normal month into a surprise bill. Flat Rate CDN makes your cost predictable.Flat Rate CDN is a good fit for teams with unpredictable CDN bills, individual builders who don't want a usage spike to break the bank, and growing businesses that need to know their CDN costs before the month starts.Pro teams can join for early access and to help shape the GA release.the waitlistRead more:Pay a fixed amount for Verc",
+    "details": "Flat Rate CDN is now available in Limited Beta for Pro teams. It replaces usage-based CDN pricing with a fixed monthly fee.Viral posts, unfiltered bots, or misconfigured routes can turn a normal month into a surprise bill. Flat Rate CDN makes your cost predictable.Flat Rate CDN is a good fit for teams with unpredictable CDN bills, individual builders who don't want a usage spike to break the bank, and growing businesses that need to know their CDN costs before the month starts.Pro teams can join for early access and to help shape the GA release.the waitlistRead more:Pay a fixed amount for Vercel CDN each month, regardless of traffic and usage.Fixed monthly price :Edge Requests, Fast Data Transfer, and other products are no longer metered.Covers spikes across Vercel CDN :Your bill will never increase because of temporary usage spikes.No overages",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T00:00:00.000Z",
+    "modifiedAt": "2026-05-19T00:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.291Z",
+    "sources": [
+      {
+        "source": "vercel-changelog",
+        "externalId": "https://vercel.com/changelog/flat-rate-cdn-in-limited-beta",
+        "url": "https://vercel.com/changelog/flat-rate-cdn-in-limited-beta",
+        "fetchedAt": "2026-05-22T14:02:53.291Z"
+      }
+    ],
+    "tags": [
+      "frontend",
+      "nextjs"
     ]
   },
   {
@@ -11154,6 +11714,42 @@
     ]
   },
   {
+    "id": "h-48689c0458cb",
+    "aliases": [
+      "xrcYtr7kU54LNDB8MEmQY"
+    ],
+    "title": "Project Glasswing: what Mythos showed us",
+    "summary": "In recent weeks, we pointed Mythos and other security-focused LLMs at live code across critical parts of our infrastructure. We share what we observed, the models’ strengths and weaknesses, and what the work around them needs to look like before any of it can scale.",
+    "details": "In recent weeks, we pointed Mythos and other security-focused LLMs at live code across critical parts of our infrastructure. We share what we observed, the models’ strengths and weaknesses, and what the work around them needs to look like before any of it can scale.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-18T06:00:00.000Z",
+    "modifiedAt": "2026-05-18T06:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.335Z",
+    "sources": [
+      {
+        "source": "cloudflare-blog",
+        "externalId": "xrcYtr7kU54LNDB8MEmQY",
+        "url": "https://blog.cloudflare.com/cyber-frontier-models/",
+        "fetchedAt": "2026-05-22T14:02:53.335Z"
+      }
+    ],
+    "tags": [
+      "general"
+    ]
+  },
+  {
     "id": "h-214273b71d25",
     "aliases": [
       "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html"
@@ -11399,6 +11995,42 @@
         "externalId": "https://thehackernews.com/2026/05/microsoft-releases-mitigation-for.html",
         "url": "https://thehackernews.com/2026/05/microsoft-releases-mitigation-for.html",
         "fetchedAt": "2026-05-22T13:47:20.315Z"
+      }
+    ],
+    "tags": [
+      "general"
+    ]
+  },
+  {
+    "id": "h-4e5dd989c4de",
+    "aliases": [
+      "https://github.blog/?p=96112"
+    ],
+    "title": "Raising the bar: Quality, shared responsibility, and the future of GitHub’s bug bounty program",
+    "summary": "We're updating our bug bounty program standards to prioritize quality submissions, clarify shared responsibility boundaries, and evolve how we reward low-risk findings. The post Raising the bar: Quality, shared responsibility, and the future of GitHub&#8217;s bug bounty program appeared first on The GitHub Blog.",
+    "details": "We're updating our bug bounty program standards to prioritize quality submissions, clarify shared responsibility boundaries, and evolve how we reward low-risk findings. The post Raising the bar: Quality, shared responsibility, and the future of GitHub&#8217;s bug bounty program appeared first on The GitHub Blog.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-15T14:00:00.000Z",
+    "modifiedAt": "2026-05-15T14:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.881Z",
+    "sources": [
+      {
+        "source": "github-security-lab",
+        "externalId": "https://github.blog/?p=96112",
+        "url": "https://github.blog/security/raising-the-bar-quality-shared-responsibility-and-the-future-of-githubs-bug-bounty-program/",
+        "fetchedAt": "2026-05-22T14:02:52.881Z"
       }
     ],
     "tags": [
@@ -11730,6 +12362,499 @@
     ]
   },
   {
+    "id": "h-044bbbcf35de",
+    "aliases": [
+      "/node/24920",
+      "/node/24901",
+      "/node/24887",
+      "/node/24885"
+    ],
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation. CVE-2025-34291 Langflow Origin Validation Error Vulnerability CVE-2026-34926 Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability These types of vulnerabilities are frequent attack vectors for malicious cyber actors and pose significant risks to the federal enterprise. Binding Operational Directive (BOD) 22-01: Reducing the Significant Risk of Known Exploited Vulnerabilities established the KEV Catalog as a living list of known Common Vulnerabili",
+    "details": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation. CVE-2025-34291 Langflow Origin Validation Error Vulnerability CVE-2026-34926 Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability These types of vulnerabilities are frequent attack vectors for malicious cyber actors and pose significant risks to the federal enterprise. Binding Operational Directive (BOD) 22-01: Reducing the Significant Risk of Known Exploited Vulnerabilities established the KEV Catalog as a living list of known Common Vulnerabilities and Exposures (CVEs) that carry significant risk to the federal enterprise. BOD 22-01 requires Federal Civilian Executive Branch (FCEB) agencies to remediate identified vulnerabilities by the due date to protect FCEB networks against active threats. See the BOD 22-01 Fact Sheet for more information. Although BOD 22-01 only applies to FCEB agencies, CISA strongly urges all organizations to reduce their exposure to cyberattacks by prioritizing timely remediation of KEV Catalog vulnerabilities as part of their vulnerability management practice. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.&nbsp;",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-21T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.971Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24920",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/05/21/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      },
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24901",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/05/20/cisa-adds-seven-known-exploited-vulnerabilities-catalog",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      },
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24887",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/05/15/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "fetchedAt": "2026-05-22T14:02:52.732Z"
+      },
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24885",
+        "url": "https://www.cisa.gov/news-events/alerts/2026/05/14/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "fetchedAt": "2026-05-22T14:02:52.740Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-fc9a71a533d1",
+    "aliases": [
+      "/node/24876",
+      "/node/24873"
+    ],
+    "title": "Siemens SIMATIC",
+    "summary": "View CSAF Summary SIMATIC HMI Unified Comfort Panels before V21.0 are affected by a vulnerability that allows an unauthenticated attacker to access the web browser via the help link. This vulnerability allows an attacker to access the web browser through the Control Panel if it is not protected by the corresponding security mechanisms. This opens the possibility for the attacker to find backdoors, which might lead to unwanted misconfigurations. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens SIMATIC ",
+    "details": "View CSAF Summary SIMATIC HMI Unified Comfort Panels before V21.0 are affected by a vulnerability that allows an unauthenticated attacker to access the web browser via the help link. This vulnerability allows an attacker to access the web browser through the Control Panel if it is not protected by the corresponding security mechanisms. This opens the possibility for the attacker to find backdoors, which might lead to unwanted misconfigurations. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens SIMATIC are affected: SIMATIC HMI MTP1000 Unified Comfort Panel (6AV2128-3KB06-0AX1) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1000 Unified Comfort Panel hygienic (6AV2128-3KB40-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1000 Unified Comfort Panel hygienic neutral design (6AV2128-3KB70-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1000, Unified Comfort Panel neutral (6AV2128-3KB36-0AX1) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Comfort Pro for stand (expandable, flange at the bottom) (6AV2128-3MB27-1BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Comfort Pro for support arm (expandable, round tube) and extension unit (6AV2128-3MB27-0BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Comfort Pro for support arm (not extendable, flange on top) (6AV2128-3MB27-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Comfort Pro neutral design for stand (expandable, flange at the bottom) (6AV2128-3MB57-1BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Comfort Pro neutral design for support arm (expandable, round tube) and extensio (6AV2128-3MB57-0BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Comfort Pro neutral design for support arm (not extendable, flange on top) (6AV2128-3MB57-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Unified Comfort Panel (6AV2128-3MB06-0AX1) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Unified Comfort Panel hygienic (6AV2128-3MB40-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Unified Comfort Panel hygienic neutral design (6AV2128-3MB70-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1200 Unified Comfort Panel neutral design (6AV2128-3MB36-0AX1) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Comfort Pro for stand (expandable, flange at the bottom) (6AV2128-3QB27-1BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Comfort Pro for support arm (expandable, round tube) and extension unit (6AV2128-3QB27-0BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Comfort Pro for support arm (not extendable, flange on top) (6AV2128-3QB27-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Comfort Pro neutral design for stand (expandable, flange at the bottom) (6AV2128-3QB57-1BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Comfort Pro neutral design for support arm (expandable, round tube) and extensio (6AV2128-3QB57-0BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Comfort Pro neutral design for support arm (not extendable, flange on top) (6AV2128-3QB57-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Unified Comfort Panel (6AV2128-3QB06-0AX1) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Unified Comfort Panel hygienic (6AV2128-3QB40-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Unified Comfort Panel hygienic neutral design (6AV2128-3QB70-0AX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1500 Unified Comfort Panel neutral design (6AV2128-3QB36-0AX1) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1900 Comfort Pro for stand (expandable, flange at the bottom) (6AV2128-3UB27-1BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1900 Comfort Pro for support arm (expandable, round tube) and extension unit (6AV2128-3UB27-0BX0) vers:intdot/&lt;21 (CVE-2026-27662) SIMATIC HMI MTP1900",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.972Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24876",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-10",
+        "fetchedAt": "2026-05-22T14:02:52.737Z"
+      },
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24873",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-07",
+        "fetchedAt": "2026-05-22T14:02:52.740Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-5340f70847cf",
+    "aliases": [
+      "/node/24878",
+      "/node/24882",
+      "/node/24877",
+      "/node/24868"
+    ],
+    "title": "Siemens Ruggedcom Rox",
+    "summary": "View CSAF Summary Ruggedcom Rox contains an improper access control vulnerability that could allow an authenticated remote attacker to read arbitrary files with root privileges from the underlying operating system's filesystem. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Ruggedcom Rox are affected: RUGGEDCOM ROX MX5000 vers:intdot/&lt;2.17.1 RUGGEDCOM ROX MX5000RE vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1400 vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1500 vers:intdot/&lt;2.17.1&nbsp; RUGGE",
+    "details": "View CSAF Summary Ruggedcom Rox contains an improper access control vulnerability that could allow an authenticated remote attacker to read arbitrary files with root privileges from the underlying operating system's filesystem. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Ruggedcom Rox are affected: RUGGEDCOM ROX MX5000 vers:intdot/&lt;2.17.1 RUGGEDCOM ROX MX5000RE vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1400 vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1500 vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1501 vers:intdot/&lt;2.17.1 RUGGEDCOM ROX RX1510 vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1511 vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1512 vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1524 vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX1536 vers:intdot/&lt;2.17.1&nbsp; RUGGEDCOM ROX RX5000 vers:intdot/&lt;2.17.1 CVSS Vendor Equipment Vulnerabilities v3 6.8 Siemens Siemens Ruggedcom Rox Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2025-40948 Affected devices do not properly validate input in the web server's JSON-RPC interface. This could allow an authenticated remote attacker to read arbitrary files from the underlying operating system's filesystem with root privileges. View CVE Details Affected Products Siemens Ruggedcom Rox Vendor:Siemens Product Version:RUGGEDCOM ROX MX5000, RUGGEDCOM ROX MX5000RE, RUGGEDCOM ROX RX1400, RUGGEDCOM ROX RX1500, RUGGEDCOM ROX RX1501, RUGGEDCOM ROX RX1510, RUGGEDCOM ROX RX1511, RUGGEDCOM ROX RX1512, RUGGEDCOM ROX RX1524, RUGGEDCOM ROX RX1536, RUGGEDCOM ROX RX5000 Product Status:known_affected Remediations Vendor fixUpdate to V2.17.1 or later versionhttps://support.industry.siemens.com/cs/ww/en/view/110002017/ Relevant CWE: CWE-88 Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.8 MEDIUM CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N Acknowledgments Emmanuel Zhou, Rick Wyble, Mehemt Balta, and Adam Robbie of Palo Alto Networks OT Threat Research Lab reported this vulnerability. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be u",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.971Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24878",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-12",
+        "fetchedAt": "2026-05-22T14:02:52.737Z"
+      },
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24882",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-16",
+        "fetchedAt": "2026-05-22T14:02:52.738Z"
+      },
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24877",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-11",
+        "fetchedAt": "2026-05-22T14:02:52.738Z"
+      },
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24868",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-02",
+        "fetchedAt": "2026-05-22T14:02:52.739Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-5ee24d168b7e",
+    "aliases": [
+      "/node/24871"
+    ],
+    "title": "Siemens Simcenter Femap",
+    "summary": "View CSAF Summary Simcenter Femap is affected by heap based buffer overflow vulnerability in Datakit library that could be triggered when the application reads files in IPT format. If a user is tricked to open a malicious file with the affected application, an attacker could leverage the vulnerability to perform remote code execution in the context of the current process. Siemens has released a new version for Simcenter Femap and recommends to update to the latest version. The following versions of Siemens Simcenter Femap are affected: Simcenter Femap vers:intdot/&lt;2512.0003 CVSS Vendor Equi",
+    "details": "View CSAF Summary Simcenter Femap is affected by heap based buffer overflow vulnerability in Datakit library that could be triggered when the application reads files in IPT format. If a user is tricked to open a malicious file with the affected application, an attacker could leverage the vulnerability to perform remote code execution in the context of the current process. Siemens has released a new version for Simcenter Femap and recommends to update to the latest version. The following versions of Siemens Simcenter Femap are affected: Simcenter Femap vers:intdot/&lt;2512.0003 CVSS Vendor Equipment Vulnerabilities v3 7.8 Siemens Siemens Simcenter Femap Heap-based Buffer Overflow Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2025-12659 The affected applications contains a memory corruption vulnerability while parsing specially crafted IPT files. This could allow an attacker to execute code in the context of the current process. (ZDI-CAN-27349, ZDI-CAN-27389) View CVE Details Affected Products Siemens Simcenter Femap Vendor:Siemens Product Version:Simcenter Femap Product Status:known_affected Remediations Vendor fixUpdate to V2512.0003 or later versionhttps://support.sw.siemens.com/product/275652363/ Relevant CWE: CWE-122 Heap-based Buffer Overflow Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.8 HIGH CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Acknowledgments TrendAI Zero Day Initiative reported this vulnerability. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov in the tech",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24871",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-05",
+        "fetchedAt": "2026-05-22T14:02:52.738Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-563fb278b54e",
+    "aliases": [
+      "/node/24883"
+    ],
+    "title": "Universal Robots Polyscope 5",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to bypass authentication and execute code. The following versions of Universal Robots Polyscope 5 are affected: Polyscope 5 &lt;5.25.1&nbsp; CVSS Vendor Equipment Vulnerabilities v3 9.8 Universal Robots Universal Robots Polyscope 5 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Denmark Vulnerabilities Expand All + CVE-2026-8153 O",
+    "details": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to bypass authentication and execute code. The following versions of Universal Robots Polyscope 5 are affected: Polyscope 5 &lt;5.25.1&nbsp; CVSS Vendor Equipment Vulnerabilities v3 9.8 Universal Robots Universal Robots Polyscope 5 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Denmark Vulnerabilities Expand All + CVE-2026-8153 OS command injection in Dashboard Server interface in Universal Robots PolyScope versions prior to 5.25.1 allows unauthenticated attacker to craft commands that will execute code on the robot's OS. View CVE Details Affected Products Universal Robots Polyscope 5 Vendor:Universal Robots Product Version:Universal Robots Polyscope 5: &lt;5.25.1 Product Status:known_affected Remediations Vendor fixUniversal Robots has released Polyscope 5 version 5.25.1.For more information, see Universal Robots article: https://www.universal-robots.com/articles/ur/cybersecurity/cve-2026-8153-command-injection-in-the-polyscope-5-dashboard-server/.https://www.universal-robots.com/articles/ur/cybersecurity/cve-2026-8153-command-injection-in-the-polyscope-5-dashboard-server/ Relevant CWE: CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.8 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H Acknowledgments Vera Mens of Claroty Team82 reported these vulnerabilities to CISA Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolating them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents. CISA also recommends users take the following measures to protect themselves from social engineering attacks: Do not click web links or open attachments in unsolicited email messages. Refer to Recognizing and Avoiding Email Scams for more information on avoiding email scams. Refer to Avoiding Social Engineering and Phishing Attacks for more information on social engineering attacks. No known public exploitation specifically targeting these vulnerabilities has been reported to CISA at this time. Revision History Initial Release Date",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24883",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-17",
+        "fetchedAt": "2026-05-22T14:02:52.738Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-895d3dfea97e",
+    "aliases": [
+      "/node/24875"
+    ],
+    "title": "Siemens Opcenter RDnL",
+    "summary": "View CSAF Summary Opcenter RDnL is affected by missing authentication in critical function in ‘ActiveMQ Artemis’. An unauthenticated attacker within the adjacent network could use the Core protocol to force a target broker to establish an outbound Core federation connection to an attacker-controlled rogue broker. This could potentially result in availability impacts or message injection into any queue via the rogue broker. Breaking the integrity of a message has a low impact due to missing auto refresh functionality and it does not contain any confidential information. ActiveMQ Artemis has rel",
+    "details": "View CSAF Summary Opcenter RDnL is affected by missing authentication in critical function in ‘ActiveMQ Artemis’. An unauthenticated attacker within the adjacent network could use the Core protocol to force a target broker to establish an outbound Core federation connection to an attacker-controlled rogue broker. This could potentially result in availability impacts or message injection into any queue via the rogue broker. Breaking the integrity of a message has a low impact due to missing auto refresh functionality and it does not contain any confidential information. ActiveMQ Artemis has released a new version and Siemens recommends to update to the latest version. The following versions of Siemens Opcenter RDnL are affected: Opcenter RDnL vers:all/* CVSS Vendor Equipment Vulnerabilities v3 7.1 Siemens Siemens Opcenter RDnL Missing Authentication for Critical Function Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-27446 Missing Authentication for Critical Function (CWE-306) vulnerability in Apache Artemis, Apache ActiveMQ Artemis. An unauthenticated remote attacker can use the Core protocol to force a target broker to establish an outbound Core federation connection to an attacker-controlled rogue broker. This could potentially result in message injection into any queue and/or message exfiltration from any queue via the rogue broker. This impacts environments that allow both: - incoming Core protocol connections from untrusted sources to the broker - outgoing Core protocol connections from the broker to untrusted targets View CVE Details Affected Products Siemens Opcenter RDnL Vendor:Siemens Product Version:Opcenter RDnL Product Status:known_affected Remediations MitigationImplement and deploy a Core interceptor to deny all Core downstream federation connect packets. Such packets have a type of (int) -16 or (byte)&nbsp;0xfffffff0. Documentation for interceptors is available at&nbsp; https://artemis.apache.org/components/artemis/documentation/latest/intercepting-operations.html . MitigationRemove Core protocol support from any acceptor receiving connections from untrusted sources. Incoming Core protocol connections are supported by default via the \"artemis\" acceptor listening on port 61616. See the \"protocols\" URL parameter configured for the acceptor. An acceptor URL without this parameter supports all protocols by default, including Core MitigationUse two-way SSL (i.e. certificate-based authentication) in order to force every client to present the proper SSL certificate when establishing a connection before any message protocol handshake is attempted. This will prevent unauthenticated exploitation of this vulnerability Vendor fixUpdate to Apache Artemis version 2.52.0 or later version Relevant CWE: CWE-306 Missing Authentication for Critical Function Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.1 HIGH CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H Acknowledgments Siemens ProductCERT reported this vulnerability to CISA. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24875",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-09",
+        "fetchedAt": "2026-05-22T14:02:52.738Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-fc7f4eb6ec19",
+    "aliases": [
+      "/node/24870"
+    ],
+    "title": "Siemens Teamcenter",
+    "summary": "View CSAF Summary Siemens Teamcenter is affected by multiple vulnerabilities which could potentially lead to a compromise in availability, integrity and confidentiality. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Teamcenter are affected: Teamcenter V2312 vers:intdot/&lt;2312.0014, vers:intdot/&lt;2312.0009 (CVE-2026-33862, CVE-2026-33893, CVE-2024-4367) Teamcenter V2406 vers:intdot/&lt;2406.0012, vers:intdot/&lt;2406.0006 (CVE-2026-33862, CVE-2026-33893, CVE-2024-4367) Teamcenter V2412 vers:intd",
+    "details": "View CSAF Summary Siemens Teamcenter is affected by multiple vulnerabilities which could potentially lead to a compromise in availability, integrity and confidentiality. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Teamcenter are affected: Teamcenter V2312 vers:intdot/&lt;2312.0014, vers:intdot/&lt;2312.0009 (CVE-2026-33862, CVE-2026-33893, CVE-2024-4367) Teamcenter V2406 vers:intdot/&lt;2406.0012, vers:intdot/&lt;2406.0006 (CVE-2026-33862, CVE-2026-33893, CVE-2024-4367) Teamcenter V2412 vers:intdot/&lt;2412.0009 (CVE-2026-33862, CVE-2026-33893) Teamcenter V2506 vers:intdot/&lt;2506.0005 (CVE-2026-33862, CVE-2026-33893) Teamcenter V2512 vers:all/*&nbsp; CVSS Vendor Equipment Vulnerabilities v3 7.5 Siemens Siemens Teamcenter Improper Check for Unusual or Exceptional Conditions, Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'), Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2024-4367 A type check was missing when handling fonts in PDF.js, which would allow arbitrary JavaScript execution in the PDF.js context. This vulnerability affects Firefox &lt; 126, Firefox ESR &lt; 115.11, and Thunderbird &lt; 115.11. View CVE Details Affected Products Siemens Teamcenter Vendor:Siemens Product Version:Teamcenter V2312, Teamcenter V2406 Product Status:known_affected, known_not_affected Remediations Vendor fixUpdate to V2312.0009 or later versionhttps://support.sw.siemens.com/product/282219420/ Vendor fixUpdate to V2406.0006 or later versionhttps://support.sw.siemens.com/product/282219420/ Relevant CWE: CWE-754 Improper Check for Unusual or Exceptional Conditions Metrics CVSS Version Base Score Base Severity Vector String 3.1 5.6 MEDIUM CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L CVE-2026-33862 The affected application does not properly encode or filter user-supplied data. This could allow an attacker to inject malicious code that can be executed by other users when they visit the affected page. View CVE Details Affected Products Siemens Teamcenter Vendor:Siemens Product Version:Teamcenter V2312, Teamcenter V2406, Teamcenter V2412, Teamcenter V2506 Product Status:known_affected, known_not_affected Remediations Vendor fixUpdate to V2312.0014 or later versionhttps://support.sw.siemens.com/product/282219420/ Vendor fixUpdate to V2406.0012 or later versionhttps://support.sw.siemens.com/product/282219420/ Vendor fixUpdate to V2412.0009 or later versionhttps://support.sw.siemens.com/product/282219420/ Vendor fixUpdate to V2506.0005 or later versionhttps://support.sw.siemens.com/product/282219420/ Relevant CWE: CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.3 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N CVE-2026-33893 The affected application contains hardcoded key which is used for obfuscation stored directly into the application. This could allow an attacker to obtain these keys and misuse them to gain unauthorized access. View CVE Details Affected Products Siemens Teamcenter Vendor:Siemens Product Version:Teamcenter V2312, Teamcenter V2406, Teamcenter V2412, Teamcenter V2506 Product Status:known_affected, known_not_affected Remediations Vendor fixUpdate to V2312.0014 or later versionhttps://support.sw.siemens.com/product/282219420/ Vendor fixUpdate to V2406.0012 or later versionhttps://support.sw.siemens.com/product/282219420/ Vendor fixUpdate to V2412.0009 or later versionhttps://support.sw.siemens.com/product/282219420/ Vendor fixUpdate to V2506.0005 or later versionhttps://support.sw.siemens.com/product/282219420/ Relevant CWE: CWE-798 Use of Hard-coded Credentials Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.5 HIGH CVSS:",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.738Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24870",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-04",
+        "fetchedAt": "2026-05-22T14:02:52.738Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-3e8d0d9646e4",
+    "aliases": [
+      "/node/24869"
+    ],
+    "title": "Siemens Solid Edge",
+    "summary": "View CSAF Summary Solid Edge SE2026 before Update 5 is affected by two file parsing vulnerabilities that could be triggered when the application reads specially crafted files in PAR format. This could allow an attacker to crash the application or execute arbitrary code. Siemens has released a new version for Solid Edge SE2026 and recommends to update to the latest version. The following versions of Siemens Solid Edge are affected: Solid Edge vers:intdot/&lt;226.0.5&nbsp; CVSS Vendor Equipment Vulnerabilities v3 7.8 Siemens Siemens Solid Edge Access of Uninitialized Pointer, Stack-based Buffer ",
+    "details": "View CSAF Summary Solid Edge SE2026 before Update 5 is affected by two file parsing vulnerabilities that could be triggered when the application reads specially crafted files in PAR format. This could allow an attacker to crash the application or execute arbitrary code. Siemens has released a new version for Solid Edge SE2026 and recommends to update to the latest version. The following versions of Siemens Solid Edge are affected: Solid Edge vers:intdot/&lt;226.0.5&nbsp; CVSS Vendor Equipment Vulnerabilities v3 7.8 Siemens Siemens Solid Edge Access of Uninitialized Pointer, Stack-based Buffer Overflow Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-44411 The affected application is vulnerable to uninitialized pointer access while parsing specially crafted PAR files. An attacker could leverage this vulnerability to execute code in the context of the current process. View CVE Details Affected Products Siemens Solid Edge Vendor:Siemens Product Version:Solid Edge Product Status:known_affected Remediations Vendor fixUpdate to V226.0 Update 5 or later versionhttps://support.sw.siemens.com/product/246738425/ Relevant CWE: CWE-824 Access of Uninitialized Pointer Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.8 HIGH CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H CVE-2026-44412 The affected applications contain a stack based overflow vulnerability while parsing specially crafted PAR files. This could allow an attacker to execute code in the context of the current process. View CVE Details Affected Products Siemens Solid Edge Vendor:Siemens Product Version:Solid Edge Product Status:known_affected Remediations Vendor fixUpdate to V226.0 Update 5 or later versionhttps://support.sw.siemens.com/product/246738425/ Relevant CWE: CWE-121 Stack-based Buffer Overflow Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.8 HIGH CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H Acknowledgments Michael Heinzl reported these vulnerabilities. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of this vulnerability. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section ",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.739Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24869",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-03",
+        "fetchedAt": "2026-05-22T14:02:52.739Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-e9495587d42d",
+    "aliases": [
+      "/node/24880"
+    ],
+    "title": "Siemens SENTRON 7KT PAC1261 Data Manager",
+    "summary": "View CSAF Summary The web server in SENTRON 7KT PAC1261 Data Manager Before V2.1.0 contains a request smuggling vulnerability in the Go Project's net/http package that could allow an attacker to retrieve authorization tokens that can be used to gain administrative control over the device. Siemens has released a new version for SENTRON 7KT PAC1261 Data Manager and recommends to update to the latest version. The following versions of Siemens SENTRON 7KT PAC1261 Data Manager are affected: SENTRON 7KT PAC1261 Data Manager vers:intdot/&lt;2.1.0&nbsp; CVSS Vendor Equipment Vulnerabilities v3 9.1 Sie",
+    "details": "View CSAF Summary The web server in SENTRON 7KT PAC1261 Data Manager Before V2.1.0 contains a request smuggling vulnerability in the Go Project's net/http package that could allow an attacker to retrieve authorization tokens that can be used to gain administrative control over the device. Siemens has released a new version for SENTRON 7KT PAC1261 Data Manager and recommends to update to the latest version. The following versions of Siemens SENTRON 7KT PAC1261 Data Manager are affected: SENTRON 7KT PAC1261 Data Manager vers:intdot/&lt;2.1.0&nbsp; CVSS Vendor Equipment Vulnerabilities v3 9.1 Siemens Siemens SENTRON 7KT PAC1261 Data Manager Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') Background Critical Infrastructure Sectors: Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2025-22871 The net/http package improperly accepts a bare LF as a line terminator in chunked data chunk-size lines. This can permit request smuggling if a net/http server is used in conjunction with a server that incorrectly accepts a bare LF as part of a chunk-ext. View CVE Details Affected Products Siemens SENTRON 7KT PAC1261 Data Manager Vendor:Siemens Product Version:SENTRON 7KT PAC1261 Data Manager Product Status:known_affected Remediations MitigationUse encrypted protocols Vendor fixUpdate to V2.1.0 or later versionhttps://support.industry.siemens.com/cs/ww/en/view/109977717/ Relevant CWE: CWE-444 Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.1 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Acknowledgments Siemens ProductCERT reported this vulnerability to CISA. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommende",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.739Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24880",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-14",
+        "fetchedAt": "2026-05-22T14:02:52.739Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-69e596019285",
+    "aliases": [
+      "/node/24872"
+    ],
+    "title": "Siemens Industrial Devices",
+    "summary": "View CSAF Summary Multiple industrial devices contain a vulnerability that could allow an attacker to cause a denial of service condition. Siemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available. The following versions of Siemens Industrial Devices are affected: IE/PB LINK HA (6GK1411-5BB00) vers:all/* (CVE-2025-40833) IE/PB link PN IO (6GK1411-5AB10) vers:all/* (CVE-2025-40833) RUGGEDCOM RM1224 LTE(4G)",
+    "details": "View CSAF Summary Multiple industrial devices contain a vulnerability that could allow an attacker to cause a denial of service condition. Siemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available. The following versions of Siemens Industrial Devices are affected: IE/PB LINK HA (6GK1411-5BB00) vers:all/* (CVE-2025-40833) IE/PB link PN IO (6GK1411-5AB10) vers:all/* (CVE-2025-40833) RUGGEDCOM RM1224 LTE(4G) EU (6GK6108-4AM00-2BA2) vers:intdot/&lt;8.3 (CVE-2025-40833) RUGGEDCOM RM1224 LTE(4G) NAM (6GK6108-4AM00-2DA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M804PB (6GK5804-0AP00-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M812-1 ADSL-Router (6GK5812-1AA00-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M812-1 ADSL-Router (6GK5812-1BA00-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M816-1 ADSL-Router (6GK5816-1AA00-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M816-1 ADSL-Router (6GK5816-1BA00-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M826-2 SHDSL-Router (6GK5826-2AB00-2AB2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M874-2 (6GK5874-2AA00-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M874-3 (6GK5874-3AA00-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M874-3 3G-Router (CN) (6GK5874-3AA00-2FA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M876-3 (6GK5876-3AA02-2BA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M876-3 (ROK) (6GK5876-3AA02-2EA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M876-4 (6GK5876-4AA10-2BA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M876-4 (EU) (6GK5876-4AA00-2BA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE M876-4 (NAM) (6GK5876-4AA00-2DA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUB852-1 (A1) (6GK5852-1EA10-1AA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUB852-1 (B1) (6GK5852-1EA10-1BA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUM853-1 (A1) (6GK5853-2EA10-2AA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUM853-1 (B1) (6GK5853-2EA10-2BA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUM853-1 (EU) (6GK5853-2EA00-2DA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUM856-1 (A1) (6GK5856-2EA10-3AA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUM856-1 (B1) (6GK5856-2EA10-3BA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUM856-1 (CN) (6GK5856-2EA00-3FA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUM856-1 (EU) (6GK5856-2EA00-3DA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE MUM856-1 (RoW) (6GK5856-2EA00-3AA1) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE S615 EEC LAN-Router (6GK5615-0AA01-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE S615 LAN-Router (6GK5615-0AA00-2AA2) vers:intdot/&lt;8.3 (CVE-2025-40833) SCALANCE SC622-2C (6GK5622-2GS00-2AC2) vers:all/* (CVE-2025-40833) SCALANCE SC626-2C (6GK5626-2GS00-2AC2) vers:all/* (CVE-2025-40833) SCALANCE SC632-2C (6GK5632-2GS00-2AC2) vers:all/* (CVE-2025-40833) SCALANCE SC636-2C (6GK5636-2GS00-2AC2) vers:all/* (CVE-2025-40833) SCALANCE SC642-2C (6GK5642-2GS00-2AC2) vers:all/* (CVE-2025-40833) SCALANCE SC646-2C (6GK5646-2GS00-2AC2) vers:all/* (CVE-2025-40833) SCALANCE W1748-1 M12 (6GK5748-1GY01-0AA0) vers:all/* (CVE-2025-40833) SCALANCE W1748-1 M12 (6GK5748-1GY01-0TA0) vers:all/* (CVE-2025-40833) SCALANCE W1788-1 M12 (6GK5788-1GY01-0AA0) vers:all/* (CVE-2025-40833) SCALANCE W1788-2 EEC M12 (6GK5788-2GY01-0TA0) vers:all/* (CVE-2025-40833) SCALANCE W1788-2 M12 (6GK5788-2GY01-0AA0) vers:all/* (CVE-2025-40833) SCALANCE W1788-2IA M12 (6GK5788-2HY01-0AA0) vers:all/* (CVE-2025-40833) SCALANCE W721-1 RJ45 (6GK5721-1FC00-0AA0) vers:intdot/&lt;6.6.0 (CVE-2025-40833) SCALANCE W721-1 RJ45 (6GK5721-1FC00-0AB0) vers:intdot/&lt;6.6.0 (CVE-2025-40833) SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AA0) vers:intdot/&lt;6.6.0 (CVE-2025-40833) SCALANCE W722-1 RJ45 (6GK5722-1FC00-0AB0) vers:intdot/&lt;6.6.0 (CVE-2",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.740Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24872",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-06",
+        "fetchedAt": "2026-05-22T14:02:52.740Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-78968d6550c1",
+    "aliases": [
+      "/node/24879"
+    ],
+    "title": "Siemens SIPROTEC 5",
+    "summary": "View CSAF Summary The SIPROTEC 5 devices do not use sufficiently random numbers to generate session identifiers. This could facilitate a brute-force attack against a valid session identifier which could allow an unauthenticated remote attacker to hijack a valid user session. The affected session identifiers are only used in a subset of the endpoints that are provided by the affected products. Siemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. The following versions of Siemens SIPROTEC 5 are affected: SIPROTEC 5 6MD84 (CP300)",
+    "details": "View CSAF Summary The SIPROTEC 5 devices do not use sufficiently random numbers to generate session identifiers. This could facilitate a brute-force attack against a valid session identifier which could allow an unauthenticated remote attacker to hijack a valid user session. The affected session identifiers are only used in a subset of the endpoints that are provided by the affected products. Siemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. The following versions of Siemens SIPROTEC 5 are affected: SIPROTEC 5 6MD84 (CP300) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 6MD85 (CP200) vers:all/* () SIPROTEC 5 6MD85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 6MD86 (CP200) vers:all/* () SIPROTEC 5 6MD86 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 6MD89 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 6MU85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7KE85 (CP200) vers:all/* () SIPROTEC 5 7KE85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SA82 (CP100) vers:intdot/&gt;=7.80 (CVE-2024-54017) SIPROTEC 5 7SA82 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SA84 (CP200) vers:all/* () SIPROTEC 5 7SA86 (CP200) vers:all/* () SIPROTEC 5 7SA86 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SA87 (CP200) vers:all/* () SIPROTEC 5 7SA87 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SD82 (CP100) vers:intdot/&gt;=7.80 (CVE-2024-54017) SIPROTEC 5 7SD82 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SD84 (CP200) vers:all/* () SIPROTEC 5 7SD86 (CP200) vers:all/* () SIPROTEC 5 7SD86 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SD87 (CP200) vers:all/* () SIPROTEC 5 7SD87 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SJ81 (CP100) vers:intdot/&gt;=7.80 (CVE-2024-54017) SIPROTEC 5 7SJ81 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SJ82 (CP100) vers:intdot/&gt;=7.80 (CVE-2024-54017) SIPROTEC 5 7SJ82 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SJ85 (CP200) vers:all/* () SIPROTEC 5 7SJ85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SJ86 (CP200) vers:all/* () SIPROTEC 5 7SJ86 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SK82 (CP100) vers:intdot/&gt;=7.80 (CVE-2024-54017) SIPROTEC 5 7SK82 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SK85 (CP200) vers:all/* () SIPROTEC 5 7SK85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SL82 (CP100) vers:intdot/&gt;=7.80 (CVE-2024-54017) SIPROTEC 5 7SL82 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SL86 (CP200) vers:all/* () SIPROTEC 5 7SL86 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SL87 (CP200) vers:all/* () SIPROTEC 5 7SL87 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SS85 (CP200) vers:all/* () SIPROTEC 5 7SS85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7ST85 (CP200) vers:all/* () SIPROTEC 5 7ST85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7ST86 (CP300) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SX82 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SX85 (CP300) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7SY82 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7UM85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7UT82 (CP100) vers:intdot/&gt;=7.80 (CVE-2024-54017) SIPROTEC 5 7UT82 (CP150) vers:intdot/&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7UT85 (CP200) vers:all/* () SIPROTEC 5 7UT85 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7UT86 (CP200) vers:all/* () SIPROTEC 5 7UT86 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7UT87 (CP200) vers:all/* () SIPROTEC 5 7UT87 (CP300) vers:intdot/&gt;=7.80|&lt;11.0 (CVE-2024-54017) SIPROTEC 5 7VE85 (C",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.740Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24879",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-13",
+        "fetchedAt": "2026-05-22T14:02:52.740Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-8a4950fd5186",
+    "aliases": [
+      "/node/24874"
+    ],
+    "title": "Siemens Siemens ROS#",
+    "summary": "View CSAF Summary ROS# contains a ROS service file_server, that before version 2.2.2 contains a path traversal vulnerability which could allow an attacker to access, i.e. read and write, arbitrary files, which are accessible with the user rights of the user that runs the service, on the system that hosts service. Siemens has released a new version for ROS# and recommends to update to the latest version. The following versions of Siemens Siemens ROS# are affected: ROS# vers:intdot/&lt;2.2.2 CVSS Vendor Equipment Vulnerabilities v3 9.1 Siemens Siemens Siemens ROS# Relative Path Traversal Backgro",
+    "details": "View CSAF Summary ROS# contains a ROS service file_server, that before version 2.2.2 contains a path traversal vulnerability which could allow an attacker to access, i.e. read and write, arbitrary files, which are accessible with the user rights of the user that runs the service, on the system that hosts service. Siemens has released a new version for ROS# and recommends to update to the latest version. The following versions of Siemens Siemens ROS# are affected: ROS# vers:intdot/&lt;2.2.2 CVSS Vendor Equipment Vulnerabilities v3 9.1 Siemens Siemens Siemens ROS# Relative Path Traversal Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-41551 Affected versions contain a path traversal vulnerability because user input is not properly sanitized. This could allow a remote attacker to access arbitrary files on the device. View CVE Details Affected Products Siemens Siemens ROS# Vendor:Siemens Product Version:ROS# Product Status:known_affected Remediations MitigationFor versions before 2.2.2: - run file_server on a trusted network only. - run file_server with appropriate user rights. - run file_server only for tasks it was designed for, transferring URDF files from ROS host to target system, not as a service that runs continuously in the background. - run file_server only if manually transferring files is not possible. Vendor fixUpdate to V2.2.2 or later versionhttps://github.com/siemens/ros-sharp/releases/tag/2.2.2 Relevant CWE: CWE-23 Relative Path Traversal Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.1 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Acknowledgments Alifia Rahmah of VyPr AI reported this vulnerability to Siemens. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages ",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-14T12:00:00.000Z",
+    "modifiedAt": "2026-05-14T12:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:52.740Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24874",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-08",
+        "fetchedAt": "2026-05-22T14:02:52.740Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
     "id": "h-d8e814294b2e",
     "aliases": [
       "https://thehackernews.com/2026/05/praisonai-cve-2026-44338-auth-bypass.html"
@@ -11763,6 +12888,41 @@
     ],
     "tags": [
       "general"
+    ]
+  },
+  {
+    "id": "h-94190c39fc97",
+    "aliases": [],
+    "title": "A 0-click exploit chain for the Pixel 10: When a Door Closes, a Window Opens",
+    "summary": "We recently published an exploit chain for the Google Pixel 9 that demonstrated it was possible to go from a zero-click context to root on Android in just two exploits. The Dolby 0-click vulnerability existed across all of Android, until it was patched in January 2026. While we had an exploit chain for the Pixel 9, we wanted to see if it was possible to write a similar exploit chain for Pixel 10. Updating the Dolby Exploit Altering our exploit for CVE-2025-54957 was fairly straightforward. The majority of needed changes involved updating offsets calculated for the specific version of the libra",
+    "details": "We recently published an exploit chain for the Google Pixel 9 that demonstrated it was possible to go from a zero-click context to root on Android in just two exploits. The Dolby 0-click vulnerability existed across all of Android, until it was patched in January 2026. While we had an exploit chain for the Pixel 9, we wanted to see if it was possible to write a similar exploit chain for Pixel 10. Updating the Dolby Exploit Altering our exploit for CVE-2025-54957 was fairly straightforward. The majority of needed changes involved updating offsets calculated for the specific version of the library we targeted on the Pixel 9 to similar offsets in the library for Pixel 10. The only challenge (outside of wishing we’d better documented which syncframes contained offsets) was that the Pixel 10 uses RET PAC in the place of -fstack-protector, which meant that __stack_chk_fail wasn’t available to be overwritten by code. After a bit of trial and error, we used dap_cpdp_init, initialization code that can be overwritten without causing functional problems, as it is called once when the decoder is initialized and never again. The updated Dolby UDC exploit is available here. This exploit will only work on unpatched devices (SPL December 2025 or earlier). Removal of BigWave, Addition of VPU Porting the local privilege escalation link of the chain to Pixel 10 was not feasible as the BigWave driver does not ship on this device. However, a new driver is visible in the mediacodec SELinux context at /dev/vpu. This driver is used for interacting with the Chips&amp;Media Wave677DV silicon on the Tensor G5 chip meant for accelerating video decoding. Based on the comments within the open-source C files, this driver is developed and maintained by the same set of developers who built the BigWave driver. Working in collaboration with Jann Horn, we spent 2 hours auditing this VPU driver and discovered an exceptional vulnerability. Unlike the upstream Linux driver for WAVE521C (which is an older Chips&amp;Media chip), the Pixel driver for WAVE677DV does not integrate with V4L2 (the “Video for Linux API”); instead, it directly exposes the chip’s hardware interface to userspace, including letting userspace map the chip’s MMIO register interface. The driver mainly establishes device memory mappings, does power management, and allows userspace to wait for interrupts from the chip. The Holy Grail of Kernel Vulnerabilities This bug in particular caught our attention as exceptionally simple to exploit: static int vpu_mmap(struct file *fp, struct vm_area_struct *vm) { unsigned long pfn; struct vpu_core *core = container_of(fp-&gt;f_inode-&gt;i_cdev, struct vpu_core, cdev); vm_flags_set(vm, VM_IO | VM_DONTEXPAND | VM_DONTDUMP); /* This is a CSRs mapping, use pgprot_device */ vm-&gt;vm_page_prot = pgprot_device(vm-&gt;vm_page_prot); pfn = core-&gt;paddr &gt;&gt; PAGE_SHIFT; return remap_pfn_range(vm, vm-&gt;vm_start, pfn, vm-&gt;vm_end-vm-&gt;vm_start, vm-&gt;vm_page_prot) ? -EAGAIN : 0; } This mmap handler is intended to be used in order to map the MMIO register region of the VPU hardware into the userland virtual address space - a region contained within a certain physical memory address range. In doing so, it makes a call to remap_pfn_range based purely on the size of the VMA and not at all bounded to the size of this register region. This means that, by specifying a size larger than the register region in an mmap syscall, the caller can map as much physical memory as they want into userland, starting at the physical address of the VPU register region. The entirety of the kernel image (including .text, and .data region) is located at a higher physical address than the VPU register region, and can therefore be accessed and modified by userspace with this bug. At this point, one can simply overwrite any kernel function to gain kernel code execution - or indeed any primitive one might desire. This is rendered even easier by the fact that the kernel is always at the ",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-13T00:00:00.000Z",
+    "modifiedAt": "2026-05-13T00:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.896Z",
+    "sources": [
+      {
+        "source": "project-zero",
+        "externalId": "https://projectzero.google/2026/05/pixel-10-exploit.html",
+        "url": "https://projectzero.google/2026/05/pixel-10-exploit.html",
+        "fetchedAt": "2026-05-22T14:02:53.896Z"
+      }
+    ],
+    "tags": [
+      "general",
+      "zero-day"
     ]
   },
   {
@@ -11801,6 +12961,76 @@
     ],
     "tags": [],
     "epss": 0.00102
+  },
+  {
+    "id": "h-af13eed6c0e4",
+    "aliases": [],
+    "title": "Automate progressive rollouts with Vercel Flags",
+    "summary": "You can now use to roll out a feature to a growing percentage of users on a schedule, with progressive rollouts.Vercel FlagsUnlike weighted splits, which hold a fixed distribution (for example, 50/50) for experiments, a progressive rollout follows a predefined schedule that gradually shifts the traffic percentage to the new variant. Each stage has a target percentage and a duration.Exposing a change in stages lets you catch a regression on a small slice of users before it hits everyone.Progressive rollouts are and through the new CLI command.now available in the dashboardvercel flags rolloutLe",
+    "details": "You can now use to roll out a feature to a growing percentage of users on a schedule, with progressive rollouts.Vercel FlagsUnlike weighted splits, which hold a fixed distribution (for example, 50/50) for experiments, a progressive rollout follows a predefined schedule that gradually shifts the traffic percentage to the new variant. Each stage has a target percentage and a duration.Exposing a change in stages lets you catch a regression on a small slice of users before it hits everyone.Progressive rollouts are and through the new CLI command.now available in the dashboardvercel flags rolloutLearn more in the .Vercel Flags documentationRead more",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-11T08:00:00.000Z",
+    "modifiedAt": "2026-05-11T08:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.291Z",
+    "sources": [
+      {
+        "source": "vercel-changelog",
+        "externalId": "https://vercel.com/changelog/progressive-rollouts-in-vercel-flags",
+        "url": "https://vercel.com/changelog/progressive-rollouts-in-vercel-flags",
+        "fetchedAt": "2026-05-22T14:02:53.291Z"
+      }
+    ],
+    "tags": [
+      "frontend",
+      "nextjs"
+    ]
+  },
+  {
+    "id": "h-362b7aa5937d",
+    "aliases": [],
+    "title": "How Superset built the IDE for AI agents on Vercel",
+    "summary": "Superset on VercelSoftware development with AI started as a single engineer chatting with a single agent about a local repo. Today, developers direct fleets of agents in the cloud, but traditional tools were built for the old shape of the job: IDEs, terminals, and review systems designed for one developer moving one ticket at a time.Co-founders Kiet Ho, Satya Patel, and Avi Peltz, all former CTOs at YC-backed companies, built as the IDE for multi-agent development. It runs up to 10 coding agents in parallel, each in its own isolated workspace. Developers use it to direct teams of agents genera",
+    "details": "Superset on VercelSoftware development with AI started as a single engineer chatting with a single agent about a local repo. Today, developers direct fleets of agents in the cloud, but traditional tools were built for the old shape of the job: IDEs, terminals, and review systems designed for one developer moving one ticket at a time.Co-founders Kiet Ho, Satya Patel, and Avi Peltz, all former CTOs at YC-backed companies, built as the IDE for multi-agent development. It runs up to 10 coding agents in parallel, each in its own isolated workspace. Developers use it to direct teams of agents generating code across multiple branches simultaneously. SupersetRunning a team of agents in parallel changes what the platform underneath has to do. The product Superset offers its users only feels parallel because nothing on the platform forces the work to wait. If any layer slows down, even briefly, the parallelism on top collapses with it.This workflow has a dependency that's invisible from the product surface. Every agent thread needs its own isolated environment, every branch needs a live URL, and every change needs a safe place to run.Without instant provisioning, parallel agents stop being parallel. CI pipelines have to be configured per branch, preview environments have to be managed by hand, and deploys back up behind one another. For a team running a dozen agents at once, that serialization is what breaks the product. Twelve workflows collapse into one queue, and a task that should take minutes takes hours. The developer is back to waiting, which is the exact problem Superset exists to solve.Vercel was the default choice from the start, as all three founders had built on it at previous companies. From day one, Superset ran six projects on Vercel: the web app, marketing site, docs, and three supporting services. The team skipped platform engineering entirely and stayed focused on the product.Next.jsEvery branch a Superset developer or agent creates becomes a automatically, often spinning up multiple services. At its peak, Superset generates roughly 600 preview deployments a day internally. Every branch gets a live URL, and the team never waits on a deploy queue.preview deploymentSuperset's AI stack grew with the product, and each piece of the Vercel platform was pulled in to solve a specific problem as functionality was added. Orchestration and model routingStorage and computeOperational controlsAs Superset has expanded into new product areas, the entire stack has stayed on Vercel. There's no second cloud to glue in, no orchestration layer to maintain, and no platform engineering team to keep it glued together. New surface areas gets built on the same primitives that handled the old surface area, which is what frees the team to keep moving on product instead of plumbing.The most credible proof how the Superset team uses Superset themselves. GitHub issues flow into Superset and get split across parallel workspaces, and Satya has tuned the team's setup to run up to a dozen instances at once. Multiple efforts move forward without anyone waiting on serial decisions. Compared to their previous dev workflows, Superset's commit graph looks exponential. During a , user counts tripled overnight. Superset absorbed the spike without anyone provisioning infrastructure mid-flight.Hacker News \"Show HN\" launchThat extends to incidents. If a customer reports an issue to Superset, their agents can spin up, write the fix, generate a preview, and merge the code in under thirty minutes. If the fix makes things worse, , so the cost of a bad deploy drops to near zero.rollbacks are instantFor Superset, immediate deployment matters because it keeps the loop between writing code, previewing it, and shipping it short enough that velocity never stalls, even across dozens of parallel workstreams. Build time averages around 30 seconds, and deployment volume runs between 1,000 and 1,400 a week.The pattern for success is already clear: a product built for paralleli",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-10T14:00:00.000Z",
+    "modifiedAt": "2026-05-10T14:00:00.000Z",
+    "mergedAt": "2026-05-22T14:02:53.291Z",
+    "sources": [
+      {
+        "source": "vercel-changelog",
+        "externalId": "https://vercel.com/blog/how-superset-built-the-ide-for-ai-agents-on-vercel",
+        "url": "https://vercel.com/blog/how-superset-built-the-ide-for-ai-agents-on-vercel",
+        "fetchedAt": "2026-05-22T14:02:53.291Z"
+      }
+    ],
+    "tags": [
+      "frontend",
+      "nextjs"
+    ]
   },
   {
     "id": "CVE-2026-43059",

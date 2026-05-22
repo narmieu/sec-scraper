@@ -1,8 +1,9 @@
 {
   "ghsa": {
-    "consecutiveFailures": 2,
-    "state": "closed",
-    "lastError": "HTTP 422 https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>2026-05-22T11%3A47%3A50.711Z"
+    "consecutiveFailures": 3,
+    "state": "open",
+    "lastError": "HTTP 422 https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>2026-05-22T12%3A02%3A52.398Z",
+    "reopenAt": "2026-05-23T14:02:52.390Z"
   },
   "osv": {
     "consecutiveFailures": 0,
@@ -41,19 +42,22 @@
     "lastFetchedAt": "2026-05-22T13:47:20.078Z"
   },
   "snyk-rss": {
-    "consecutiveFailures": 2,
-    "state": "closed",
-    "lastError": "Attribute without value\nLine: 50\nColumn: 101\nChar: >"
+    "consecutiveFailures": 3,
+    "state": "open",
+    "lastError": "Attribute without value\nLine: 50\nColumn: 101\nChar: >",
+    "reopenAt": "2026-05-23T14:02:52.390Z"
   },
   "sonatype-rss": {
-    "consecutiveFailures": 2,
-    "state": "closed",
-    "lastError": "HTTP 404 https://ossindex.sonatype.org/rest/v1/feed"
+    "consecutiveFailures": 3,
+    "state": "open",
+    "lastError": "HTTP 404 https://ossindex.sonatype.org/rest/v1/feed",
+    "reopenAt": "2026-05-23T14:02:52.390Z"
   },
   "symfony-blog": {
-    "consecutiveFailures": 2,
-    "state": "closed",
-    "lastError": "HTTP 404 https://symfony.com/blog/category/security-advisories.atom"
+    "consecutiveFailures": 3,
+    "state": "open",
+    "lastError": "HTTP 404 https://symfony.com/blog/category/security-advisories.atom",
+    "reopenAt": "2026-05-23T14:02:52.390Z"
   },
   "nextjs-releases": {
     "consecutiveFailures": 0,
@@ -102,5 +106,59 @@
     "state": "closed",
     "lastSuccess": "2026-05-22T13:47:20.078Z",
     "lastFetchedAt": "2026-05-22T13:47:20.078Z"
+  },
+  "nodejs-security": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
+  },
+  "php-security": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
+  },
+  "github-security-lab": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
+  },
+  "project-zero": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
+  },
+  "cisa-alerts": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
+  },
+  "cloudflare-blog": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
+  },
+  "vercel-changelog": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
+  },
+  "mastodon-cve": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
+  },
+  "mastodon-zeroday": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-22T14:02:52.390Z",
+    "lastFetchedAt": "2026-05-22T14:02:52.390Z"
   }
 }

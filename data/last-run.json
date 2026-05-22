@@ -1,9 +1,9 @@
 {
-  "startedAt": "2026-05-22T13:47:50.706Z",
-  "finishedAt": "2026-05-22T13:47:52.570Z",
-  "durationMs": 1864,
+  "startedAt": "2026-05-22T14:02:52.390Z",
+  "finishedAt": "2026-05-22T14:02:55.194Z",
+  "durationMs": 2804,
   "stats": {
-    "newCount": 1312,
+    "newCount": 1344,
     "updatedCount": 280,
     "droppedCount": 0,
     "alertCount": 0
@@ -12,33 +12,78 @@
     "ghsa": {
       "ok": false,
       "fetched": 0,
-      "durationMs": 137,
-      "error": "HTTP 422 https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>2026-05-22T11%3A47%3A50.711Z"
+      "durationMs": 240,
+      "error": "HTTP 422 https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>2026-05-22T12%3A02%3A52.398Z"
     },
     "snyk-rss": {
       "ok": false,
       "fetched": 0,
-      "durationMs": 278,
+      "durationMs": 494,
       "error": "Attribute without value\nLine: 50\nColumn: 101\nChar: >"
     },
     "sonatype-rss": {
       "ok": false,
       "fetched": 0,
-      "durationMs": 250,
+      "durationMs": 1127,
       "error": "HTTP 404 https://ossindex.sonatype.org/rest/v1/feed"
     },
     "symfony-blog": {
       "ok": false,
       "fetched": 0,
-      "durationMs": 169,
+      "durationMs": 307,
       "error": "HTTP 404 https://symfony.com/blog/category/security-advisories.atom"
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 199
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1059
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 442
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 1456
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 299
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 894
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 4,
+      "durationMs": 849
+    },
+    "mastodon-cve": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 516
+    },
+    "mastodon-zeroday": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 517
     }
   },
   "errors": [
     {
       "source": "ghsa",
       "phase": "fetch",
-      "message": "HTTP 422 https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>2026-05-22T11%3A47%3A50.711Z"
+      "message": "HTTP 422 https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>2026-05-22T12%3A02%3A52.398Z"
     },
     {
       "source": "snyk-rss",
