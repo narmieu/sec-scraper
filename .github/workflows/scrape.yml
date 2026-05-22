@@ -48,7 +48,17 @@ jobs:
           NEW=$(jq '.stats.newCount // 0' data/last-run.json)
           UPD=$(jq '.stats.updatedCount // 0' data/last-run.json)
           git commit -m "[bot] scrape: +${NEW} new, ${UPD} updated [skip ci]"
-          git push
+          # Survive concurrent pushes (Vercel-triggered rebuilds, manual edits)
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash origin main || true
+            if git push; then
+              exit 0
+            fi
+            echo "push attempt $attempt failed, retrying"
+            sleep $((attempt * 5))
+          done
+          echo "push failed after 3 attempts"
+          exit 1
 
       - name: upload run log on failure
         if: failure()
