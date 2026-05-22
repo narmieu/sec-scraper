@@ -2,6 +2,7 @@ import type { Adapter, Enricher } from './types.js';
 import { ghsaAdapter } from './ghsa.js';
 import { osvAdapter } from './osv.js';
 import { nvdAdapter } from './nvd.js';
+import { cveOrgAdapter } from './cve-org.js';
 import { packagistAdapter } from './packagist.js';
 import { epssEnricher } from './epss.js';
 import { kevEnricher } from './cisa-kev.js';
@@ -29,6 +30,7 @@ export const ADAPTERS: Adapter[] = [
   ghsaAdapter,
   osvAdapter,
   nvdAdapter,
+  cveOrgAdapter,
   packagistAdapter,
   friendsofphpAdvisoriesAdapter,
   symfonySecurityAdapter,
