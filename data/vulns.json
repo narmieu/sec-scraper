@@ -129,7 +129,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.93617
   },
   {
     "id": "CVE-2009-1537",
@@ -165,7 +166,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.74066
   },
   {
     "id": "CVE-2009-3459",
@@ -201,17 +203,18 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.90515
   },
   {
-    "id": "CVE-2010-0806",
-    "cveId": "CVE-2010-0806",
+    "id": "CVE-2010-0249",
+    "cveId": "CVE-2010-0249",
     "aliases": [
       "CVE-2010-0249",
       "CVE-2010-0806"
     ],
     "title": "Microsoft Internet Explorer Use-After-Free Vulnerability",
-    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -227,7 +230,7 @@
     "kev": true,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:28.424Z",
+    "mergedAt": "2026-05-22T13:47:51.759Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -244,7 +247,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.88223
   },
   {
     "id": "CVE-2026-41091",
@@ -280,7 +284,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.12101
   },
   {
     "id": "CVE-2026-45498",
@@ -316,7 +321,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.02271
   },
   {
     "id": "CVE-2026-42897",
@@ -352,7 +358,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.10026
   },
   {
     "id": "CVE-2026-20182",
@@ -388,7 +395,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.69191
   },
   {
     "id": "CVE-2026-42208",
@@ -424,7 +432,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.43191
   },
   {
     "id": "CVE-2026-6973",
@@ -460,7 +469,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.06129
   },
   {
     "id": "CVE-2026-0300",
@@ -496,7 +506,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.14433
   },
   {
     "id": "CVE-2026-31431",
@@ -532,7 +543,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.0257
   },
   {
     "id": "CVE-2026-41940",
@@ -568,7 +580,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.88634
   },
   {
     "id": "CVE-2024-1708",
@@ -604,7 +617,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.8481
   },
   {
     "id": "CVE-2026-32202",
@@ -640,7 +654,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.07888
   },
   {
     "id": "CVE-2025-29635",
@@ -676,7 +691,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.53802
   },
   {
     "id": "CVE-2024-7399",
@@ -712,7 +728,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.82267
   },
   {
     "id": "CVE-2024-57728",
@@ -748,7 +765,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.58822
   },
   {
     "id": "CVE-2024-57726",
@@ -784,7 +802,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.4537
   },
   {
     "id": "CVE-2026-39987",
@@ -820,7 +839,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.8426
   },
   {
     "id": "CVE-2026-33825",
@@ -856,7 +876,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.06378
   },
   {
     "id": "CVE-2026-20122",
@@ -892,7 +913,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.01592
   },
   {
     "id": "CVE-2026-20133",
@@ -928,7 +950,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.01356
   },
   {
     "id": "CVE-2025-2749",
@@ -964,7 +987,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.04902
   },
   {
     "id": "CVE-2023-27351",
@@ -1000,7 +1024,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.86957
   },
   {
     "id": "CVE-2025-48700",
@@ -1036,7 +1061,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.18757
   },
   {
     "id": "CVE-2026-20128",
@@ -1072,7 +1098,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00088
   },
   {
     "id": "CVE-2025-32975",
@@ -1108,7 +1135,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.46502
   },
   {
     "id": "CVE-2024-27199",
@@ -1144,7 +1172,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.90931
   },
   {
     "id": "CVE-2026-34197",
@@ -1180,7 +1209,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.75807
   },
   {
     "id": "CVE-2009-0238",
@@ -1216,7 +1246,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.74913
   },
   {
     "id": "CVE-2026-32201",
@@ -1252,7 +1283,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.08708
   },
   {
     "id": "CVE-2012-1854",
@@ -1288,7 +1320,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.04639
   },
   {
     "id": "CVE-2025-60710",
@@ -1324,7 +1357,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.29871
   },
   {
     "id": "CVE-2023-21529",
@@ -1360,7 +1394,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.31783
   },
   {
     "id": "CVE-2023-36424",
@@ -1396,7 +1431,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.10917
   },
   {
     "id": "CVE-2020-9715",
@@ -1432,7 +1468,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.77499
   },
   {
     "id": "CVE-2026-21643",
@@ -1468,7 +1505,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.6745
   },
   {
     "id": "CVE-2026-34621",
@@ -1504,7 +1542,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.12155
   },
   {
     "id": "CVE-2026-1340",
@@ -1540,7 +1579,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.70676
   },
   {
     "id": "CVE-2026-35616",
@@ -1576,7 +1616,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.49255
   },
   {
     "id": "CVE-2026-3502",
@@ -1612,7 +1653,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.02577
   },
   {
     "id": "CVE-2026-5281",
@@ -1648,7 +1690,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.01066
   },
   {
     "id": "CVE-2026-3055",
@@ -1684,7 +1727,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.89367
   },
   {
     "id": "CVE-2025-53521",
@@ -1720,7 +1764,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.08155
   },
   {
     "id": "CVE-2026-33634",
@@ -1756,7 +1801,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.17652
   },
   {
     "id": "CVE-2026-33017",
@@ -1835,7 +1881,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.92647
   },
   {
     "id": "CVE-2025-54068",
@@ -1871,7 +1918,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.58072
   },
   {
     "id": "CVE-2025-43510",
@@ -1907,17 +1955,18 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -1933,7 +1982,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T13:47:28.432Z",
+    "mergedAt": "2026-05-22T13:47:51.759Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -1950,7 +1999,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00171
   },
   {
     "id": "CVE-2026-20131",
@@ -1986,7 +2036,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.0172
   },
   {
     "id": "CVE-2025-66376",
@@ -2022,7 +2073,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.10899
   },
   {
     "id": "CVE-2026-20963",
@@ -2058,7 +2110,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.05286
   },
   {
     "id": "CVE-2025-47813",
@@ -2094,7 +2147,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.26923
   },
   {
     "id": "CVE-2026-3910",
@@ -2130,7 +2184,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00943
   },
   {
     "id": "CVE-2026-3909",
@@ -2166,7 +2221,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00454
   },
   {
     "id": "CVE-2025-68613",
@@ -2202,7 +2258,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.65759
   },
   {
     "id": "CVE-2021-22054",
@@ -2238,7 +2295,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.9384
   },
   {
     "id": "CVE-2025-26399",
@@ -2274,7 +2332,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.26749
   },
   {
     "id": "CVE-2026-1603",
@@ -2310,7 +2369,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.58921
   },
   {
     "id": "CVE-2017-7921",
@@ -2346,7 +2406,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.94233
   },
   {
     "id": "CVE-2021-22681",
@@ -2382,7 +2443,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.18159
   },
   {
     "id": "CVE-2023-43000",
@@ -2418,7 +2480,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00027
   },
   {
     "id": "CVE-2021-30952",
@@ -2454,7 +2517,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00886
   },
   {
     "id": "CVE-2023-41974",
@@ -2490,7 +2554,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00217
   },
   {
     "id": "CVE-2026-22719",
@@ -2526,7 +2591,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.02095
   },
   {
     "id": "CVE-2026-21385",
@@ -2562,7 +2628,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00227
   },
   {
     "id": "CVE-2022-20775",
@@ -2598,7 +2665,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.00419
   },
   {
     "id": "CVE-2026-20127",
@@ -2634,7 +2702,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.5895
   },
   {
     "id": "CVE-2026-25108",
@@ -2670,7 +2739,8 @@
     ],
     "tags": [
       "exploited"
-    ]
+    ],
+    "epss": 0.0837
   },
   {
     "id": "CVE-2025-34291",

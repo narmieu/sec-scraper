@@ -1,8 +1,8 @@
 {
   "ghsa": {
-    "consecutiveFailures": 1,
+    "consecutiveFailures": 2,
     "state": "closed",
-    "lastError": "HTTP 422 https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>2026-05-22T11%3A47%3A20.080Z"
+    "lastError": "HTTP 422 https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>2026-05-22T11%3A47%3A50.711Z"
   },
   "osv": {
     "consecutiveFailures": 0,
@@ -41,17 +41,17 @@
     "lastFetchedAt": "2026-05-22T13:47:20.078Z"
   },
   "snyk-rss": {
-    "consecutiveFailures": 1,
+    "consecutiveFailures": 2,
     "state": "closed",
     "lastError": "Attribute without value\nLine: 50\nColumn: 101\nChar: >"
   },
   "sonatype-rss": {
-    "consecutiveFailures": 1,
+    "consecutiveFailures": 2,
     "state": "closed",
     "lastError": "HTTP 404 https://ossindex.sonatype.org/rest/v1/feed"
   },
   "symfony-blog": {
-    "consecutiveFailures": 1,
+    "consecutiveFailures": 2,
     "state": "closed",
     "lastError": "HTTP 404 https://symfony.com/blog/category/security-advisories.atom"
   },
