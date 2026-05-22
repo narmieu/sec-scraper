@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter @sec/dashboard build",
+  "outputDirectory": "apps/dashboard/out",
+  "cleanUrls": true,
+  "trailingSlash": true
+}
