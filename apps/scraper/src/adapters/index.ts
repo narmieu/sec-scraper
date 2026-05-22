@@ -8,6 +8,7 @@ import { kevEnricher } from './cisa-kev.js';
 import { friendsofphpAdvisoriesAdapter } from './friendsofphp-advisories.js';
 import { symfonySecurityAdapter } from './symfony-security.js';
 import { npmBlogAdapter } from './npm-blog.js';
+import { githubRepoAdvisoriesAdapter } from './github-repo-advisories.js';
 import { nextjsReleasesAdapter } from './nextjs-releases.js';
 import { nodejsSecurityAdapter } from './nodejs-security.js';
 import { phpSecurityAdapter } from './php-security.js';
@@ -32,6 +33,7 @@ export const ADAPTERS: Adapter[] = [
   friendsofphpAdvisoriesAdapter,
   symfonySecurityAdapter,
   npmBlogAdapter,
+  githubRepoAdvisoriesAdapter,
   nextjsReleasesAdapter,
   nodejsSecurityAdapter,
   phpSecurityAdapter,
