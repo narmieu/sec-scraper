@@ -208,14 +208,14 @@
     "epss": 0.91018
   },
   {
-    "id": "CVE-2010-0806",
-    "cveId": "CVE-2010-0806",
+    "id": "CVE-2010-0249",
+    "cveId": "CVE-2010-0249",
     "aliases": [
       "CVE-2010-0249",
       "CVE-2010-0806"
     ],
     "title": "Microsoft Internet Explorer Use-After-Free Vulnerability",
-    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -231,7 +231,7 @@
     "kev": true,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:54.369Z",
+    "mergedAt": "2026-05-22T14:12:34.145Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -249,7 +249,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.88677
+    "epss": 0.87253
   },
   {
     "id": "CVE-2026-41091",
@@ -1960,14 +1960,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -1983,7 +1983,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T14:02:54.369Z",
+    "mergedAt": "2026-05-22T14:12:34.146Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2001,7 +2001,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00197
   },
   {
     "id": "CVE-2026-20131",
