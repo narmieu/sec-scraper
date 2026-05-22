@@ -296,7 +296,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-20T22:20:24.279Z",
-    "mergedAt": "2026-05-22T20:40:58.038Z",
+    "mergedAt": "2026-05-22T21:34:26.104Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2073,14 +2073,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2096,7 +2096,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T20:40:58.038Z",
+    "mergedAt": "2026-05-22T21:34:26.104Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2114,7 +2114,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00197
   },
   {
     "id": "CVE-2026-20131",
