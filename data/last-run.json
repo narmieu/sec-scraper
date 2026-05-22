@@ -1,0 +1,8 @@
+{
+  "startedAt": "1970-01-01T00:00:00Z",
+  "finishedAt": "1970-01-01T00:00:00Z",
+  "durationMs": 0,
+  "stats": { "newCount": 0, "updatedCount": 0, "droppedCount": 0, "alertCount": 0 },
+  "sources": {},
+  "errors": []
+}

@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: oklch(0.15 0 0);
+  --color-surface: oklch(0.21 0 0);
+  --color-surface-2: oklch(0.27 0 0);
+  --color-fg: oklch(0.95 0 0);
+  --color-muted: oklch(0.65 0 0);
+  --color-accent: oklch(0.72 0.18 250);
+  --color-critical: oklch(0.65 0.21 25);
+  --color-high: oklch(0.7 0.19 50);
+  --color-medium: oklch(0.8 0.17 90);
+  --color-low: oklch(0.65 0.03 240);
+  --color-unknown: oklch(0.5 0 0);
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: oklch(0.72 0.18 250 / 0.35);
+}
