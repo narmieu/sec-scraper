@@ -16,7 +16,7 @@ export function AlertLog({ alerted }: { alerted: AlertedFile }) {
       <button
         type="button"
         onClick={() => setOpen((x) => !x)}
-        className="text-xs uppercase tracking-wide text-[var(--color-muted)] hover:text-[var(--color-fg)]"
+        className="text-xs uppercase tracking-wide text-[var(--color-muted)] hover:text-[var(--color-fg)] min-h-[36px] flex items-center md:min-h-0"
       >
         Alerts last 7d ({recent.length}) {open ? '▾' : '▸'}
       </button>
