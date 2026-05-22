@@ -46,9 +46,22 @@ const QUERIES: { name: string; ecosystem: 'npm' | 'Packagist' }[] = [
   { name: 'zod', ecosystem: 'npm' },
   { name: 'graphql', ecosystem: 'npm' },
   { name: 'symfony/symfony', ecosystem: 'Packagist' },
+  { name: 'symfony/http-kernel', ecosystem: 'Packagist' },
+  { name: 'symfony/security-bundle', ecosystem: 'Packagist' },
+  { name: 'symfony/security-http', ecosystem: 'Packagist' },
+  { name: 'symfony/serializer', ecosystem: 'Packagist' },
+  { name: 'symfony/console', ecosystem: 'Packagist' },
+  { name: 'symfony/messenger', ecosystem: 'Packagist' },
+  { name: 'symfony/http-foundation', ecosystem: 'Packagist' },
+  { name: 'symfony/form', ecosystem: 'Packagist' },
+  { name: 'symfony/validator', ecosystem: 'Packagist' },
   { name: 'doctrine/orm', ecosystem: 'Packagist' },
+  { name: 'doctrine/dbal', ecosystem: 'Packagist' },
+  { name: 'doctrine/migrations', ecosystem: 'Packagist' },
   { name: 'twig/twig', ecosystem: 'Packagist' },
   { name: 'guzzlehttp/guzzle', ecosystem: 'Packagist' },
+  { name: 'api-platform/core', ecosystem: 'Packagist' },
+  { name: 'monolog/monolog', ecosystem: 'Packagist' },
 ];
 
 function extractCvss(item: OsvItem): { vector?: string } {
