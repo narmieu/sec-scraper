@@ -1,1 +1,13 @@
-{}
+{
+  "CVE-2026-46633": {
+    "alertedAt": "2026-05-22T13:47:20.078Z",
+    "channels": {
+      "console": "ok"
+    },
+    "vulnSnapshot": {
+      "priority": 85,
+      "kev": false,
+      "severity": "critical"
+    }
+  }
+}
