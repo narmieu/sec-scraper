@@ -71,6 +71,16 @@ export function FilterSidebar() {
           <label className="flex cursor-pointer items-center gap-2">
             <input
               type="checkbox"
+              checked={filters.kevOnly}
+              onChange={(e) => setFilters({ kevOnly: e.target.checked })}
+            />
+            <span>KEV only (actively exploited)</span>
+          </label>
+        </li>
+        <li>
+          <label className="flex cursor-pointer items-center gap-2">
+            <input
+              type="checkbox"
               checked={filters.hideRead}
               onChange={(e) => setFilters({ hideRead: e.target.checked })}
             />
