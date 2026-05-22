@@ -9,3 +9,4 @@ coverage/
 .DS_Store
 .turbo/
 .vercel/
+.claude/settings.local.json
