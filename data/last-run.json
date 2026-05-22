@@ -1,94 +1,13 @@
 {
-  "startedAt": "2026-05-22T18:48:33.756Z",
-  "finishedAt": "2026-05-22T18:48:49.036Z",
-  "durationMs": 15280,
+  "startedAt": "2026-05-22T19:40:22.446Z",
+  "finishedAt": "2026-05-22T19:40:26.355Z",
+  "durationMs": 3909,
   "stats": {
-    "newCount": 1479,
-    "updatedCount": 800,
+    "newCount": 1310,
+    "updatedCount": 812,
     "droppedCount": 0,
     "alertCount": 0
   },
-  "sources": {
-    "osv": {
-      "ok": true,
-      "fetched": 264,
-      "durationMs": 10830
-    },
-    "nvd": {
-      "ok": true,
-      "fetched": 23,
-      "durationMs": 4325
-    },
-    "cve-org": {
-      "ok": true,
-      "fetched": 33,
-      "durationMs": 3408
-    },
-    "packagist": {
-      "ok": true,
-      "fetched": 206,
-      "durationMs": 320
-    },
-    "friendsofphp-advisories": {
-      "ok": true,
-      "fetched": 10,
-      "durationMs": 311
-    },
-    "symfony-security": {
-      "ok": true,
-      "fetched": 5,
-      "durationMs": 425
-    },
-    "npm-blog": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 103
-    },
-    "github-repo-advisories": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 5275
-    },
-    "nextjs-releases": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1268
-    },
-    "nodejs-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 203
-    },
-    "php-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1260
-    },
-    "github-security-lab": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 190
-    },
-    "project-zero": {
-      "ok": true,
-      "fetched": 1,
-      "durationMs": 1559
-    },
-    "cisa-alerts": {
-      "ok": true,
-      "fetched": 30,
-      "durationMs": 394
-    },
-    "cloudflare-blog": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 469
-    },
-    "vercel-changelog": {
-      "ok": true,
-      "fetched": 4,
-      "durationMs": 870
-    }
-  },
+  "sources": {},
   "errors": []
 }
