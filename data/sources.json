@@ -8,20 +8,20 @@
   "osv": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "nvd": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "packagist": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "hackernews": {
     "consecutiveFailures": 0,
@@ -62,8 +62,8 @@
   "nextjs-releases": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "avid": {
     "consecutiveFailures": 0,
@@ -110,44 +110,44 @@
   "nodejs-security": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "php-security": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "github-security-lab": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "project-zero": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "cisa-alerts": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "cloudflare-blog": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "vercel-changelog": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "mastodon-cve": {
     "consecutiveFailures": 0,
@@ -164,32 +164,32 @@
   "cve-org": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "friendsofphp-advisories": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "symfony-security": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "npm-blog": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "github-repo-advisories": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-22T20:40:44.191Z",
-    "lastFetchedAt": "2026-05-22T20:40:44.191Z"
+    "lastSuccess": "2026-05-22T22:30:35.031Z",
+    "lastFetchedAt": "2026-05-22T22:30:35.031Z"
   },
   "cisa-vulnrichment": {
     "consecutiveFailures": 0,
