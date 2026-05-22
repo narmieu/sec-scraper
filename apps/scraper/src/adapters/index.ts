@@ -5,7 +5,6 @@ import { nvdAdapter } from './nvd.js';
 import { packagistAdapter } from './packagist.js';
 import { epssEnricher } from './epss.js';
 import { kevEnricher } from './cisa-kev.js';
-import { bleepingcomputerAdapter } from './bleepingcomputer.js';
 import { symfonyBlogAdapter } from './symfony-blog.js';
 import { nextjsReleasesAdapter } from './nextjs-releases.js';
 import { nodejsSecurityAdapter } from './nodejs-security.js';
@@ -29,7 +28,6 @@ export const ADAPTERS: Adapter[] = [
   osvAdapter,
   nvdAdapter,
   packagistAdapter,
-  bleepingcomputerAdapter,
   symfonyBlogAdapter,
   nextjsReleasesAdapter,
   nodejsSecurityAdapter,
