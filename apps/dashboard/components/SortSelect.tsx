@@ -12,7 +12,7 @@ export function SortSelect() {
       <select
         value={sort}
         onChange={(e) => setSort(e.target.value as SortKey)}
-        className="rounded border border-zinc-700 bg-[var(--color-surface)] px-2 py-1 text-sm text-[var(--color-fg)] focus:border-[var(--color-accent)] focus:outline-none"
+        className="rounded border border-zinc-700 bg-[var(--color-surface)] px-3 py-2 text-sm min-h-[36px] text-[var(--color-fg)] focus:border-[var(--color-accent)] focus:outline-none md:px-2 md:py-1 md:min-h-0"
       >
         {SORT_OPTIONS.map((o) => (
           <option key={o.key} value={o.key}>
