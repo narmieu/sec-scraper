@@ -14,7 +14,6 @@ import { projectZeroAdapter } from './project-zero.js';
 import { cisaAlertsAdapter } from './cisa-alerts.js';
 import { cloudflareBlogAdapter } from './cloudflare-blog.js';
 import { vercelChangelogAdapter } from './vercel-changelog.js';
-import { mastodonCveAdapter, mastodonZeroDayAdapter } from './mastodon-cve.js';
 import { avidAdapter } from './avid.js';
 import { owaspLlmAdapter } from './owasp-llm.js';
 import { mitreAtlasAdapter } from './mitre-atlas.js';
@@ -37,8 +36,6 @@ export const ADAPTERS: Adapter[] = [
   cisaAlertsAdapter,
   cloudflareBlogAdapter,
   vercelChangelogAdapter,
-  mastodonCveAdapter,
-  mastodonZeroDayAdapter,
   avidAdapter,
   owaspLlmAdapter,
   mitreAtlasAdapter,
