@@ -52,12 +52,14 @@ interface State {
   filters: Filters;
   query: string;
   sort: SortKey;
+  filtersOpen: boolean;
   markRead: (id: string) => void;
   unmarkRead: (id: string) => void;
   dismiss: (id: string) => void;
   setQuery: (q: string) => void;
   setFilters: (patch: Partial<Filters>) => void;
   setSort: (sort: SortKey) => void;
+  setFiltersOpen: (open: boolean) => void;
   reset: () => void;
 }
 
@@ -69,6 +71,7 @@ export const useStore = create<State>()(
       filters: DEFAULT_FILTERS,
       query: '',
       sort: DEFAULT_SORT,
+      filtersOpen: false,
       markRead: (id) =>
         set((s) => ({ readIds: s.readIds.includes(id) ? s.readIds : [...s.readIds, id] })),
       unmarkRead: (id) => set((s) => ({ readIds: s.readIds.filter((x) => x !== id) })),
@@ -77,9 +80,20 @@ export const useStore = create<State>()(
       setQuery: (query) => set({ query }),
       setFilters: (patch) => set((s) => ({ filters: { ...s.filters, ...patch } })),
       setSort: (sort) => set({ sort }),
+      setFiltersOpen: (filtersOpen) => set({ filtersOpen }),
       reset: () =>
         set({ readIds: [], hiddenIds: [], filters: DEFAULT_FILTERS, query: '', sort: DEFAULT_SORT }),
     }),
-    { name: 'sec-scraper-store', version: 2 },
+    {
+      name: 'sec-scraper-store',
+      version: 2,
+      partialize: (s) => ({
+        readIds: s.readIds,
+        hiddenIds: s.hiddenIds,
+        filters: s.filters,
+        query: s.query,
+        sort: s.sort,
+      }),
+    },
   ),
 );
