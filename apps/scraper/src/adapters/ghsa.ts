@@ -49,15 +49,20 @@ function mapEcosystem(e: string): Ecosystem {
   return ECO_MAP[e.toLowerCase()] ?? 'generic';
 }
 
+function stripMillis(iso: string): string {
+  // GitHub Advisory API rejects fractional seconds in the date filter.
+  return iso.replace(/\.\d+Z$/, 'Z');
+}
+
 export const ghsaAdapter: Adapter = {
   id: 'ghsa',
   cadence: 'hourly',
 
   async fetch(cursor: SourceCursor): Promise<FetchResult> {
     const since = cursor.lastFetchedAt
-      ? new Date(new Date(cursor.lastFetchedAt).getTime() - 30 * 60_000).toISOString()
-      : new Date(Date.now() - 2 * 60 * 60_000).toISOString();
-    const url = `https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=>${encodeURIComponent(since)}`;
+      ? stripMillis(new Date(new Date(cursor.lastFetchedAt).getTime() - 30 * 60_000).toISOString())
+      : stripMillis(new Date(Date.now() - 2 * 60 * 60_000).toISOString());
+    const url = `https://api.github.com/advisories?per_page=100&sort=updated&direction=desc&modified=%3E${since}`;
     const token = process.env['GITHUB_TOKEN'] || process.env['SCRAPER_PAT'];
     const headers: Record<string, string> = {
       accept: 'application/vnd.github+json',
