@@ -32,7 +32,7 @@ pnpm scrape --alert-test       # fake critical → notifiers
 | `SCRAPER_PAT` | Fine-grained PAT with `contents:write` |
 | `NVD_API_KEY` | Boosts NVD rate limit (50 req/30s) |
 | `TEAMS_WEBHOOK_URL` | Power Automate workflow webhook |
-| `GITHUB_TOKEN` | Auto-provided, used for GHSA API |
+| `GITHUB_TOKEN` | Auto-provided, used by ghsa, github-repo-advisories, cve-org, cisa-vulnrichment adapters |
 
 ## Teams webhook setup
 
