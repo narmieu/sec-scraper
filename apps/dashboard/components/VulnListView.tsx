@@ -3,13 +3,16 @@ import { useMemo } from 'react';
 import type { Vuln } from '@sec/shared';
 import { useStore } from '../lib/store';
 import { search } from '../lib/search';
+import { sortVulns } from '../lib/sort';
 import { FilterSidebar } from './FilterSidebar';
 import { SearchBar } from './SearchBar';
+import { SortSelect } from './SortSelect';
 import { VulnRow } from './VulnRow';
 
 export function VulnListView({ vulns }: { vulns: Vuln[] }) {
   const filters = useStore((s) => s.filters);
   const query = useStore((s) => s.query);
+  const sort = useStore((s) => s.sort);
   const readIds = useStore((s) => s.readIds);
   const hiddenIds = useStore((s) => s.hiddenIds);
 
@@ -27,6 +30,9 @@ export function VulnListView({ vulns }: { vulns: Vuln[] }) {
     if (filters.stackMatchOnly) {
       out = out.filter((v) => v.stackMatch.score > 0);
     }
+    if (filters.kevOnly) {
+      out = out.filter((v) => v.kev);
+    }
     if (filters.hideRead) {
       out = out.filter((v) => !readIds.includes(v.id));
     }
@@ -34,17 +40,20 @@ export function VulnListView({ vulns }: { vulns: Vuln[] }) {
       out = out.filter((v) => !hiddenIds.includes(v.id));
     }
     if (query) out = search(out, query);
-    return out;
-  }, [vulns, filters, query, readIds, hiddenIds]);
+    return sortVulns(out, sort);
+  }, [vulns, filters, query, sort, readIds, hiddenIds]);
 
   return (
     <div className="flex">
       <FilterSidebar />
       <section className="flex-1 min-w-0">
-        <div className="border-b border-zinc-800 px-4 py-3">
+        <div className="border-b border-zinc-800 px-4 py-3 space-y-2">
           <SearchBar />
-          <div className="mt-1 text-xs text-[var(--color-muted)]">
-            {filtered.length} of {vulns.length} shown
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <span className="text-xs text-[var(--color-muted)]">
+              {filtered.length} of {vulns.length} shown
+            </span>
+            <SortSelect />
           </div>
         </div>
         <div>
