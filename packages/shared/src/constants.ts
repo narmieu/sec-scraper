@@ -6,8 +6,6 @@ export const SOURCE_IDS = [
   'epss',
   'cisa-kev',
   'cisa-alerts',
-  'snyk-rss',
-  'sonatype-rss',
   'hackernews',
   'thehackernews',
   'bleepingcomputer',

@@ -8,8 +8,6 @@ import { kevEnricher } from './cisa-kev.js';
 import { hackernewsAdapter } from './hackernews.js';
 import { thehackernewsAdapter } from './thehackernews.js';
 import { bleepingcomputerAdapter } from './bleepingcomputer.js';
-import { snykRssAdapter } from './snyk-rss.js';
-import { sonatypeRssAdapter } from './sonatype-rss.js';
 import { symfonyBlogAdapter } from './symfony-blog.js';
 import { nextjsReleasesAdapter } from './nextjs-releases.js';
 import { nodejsSecurityAdapter } from './nodejs-security.js';
@@ -36,8 +34,6 @@ export const ADAPTERS: Adapter[] = [
   hackernewsAdapter,
   thehackernewsAdapter,
   bleepingcomputerAdapter,
-  snykRssAdapter,
-  sonatypeRssAdapter,
   symfonyBlogAdapter,
   nextjsReleasesAdapter,
   nodejsSecurityAdapter,
