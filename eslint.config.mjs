@@ -28,6 +28,7 @@ export default [
       '**/coverage/**',
       '**/__fixtures__/**',
       '**/node_modules/**',
+      '**/next-env.d.ts',
     ],
   },
 ];
