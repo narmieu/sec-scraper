@@ -23,42 +23,6 @@
     "lastSuccess": "2026-05-23T21:25:05.198Z",
     "lastFetchedAt": "2026-05-23T21:25:05.198Z"
   },
-  "hackernews": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-22T15:13:34.618Z",
-    "lastFetchedAt": "2026-05-22T15:13:34.618Z"
-  },
-  "thehackernews": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-22T15:13:34.618Z",
-    "lastFetchedAt": "2026-05-22T15:13:34.618Z"
-  },
-  "bleepingcomputer": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-22T15:13:34.618Z",
-    "lastFetchedAt": "2026-05-22T15:13:34.618Z"
-  },
-  "snyk-rss": {
-    "consecutiveFailures": 3,
-    "state": "open",
-    "lastError": "Attribute without value\nLine: 50\nColumn: 101\nChar: >",
-    "reopenAt": "2026-05-23T14:02:52.390Z"
-  },
-  "sonatype-rss": {
-    "consecutiveFailures": 3,
-    "state": "open",
-    "lastError": "HTTP 404 https://ossindex.sonatype.org/rest/v1/feed",
-    "reopenAt": "2026-05-23T14:02:52.390Z"
-  },
-  "symfony-blog": {
-    "consecutiveFailures": 3,
-    "state": "open",
-    "lastError": "HTTP 404 https://symfony.com/blog/category/security-advisories.atom",
-    "reopenAt": "2026-05-23T14:02:52.390Z"
-  },
   "nextjs-releases": {
     "consecutiveFailures": 0,
     "state": "closed",
@@ -148,18 +112,6 @@
     "state": "closed",
     "lastSuccess": "2026-05-23T21:25:05.198Z",
     "lastFetchedAt": "2026-05-23T21:25:05.198Z"
-  },
-  "mastodon-cve": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-22T15:13:34.618Z",
-    "lastFetchedAt": "2026-05-22T15:13:34.618Z"
-  },
-  "mastodon-zeroday": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-22T15:13:34.618Z",
-    "lastFetchedAt": "2026-05-22T15:13:34.618Z"
   },
   "cve-org": {
     "consecutiveFailures": 0,
