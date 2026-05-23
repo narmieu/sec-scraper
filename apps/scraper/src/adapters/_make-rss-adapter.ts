@@ -11,17 +11,20 @@ export interface MakeRssAdapterOpts {
   tags?: Tag[];
   severityFromTitle?: boolean;
   filter?: (item: RssItem) => boolean;
+  maxAgeDays?: number;
 }
 
 export function makeRssAdapter(opts: MakeRssAdapterOpts): Adapter {
-  const { id, cadence = 'hourly', url } = opts;
+  const { id, cadence = 'hourly', url, maxAgeDays } = opts;
   return {
     id,
     cadence,
     async fetch(_cursor: SourceCursor): Promise<FetchResult> {
       const items = await fetchRss(url);
       const filtered = items.filter(
-        (i) => isRecent(i.isoDate ?? i.pubDate) && (opts.filter ? opts.filter(i) : true),
+        (i) =>
+          isRecent(i.isoDate ?? i.pubDate, maxAgeDays) &&
+          (opts.filter ? opts.filter(i) : true),
       );
       return { raw: filtered };
     },

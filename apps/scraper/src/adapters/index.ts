@@ -9,7 +9,6 @@ import { epssEnricher } from './epss.js';
 import { kevEnricher } from './cisa-kev.js';
 import { friendsofphpAdvisoriesAdapter } from './friendsofphp-advisories.js';
 import { symfonySecurityAdapter } from './symfony-security.js';
-import { npmBlogAdapter } from './npm-blog.js';
 import { makeGithubRepoAdvisoriesAdapter } from './github-repo-advisories.js';
 import { nextjsReleasesAdapter } from './nextjs-releases.js';
 import { nodejsSecurityAdapter } from './nodejs-security.js';
@@ -20,12 +19,6 @@ import { cisaAlertsAdapter } from './cisa-alerts.js';
 import { cisaVulnrichmentAdapter } from './cisa-vulnrichment.js';
 import { cloudflareBlogAdapter } from './cloudflare-blog.js';
 import { vercelChangelogAdapter } from './vercel-changelog.js';
-import { avidAdapter } from './avid.js';
-import { owaspLlmAdapter } from './owasp-llm.js';
-import { mitreAtlasAdapter } from './mitre-atlas.js';
-import { anthropicTrustAdapter } from './anthropic-trust.js';
-import { openaiSecurityAdapter } from './openai-security.js';
-import { hackeroneAiAdapter } from './hackerone-ai.js';
 import { arxivCsCrAdapter } from './arxiv-cs-cr.js';
 
 export function buildAdapters(targets: StackTargets): Adapter[] {
@@ -37,7 +30,6 @@ export function buildAdapters(targets: StackTargets): Adapter[] {
     packagistAdapter,
     friendsofphpAdvisoriesAdapter,
     symfonySecurityAdapter,
-    npmBlogAdapter,
     makeGithubRepoAdvisoriesAdapter(targets),
     nextjsReleasesAdapter,
     nodejsSecurityAdapter,
@@ -48,12 +40,6 @@ export function buildAdapters(targets: StackTargets): Adapter[] {
     cisaVulnrichmentAdapter,
     cloudflareBlogAdapter,
     vercelChangelogAdapter,
-    avidAdapter,
-    owaspLlmAdapter,
-    mitreAtlasAdapter,
-    anthropicTrustAdapter,
-    openaiSecurityAdapter,
-    hackeroneAiAdapter,
     arxivCsCrAdapter,
   ];
 }
