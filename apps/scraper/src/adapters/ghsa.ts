@@ -1,5 +1,6 @@
 import type { Ecosystem, Vuln } from '@sec/shared';
 import { fetchJson } from '../pipeline/fetch.js';
+import { mapEcosystem } from '../pipeline/ecosystem.js';
 import {
   canonicalId,
   cleanText,
@@ -28,25 +29,6 @@ interface GhsaItem {
   published_at: string;
   updated_at: string;
   html_url: string;
-}
-
-const ECO_MAP: Record<string, Ecosystem> = {
-  npm: 'npm',
-  composer: 'composer',
-  pip: 'pypi',
-  pypi: 'pypi',
-  rubygems: 'generic',
-  maven: 'generic',
-  go: 'generic',
-  nuget: 'generic',
-  rust: 'generic',
-  erlang: 'generic',
-  swift: 'generic',
-  pub: 'generic',
-};
-
-function mapEcosystem(e: string): Ecosystem {
-  return ECO_MAP[e.toLowerCase()] ?? 'generic';
 }
 
 function stripMillis(iso: string): string {
