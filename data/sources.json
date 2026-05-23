@@ -194,7 +194,7 @@
   "cisa-vulnrichment": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T13:39:18.656Z",
-    "lastFetchedAt": "2026-05-23T13:39:18.656Z"
+    "lastSuccess": "2026-05-23T20:25:21.217Z",
+    "lastFetchedAt": "2026-05-23T20:25:21.217Z"
   }
 }
