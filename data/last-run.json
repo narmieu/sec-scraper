@@ -1,13 +1,134 @@
 {
-  "startedAt": "2026-05-23T15:31:50.303Z",
-  "finishedAt": "2026-05-23T15:31:56.450Z",
-  "durationMs": 6147,
+  "startedAt": "2026-05-23T16:29:33.075Z",
+  "finishedAt": "2026-05-23T16:30:15.949Z",
+  "durationMs": 42874,
   "stats": {
-    "newCount": 1310,
+    "newCount": 1467,
     "updatedCount": 908,
     "droppedCount": 0,
     "alertCount": 0
   },
-  "sources": {},
+  "sources": {
+    "ghsa": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 146
+    },
+    "osv": {
+      "ok": true,
+      "fetched": 264,
+      "durationMs": 11583
+    },
+    "nvd": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 6321
+    },
+    "cve-org": {
+      "ok": true,
+      "fetched": 601,
+      "durationMs": 37389
+    },
+    "packagist": {
+      "ok": true,
+      "fetched": 206,
+      "durationMs": 252
+    },
+    "friendsofphp-advisories": {
+      "ok": true,
+      "fetched": 10,
+      "durationMs": 244
+    },
+    "symfony-security": {
+      "ok": true,
+      "fetched": 5,
+      "durationMs": 266
+    },
+    "npm-blog": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 279
+    },
+    "github-repo-advisories": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 4717
+    },
+    "nextjs-releases": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 910
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 339
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1863
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 528
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 1622
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 644
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 779
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 4,
+      "durationMs": 1319
+    },
+    "avid": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 863
+    },
+    "owasp-llm": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 813
+    },
+    "mitre-atlas": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 778
+    },
+    "anthropic-trust": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1006
+    },
+    "openai-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 753
+    },
+    "hackerone-ai": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1408
+    },
+    "arxiv-cs-cr": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 793
+    }
+  },
   "errors": []
 }
