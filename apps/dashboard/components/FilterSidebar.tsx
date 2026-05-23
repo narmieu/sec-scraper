@@ -51,7 +51,7 @@ export function FilterSidebar({ sourceOptions }: { sourceOptions: SourceOption[]
 
   return (
     <>
-      <aside className="hidden lg:block w-60 shrink-0 border-r border-zinc-800 p-4 overflow-y-auto sticky top-[57px] self-start max-h-[calc(100vh-57px)]">
+      <aside className="hidden lg:block w-60 shrink-0 border-r border-zinc-800 p-4 overflow-y-auto sticky top-[57px] self-start max-h-[calc(100vh-57px)] scrollbar-fade">
         <FilterPanel sourceOptions={sourceOptions} />
       </aside>
 
@@ -63,7 +63,7 @@ export function FilterSidebar({ sourceOptions }: { sourceOptions: SourceOption[]
             aria-hidden
           />
           <aside
-            className="absolute inset-y-0 left-0 w-72 max-w-[85vw] bg-[var(--color-bg)] border-r border-zinc-800 p-4 overflow-y-auto"
+            className="absolute inset-y-0 left-0 w-72 max-w-[85vw] bg-[var(--color-bg)] border-r border-zinc-800 p-4 overflow-y-auto scrollbar-slim"
             role="dialog"
             aria-label="Filters"
           >
@@ -195,7 +195,7 @@ function FilterPanel({ sourceOptions }: { sourceOptions: SourceOption[] }) {
               </button>
             )}
           </div>
-          <ul className="mb-5 max-h-72 overflow-y-auto pr-1 space-y-0.5">
+          <ul className="mb-5 max-h-72 overflow-y-auto pr-1 space-y-0.5 scrollbar-slim">
             {sourceOptions.map((s) => {
               const active = filters.sources.includes(s.id);
               return (
