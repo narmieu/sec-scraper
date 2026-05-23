@@ -46,8 +46,8 @@ export function makeGithubRepoAdvisoriesAdapter(targets: StackTargets): Adapter 
 
     async fetch(cursor: SourceCursor): Promise<FetchResult> {
       const sinceMs = cursor.lastFetchedAt
-        ? new Date(cursor.lastFetchedAt).getTime()
-        : Date.now() - 24 * 3600_000;
+        ? new Date(cursor.lastFetchedAt).getTime() - 30 * 60_000
+        : Date.now() - 30 * 24 * 3600_000;
       const headers = githubHeaders();
       const all: RawItem[] = [];
 
