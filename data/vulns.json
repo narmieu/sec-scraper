@@ -55,8 +55,8 @@
     "title": "Drupal core - Highly critical - SQL injection - SA-CORE-2026-004",
     "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Drupal Drupal core allows SQL Injection. This issue affects Drupal core: from 8.9.0 before 10.4.10, from 10.5.0 before 10.5.10, from 10.6.0 before 10.6.9, from 11.0.0 before 11.1.10, from 11.2.0 before 11.2.12, from 11.3.0 before 11.3.10.",
     "severity": "critical",
-    "cvss": 9.1,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "cvss": 9.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
     "kev": true,
     "ecosystems": [
       "generic"
@@ -72,8 +72,8 @@
     },
     "priority": 85,
     "publishedAt": "2026-05-20T18:20:52.863Z",
-    "modifiedAt": "2026-05-22T14:33:17.496Z",
-    "mergedAt": "2026-05-22T23:33:30.420Z",
+    "modifiedAt": "2026-05-23T03:55:38.207Z",
+    "mergedAt": "2026-05-23T07:08:52.518Z",
     "sources": [
       {
         "source": "nvd",
@@ -130,7 +130,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:20.771Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "osv",
@@ -296,7 +296,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-23T05:24:54.279Z",
+    "mergedAt": "2026-05-23T07:08:54.430Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -323,16 +323,17 @@
     "epss": 0.88677
   },
   {
-    "id": "CVE-2026-41091",
-    "cveId": "CVE-2026-41091",
+    "id": "CVE-2026-42901",
+    "cveId": "CVE-2026-42901",
     "aliases": [
-      "CVE-2026-41091"
+      "CVE-2026-41091",
+      "CVE-2026-42901"
     ],
-    "title": "Microsoft Defender Elevation of Privilege Vulnerability",
-    "summary": "Improper link resolution before file access ('link following') in Microsoft Defender allows an authorized attacker to elevate privileges locally.",
-    "severity": "high",
-    "cvss": 7.8,
-    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
+    "title": "Microsoft Entra ID Elevation of Privilege Vulnerability",
+    "summary": "Origin validation error in Microsoft Entra ID allows an unauthorized attacker to elevate privileges over a network.",
+    "severity": "critical",
+    "cvss": 10,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:U/RL:O/RC:C",
     "kev": true,
     "ecosystems": [
       "infrastructure",
@@ -347,8 +348,8 @@
     },
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
-    "modifiedAt": "2026-05-21T03:55:23.197Z",
-    "mergedAt": "2026-05-22T23:33:30.399Z",
+    "modifiedAt": "2026-05-23T03:19:46.156Z",
+    "mergedAt": "2026-05-23T07:08:54.430Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -361,6 +362,12 @@
         "externalId": "CVE-2026-41091",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/41xxx/CVE-2026-41091.json",
         "fetchedAt": "2026-05-22T16:40:00.133Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-42901",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/42xxx/CVE-2026-42901.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": [
@@ -2073,14 +2080,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2096,7 +2103,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:54.279Z",
+    "mergedAt": "2026-05-23T07:08:54.430Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2114,7 +2121,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00197
   },
   {
     "id": "CVE-2026-20131",
@@ -2979,7 +2986,7 @@
     "priority": 71,
     "publishedAt": "2025-03-21T15:20:12.000Z",
     "modifiedAt": "2026-03-04T15:06:29.993Z",
-    "mergedAt": "2026-05-23T05:24:52.413Z",
+    "mergedAt": "2026-05-23T07:08:52.450Z",
     "sources": [
       {
         "source": "osv",
@@ -3027,7 +3034,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:55:15.000Z",
     "modifiedAt": "2026-05-14T20:50:45.445Z",
-    "mergedAt": "2026-05-23T05:24:52.413Z",
+    "mergedAt": "2026-05-23T07:08:52.450Z",
     "sources": [
       {
         "source": "osv",
@@ -3075,7 +3082,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:53:51.000Z",
     "modifiedAt": "2026-05-14T20:48:35.793Z",
-    "mergedAt": "2026-05-23T05:24:52.410Z",
+    "mergedAt": "2026-05-23T07:08:52.446Z",
     "sources": [
       {
         "source": "osv",
@@ -3120,7 +3127,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T14:50:27.000Z",
     "modifiedAt": "2026-05-13T03:44:29.651Z",
-    "mergedAt": "2026-05-23T05:24:52.412Z",
+    "mergedAt": "2026-05-23T07:08:52.449Z",
     "sources": [
       {
         "source": "osv",
@@ -3167,7 +3174,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:26:29.000Z",
     "modifiedAt": "2026-05-06T15:29:21.690Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -3216,7 +3223,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:25:47.000Z",
     "modifiedAt": "2026-05-06T15:29:22.420Z",
-    "mergedAt": "2026-05-23T05:24:52.421Z",
+    "mergedAt": "2026-05-23T07:08:52.458Z",
     "sources": [
       {
         "source": "osv",
@@ -3266,7 +3273,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:20:58.000Z",
     "modifiedAt": "2026-05-06T15:29:21.321Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -3314,7 +3321,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:18:38.000Z",
     "modifiedAt": "2026-05-12T17:16:38.232Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -3359,7 +3366,7 @@
     "priority": 67,
     "publishedAt": "2026-04-10T15:35:47.000Z",
     "modifiedAt": "2026-04-16T23:29:14.079Z",
-    "mergedAt": "2026-05-23T05:24:52.417Z",
+    "mergedAt": "2026-05-23T07:08:52.454Z",
     "sources": [
       {
         "source": "osv",
@@ -3424,7 +3431,7 @@
     "priority": 67,
     "publishedAt": "2026-04-01T23:51:12.000Z",
     "modifiedAt": "2026-04-02T17:29:57.498Z",
-    "mergedAt": "2026-05-23T05:24:52.424Z",
+    "mergedAt": "2026-05-23T07:08:52.461Z",
     "sources": [
       {
         "source": "osv",
@@ -3498,7 +3505,7 @@
     "priority": 66,
     "publishedAt": "2019-07-10T19:45:23.000Z",
     "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-23T05:24:52.424Z",
+    "mergedAt": "2026-05-23T07:08:52.461Z",
     "sources": [
       {
         "source": "osv",
@@ -3547,7 +3554,7 @@
     "priority": 65,
     "publishedAt": "2026-02-09T17:46:14.000Z",
     "modifiedAt": "2026-05-08T14:03:50.604Z",
-    "mergedAt": "2026-05-23T05:24:52.421Z",
+    "mergedAt": "2026-05-23T07:08:52.458Z",
     "sources": [
       {
         "source": "osv",
@@ -3637,7 +3644,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.830Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "osv",
@@ -3693,7 +3700,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.837Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "osv",
@@ -3747,7 +3754,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T15:44:33.359Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "packagist",
@@ -3804,7 +3811,7 @@
     "priority": 61,
     "publishedAt": "2021-11-11T13:30:00.000Z",
     "modifiedAt": "2026-03-13T22:00:38.072Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.500Z",
     "sources": [
       {
         "source": "osv",
@@ -3860,7 +3867,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.132Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "osv",
@@ -3916,7 +3923,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.214Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "osv",
@@ -3972,7 +3979,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T16:21:19.000Z",
     "modifiedAt": "2026-05-14T20:47:46.572Z",
-    "mergedAt": "2026-05-23T05:24:52.410Z",
+    "mergedAt": "2026-05-23T07:08:52.446Z",
     "sources": [
       {
         "source": "osv",
@@ -4026,7 +4033,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:56:24.000Z",
     "modifiedAt": "2026-05-14T20:50:54.621Z",
-    "mergedAt": "2026-05-23T05:24:52.416Z",
+    "mergedAt": "2026-05-23T07:08:52.453Z",
     "sources": [
       {
         "source": "osv",
@@ -4074,7 +4081,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:54:08.000Z",
     "modifiedAt": "2026-05-14T20:47:43.284Z",
-    "mergedAt": "2026-05-23T05:24:52.411Z",
+    "mergedAt": "2026-05-23T07:08:52.447Z",
     "sources": [
       {
         "source": "osv",
@@ -4118,7 +4125,7 @@
     "priority": 55,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "packagist",
@@ -4167,7 +4174,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:57:12.000Z",
     "modifiedAt": "2026-05-14T20:51:12.557Z",
-    "mergedAt": "2026-05-23T05:24:52.413Z",
+    "mergedAt": "2026-05-23T07:08:52.450Z",
     "sources": [
       {
         "source": "osv",
@@ -4215,7 +4222,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:38.000Z",
     "modifiedAt": "2026-05-14T20:51:25.401Z",
-    "mergedAt": "2026-05-23T05:24:52.416Z",
+    "mergedAt": "2026-05-23T07:08:52.452Z",
     "sources": [
       {
         "source": "osv",
@@ -4263,7 +4270,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:05.000Z",
     "modifiedAt": "2026-05-14T20:51:26.606Z",
-    "mergedAt": "2026-05-23T05:24:52.416Z",
+    "mergedAt": "2026-05-23T07:08:52.453Z",
     "sources": [
       {
         "source": "osv",
@@ -4311,7 +4318,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:54:46.000Z",
     "modifiedAt": "2026-05-14T20:52:45.704Z",
-    "mergedAt": "2026-05-23T05:24:52.418Z",
+    "mergedAt": "2026-05-23T07:08:52.456Z",
     "sources": [
       {
         "source": "osv",
@@ -4359,7 +4366,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:45.000Z",
     "modifiedAt": "2026-05-06T15:29:22.982Z",
-    "mergedAt": "2026-05-23T05:24:52.421Z",
+    "mergedAt": "2026-05-23T07:08:52.458Z",
     "sources": [
       {
         "source": "osv",
@@ -4407,7 +4414,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:17.000Z",
     "modifiedAt": "2026-05-06T15:29:25.469Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -4455,7 +4462,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:34:32.000Z",
     "modifiedAt": "2026-05-06T15:29:21.389Z",
-    "mergedAt": "2026-05-23T05:24:52.421Z",
+    "mergedAt": "2026-05-23T07:08:52.458Z",
     "sources": [
       {
         "source": "osv",
@@ -4503,7 +4510,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:33:25.000Z",
     "modifiedAt": "2026-05-06T15:29:22.484Z",
-    "mergedAt": "2026-05-23T05:24:52.421Z",
+    "mergedAt": "2026-05-23T07:08:52.458Z",
     "sources": [
       {
         "source": "osv",
@@ -4551,7 +4558,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:26:57.000Z",
     "modifiedAt": "2026-05-06T15:29:25.221Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -4600,7 +4607,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:25:22.000Z",
     "modifiedAt": "2026-05-06T15:29:24.391Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -4649,7 +4656,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:21:39.000Z",
     "modifiedAt": "2026-05-06T15:29:25.530Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -4698,7 +4705,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:19:33.000Z",
     "modifiedAt": "2026-05-06T15:29:23.367Z",
-    "mergedAt": "2026-05-23T05:24:52.420Z",
+    "mergedAt": "2026-05-23T07:08:52.457Z",
     "sources": [
       {
         "source": "osv",
@@ -4748,7 +4755,7 @@
     "priority": 52,
     "publishedAt": "2026-04-10T19:47:16.000Z",
     "modifiedAt": "2026-05-20T00:30:10.353Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -4797,7 +4804,7 @@
     "priority": 52,
     "publishedAt": "2026-04-09T17:32:19.000Z",
     "modifiedAt": "2026-05-08T13:46:43.000Z",
-    "mergedAt": "2026-05-23T05:24:52.420Z",
+    "mergedAt": "2026-05-23T07:08:52.457Z",
     "sources": [
       {
         "source": "osv",
@@ -4863,7 +4870,7 @@
     "priority": 52,
     "publishedAt": "2026-04-01T23:50:27.000Z",
     "modifiedAt": "2026-04-02T17:29:51.565Z",
-    "mergedAt": "2026-05-23T05:24:52.423Z",
+    "mergedAt": "2026-05-23T07:08:52.460Z",
     "sources": [
       {
         "source": "osv",
@@ -4911,7 +4918,7 @@
     "priority": 51,
     "publishedAt": "2021-12-07T21:12:09.000Z",
     "modifiedAt": "2026-03-13T22:00:36.554Z",
-    "mergedAt": "2026-05-23T05:24:52.410Z",
+    "mergedAt": "2026-05-23T07:08:52.446Z",
     "sources": [
       {
         "source": "osv",
@@ -4959,7 +4966,7 @@
     "priority": 51,
     "publishedAt": "2021-09-01T18:24:22.000Z",
     "modifiedAt": "2026-03-13T22:00:20.154Z",
-    "mergedAt": "2026-05-23T05:24:52.413Z",
+    "mergedAt": "2026-05-23T07:08:52.449Z",
     "sources": [
       {
         "source": "osv",
@@ -5016,7 +5023,7 @@
     "priority": 51,
     "publishedAt": "2020-09-02T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:14:38.594Z",
-    "mergedAt": "2026-05-23T05:24:52.461Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "osv",
@@ -5094,7 +5101,7 @@
     "priority": 51,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:03.504Z",
-    "mergedAt": "2026-05-23T05:24:52.462Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "osv",
@@ -5156,7 +5163,7 @@
     "priority": 51,
     "publishedAt": "2020-01-30T21:22:15.000Z",
     "modifiedAt": "2026-03-13T22:01:20.067Z",
-    "mergedAt": "2026-05-23T05:24:52.424Z",
+    "mergedAt": "2026-05-23T07:08:52.461Z",
     "sources": [
       {
         "source": "osv",
@@ -5205,7 +5212,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:22.410Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "osv",
@@ -5261,7 +5268,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:21.667Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "osv",
@@ -5312,7 +5319,7 @@
     "priority": 47,
     "publishedAt": "2026-03-31T03:15:49.000Z",
     "modifiedAt": "2026-04-07T14:52:30.013Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.460Z",
     "sources": [
       {
         "source": "osv",
@@ -5359,7 +5366,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T16:12:07.000Z",
     "modifiedAt": "2026-05-14T20:48:38.453Z",
-    "mergedAt": "2026-05-23T05:24:52.410Z",
+    "mergedAt": "2026-05-23T07:08:52.447Z",
     "sources": [
       {
         "source": "osv",
@@ -5407,7 +5414,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T15:56:48.000Z",
     "modifiedAt": "2026-05-14T20:52:41.365Z",
-    "mergedAt": "2026-05-23T05:24:52.418Z",
+    "mergedAt": "2026-05-23T07:08:52.455Z",
     "sources": [
       {
         "source": "osv",
@@ -5456,7 +5463,7 @@
     "priority": 45,
     "publishedAt": "2026-05-05T00:18:03.000Z",
     "modifiedAt": "2026-05-06T15:29:21.463Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -5506,7 +5513,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.464Z",
+    "mergedAt": "2026-05-23T07:08:52.499Z",
     "sources": [
       {
         "source": "packagist",
@@ -5558,7 +5565,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.494Z",
     "sources": [
       {
         "source": "packagist",
@@ -5605,7 +5612,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T13:37:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.475Z",
+    "mergedAt": "2026-05-23T07:08:52.509Z",
     "sources": [
       {
         "source": "packagist",
@@ -5664,7 +5671,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.464Z",
+    "mergedAt": "2026-05-23T07:08:52.500Z",
     "sources": [
       {
         "source": "packagist",
@@ -5716,7 +5723,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -5762,7 +5769,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -5809,7 +5816,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.475Z",
+    "mergedAt": "2026-05-23T07:08:52.509Z",
     "sources": [
       {
         "source": "packagist",
@@ -5862,7 +5869,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -5909,7 +5916,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.475Z",
+    "mergedAt": "2026-05-23T07:08:52.509Z",
     "sources": [
       {
         "source": "packagist",
@@ -5962,7 +5969,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -6014,7 +6021,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.461Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "packagist",
@@ -6066,7 +6073,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -6112,7 +6119,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -6158,7 +6165,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -6205,7 +6212,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.475Z",
+    "mergedAt": "2026-05-23T07:08:52.509Z",
     "sources": [
       {
         "source": "packagist",
@@ -6264,7 +6271,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.461Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "packagist",
@@ -6316,7 +6323,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -6362,7 +6369,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -6408,7 +6415,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -6460,7 +6467,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.461Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "packagist",
@@ -6518,7 +6525,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.464Z",
+    "mergedAt": "2026-05-23T07:08:52.500Z",
     "sources": [
       {
         "source": "packagist",
@@ -6570,7 +6577,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
+    "mergedAt": "2026-05-23T07:08:52.495Z",
     "sources": [
       {
         "source": "packagist",
@@ -6628,7 +6635,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.461Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "packagist",
@@ -6686,7 +6693,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "packagist",
@@ -6731,7 +6738,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.465Z",
+    "mergedAt": "2026-05-23T07:08:52.501Z",
     "sources": [
       {
         "source": "packagist",
@@ -6827,7 +6834,7 @@
     "aliases": [
       "CVE-2026-4070"
     ],
-    "title": "The Alfie – Feed Plugin plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.2.1. This is due to missing nonce validation on the alfie_manage() func",
+    "title": "Alfie <= 1.2.1 - Cross-Site Request Forgery to Feed Deletion via 'delete' Parameter",
     "summary": "The Alfie – Feed Plugin plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.2.1. This is due to missing nonce validation on the alfie_manage() function which handles feed deletion via the 'delete' GET parameter. This makes it possible for unauthenticated attackers to delete arbitrary plugin feed data (from alfie_colindex, alfie_producten, alfie_reactions, and alfie_searchproduct tables) via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
     "severity": "medium",
     "cvss": 4.3,
@@ -6849,18 +6856,63 @@
     },
     "priority": 39,
     "publishedAt": "2026-05-22T05:16:27.233Z",
-    "modifiedAt": "2026-05-22T05:16:27.233Z",
-    "mergedAt": "2026-05-22T16:38:48.270Z",
+    "modifiedAt": "2026-05-23T02:26:29.032Z",
+    "mergedAt": "2026-05-23T07:08:52.571Z",
     "sources": [
       {
         "source": "nvd",
         "externalId": "CVE-2026-4070",
         "url": "https://plugins.trac.wordpress.org/browser/alfie-the-productfeedtool-wp-plugin/tags/1.2.1/include/alfie-manage.php#L58",
         "fetchedAt": "2026-05-22T16:38:48.270Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-4070",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/4xxx/CVE-2026-4070.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": [],
     "epss": 0.00005
+  },
+  {
+    "id": "CVE-2026-9101",
+    "cveId": "CVE-2026-9101",
+    "aliases": [
+      "CVE-2026-9101"
+    ],
+    "title": "Prototype pollution in csv parsing",
+    "summary": "Prototype pollution in csv parsing logic during import can lead to untrusted file paths (but not arguments) entering shell.openExternal after specific user behavior leading to \"1-click\" command execution.",
+    "severity": "medium",
+    "cvss": 4.3,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 40,
+      "packages": [
+        "next"
+      ],
+      "reason": "topic-mention"
+    },
+    "priority": 39,
+    "publishedAt": "2026-05-20T16:18:10.689Z",
+    "modifiedAt": "2026-05-23T03:55:41.949Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-9101",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/9xxx/CVE-2026-9101.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00012
   },
   {
     "id": "CVE-2026-6566",
@@ -6937,7 +6989,7 @@
     "priority": 38,
     "publishedAt": "2026-04-08T15:51:48.000Z",
     "modifiedAt": "2026-05-05T16:10:10.879Z",
-    "mergedAt": "2026-05-23T05:24:52.422Z",
+    "mergedAt": "2026-05-23T07:08:52.459Z",
     "sources": [
       {
         "source": "osv",
@@ -6985,7 +7037,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:15.000Z",
     "modifiedAt": "2026-03-19T17:59:01.302Z",
-    "mergedAt": "2026-05-23T05:24:52.415Z",
+    "mergedAt": "2026-05-23T07:08:52.452Z",
     "sources": [
       {
         "source": "osv",
@@ -7033,7 +7085,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:06.000Z",
     "modifiedAt": "2026-03-20T14:59:12.698Z",
-    "mergedAt": "2026-05-23T05:24:52.411Z",
+    "mergedAt": "2026-05-23T07:08:52.447Z",
     "sources": [
       {
         "source": "osv",
@@ -7081,7 +7133,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:16:49.000Z",
     "modifiedAt": "2026-03-19T18:48:06.587Z",
-    "mergedAt": "2026-05-23T05:24:52.416Z",
+    "mergedAt": "2026-05-23T07:08:52.453Z",
     "sources": [
       {
         "source": "osv",
@@ -7129,7 +7181,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T15:30:14.000Z",
     "modifiedAt": "2026-03-19T18:31:23.523Z",
-    "mergedAt": "2026-05-23T05:24:52.416Z",
+    "mergedAt": "2026-05-23T07:08:52.453Z",
     "sources": [
       {
         "source": "osv",
@@ -7179,7 +7231,7 @@
     "priority": 36,
     "publishedAt": "2026-01-28T15:20:55.000Z",
     "modifiedAt": "2026-04-08T21:16:40.797Z",
-    "mergedAt": "2026-05-23T05:24:52.411Z",
+    "mergedAt": "2026-05-23T07:08:52.448Z",
     "sources": [
       {
         "source": "osv",
@@ -7236,7 +7288,7 @@
     "priority": 36,
     "publishedAt": "2021-11-15T10:47:04.000Z",
     "modifiedAt": "2026-03-13T21:59:52.395Z",
-    "mergedAt": "2026-05-23T05:24:52.462Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "osv",
@@ -7308,7 +7360,7 @@
     "priority": 36,
     "publishedAt": "2021-10-23T11:11:11.000Z",
     "modifiedAt": "2026-03-13T22:14:23.582Z",
-    "mergedAt": "2026-05-23T05:24:52.461Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "osv",
@@ -7380,7 +7432,7 @@
     "priority": 36,
     "publishedAt": "2021-10-09T12:10:44.000Z",
     "modifiedAt": "2026-03-13T22:00:11.423Z",
-    "mergedAt": "2026-05-23T05:24:52.461Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "osv",
@@ -7443,7 +7495,7 @@
     "priority": 36,
     "publishedAt": "2021-08-12T14:51:14.000Z",
     "modifiedAt": "2026-03-13T22:00:08.038Z",
-    "mergedAt": "2026-05-23T05:24:52.418Z",
+    "mergedAt": "2026-05-23T07:08:52.455Z",
     "sources": [
       {
         "source": "osv",
@@ -7500,7 +7552,7 @@
     "priority": 36,
     "publishedAt": "2021-06-17T15:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:16.333Z",
-    "mergedAt": "2026-05-23T05:24:52.461Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "osv",
@@ -7604,7 +7656,7 @@
     "priority": 36,
     "publishedAt": "2021-05-12T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:14.858Z",
-    "mergedAt": "2026-05-23T05:24:52.462Z",
+    "mergedAt": "2026-05-23T07:08:52.498Z",
     "sources": [
       {
         "source": "osv",
@@ -7673,7 +7725,7 @@
     "priority": 36,
     "publishedAt": "2020-10-08T19:28:07.000Z",
     "modifiedAt": "2026-03-13T22:14:13.665Z",
-    "mergedAt": "2026-05-23T05:24:52.419Z",
+    "mergedAt": "2026-05-23T07:08:52.456Z",
     "sources": [
       {
         "source": "osv",
@@ -7729,7 +7781,7 @@
     "priority": 36,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:15:59.230Z",
-    "mergedAt": "2026-05-23T05:24:52.459Z",
+    "mergedAt": "2026-05-23T07:08:52.496Z",
     "sources": [
       {
         "source": "osv",
@@ -7805,7 +7857,7 @@
     "priority": 36,
     "publishedAt": "2019-07-19T16:13:07.000Z",
     "modifiedAt": "2026-03-13T21:56:22.446Z",
-    "mergedAt": "2026-05-23T05:24:52.424Z",
+    "mergedAt": "2026-05-23T07:08:52.461Z",
     "sources": [
       {
         "source": "osv",
@@ -7842,7 +7894,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T17:00:00.000Z",
     "modifiedAt": "2026-05-21T17:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.596Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -7917,7 +7969,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T07:25:00.000Z",
     "modifiedAt": "2026-05-21T07:25:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.475Z",
+    "mergedAt": "2026-05-23T07:08:52.509Z",
     "sources": [
       {
         "source": "symfony-security",
@@ -7992,7 +8044,7 @@
     "priority": 34,
     "publishedAt": "2026-05-18T23:01:00.000Z",
     "modifiedAt": "2026-05-18T23:01:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.482Z",
+    "mergedAt": "2026-05-23T07:08:52.600Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -8106,7 +8158,7 @@
     "priority": 29,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -8234,7 +8286,7 @@
     "priority": 28,
     "publishedAt": "2026-03-17T15:29:48.000Z",
     "modifiedAt": "2026-03-25T19:49:01.129Z",
-    "mergedAt": "2026-05-23T05:24:52.416Z",
+    "mergedAt": "2026-05-23T07:08:52.453Z",
     "sources": [
       {
         "source": "osv",
@@ -8291,7 +8343,7 @@
     "priority": 26,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:08.748Z",
-    "mergedAt": "2026-05-23T05:24:52.463Z",
+    "mergedAt": "2026-05-23T07:08:52.499Z",
     "sources": [
       {
         "source": "osv",
@@ -8387,8 +8439,8 @@
     },
     "priority": 20,
     "publishedAt": "2026-05-22T15:01:21.462Z",
-    "modifiedAt": "2026-05-22T18:07:38.019Z",
-    "mergedAt": "2026-05-22T23:33:29.080Z",
+    "modifiedAt": "2026-05-23T03:55:57.406Z",
+    "mergedAt": "2026-05-23T07:08:52.512Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -10340,8 +10392,8 @@
     },
     "priority": 20,
     "publishedAt": "2026-05-22T02:16:34.527Z",
-    "modifiedAt": "2026-05-22T12:50:32.825Z",
-    "mergedAt": "2026-05-22T17:43:10.385Z",
+    "modifiedAt": "2026-05-23T03:55:51.245Z",
+    "mergedAt": "2026-05-23T07:08:52.512Z",
     "sources": [
       {
         "source": "nvd",
@@ -10397,8 +10449,8 @@
     },
     "priority": 20,
     "publishedAt": "2026-05-22T02:16:34.240Z",
-    "modifiedAt": "2026-05-22T12:51:11.525Z",
-    "mergedAt": "2026-05-22T17:43:10.385Z",
+    "modifiedAt": "2026-05-23T03:55:49.702Z",
+    "mergedAt": "2026-05-23T07:08:52.512Z",
     "sources": [
       {
         "source": "nvd",
@@ -11889,6 +11941,42 @@
     "epss": 0.00046
   },
   {
+    "id": "CVE-2026-35430",
+    "cveId": "CVE-2026-35430",
+    "aliases": [
+      "CVE-2026-35430"
+    ],
+    "title": "Azure Privileged Identity Management (PIM) Elevation of Privilege Vulnerability",
+    "summary": "Authorization bypass through user-controlled key in Azure Privileged Identity Management (PIM) allows an authorized attacker to elevate privileges over a network.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 16,
+    "publishedAt": "2026-05-22T22:03:06.054Z",
+    "modifiedAt": "2026-05-23T03:13:09.466Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-35430",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/35xxx/CVE-2026-35430.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": []
+  },
+  {
     "id": "CVE-2026-40172",
     "cveId": "CVE-2026-40172",
     "aliases": [
@@ -11920,6 +12008,42 @@
         "externalId": "CVE-2026-40172",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/40xxx/CVE-2026-40172.json",
         "fetchedAt": "2026-05-22T23:33:29.080Z"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "CVE-2026-6406",
+    "cveId": "CVE-2026-6406",
+    "aliases": [
+      "CVE-2026-6406"
+    ],
+    "title": "Docker Desktop Enhanced Container Isolation bypass via --use-api-socket CLI flag",
+    "summary": "The Docker CLI --use-api-socket flag bypasses Enhanced Container Isolation (ECI) restrictions in Docker Desktop. When ECI is enabled, Docker socket mounts from containers are denied unless explicitly allowed via the admin-settings configuration. However, the --use-api-socket flag adds the Docker socket mount via the HostConfig.Mounts field rather than the HostConfig.Binds field. The ECI enforcement in the Docker Desktop API proxy only inspected Binds, allowing the mount to pass unchecked. This grants a container full access to the Docker Engine socket and, if the host user has logged in to container registries, their authentication credentials. A local attacker with the ability to run Docker CLI commands can exploit this to escape ECI restrictions, access the Docker Engine, and potentially escalate privileges.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 16,
+    "publishedAt": "2026-05-22T18:32:15.959Z",
+    "modifiedAt": "2026-05-23T03:56:00.655Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-6406",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/6xxx/CVE-2026-6406.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": []
@@ -12096,8 +12220,8 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-22T16:38:10.522Z",
-    "modifiedAt": "2026-05-22T17:22:40.826Z",
-    "mergedAt": "2026-05-22T23:33:29.080Z",
+    "modifiedAt": "2026-05-23T03:55:58.873Z",
+    "mergedAt": "2026-05-23T07:08:52.522Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -12240,8 +12364,8 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-22T14:24:53.070Z",
-    "modifiedAt": "2026-05-22T14:49:05.063Z",
-    "mergedAt": "2026-05-22T16:40:00.128Z",
+    "modifiedAt": "2026-05-23T03:55:55.923Z",
+    "mergedAt": "2026-05-23T07:08:52.518Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -12276,8 +12400,8 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-22T14:11:41.877Z",
-    "modifiedAt": "2026-05-22T14:50:36.484Z",
-    "mergedAt": "2026-05-22T16:40:00.128Z",
+    "modifiedAt": "2026-05-23T03:55:52.757Z",
+    "mergedAt": "2026-05-23T07:08:52.522Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -12312,8 +12436,8 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-22T13:22:38.873Z",
-    "modifiedAt": "2026-05-22T14:17:39.549Z",
-    "mergedAt": "2026-05-22T16:40:00.128Z",
+    "modifiedAt": "2026-05-23T03:04:40.537Z",
+    "mergedAt": "2026-05-23T07:08:52.582Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -12384,8 +12508,8 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-22T12:17:25.102Z",
-    "modifiedAt": "2026-05-22T13:05:13.820Z",
-    "mergedAt": "2026-05-22T16:40:00.129Z",
+    "modifiedAt": "2026-05-23T03:55:40.449Z",
+    "mergedAt": "2026-05-23T07:08:52.512Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -12469,6 +12593,43 @@
     ],
     "tags": [],
     "epss": 0.00132
+  },
+  {
+    "id": "CVE-2026-9011",
+    "cveId": "CVE-2026-9011",
+    "aliases": [
+      "CVE-2026-9011"
+    ],
+    "title": "Ditty <= 3.1.65 - Missing Authorization to Unauthenticated Sensitive Information Disclosure via ditty_init AJAX Action",
+    "summary": "The Ditty – Responsive News Tickers, Sliders, and Lists plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.1.65. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to retrieve the full item content of non-public Dittys — including drafts, pending, scheduled, and disabled entries — by enumerating integer post IDs against the ditty_init AJAX endpoint. Unlike the non-AJAX init() counterpart, init_ajax() does not verify that the requested Ditty has a 'publish' post status before loading and returning its items, allowing content that administrators explicitly withheld from public view to be extracted.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 16,
+    "publishedAt": "2026-05-22T07:50:25.552Z",
+    "modifiedAt": "2026-05-23T02:29:34.538Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-9011",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/9xxx/CVE-2026-9011.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00082
   },
   {
     "id": "CVE-2026-9018",
@@ -12816,8 +12977,8 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-21T20:34:37.893Z",
-    "modifiedAt": "2026-05-22T13:19:33.044Z",
-    "mergedAt": "2026-05-22T23:33:30.419Z",
+    "modifiedAt": "2026-05-23T03:55:45.020Z",
+    "mergedAt": "2026-05-23T07:08:52.512Z",
     "sources": [
       {
         "source": "nvd",
@@ -12841,7 +13002,7 @@
     "aliases": [
       "CVE-2026-47101"
     ],
-    "title": "LiteLLM prior to 1.83.14 allows an authenticated internal_user to create API keys with access to routes that their role does not permit. When generating a key, the allowed_routes field is stored witho",
+    "title": "LiteLLM < 1.83.14 Privilege Escalation via API Key Generation",
     "summary": "LiteLLM prior to 1.83.14 allows an authenticated internal_user to create API keys with access to routes that their role does not permit. When generating a key, the allowed_routes field is stored without verifying that the specified routes fall within the user's own permissions. A key created with access to admin-only routes can then be used to reach those routes successfully, bypassing the role-based access controls that would otherwise block the request, enabling full privilege escalation from internal_user to proxy_admin.",
     "severity": "high",
     "cvss": 8.8,
@@ -12861,8 +13022,8 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-21T20:33:30.163Z",
-    "modifiedAt": "2026-05-21T21:16:32.413Z",
-    "mergedAt": "2026-05-22T23:33:30.419Z",
+    "modifiedAt": "2026-05-23T03:55:46.656Z",
+    "mergedAt": "2026-05-23T07:08:52.512Z",
     "sources": [
       {
         "source": "nvd",
@@ -12963,13 +13124,14 @@
     "epss": 0.00011
   },
   {
-    "id": "CVE-2026-48241",
-    "cveId": "CVE-2026-48241",
+    "id": "CVE-2026-48242",
+    "cveId": "CVE-2026-48242",
     "aliases": [
-      "CVE-2026-48241"
+      "CVE-2026-48241",
+      "CVE-2026-48242"
     ],
-    "title": "Open ISES Tickets < 3.44.2 Hardcoded MySQL Database Credentials in loader.php",
-    "summary": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database credentials in loader.php (a public-facing database utility) that are committed to the source repository. Any actor with access to the public source tree (or an unauthenticated attacker with read access to the file on a deployed installation) can read the username, password, and database name and use them to connect to the database if it is reachable from their network.",
+    "title": "Open ISES Tickets < 3.44.2 Hardcoded MySQL Database Credentials in import_mdb.php",
+    "summary": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database connection credentials (host, username, password, database name) in import_mdb.php. The credentials are embedded in source code committed to the public repository, allowing any reader of the source to obtain valid configuration values that may match deployed installations.",
     "severity": "high",
     "cvss": 8.1,
     "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
@@ -12986,18 +13148,24 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-21T17:10:55.398Z",
-    "modifiedAt": "2026-05-21T18:03:27.977Z",
-    "mergedAt": "2026-05-22T16:40:00.135Z",
+    "modifiedAt": "2026-05-23T02:24:26.941Z",
+    "mergedAt": "2026-05-23T07:08:52.568Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
         "externalId": "CVE-2026-48241",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48241.json",
         "fetchedAt": "2026-05-22T16:40:00.135Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48242",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48242.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": [],
-    "epss": 0.00052
+    "epss": 0.00039
   },
   {
     "id": "CVE-2026-48240",
@@ -13266,13 +13434,14 @@
     "epss": 0.00024
   },
   {
-    "id": "CVE-2026-48231",
-    "cveId": "CVE-2026-48231",
+    "id": "CVE-2026-48236",
+    "cveId": "CVE-2026-48236",
     "aliases": [
-      "CVE-2026-48231"
+      "CVE-2026-48231",
+      "CVE-2026-48236"
     ],
-    "title": "Open ISES Tickets < 3.44.2 SQL Injection via tables.php Multiple Parameters",
-    "summary": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in tables.php where the multiple POST parameters (tablename, indexname, sortby) are concatenated into table/column identifiers in dynamically constructed SELECT/UPDATE/DELETE statements without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
+    "title": "Open ISES Tickets < 3.44.2 SQL Injection via db_loader.php Multiple Parameters",
+    "summary": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in db_loader.php where the multiple POST parameters (ticketsdb, ticketshost, ticketsuser, ticketspassword) are concatenated into mysqli connection arguments and dynamic SQL operating against an attacker-controlled database without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
     "severity": "high",
     "cvss": 7.1,
     "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
@@ -13289,14 +13458,20 @@
     },
     "priority": 16,
     "publishedAt": "2026-05-21T17:10:19.878Z",
-    "modifiedAt": "2026-05-21T19:01:05.059Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "modifiedAt": "2026-05-23T02:23:07.220Z",
+    "mergedAt": "2026-05-23T07:08:52.566Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
         "externalId": "CVE-2026-48231",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48231.json",
         "fetchedAt": "2026-05-22T16:40:00.134Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48236",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48236.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": [],
@@ -13491,6 +13666,52 @@
     ],
     "tags": [],
     "epss": 0.00028
+  },
+  {
+    "id": "CVE-2026-45760",
+    "cveId": "CVE-2026-45760",
+    "aliases": [
+      "CVE-2026-45760"
+    ],
+    "title": "Apache Camel K: Camel K Cross-Namespace Build Deputy Attack",
+    "summary": "(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace. This issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1. Users are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.",
+    "severity": "high",
+    "cvss": 8.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-610",
+      "CWE-639"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 16,
+    "publishedAt": "2026-05-21T13:16:19.840Z",
+    "modifiedAt": "2026-05-23T02:17:48.106Z",
+    "mergedAt": "2026-05-23T07:08:52.582Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-45760",
+        "url": "https://camel.apache.org/security/CVE-2026-45760.html",
+        "fetchedAt": "2026-05-23T03:19:14.929Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-45760",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45760.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00017
   },
   {
     "id": "CVE-2025-71214",
@@ -19697,6 +19918,43 @@
     "epss": 0.00005
   },
   {
+    "id": "CVE-2024-1451",
+    "cveId": "CVE-2024-1451",
+    "aliases": [
+      "CVE-2024-1451"
+    ],
+    "title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
+    "summary": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.9 before 16.9.1. A crafted payload added to the user profile page could lead to a stored XSS on the client side, allowing attackers to perform arbitrary actions on behalf of victims.\"",
+    "severity": "high",
+    "cvss": 8.7,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2024-02-21T23:30:49.790Z",
+    "modifiedAt": "2026-05-23T04:05:17.051Z",
+    "mergedAt": "2026-05-23T07:08:43.538Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-1451",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/1xxx/CVE-2024-1451.json",
+        "fetchedAt": "2026-05-23T07:08:43.538Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.29088
+  },
+  {
     "id": "CVE-2026-31433",
     "cveId": "CVE-2026-31433",
     "aliases": [
@@ -21484,6 +21742,78 @@
     "epss": 0.0597
   },
   {
+    "id": "CVE-2026-41073",
+    "cveId": "CVE-2026-41073",
+    "aliases": [
+      "CVE-2026-41073"
+    ],
+    "title": "RT: Spreadsheet downloads vulnerable to CSV/formula injection in Microsoft Excel and similar apps",
+    "summary": "RT is an open source, enterprise-grade issue and ticket tracking system. Versions prior to 5.0.10 and 6.0.0 through 6.0.2 contain a spreadsheet (CSV/formula) injection vulnerability. User-controlled data in spreadsheet exports is not sanitized before being written to the output file, which can cause spreadsheet applications to interpret crafted values as formulas or macros when the file is opened. This issue has been fixed in versions 5.0.10 and 6.0.3. If developers are unable to upgrade immediately, they can temporarily work around this issue by avoiding opening exported RT spreadsheet files directly in spreadsheet applications when the data may contain untrusted user input.",
+    "severity": "medium",
+    "cvss": 4.6,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 10,
+    "publishedAt": "2026-05-22T21:10:22.249Z",
+    "modifiedAt": "2026-05-23T02:57:38.966Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-41073",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/41xxx/CVE-2026-41073.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "CVE-2026-39969",
+    "cveId": "CVE-2026-39969",
+    "aliases": [
+      "CVE-2026-39969"
+    ],
+    "title": "TypeBot: WhatsApp Webhook Endpoint Missing Signature Verification",
+    "summary": "TypeBot is a chatbot builder tool. In versions 3.16.0 and prior, the WhatsApp Cloud API webhook endpoint (POST /v1/workspaces/{workspaceId}/whatsapp/{credentialsId}/webhook) does not verify the x-hub-signature-256 HMAC signature included by Meta in every webhook delivery. The webhook URL exposes both workspaceId and credentialsId as path parameters, which are logged in web server access logs, visible in Meta's webhook configuration dashboard, and potentially shared when configuring integrations. This allows any unauthenticated attacker to send spoofed webhook messages to trigger bot flows, consume API resources, and interact with external services using the workspace owner's credentials. The issue has been fixed in version 3.17.0.",
+    "severity": "medium",
+    "cvss": 6.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 10,
+    "publishedAt": "2026-05-22T18:43:39.039Z",
+    "modifiedAt": "2026-05-23T02:35:40.152Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-39969",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/39xxx/CVE-2026-39969.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": []
+  },
+  {
     "id": "CVE-2026-39966",
     "cveId": "CVE-2026-39966",
     "aliases": [
@@ -21515,6 +21845,42 @@
         "externalId": "CVE-2026-39966",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/39xxx/CVE-2026-39966.json",
         "fetchedAt": "2026-05-22T23:33:29.080Z"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "CVE-2026-39964",
+    "cveId": "CVE-2026-39964",
+    "aliases": [
+      "CVE-2026-39964"
+    ],
+    "title": "TypeBot: Stored XSS via javascript: URI in text bubble links — bot author executes JS on visitors' browsers",
+    "summary": "TypeBot is a chatbot builder tool. In versions prior to 3.16.0, the Typebot viewer (packages/embeds/js) renders anchor tags from rich text bubble content without filtering the javascript: URI scheme. A bot author can set a link URL to javascript:PAYLOAD, which executes in the visitor's browser context when clicked. Since the viewer is typically embedded in a third-party site, the attacker's JavaScript runs in the host page's origin and can exfiltrate cookies and session tokens. This can result in any authenticated Typebot user (including those on the free tier) being able to create a bot with this payload. Shared bots are publicly accessible — no victim authentication is required. This issue has been resolved in version 3.16.0.",
+    "severity": "medium",
+    "cvss": 5.4,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 10,
+    "publishedAt": "2026-05-22T17:21:20.237Z",
+    "modifiedAt": "2026-05-23T02:34:09.886Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-39964",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/39xxx/CVE-2026-39964.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": []
@@ -21995,6 +22361,42 @@
     "tags": []
   },
   {
+    "id": "CVE-2022-31231",
+    "cveId": "CVE-2022-31231",
+    "aliases": [
+      "CVE-2022-31231"
+    ],
+    "title": "Dell ECS, versions 3.5 and 3.6, contain an Improper Access Control in the Identity and Access Management (IAM) module. A remote unauthenticated attacker may potentially exploit this vulnerability, lea",
+    "summary": "Dell ECS, versions 3.5 and 3.6, contain an Improper Access Control in the Identity and Access Management (IAM) module. A remote unauthenticated attacker may potentially exploit this vulnerability, leading to gaining read access to unauthorized data.",
+    "severity": "medium",
+    "cvss": 5.9,
+    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 10,
+    "publishedAt": "2026-05-22T14:31:22.048Z",
+    "modifiedAt": "2026-05-23T02:32:17.628Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2022-31231",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2022/31xxx/CVE-2022-31231.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": []
+  },
+  {
     "id": "CVE-2021-21508",
     "cveId": "CVE-2021-21508",
     "aliases": [
@@ -22018,8 +22420,8 @@
     },
     "priority": 10,
     "publishedAt": "2026-05-22T14:17:02.910Z",
-    "modifiedAt": "2026-05-22T16:04:38.593Z",
-    "mergedAt": "2026-05-22T23:33:30.705Z",
+    "modifiedAt": "2026-05-23T03:55:54.259Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -22031,16 +22433,17 @@
     "tags": []
   },
   {
-    "id": "CVE-2025-32751",
-    "cveId": "CVE-2025-32751",
+    "id": "CVE-2025-32746",
+    "cveId": "CVE-2025-32746",
     "aliases": [
-      "CVE-2025-32751"
+      "CVE-2025-32751",
+      "CVE-2025-32746"
     ],
-    "title": "Dell PowerFlex Manager, version(s) <=4.6.2, contain(s) an Insecure Storage of Sensitive Information vulnerability. A low privileged attacker with local access could potentially exploit this vulnerabil",
-    "summary": "Dell PowerFlex Manager, version(s) <=4.6.2, contain(s) an Insecure Storage of Sensitive Information vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to unauthorized access to sensitive information.",
+    "title": "Dell PowerFlex Manager, version(s) <=4.6.2, contain(s) an Insecure Storage of Sensitive Information vulnerability. An unauthenticated attacker with local access could potentially exploit this vulnerab",
+    "summary": "Dell PowerFlex Manager, version(s) <=4.6.2, contain(s) an Insecure Storage of Sensitive Information vulnerability. An unauthenticated attacker with local access could potentially exploit this vulnerability, leading to unauthorized access to sensitive information.",
     "severity": "medium",
     "cvss": 5.5,
-    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
     "kev": false,
     "ecosystems": [
       "generic"
@@ -22054,14 +22457,20 @@
     },
     "priority": 10,
     "publishedAt": "2026-05-22T13:52:12.476Z",
-    "modifiedAt": "2026-05-22T17:21:30.404Z",
-    "mergedAt": "2026-05-22T23:33:29.080Z",
+    "modifiedAt": "2026-05-23T02:31:04.494Z",
+    "mergedAt": "2026-05-23T07:08:52.534Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
         "externalId": "CVE-2025-32751",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2025/32xxx/CVE-2025-32751.json",
         "fetchedAt": "2026-05-22T23:33:29.080Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2025-32746",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2025/32xxx/CVE-2025-32746.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": []
@@ -22738,6 +23147,43 @@
     ],
     "tags": [],
     "epss": 0.00033
+  },
+  {
+    "id": "CVE-2026-7615",
+    "cveId": "CVE-2026-7615",
+    "aliases": [
+      "CVE-2026-7615"
+    ],
+    "title": "Widget Context <= 1.3.3 - Cross-Site Request Forgery to Settings Update via 'wl' Parameter",
+    "summary": "The Widget Context plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.3.3. This is due to missing or incorrect nonce validation on the save_widget_context_settings function. This makes it possible for unauthenticated attackers to modify widget visibility context settings stored in the WordPress options table via a forged POST request to /wp-admin/widgets.php via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+    "severity": "medium",
+    "cvss": 4.3,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 10,
+    "publishedAt": "2026-05-22T07:50:25.128Z",
+    "modifiedAt": "2026-05-23T02:27:03.512Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-7615",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7615.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00014
   },
   {
     "id": "CVE-2026-8692",
@@ -23499,50 +23945,15 @@
     "epss": 0.00009
   },
   {
-    "id": "CVE-2026-48249",
-    "cveId": "CVE-2026-48249",
+    "id": "CVE-2026-48248",
+    "cveId": "CVE-2026-48248",
     "aliases": [
-      "CVE-2026-48249"
-    ],
-    "title": "Open ISES Tickets < 3.44.2 Disabled TLS Certificate Verification in rm/incs/mobile_login.inc.php",
-    "summary": "Open ISES Tickets before 3.44.2 disables TLS certificate verification in rm/incs/mobile_login.inc.php by setting CURLOPT_SSL_VERIFYPEER to false (and not setting CURLOPT_SSL_VERIFYHOST) when issuing outbound HTTPS requests for outbound HTTPS requests issued during the mobile (RouteMate) login flow. An attacker positioned on the network path between the server and the remote endpoint can present a forged certificate to intercept, monitor, or modify the request and response, including any API keys or session-bearing data in transit.",
-    "severity": "medium",
-    "cvss": 5.9,
-    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 10,
-    "publishedAt": "2026-05-21T17:11:20.219Z",
-    "modifiedAt": "2026-05-21T18:15:21.131Z",
-    "mergedAt": "2026-05-22T16:40:00.135Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-48249",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48249.json",
-        "fetchedAt": "2026-05-22T16:40:00.135Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00017
-  },
-  {
-    "id": "CVE-2026-48247",
-    "cveId": "CVE-2026-48247",
-    "aliases": [
+      "CVE-2026-48249",
+      "CVE-2026-48248",
       "CVE-2026-48247"
     ],
-    "title": "Open ISES Tickets < 3.44.2 Disabled TLS Certificate Verification in incs/functions.inc.php",
-    "summary": "Open ISES Tickets before 3.44.2 disables TLS certificate verification in incs/functions.inc.php by setting CURLOPT_SSL_VERIFYPEER to false (and not setting CURLOPT_SSL_VERIFYHOST) when issuing outbound HTTPS requests for general-purpose outbound HTTPS requests issued by the shared helper functions. An attacker positioned on the network path between the server and the remote endpoint can present a forged certificate to intercept, monitor, or modify the request and response, including any API keys or session-bearing data in transit.",
+    "title": "Open ISES Tickets < 3.44.2 Disabled TLS Certificate Verification in incs/login.inc.php",
+    "summary": "Open ISES Tickets before 3.44.2 disables TLS certificate verification in incs/login.inc.php by setting CURLOPT_SSL_VERIFYPEER to false (and not setting CURLOPT_SSL_VERIFYHOST) when issuing outbound HTTPS requests for outbound HTTPS requests issued during the login/authentication flow. An attacker positioned on the network path between the server and the remote endpoint can present a forged certificate to intercept, monitor, or modify the request and response, including any API keys or session-bearing data in transit.",
     "severity": "medium",
     "cvss": 5.9,
     "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
@@ -23559,9 +23970,21 @@
     },
     "priority": 10,
     "publishedAt": "2026-05-21T17:11:15.088Z",
-    "modifiedAt": "2026-05-21T18:05:17.387Z",
-    "mergedAt": "2026-05-22T16:40:00.135Z",
+    "modifiedAt": "2026-05-23T02:25:36.453Z",
+    "mergedAt": "2026-05-23T07:08:53.317Z",
     "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48249",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48249.json",
+        "fetchedAt": "2026-05-22T16:40:00.135Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48248",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48248.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      },
       {
         "source": "cisa-vulnrichment",
         "externalId": "CVE-2026-48247",
@@ -23570,7 +23993,7 @@
       }
     ],
     "tags": [],
-    "epss": 0.00017
+    "epss": 0.00028
   },
   {
     "id": "CVE-2026-48246",
@@ -23691,6 +24114,43 @@
     "epss": 0.00028
   },
   {
+    "id": "CVE-2026-48230",
+    "cveId": "CVE-2026-48230",
+    "aliases": [
+      "CVE-2026-48230"
+    ],
+    "title": "Open ISES Tickets < 3.44.2 Reflected XSS via ticketsmdb_import.php Multiple POST Parameters",
+    "summary": "Open ISES Tickets before 3.44.2 contains a reflected cross-site scripting vulnerability in ticketsmdb_import.php that allows authenticated attackers to inject arbitrary JavaScript by passing an unsanitized value through the multiple POST parameters (mdbhost, mdbdb, mdbuser, mdbpassword, mdbprefix, ticketshost, ticketsdb, ticketsuser, ticketspassword, ticketsprefix) directly into HTML form hidden input value attributes. Attackers can craft a malicious request containing a JavaScript payload that executes in the victim's browser when the response is rendered.",
+    "severity": "medium",
+    "cvss": 5.4,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 10,
+    "publishedAt": "2026-05-21T17:10:17.026Z",
+    "modifiedAt": "2026-05-23T02:21:41.885Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48230",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48230.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00029
+  },
+  {
     "id": "CVE-2026-48226",
     "cveId": "CVE-2026-48226",
     "aliases": [
@@ -23765,17 +24225,18 @@
     "epss": 0.0001
   },
   {
-    "id": "CVE-2026-48219",
-    "cveId": "CVE-2026-48219",
+    "id": "CVE-2026-48224",
+    "cveId": "CVE-2026-48224",
     "aliases": [
       "CVE-2026-48219",
       "CVE-2026-48220",
       "CVE-2026-48221",
       "CVE-2026-48222",
-      "CVE-2026-48223"
+      "CVE-2026-48223",
+      "CVE-2026-48224"
     ],
-    "title": "Open ISES Tickets < 3.44.2 Reflected XSS via ics202.php frm_add_str Parameter",
-    "summary": "Open ISES Tickets before 3.44.2 contains a reflected cross-site scripting vulnerability in ics202.php that allows authenticated attackers to inject arbitrary JavaScript by passing an unsanitized value through the frm_add_str POST parameter directly into an HTML form hidden input value attribute. Attackers can craft a malicious request containing a JavaScript payload that executes in the victim's browser when the response is rendered.",
+    "title": "Open ISES Tickets < 3.44.2 Reflected XSS via ics214.php frm_add_str Parameter",
+    "summary": "Open ISES Tickets before 3.44.2 contains a reflected cross-site scripting vulnerability in ics214.php that allows authenticated attackers to inject arbitrary JavaScript by passing an unsanitized value through the frm_add_str POST parameter directly into an HTML form hidden input value attribute. Attackers can craft a malicious request containing a JavaScript payload that executes in the victim's browser when the response is rendered.",
     "severity": "medium",
     "cvss": 5.4,
     "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
@@ -23792,8 +24253,8 @@
     },
     "priority": 10,
     "publishedAt": "2026-05-21T17:09:57.698Z",
-    "modifiedAt": "2026-05-21T19:04:41.266Z",
-    "mergedAt": "2026-05-22T16:40:01.385Z",
+    "modifiedAt": "2026-05-23T02:20:45.255Z",
+    "mergedAt": "2026-05-23T07:08:52.590Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -23824,6 +24285,49 @@
         "externalId": "CVE-2026-48223",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48223.json",
         "fetchedAt": "2026-05-22T16:40:00.135Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48224",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48224.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00029
+  },
+  {
+    "id": "CVE-2026-48218",
+    "cveId": "CVE-2026-48218",
+    "aliases": [
+      "CVE-2026-48218"
+    ],
+    "title": "Open ISES Tickets < 3.44.2 Reflected XSS via icons/buttons/landb.php frm_name and frm_id Parameters",
+    "summary": "Open ISES Tickets before 3.44.2 contains a reflected cross-site scripting vulnerability in icons/buttons/landb.php that allows authenticated attackers to inject arbitrary JavaScript by passing an unsanitized value through the frm_name and frm_id POST parameters directly into rendered HTML content and inline JavaScript. Attackers can craft a malicious request containing a JavaScript payload that executes in the victim's browser when the response is rendered.",
+    "severity": "medium",
+    "cvss": 5.4,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 10,
+    "publishedAt": "2026-05-21T17:09:26.489Z",
+    "modifiedAt": "2026-05-23T02:19:05.169Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48218",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48218.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": [],
@@ -26115,6 +26619,74 @@
     "epss": 0.91436
   },
   {
+    "id": "CVE-2026-41149",
+    "cveId": "CVE-2026-41149",
+    "aliases": [
+      "CVE-2026-41149"
+    ],
+    "title": "Mermaid: Improper sanitization of `classDef` in state diagrams leads to HTML injection",
+    "summary": "Mermaid is a JavaScript tool that uses Markdown-inspired text to create and modify diagrams and charts. Versions 10.9.5 and earlier, as well as 11.0.0-alpha.1 through 11.14.0, are vulnerable to HTML injection under the default configuration. Specifically, the classDef directive in Mermaid state diagrams permits DOM injection that escapes the SVG context. However, tags are stripped, which prevents cross-site scripting (XSS). This issue has been fixed in versions 10.9.6 and 11.15.0. If developers are unable to immediately upgrade, they can work around this issue by setting \"securityLevel\": \"sandbox\", which prevents the issue by rendering the mermaid diagram in a sandboxed .",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-22T22:34:36.944Z",
+    "modifiedAt": "2026-05-23T03:22:44.013Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-41149",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/41xxx/CVE-2026-41149.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": []
+  },
+  {
+    "id": "CVE-2026-40598",
+    "cveId": "CVE-2026-40598",
+    "aliases": [
+      "CVE-2026-40598"
+    ],
+    "title": "MantisBT has Potential Referer-Based Reflected HTML Injection / XSS in Tag Update Page",
+    "summary": "Mantis Bug Tracker (MantisBT) is an open source issue tracker. In versions 2.28.1 and below, improper escaping of the redirection page (retrieved from the request's Referer header) allows an attacker to inject HTML. While this is generally not directly actionable as modern browsers will URL-encode special characters, on some specific server configurations this could poison the cache, leading to cross-site scripting. This issue has been fixed in version 2.28.2.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-22T19:32:35.535Z",
+    "modifiedAt": "2026-05-23T02:41:23.021Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-40598",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/40xxx/CVE-2026-40598.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": []
+  },
+  {
     "id": "CVE-2026-40596",
     "cveId": "CVE-2026-40596",
     "aliases": [
@@ -26483,7 +27055,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T12:00:00.000Z",
     "modifiedAt": "2026-05-22T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -28447,7 +29019,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:08:48.000Z",
     "modifiedAt": "2026-05-21T14:08:48.000Z",
-    "mergedAt": "2026-05-23T05:24:52.467Z",
+    "mergedAt": "2026-05-23T07:08:52.502Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -28568,44 +29140,6 @@
     "tags": [
       "general"
     ]
-  },
-  {
-    "id": "CVE-2026-45760",
-    "cveId": "CVE-2026-45760",
-    "aliases": [
-      "CVE-2026-45760"
-    ],
-    "title": "(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can cr",
-    "summary": "(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace. This issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1. Users are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [
-      "CWE-610",
-      "CWE-639"
-    ],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-21T13:16:19.840Z",
-    "modifiedAt": "2026-05-21T19:16:53.413Z",
-    "mergedAt": "2026-05-23T05:24:52.458Z",
-    "sources": [
-      {
-        "source": "nvd",
-        "externalId": "CVE-2026-45760",
-        "url": "https://camel.apache.org/security/CVE-2026-45760.html",
-        "fetchedAt": "2026-05-23T03:19:14.929Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00017
   },
   {
     "id": "CVE-2026-43502",
@@ -28911,7 +29445,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -28948,7 +29482,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -28985,7 +29519,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29022,7 +29556,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29059,7 +29593,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29238,7 +29772,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T09:19:32.000Z",
     "modifiedAt": "2026-05-21T09:19:32.000Z",
-    "mergedAt": "2026-05-23T05:24:52.468Z",
+    "mergedAt": "2026-05-23T07:08:52.503Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -29498,7 +30032,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T21:07:38.000Z",
     "modifiedAt": "2026-05-20T21:07:38.000Z",
-    "mergedAt": "2026-05-23T05:24:52.475Z",
+    "mergedAt": "2026-05-23T07:08:52.509Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -30175,7 +30709,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:39:47.000Z",
     "modifiedAt": "2026-05-20T10:23:06.000Z",
-    "mergedAt": "2026-05-23T05:24:52.469Z",
+    "mergedAt": "2026-05-23T07:08:52.504Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -30216,7 +30750,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:29:56.000Z",
     "modifiedAt": "2026-05-20T09:34:33.000Z",
-    "mergedAt": "2026-05-23T05:24:52.471Z",
+    "mergedAt": "2026-05-23T07:08:52.506Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -30612,7 +31146,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30649,7 +31183,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30686,7 +31220,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30723,7 +31257,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30760,7 +31294,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -31010,7 +31544,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T00:00:00.000Z",
     "modifiedAt": "2026-05-19T00:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.482Z",
+    "mergedAt": "2026-05-23T07:08:52.600Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -31334,7 +31868,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T06:00:00.000Z",
     "modifiedAt": "2026-05-18T06:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.596Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -32767,7 +33301,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T14:00:00.000Z",
     "modifiedAt": "2026-05-15T14:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.475Z",
+    "mergedAt": "2026-05-23T07:08:52.509Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -33130,7 +33664,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33186,7 +33720,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33232,7 +33766,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33287,7 +33821,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33324,7 +33858,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33398,7 +33932,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33435,7 +33969,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33472,7 +34006,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33509,7 +34043,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33546,7 +34080,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33583,7 +34117,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.478Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33654,7 +34188,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:23:05.000Z",
     "modifiedAt": "2026-05-14T10:23:05.000Z",
-    "mergedAt": "2026-05-23T05:24:52.472Z",
+    "mergedAt": "2026-05-23T07:08:52.506Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -33689,7 +34223,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:16:24.000Z",
     "modifiedAt": "2026-05-14T10:16:24.000Z",
-    "mergedAt": "2026-05-23T05:24:52.473Z",
+    "mergedAt": "2026-05-23T07:08:52.507Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34144,7 +34678,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:12:36.000Z",
     "modifiedAt": "2026-05-13T10:12:36.000Z",
-    "mergedAt": "2026-05-23T05:24:52.474Z",
+    "mergedAt": "2026-05-23T07:08:52.508Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34179,7 +34713,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:03:30.000Z",
     "modifiedAt": "2026-05-13T10:03:30.000Z",
-    "mergedAt": "2026-05-23T05:24:52.475Z",
+    "mergedAt": "2026-05-23T07:08:52.508Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34214,7 +34748,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T00:00:00.000Z",
     "modifiedAt": "2026-05-13T00:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.477Z",
+    "mergedAt": "2026-05-23T07:08:52.511Z",
     "sources": [
       {
         "source": "project-zero",
@@ -34286,7 +34820,7 @@
     "priority": 6,
     "publishedAt": "2026-05-11T08:00:00.000Z",
     "modifiedAt": "2026-05-11T08:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.484Z",
+    "mergedAt": "2026-05-23T07:08:52.602Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -34321,7 +34855,7 @@
     "priority": 6,
     "publishedAt": "2026-05-10T14:00:00.000Z",
     "modifiedAt": "2026-05-10T14:00:00.000Z",
-    "mergedAt": "2026-05-23T05:24:52.486Z",
+    "mergedAt": "2026-05-23T07:08:52.603Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -34927,8 +35461,8 @@
     },
     "priority": 6,
     "publishedAt": "2024-01-26T01:02:43.953Z",
-    "modifiedAt": "2026-05-21T23:00:07.461Z",
-    "mergedAt": "2026-05-22T16:40:00.131Z",
+    "modifiedAt": "2026-05-22T23:10:50.701Z",
+    "mergedAt": "2026-05-23T07:08:52.596Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -34964,8 +35498,8 @@
     },
     "priority": 6,
     "publishedAt": "2024-01-12T13:56:31.881Z",
-    "modifiedAt": "2026-05-21T23:00:05.560Z",
-    "mergedAt": "2026-05-22T23:33:30.399Z",
+    "modifiedAt": "2026-05-22T23:10:50.549Z",
+    "mergedAt": "2026-05-23T07:08:52.596Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -35243,6 +35777,41 @@
     ],
     "tags": [],
     "epss": 0.00212
+  },
+  {
+    "id": "CVE-2026-4682",
+    "cveId": "CVE-2026-4682",
+    "aliases": [
+      "CVE-2026-4682"
+    ],
+    "title": "Certain HP DeskJet All In One (AIO) Devices – Potential Remote Code Execution & Potential Buffer Overflow",
+    "summary": "Certain HP DeskJet All in One devices may be vulnerable to remote code execution caused by a buffer overflow when specially crafted Web Services for Devices (WSD) scan requests are improperly validated and handled by the MFP. WSD Scan is a Microsoft Windows–based network scanning protocol that allows a PC to discover scanners (and MFPs) on a network and send scan jobs to them without requiring vendor specific drivers or utilities.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 5,
+    "publishedAt": "2026-04-15T14:32:31.348Z",
+    "modifiedAt": "2026-05-23T03:55:43.432Z",
+    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-4682",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/4xxx/CVE-2026-4682.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00054
   },
   {
     "id": "CVE-2026-32145",
