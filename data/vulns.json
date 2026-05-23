@@ -1,69 +1,5 @@
 [
   {
-    "id": "CVE-2026-46633",
-    "cveId": "CVE-2026-46633",
-    "aliases": [
-      "CVE-2026-46633",
-      "PKSA-h8hf-ytnd-5t9q",
-      "GHSA-7p85-w9px-jpjp"
-    ],
-    "title": "Twig: PHP code injection via `{% use %}` template name",
-    "summary": "Twig: PHP code injection via `{% use %}` template name",
-    "details": "### Description `Compiler::string()` escapes `\"`, `$`, `\\`, NUL and TAB when generating PHP double-quoted string literals, but does not escape single quotes. In `ModuleNode::compileConstructor()`, the template name from a `{% use %}` tag is compiled via `subcompile()` -> `string()` and placed inside a surrounding PHP single-quoted string literal. A template name containing a single quote terminates that surrounding string early, allowing arbitrary PHP expressions to be injected into the compiled cache file. The injected code executes within the PHP process when the cache file is first loaded, bypassing the Twig sandbox entirely and achieving remote code execution. `SecurityPolicy` unconditionally allows `{% use %}` regardless of the configured `allowedTags`, so this primitive is reachable from sandboxed templates as well. ### Resolution `Compiler::string()` now also escapes single quotes so that template names placed inside single-quoted PHP literals can no longer break out of the surrounding context. ### Credits Twig would like to thank Anvil Secure in collaboration with Claude and Anthropic Research for reporting the issue and providing the fix.",
-    "severity": "critical",
-    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-    "kev": false,
-    "ecosystems": [
-      "composer"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "affected": [
-      {
-        "ecosystem": "composer",
-        "package": "twig/twig",
-        "versions": ">=0 <3.26.0",
-        "fixedIn": "3.26.0"
-      }
-    ],
-    "stackMatch": {
-      "score": 100,
-      "packages": [
-        "twig/twig"
-      ],
-      "reason": "direct-dep"
-    },
-    "priority": 85,
-    "publishedAt": "2026-05-21T21:24:53.000Z",
-    "modifiedAt": "2026-05-23T18:29:19.113Z",
-    "mergedAt": "2026-05-23T22:52:56.826Z",
-    "sources": [
-      {
-        "source": "osv",
-        "externalId": "GHSA-7p85-w9px-jpjp",
-        "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-7p85-w9px-jpjp",
-        "fetchedAt": "2026-05-22T13:47:27.991Z"
-      },
-      {
-        "source": "packagist",
-        "externalId": "PKSA-h8hf-ytnd-5t9q",
-        "url": "https://symfony.com/cve-2026-46633",
-        "fetchedAt": "2026-05-22T13:47:20.424Z"
-      },
-      {
-        "source": "ghsa-stack",
-        "externalId": "GHSA-7p85-w9px-jpjp",
-        "url": "https://github.com/advisories/GHSA-7p85-w9px-jpjp",
-        "fetchedAt": "2026-05-23T22:52:54.996Z"
-      }
-    ],
-    "tags": [
-      "backend"
-    ],
-    "ghsaId": "GHSA-7p85-w9px-jpjp"
-  },
-  {
     "id": "CVE-2026-34926",
     "cveId": "CVE-2026-34926",
     "aliases": [
@@ -156,6 +92,70 @@
       "exploited"
     ],
     "epss": 0.12571
+  },
+  {
+    "id": "CVE-2026-46633",
+    "cveId": "CVE-2026-46633",
+    "aliases": [
+      "CVE-2026-46633",
+      "PKSA-h8hf-ytnd-5t9q",
+      "GHSA-7p85-w9px-jpjp"
+    ],
+    "title": "Twig: PHP code injection via `{% use %}` template name",
+    "summary": "Twig: PHP code injection via `{% use %}` template name",
+    "details": "### Description `Compiler::string()` escapes `\"`, `$`, `\\`, NUL and TAB when generating PHP double-quoted string literals, but does not escape single quotes. In `ModuleNode::compileConstructor()`, the template name from a `{% use %}` tag is compiled via `subcompile()` -> `string()` and placed inside a surrounding PHP single-quoted string literal. A template name containing a single quote terminates that surrounding string early, allowing arbitrary PHP expressions to be injected into the compiled cache file. The injected code executes within the PHP process when the cache file is first loaded, bypassing the Twig sandbox entirely and achieving remote code execution. `SecurityPolicy` unconditionally allows `{% use %}` regardless of the configured `allowedTags`, so this primitive is reachable from sandboxed templates as well. ### Resolution `Compiler::string()` now also escapes single quotes so that template names placed inside single-quoted PHP literals can no longer break out of the surrounding context. ### Credits Twig would like to thank Anvil Secure in collaboration with Claude and Anthropic Research for reporting the issue and providing the fix.",
+    "severity": "critical",
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "kev": false,
+    "ecosystems": [
+      "composer"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "affected": [
+      {
+        "ecosystem": "composer",
+        "package": "twig/twig",
+        "versions": ">=0 <3.26.0",
+        "fixedIn": "3.26.0"
+      }
+    ],
+    "stackMatch": {
+      "score": 100,
+      "packages": [
+        "twig/twig"
+      ],
+      "reason": "direct-dep"
+    },
+    "priority": 85,
+    "publishedAt": "2026-05-20T08:00:00.000Z",
+    "modifiedAt": "2026-05-23T18:29:19.113Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
+    "sources": [
+      {
+        "source": "osv",
+        "externalId": "GHSA-7p85-w9px-jpjp",
+        "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-7p85-w9px-jpjp",
+        "fetchedAt": "2026-05-22T13:47:27.991Z"
+      },
+      {
+        "source": "packagist",
+        "externalId": "PKSA-h8hf-ytnd-5t9q",
+        "url": "https://symfony.com/cve-2026-46633",
+        "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-7p85-w9px-jpjp",
+        "url": "https://github.com/advisories/GHSA-7p85-w9px-jpjp",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
+      }
+    ],
+    "tags": [
+      "backend"
+    ],
+    "ghsaId": "GHSA-7p85-w9px-jpjp"
   },
   {
     "id": "CVE-2008-4250",
@@ -304,7 +304,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-23T22:52:59.396Z",
+    "mergedAt": "2026-05-23T23:27:13.856Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -357,7 +357,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-23T22:52:59.396Z",
+    "mergedAt": "2026-05-23T23:27:13.856Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2088,14 +2088,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-43520",
-    "cveId": "CVE-2025-43520",
+    "id": "CVE-2025-31277",
+    "cveId": "CVE-2025-31277",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
-    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
+    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
+    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2111,7 +2111,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-23T22:52:59.396Z",
+    "mergedAt": "2026-05-23T23:27:13.856Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2129,7 +2129,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00197
+    "epss": 0.00265
   },
   {
     "id": "CVE-2026-20131",
@@ -2996,7 +2996,7 @@
     "priority": 71,
     "publishedAt": "2025-03-21T15:20:12.000Z",
     "modifiedAt": "2026-03-04T15:06:29.993Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.129Z",
     "sources": [
       {
         "source": "osv",
@@ -3015,8 +3015,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.9255,
-    "ghsaId": "GHSA-f82v-jwr5-mffw"
+    "ghsaId": "GHSA-f82v-jwr5-mffw",
+    "epss": 0.9255
   },
   {
     "id": "CVE-2026-44578",
@@ -3056,7 +3056,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:55:15.000Z",
     "modifiedAt": "2026-05-14T20:50:45.445Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.128Z",
     "sources": [
       {
         "source": "osv",
@@ -3075,8 +3075,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.05039,
-    "ghsaId": "GHSA-c4j6-fc7j-m34r"
+    "ghsaId": "GHSA-c4j6-fc7j-m34r",
+    "epss": 0.05039
   },
   {
     "id": "CVE-2026-44573",
@@ -3116,7 +3116,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:53:51.000Z",
     "modifiedAt": "2026-05-14T20:48:35.793Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.121Z",
     "sources": [
       {
         "source": "osv",
@@ -3135,8 +3135,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00052,
-    "ghsaId": "GHSA-36qx-fr4f-26g5"
+    "ghsaId": "GHSA-36qx-fr4f-26g5",
+    "epss": 0.00052
   },
   {
     "id": "GHSA-8h8q-6873-q5fj",
@@ -3174,7 +3174,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T14:50:27.000Z",
     "modifiedAt": "2026-05-13T03:44:29.651Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.126Z",
     "sources": [
       {
         "source": "osv",
@@ -3233,7 +3233,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:34:32.000Z",
     "modifiedAt": "2026-05-06T15:29:21.389Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.153Z",
     "sources": [
       {
         "source": "osv",
@@ -3251,8 +3251,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00065,
-    "ghsaId": "GHSA-62hf-57xw-28j9"
+    "ghsaId": "GHSA-62hf-57xw-28j9",
+    "epss": 0.00065
   },
   {
     "id": "CVE-2026-42033",
@@ -3292,7 +3292,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:26:29.000Z",
     "modifiedAt": "2026-05-06T15:29:21.690Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -3310,8 +3310,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.0004,
-    "ghsaId": "GHSA-pf86-5x62-jrwf"
+    "ghsaId": "GHSA-pf86-5x62-jrwf",
+    "epss": 0.0004
   },
   {
     "id": "CVE-2026-42035",
@@ -3352,7 +3352,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:25:47.000Z",
     "modifiedAt": "2026-05-06T15:29:22.420Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.153Z",
     "sources": [
       {
         "source": "osv",
@@ -3370,8 +3370,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00032,
-    "ghsaId": "GHSA-6chq-wfr3-2hj9"
+    "ghsaId": "GHSA-6chq-wfr3-2hj9",
+    "epss": 0.00032
   },
   {
     "id": "CVE-2026-42043",
@@ -3413,7 +3413,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:20:58.000Z",
     "modifiedAt": "2026-05-06T15:29:21.321Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -3431,8 +3431,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00055,
-    "ghsaId": "GHSA-pmwg-cvhr-8vh7"
+    "ghsaId": "GHSA-pmwg-cvhr-8vh7",
+    "epss": 0.00055
   },
   {
     "id": "CVE-2026-42264",
@@ -3472,7 +3472,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:18:38.000Z",
     "modifiedAt": "2026-05-12T17:16:38.232Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -3490,8 +3490,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.0007,
-    "ghsaId": "GHSA-q8qp-cvcw-x6jj"
+    "ghsaId": "GHSA-q8qp-cvcw-x6jj",
+    "epss": 0.0007
   },
   {
     "id": "GHSA-q4gf-8mx6-v5v3",
@@ -3529,7 +3529,7 @@
     "priority": 67,
     "publishedAt": "2026-04-10T15:35:47.000Z",
     "modifiedAt": "2026-04-16T23:29:14.079Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.135Z",
     "sources": [
       {
         "source": "osv",
@@ -3606,7 +3606,7 @@
     "priority": 67,
     "publishedAt": "2026-04-01T23:51:12.000Z",
     "modifiedAt": "2026-04-02T17:29:57.498Z",
-    "mergedAt": "2026-05-23T22:52:56.793Z",
+    "mergedAt": "2026-05-23T23:27:08.158Z",
     "sources": [
       {
         "source": "osv",
@@ -3624,8 +3624,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00044,
-    "ghsaId": "GHSA-r5fr-rjxr-66jc"
+    "ghsaId": "GHSA-r5fr-rjxr-66jc",
+    "epss": 0.00044
   },
   {
     "id": "CVE-2019-10744",
@@ -3691,7 +3691,7 @@
     "priority": 66,
     "publishedAt": "2019-07-10T19:45:23.000Z",
     "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-23T22:52:56.795Z",
+    "mergedAt": "2026-05-23T23:27:08.157Z",
     "sources": [
       {
         "source": "osv",
@@ -3709,8 +3709,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.14845,
-    "ghsaId": "GHSA-jf85-cpcp-j695"
+    "ghsaId": "GHSA-jf85-cpcp-j695",
+    "epss": 0.14845
   },
   {
     "id": "CVE-2026-25639",
@@ -3751,7 +3751,7 @@
     "priority": 65,
     "publishedAt": "2026-02-09T17:46:14.000Z",
     "modifiedAt": "2026-05-08T14:03:50.604Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.152Z",
     "sources": [
       {
         "source": "osv",
@@ -3769,8 +3769,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00044,
-    "ghsaId": "GHSA-43fc-jf86-j433"
+    "ghsaId": "GHSA-43fc-jf86-j433",
+    "epss": 0.00044
   },
   {
     "id": "CVE-2026-2611",
@@ -3849,9 +3849,9 @@
       "reason": "direct-dep"
     },
     "priority": 61,
-    "publishedAt": "2026-05-21T21:31:08.000Z",
+    "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:18.836Z",
-    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "osv",
@@ -3913,9 +3913,9 @@
       "reason": "direct-dep"
     },
     "priority": 61,
-    "publishedAt": "2026-05-21T21:30:49.000Z",
+    "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.837Z",
-    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "osv",
@@ -3976,7 +3976,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T15:44:33.359Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "packagist",
@@ -4033,9 +4033,9 @@
       "reason": "direct-dep"
     },
     "priority": 61,
-    "publishedAt": "2021-11-16T17:25:57.000Z",
+    "publishedAt": "2021-11-11T13:30:00.000Z",
     "modifiedAt": "2026-03-13T22:00:38.072Z",
-    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "osv",
@@ -4059,8 +4059,8 @@
     "tags": [
       "backend"
     ],
-    "epss": 0.01352,
-    "ghsaId": "GHSA-r7cj-8hjg-x622"
+    "ghsaId": "GHSA-r7cj-8hjg-x622",
+    "epss": 0.01352
   },
   {
     "id": "CVE-2026-46638",
@@ -4098,9 +4098,9 @@
       "reason": "direct-dep"
     },
     "priority": 60,
-    "publishedAt": "2026-05-21T21:28:28.000Z",
+    "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.214Z",
-    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "osv",
@@ -4161,9 +4161,9 @@
       "reason": "direct-dep"
     },
     "priority": 60,
-    "publishedAt": "2026-05-21T21:25:12.000Z",
+    "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.132Z",
-    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "osv",
@@ -4188,66 +4188,6 @@
       "backend"
     ],
     "ghsaId": "GHSA-24x9-r6q4-q93w"
-  },
-  {
-    "id": "CVE-2026-44579",
-    "cveId": "CVE-2026-44579",
-    "aliases": [
-      "CVE-2026-44579",
-      "GHSA-mg66-mrh9-m8jx"
-    ],
-    "title": "Next.js vulnerable to Denial of Service via connection exhaustion in applications using Cache Components",
-    "summary": "Next.js vulnerable to Denial of Service via connection exhaustion in applications using Cache Components",
-    "details": "### Impact Applications using Partial Prerendering through the Cache Components feature can be vulnerable to connection exhaustion through crafted POST requests to a server action. In affected configurations, a malicious request can trigger a request-body handling deadlock that leaves connections open for an extended period, consuming file descriptors and server capacity until legitimate users are denied service. ### Fix We now treat the header used for resuming Partial Prerendered requests as an internal-only header and strip it from untrusted incoming requests. This header should never be accepted directly from external clients. ### Workarounds If you cannot upgrade immediately, block requests that would be handled by Next.js if they contain the `Next-Resume` header at the edge.",
-    "severity": "high",
-    "cvss": 7.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-    "kev": false,
-    "ecosystems": [
-      "npm"
-    ],
-    "cwe": [
-      "CWE-770"
-    ],
-    "affected": [
-      {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.0.0 <15.5.16",
-        "fixedIn": "15.5.16"
-      }
-    ],
-    "stackMatch": {
-      "score": 60,
-      "packages": [
-        "next"
-      ],
-      "reason": "direct-dep"
-    },
-    "priority": 56,
-    "publishedAt": "2026-05-11T15:56:24.000Z",
-    "modifiedAt": "2026-05-14T20:50:54.621Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
-    "sources": [
-      {
-        "source": "osv",
-        "externalId": "GHSA-mg66-mrh9-m8jx",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44579",
-        "fetchedAt": "2026-05-22T13:47:27.985Z"
-      },
-      {
-        "source": "ghsa-stack",
-        "externalId": "GHSA-mg66-mrh9-m8jx",
-        "url": "https://github.com/advisories/GHSA-mg66-mrh9-m8jx",
-        "fetchedAt": "2026-05-23T22:52:54.991Z"
-      }
-    ],
-    "tags": [
-      "frontend",
-      "nextjs"
-    ],
-    "epss": 0.00019,
-    "ghsaId": "GHSA-mg66-mrh9-m8jx"
   },
   {
     "id": "CVE-2026-44575",
@@ -4287,9 +4227,9 @@
       "reason": "direct-dep"
     },
     "priority": 56,
-    "publishedAt": "2026-05-11T15:54:24.000Z",
+    "publishedAt": "2026-05-11T16:21:19.000Z",
     "modifiedAt": "2026-05-14T20:47:46.572Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.121Z",
     "sources": [
       {
         "source": "osv",
@@ -4320,8 +4260,68 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00053,
-    "ghsaId": "GHSA-26hh-7cqf-hhc6"
+    "ghsaId": "GHSA-26hh-7cqf-hhc6",
+    "epss": 0.00053
+  },
+  {
+    "id": "CVE-2026-44579",
+    "cveId": "CVE-2026-44579",
+    "aliases": [
+      "CVE-2026-44579",
+      "GHSA-mg66-mrh9-m8jx"
+    ],
+    "title": "Next.js vulnerable to Denial of Service via connection exhaustion in applications using Cache Components",
+    "summary": "Next.js vulnerable to Denial of Service via connection exhaustion in applications using Cache Components",
+    "details": "### Impact Applications using Partial Prerendering through the Cache Components feature can be vulnerable to connection exhaustion through crafted POST requests to a server action. In affected configurations, a malicious request can trigger a request-body handling deadlock that leaves connections open for an extended period, consuming file descriptors and server capacity until legitimate users are denied service. ### Fix We now treat the header used for resuming Partial Prerendered requests as an internal-only header and strip it from untrusted incoming requests. This header should never be accepted directly from external clients. ### Workarounds If you cannot upgrade immediately, block requests that would be handled by Next.js if they contain the `Next-Resume` header at the edge.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "npm"
+    ],
+    "cwe": [
+      "CWE-770"
+    ],
+    "affected": [
+      {
+        "ecosystem": "npm",
+        "package": "next",
+        "versions": ">=15.0.0 <15.5.16",
+        "fixedIn": "15.5.16"
+      }
+    ],
+    "stackMatch": {
+      "score": 60,
+      "packages": [
+        "next"
+      ],
+      "reason": "direct-dep"
+    },
+    "priority": 56,
+    "publishedAt": "2026-05-11T15:56:24.000Z",
+    "modifiedAt": "2026-05-14T20:50:54.621Z",
+    "mergedAt": "2026-05-23T23:27:08.134Z",
+    "sources": [
+      {
+        "source": "osv",
+        "externalId": "GHSA-mg66-mrh9-m8jx",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44579",
+        "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-mg66-mrh9-m8jx",
+        "url": "https://github.com/advisories/GHSA-mg66-mrh9-m8jx",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
+      }
+    ],
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "ghsaId": "GHSA-mg66-mrh9-m8jx",
+    "epss": 0.00019
   },
   {
     "id": "CVE-2026-44574",
@@ -4361,7 +4361,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:54:08.000Z",
     "modifiedAt": "2026-05-14T20:47:43.284Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.122Z",
     "sources": [
       {
         "source": "osv",
@@ -4380,8 +4380,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00011,
-    "ghsaId": "GHSA-492v-c6pp-mqqv"
+    "ghsaId": "GHSA-492v-c6pp-mqqv",
+    "epss": 0.00011
   },
   {
     "id": "CVE-2026-47730",
@@ -4415,7 +4415,7 @@
     "priority": 55,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "packagist",
@@ -4466,7 +4466,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:57:12.000Z",
     "modifiedAt": "2026-05-14T20:51:12.557Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.129Z",
     "sources": [
       {
         "source": "osv",
@@ -4485,8 +4485,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00011,
-    "ghsaId": "GHSA-ffhc-5mcf-pf4q"
+    "ghsaId": "GHSA-ffhc-5mcf-pf4q",
+    "epss": 0.00011
   },
   {
     "id": "CVE-2026-44580",
@@ -4526,7 +4526,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:38.000Z",
     "modifiedAt": "2026-05-14T20:51:25.401Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.133Z",
     "sources": [
       {
         "source": "osv",
@@ -4545,8 +4545,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00012,
-    "ghsaId": "GHSA-gx5p-jg67-6x7h"
+    "ghsaId": "GHSA-gx5p-jg67-6x7h",
+    "epss": 0.00012
   },
   {
     "id": "CVE-2026-44577",
@@ -4586,7 +4586,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:05.000Z",
     "modifiedAt": "2026-05-14T20:51:26.606Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.134Z",
     "sources": [
       {
         "source": "osv",
@@ -4605,8 +4605,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00018,
-    "ghsaId": "GHSA-h64f-5h5j-jqjh"
+    "ghsaId": "GHSA-h64f-5h5j-jqjh",
+    "epss": 0.00018
   },
   {
     "id": "CVE-2026-44576",
@@ -4646,7 +4646,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:54:46.000Z",
     "modifiedAt": "2026-05-14T20:52:45.704Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.136Z",
     "sources": [
       {
         "source": "osv",
@@ -4665,8 +4665,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00016,
-    "ghsaId": "GHSA-wfc6-r584-vfw7"
+    "ghsaId": "GHSA-wfc6-r584-vfw7",
+    "epss": 0.00016
   },
   {
     "id": "CVE-2026-42037",
@@ -4706,7 +4706,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:45.000Z",
     "modifiedAt": "2026-05-06T15:29:22.982Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.152Z",
     "sources": [
       {
         "source": "osv",
@@ -4724,8 +4724,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00078,
-    "ghsaId": "GHSA-445q-vr5w-6q77"
+    "ghsaId": "GHSA-445q-vr5w-6q77",
+    "epss": 0.00078
   },
   {
     "id": "CVE-2026-42038",
@@ -4765,7 +4765,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:17.000Z",
     "modifiedAt": "2026-05-06T15:29:25.469Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -4783,8 +4783,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00056,
-    "ghsaId": "GHSA-m7pr-hjqh-92cm"
+    "ghsaId": "GHSA-m7pr-hjqh-92cm",
+    "epss": 0.00056
   },
   {
     "id": "CVE-2026-42034",
@@ -4824,7 +4824,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:33:25.000Z",
     "modifiedAt": "2026-05-06T15:29:22.484Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.153Z",
     "sources": [
       {
         "source": "osv",
@@ -4842,8 +4842,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00065,
-    "ghsaId": "GHSA-5c9x-8gcm-mpgx"
+    "ghsaId": "GHSA-5c9x-8gcm-mpgx",
+    "epss": 0.00065
   },
   {
     "id": "CVE-2026-42036",
@@ -4883,7 +4883,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:26:57.000Z",
     "modifiedAt": "2026-05-06T15:29:25.221Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -4901,8 +4901,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00065,
-    "ghsaId": "GHSA-vf2m-468p-8v99"
+    "ghsaId": "GHSA-vf2m-468p-8v99",
+    "epss": 0.00065
   },
   {
     "id": "CVE-2026-42042",
@@ -4943,7 +4943,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:25:22.000Z",
     "modifiedAt": "2026-05-06T15:29:24.391Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -4961,8 +4961,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00044,
-    "ghsaId": "GHSA-xx6v-rp6x-q39c"
+    "ghsaId": "GHSA-xx6v-rp6x-q39c",
+    "epss": 0.00044
   },
   {
     "id": "CVE-2026-42041",
@@ -5003,7 +5003,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:21:39.000Z",
     "modifiedAt": "2026-05-06T15:29:25.530Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -5021,8 +5021,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00136,
-    "ghsaId": "GHSA-w9j2-pvgh-6h63"
+    "ghsaId": "GHSA-w9j2-pvgh-6h63",
+    "epss": 0.00136
   },
   {
     "id": "CVE-2026-42044",
@@ -5063,7 +5063,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:19:33.000Z",
     "modifiedAt": "2026-05-06T15:29:23.367Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.151Z",
     "sources": [
       {
         "source": "osv",
@@ -5081,8 +5081,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00127,
-    "ghsaId": "GHSA-3w6x-2g7m-8v23"
+    "ghsaId": "GHSA-3w6x-2g7m-8v23",
+    "epss": 0.00127
   },
   {
     "id": "CVE-2026-40175",
@@ -5124,7 +5124,7 @@
     "priority": 52,
     "publishedAt": "2026-04-10T19:47:16.000Z",
     "modifiedAt": "2026-05-20T00:30:10.353Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.153Z",
     "sources": [
       {
         "source": "osv",
@@ -5142,8 +5142,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00063,
-    "ghsaId": "GHSA-fvcv-3m26-pcqx"
+    "ghsaId": "GHSA-fvcv-3m26-pcqx",
+    "epss": 0.00063
   },
   {
     "id": "CVE-2025-62718",
@@ -5184,7 +5184,7 @@
     "priority": 52,
     "publishedAt": "2026-04-09T17:32:19.000Z",
     "modifiedAt": "2026-05-08T13:46:43.000Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.151Z",
     "sources": [
       {
         "source": "osv",
@@ -5202,8 +5202,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00069,
-    "ghsaId": "GHSA-3p68-rc4w-qgx5"
+    "ghsaId": "GHSA-3p68-rc4w-qgx5",
+    "epss": 0.00069
   },
   {
     "id": "CVE-2026-2950",
@@ -5261,7 +5261,7 @@
     "priority": 52,
     "publishedAt": "2026-04-01T23:50:27.000Z",
     "modifiedAt": "2026-04-02T17:29:51.565Z",
-    "mergedAt": "2026-05-23T22:52:56.793Z",
+    "mergedAt": "2026-05-23T23:27:08.156Z",
     "sources": [
       {
         "source": "osv",
@@ -5279,8 +5279,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00025,
-    "ghsaId": "GHSA-f23m-r3pf-42rh"
+    "ghsaId": "GHSA-f23m-r3pf-42rh",
+    "epss": 0.00025
   },
   {
     "id": "CVE-2021-43803",
@@ -5320,7 +5320,7 @@
     "priority": 51,
     "publishedAt": "2021-12-07T21:12:09.000Z",
     "modifiedAt": "2026-03-13T22:00:36.554Z",
-    "mergedAt": "2026-05-23T22:52:56.776Z",
+    "mergedAt": "2026-05-23T23:27:08.120Z",
     "sources": [
       {
         "source": "osv",
@@ -5339,8 +5339,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.0218,
-    "ghsaId": "GHSA-25mp-g6fv-mqxx"
+    "ghsaId": "GHSA-25mp-g6fv-mqxx",
+    "epss": 0.0218
   },
   {
     "id": "CVE-2021-39178",
@@ -5380,7 +5380,7 @@
     "priority": 51,
     "publishedAt": "2021-09-01T18:24:22.000Z",
     "modifiedAt": "2026-03-13T22:00:20.154Z",
-    "mergedAt": "2026-05-23T22:52:56.776Z",
+    "mergedAt": "2026-05-23T23:27:08.127Z",
     "sources": [
       {
         "source": "osv",
@@ -5399,8 +5399,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.007,
-    "ghsaId": "GHSA-9gr3-7897-pp7m"
+    "ghsaId": "GHSA-9gr3-7897-pp7m",
+    "epss": 0.007
   },
   {
     "id": "CVE-2020-15094",
@@ -5447,9 +5447,9 @@
       "reason": "direct-dep"
     },
     "priority": 51,
-    "publishedAt": "2020-09-02T17:29:56.000Z",
+    "publishedAt": "2020-09-02T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:14:38.594Z",
-    "mergedAt": "2026-05-23T22:52:56.807Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "osv",
@@ -5480,8 +5480,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.02248,
-    "ghsaId": "GHSA-754h-5r27-7x3r"
+    "ghsaId": "GHSA-754h-5r27-7x3r",
+    "epss": 0.02248
   },
   {
     "id": "CVE-2020-5275",
@@ -5534,9 +5534,9 @@
       "reason": "direct-dep"
     },
     "priority": 51,
-    "publishedAt": "2020-03-30T20:09:44.000Z",
+    "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:03.504Z",
-    "mergedAt": "2026-05-23T22:52:56.816Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "osv",
@@ -5567,8 +5567,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.00274,
-    "ghsaId": "GHSA-g4m9-5hpf-hx72"
+    "ghsaId": "GHSA-g4m9-5hpf-hx72",
+    "epss": 0.00274
   },
   {
     "id": "CVE-2020-17480",
@@ -5606,7 +5606,7 @@
     "priority": 51,
     "publishedAt": "2020-01-30T21:22:15.000Z",
     "modifiedAt": "2026-03-13T22:01:20.067Z",
-    "mergedAt": "2026-05-23T22:52:56.787Z",
+    "mergedAt": "2026-05-23T23:27:08.141Z",
     "sources": [
       {
         "source": "osv",
@@ -5624,8 +5624,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00553,
-    "ghsaId": "GHSA-27gm-ghr9-4v95"
+    "ghsaId": "GHSA-27gm-ghr9-4v95",
+    "epss": 0.00553
   },
   {
     "id": "CVE-2026-46635",
@@ -5663,9 +5663,9 @@
       "reason": "direct-dep"
     },
     "priority": 50,
-    "publishedAt": "2026-05-21T21:25:55.000Z",
+    "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:18.155Z",
-    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "osv",
@@ -5727,9 +5727,9 @@
       "reason": "direct-dep"
     },
     "priority": 50,
-    "publishedAt": "2026-05-21T21:21:35.000Z",
+    "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:19.441Z",
-    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "osv",
@@ -5869,7 +5869,7 @@
     "priority": 47,
     "publishedAt": "2026-03-31T03:15:49.000Z",
     "modifiedAt": "2026-04-07T14:52:30.013Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -5918,7 +5918,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T16:12:07.000Z",
     "modifiedAt": "2026-05-14T20:48:38.453Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.121Z",
     "sources": [
       {
         "source": "osv",
@@ -5937,8 +5937,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00008,
-    "ghsaId": "GHSA-3g8h-86w9-wvmq"
+    "ghsaId": "GHSA-3g8h-86w9-wvmq",
+    "epss": 0.00008
   },
   {
     "id": "CVE-2026-44582",
@@ -5978,7 +5978,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T15:56:48.000Z",
     "modifiedAt": "2026-05-14T20:52:41.365Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.136Z",
     "sources": [
       {
         "source": "osv",
@@ -5997,8 +5997,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00009,
-    "ghsaId": "GHSA-vfv6-92ff-j949"
+    "ghsaId": "GHSA-vfv6-92ff-j949",
+    "epss": 0.00009
   },
   {
     "id": "CVE-2026-42040",
@@ -6039,7 +6039,7 @@
     "priority": 45,
     "publishedAt": "2026-05-05T00:18:03.000Z",
     "modifiedAt": "2026-05-06T15:29:21.463Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -6057,8 +6057,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00056,
-    "ghsaId": "GHSA-xhjh-pmcv-23jw"
+    "ghsaId": "GHSA-xhjh-pmcv-23jw",
+    "epss": 0.00056
   },
   {
     "id": "CVE-2024-35955",
@@ -6137,7 +6137,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.872Z",
+    "mergedAt": "2026-05-23T23:27:08.210Z",
     "sources": [
       {
         "source": "packagist",
@@ -6189,7 +6189,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.203Z",
     "sources": [
       {
         "source": "packagist",
@@ -6236,7 +6236,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T13:37:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.882Z",
+    "mergedAt": "2026-05-23T23:27:08.220Z",
     "sources": [
       {
         "source": "packagist",
@@ -6295,7 +6295,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.872Z",
+    "mergedAt": "2026-05-23T23:27:08.210Z",
     "sources": [
       {
         "source": "packagist",
@@ -6347,7 +6347,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -6393,7 +6393,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -6440,7 +6440,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.882Z",
+    "mergedAt": "2026-05-23T23:27:08.220Z",
     "sources": [
       {
         "source": "packagist",
@@ -6493,7 +6493,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -6540,7 +6540,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.882Z",
+    "mergedAt": "2026-05-23T23:27:08.220Z",
     "sources": [
       {
         "source": "packagist",
@@ -6593,7 +6593,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -6645,7 +6645,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "packagist",
@@ -6697,7 +6697,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -6743,7 +6743,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -6789,7 +6789,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -6836,7 +6836,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.882Z",
+    "mergedAt": "2026-05-23T23:27:08.220Z",
     "sources": [
       {
         "source": "packagist",
@@ -6895,7 +6895,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "packagist",
@@ -6947,7 +6947,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -6993,7 +6993,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -7039,7 +7039,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -7091,7 +7091,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "packagist",
@@ -7149,7 +7149,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.872Z",
+    "mergedAt": "2026-05-23T23:27:08.210Z",
     "sources": [
       {
         "source": "packagist",
@@ -7201,7 +7201,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.866Z",
+    "mergedAt": "2026-05-23T23:27:08.204Z",
     "sources": [
       {
         "source": "packagist",
@@ -7259,7 +7259,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "packagist",
@@ -7317,7 +7317,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "packagist",
@@ -7362,7 +7362,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T23:27:08.212Z",
     "sources": [
       {
         "source": "packagist",
@@ -7615,7 +7615,7 @@
     "priority": 38,
     "publishedAt": "2026-04-08T15:51:48.000Z",
     "modifiedAt": "2026-05-05T16:10:10.879Z",
-    "mergedAt": "2026-05-23T22:52:56.790Z",
+    "mergedAt": "2026-05-23T23:27:08.154Z",
     "sources": [
       {
         "source": "osv",
@@ -7633,8 +7633,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00021,
-    "ghsaId": "GHSA-qj83-cq47-w5f8"
+    "ghsaId": "GHSA-qj83-cq47-w5f8",
+    "epss": 0.00021
   },
   {
     "id": "CVE-2026-29057",
@@ -7673,7 +7673,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:15.000Z",
     "modifiedAt": "2026-03-19T17:59:01.302Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.133Z",
     "sources": [
       {
         "source": "osv",
@@ -7692,8 +7692,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.0004,
-    "ghsaId": "GHSA-ggv3-7p47-pfv8"
+    "ghsaId": "GHSA-ggv3-7p47-pfv8",
+    "epss": 0.0004
   },
   {
     "id": "CVE-2026-27980",
@@ -7732,7 +7732,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:06.000Z",
     "modifiedAt": "2026-03-20T14:59:12.698Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.122Z",
     "sources": [
       {
         "source": "osv",
@@ -7751,8 +7751,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00022,
-    "ghsaId": "GHSA-3x4c-7xq6-9pq8"
+    "ghsaId": "GHSA-3x4c-7xq6-9pq8",
+    "epss": 0.00022
   },
   {
     "id": "CVE-2026-27979",
@@ -7791,7 +7791,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:16:49.000Z",
     "modifiedAt": "2026-03-19T18:48:06.587Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.134Z",
     "sources": [
       {
         "source": "osv",
@@ -7810,8 +7810,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00019,
-    "ghsaId": "GHSA-h27x-g6w4-24gq"
+    "ghsaId": "GHSA-h27x-g6w4-24gq",
+    "epss": 0.00019
   },
   {
     "id": "CVE-2026-27978",
@@ -7850,7 +7850,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T15:30:14.000Z",
     "modifiedAt": "2026-03-19T18:31:23.523Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.134Z",
     "sources": [
       {
         "source": "osv",
@@ -7869,8 +7869,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00008,
-    "ghsaId": "GHSA-mq59-m269-xvcx"
+    "ghsaId": "GHSA-mq59-m269-xvcx",
+    "epss": 0.00008
   },
   {
     "id": "CVE-2025-59472",
@@ -7912,7 +7912,7 @@
     "priority": 36,
     "publishedAt": "2026-01-28T15:20:55.000Z",
     "modifiedAt": "2026-04-08T21:16:40.797Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.122Z",
     "sources": [
       {
         "source": "osv",
@@ -7931,8 +7931,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00089,
-    "ghsaId": "GHSA-5f7q-jpqc-wp7h"
+    "ghsaId": "GHSA-5f7q-jpqc-wp7h",
+    "epss": 0.00089
   },
   {
     "id": "CVE-2021-41270",
@@ -7979,9 +7979,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-11-24T21:01:23.000Z",
+    "publishedAt": "2021-11-15T10:47:04.000Z",
     "modifiedAt": "2026-03-13T21:59:52.395Z",
-    "mergedAt": "2026-05-23T22:52:56.816Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "osv",
@@ -8012,8 +8012,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.00871,
-    "ghsaId": "GHSA-2xhg-w2g5-w95x"
+    "ghsaId": "GHSA-2xhg-w2g5-w95x",
+    "epss": 0.00871
   },
   {
     "id": "CVE-2021-41268",
@@ -8060,9 +8060,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-11-24T20:05:22.000Z",
+    "publishedAt": "2021-10-23T11:11:11.000Z",
     "modifiedAt": "2026-03-13T22:14:23.582Z",
-    "mergedAt": "2026-05-23T22:52:56.816Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "osv",
@@ -8093,8 +8093,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.00476,
-    "ghsaId": "GHSA-qw36-p97w-vcqr"
+    "ghsaId": "GHSA-qw36-p97w-vcqr",
+    "epss": 0.00476
   },
   {
     "id": "CVE-2021-41267",
@@ -8141,9 +8141,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-11-24T20:04:25.000Z",
+    "publishedAt": "2021-10-09T12:10:44.000Z",
     "modifiedAt": "2026-03-13T22:00:11.423Z",
-    "mergedAt": "2026-05-23T22:52:56.816Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "osv",
@@ -8174,8 +8174,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.00462,
-    "ghsaId": "GHSA-q3j3-w37x-hq2q"
+    "ghsaId": "GHSA-q3j3-w37x-hq2q",
+    "epss": 0.00462
   },
   {
     "id": "CVE-2021-37699",
@@ -8215,7 +8215,7 @@
     "priority": 36,
     "publishedAt": "2021-08-12T14:51:14.000Z",
     "modifiedAt": "2026-03-13T22:00:08.038Z",
-    "mergedAt": "2026-05-23T22:52:56.777Z",
+    "mergedAt": "2026-05-23T23:27:08.136Z",
     "sources": [
       {
         "source": "osv",
@@ -8234,8 +8234,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.0043,
-    "ghsaId": "GHSA-vxf5-wxwp-m7g9"
+    "ghsaId": "GHSA-vxf5-wxwp-m7g9",
+    "epss": 0.0043
   },
   {
     "id": "CVE-2021-32693",
@@ -8282,9 +8282,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-06-21T17:03:44.000Z",
+    "publishedAt": "2021-06-17T15:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:16.333Z",
-    "mergedAt": "2026-05-23T22:52:56.816Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "osv",
@@ -8315,8 +8315,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.00545,
-    "ghsaId": "GHSA-rfcf-m67m-jcrq"
+    "ghsaId": "GHSA-rfcf-m67m-jcrq",
+    "epss": 0.00545
   },
   {
     "id": "CVE-2021-21424",
@@ -8395,9 +8395,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-05-13T20:23:02.000Z",
+    "publishedAt": "2021-05-12T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:14.858Z",
-    "mergedAt": "2026-05-23T22:52:56.807Z",
+    "mergedAt": "2026-05-23T23:27:08.208Z",
     "sources": [
       {
         "source": "osv",
@@ -8434,8 +8434,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.00266,
-    "ghsaId": "GHSA-5pv8-ppvj-4h68"
+    "ghsaId": "GHSA-5pv8-ppvj-4h68",
+    "epss": 0.00266
   },
   {
     "id": "CVE-2020-15242",
@@ -8475,7 +8475,7 @@
     "priority": 36,
     "publishedAt": "2020-10-08T19:28:07.000Z",
     "modifiedAt": "2026-03-13T22:14:13.665Z",
-    "mergedAt": "2026-05-23T22:52:56.778Z",
+    "mergedAt": "2026-05-23T23:27:08.137Z",
     "sources": [
       {
         "source": "osv",
@@ -8494,8 +8494,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00211,
-    "ghsaId": "GHSA-x56p-c8cg-q435"
+    "ghsaId": "GHSA-x56p-c8cg-q435",
+    "epss": 0.00211
   },
   {
     "id": "CVE-2020-5274",
@@ -8541,9 +8541,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2020-03-30T20:09:31.000Z",
+    "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:15:59.230Z",
-    "mergedAt": "2026-05-23T22:52:56.816Z",
+    "mergedAt": "2026-05-23T23:27:08.205Z",
     "sources": [
       {
         "source": "osv",
@@ -8568,8 +8568,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.00267,
-    "ghsaId": "GHSA-m884-279h-32v2"
+    "ghsaId": "GHSA-m884-279h-32v2",
+    "epss": 0.00267
   },
   {
     "id": "CVE-2019-1010266",
@@ -8628,7 +8628,7 @@
     "priority": 36,
     "publishedAt": "2019-07-19T16:13:07.000Z",
     "modifiedAt": "2026-03-13T21:56:22.446Z",
-    "mergedAt": "2026-05-23T22:52:56.794Z",
+    "mergedAt": "2026-05-23T23:27:08.158Z",
     "sources": [
       {
         "source": "osv",
@@ -8646,8 +8646,8 @@
     "tags": [
       "frontend"
     ],
-    "epss": 0.00213,
-    "ghsaId": "GHSA-x5rq-j2xg-h7qm"
+    "ghsaId": "GHSA-x5rq-j2xg-h7qm",
+    "epss": 0.00213
   },
   {
     "id": "h-b77627a0b21c",
@@ -8674,7 +8674,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T17:00:00.000Z",
     "modifiedAt": "2026-05-21T17:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -8749,7 +8749,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T07:25:00.000Z",
     "modifiedAt": "2026-05-21T07:25:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.882Z",
+    "mergedAt": "2026-05-23T23:27:08.220Z",
     "sources": [
       {
         "source": "symfony-security",
@@ -8824,7 +8824,7 @@
     "priority": 34,
     "publishedAt": "2026-05-18T23:01:00.000Z",
     "modifiedAt": "2026-05-18T23:01:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.890Z",
+    "mergedAt": "2026-05-23T23:27:08.230Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -8938,7 +8938,7 @@
     "priority": 29,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -9223,7 +9223,7 @@
     "priority": 28,
     "publishedAt": "2026-03-17T15:29:48.000Z",
     "modifiedAt": "2026-03-25T19:49:01.129Z",
-    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "mergedAt": "2026-05-23T23:27:08.134Z",
     "sources": [
       {
         "source": "osv",
@@ -9242,8 +9242,8 @@
       "frontend",
       "nextjs"
     ],
-    "epss": 0.00006,
-    "ghsaId": "GHSA-jcc7-9wpm-mj36"
+    "ghsaId": "GHSA-jcc7-9wpm-mj36",
+    "epss": 0.00006
   },
   {
     "id": "CVE-2020-5255",
@@ -9290,9 +9290,9 @@
       "reason": "direct-dep"
     },
     "priority": 26,
-    "publishedAt": "2020-03-30T20:09:16.000Z",
+    "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:08.748Z",
-    "mergedAt": "2026-05-23T22:52:56.816Z",
+    "mergedAt": "2026-05-23T23:27:08.209Z",
     "sources": [
       {
         "source": "osv",
@@ -9323,8 +9323,8 @@
       "backend",
       "symfony"
     ],
-    "epss": 0.00374,
-    "ghsaId": "GHSA-mcx4-f5f5-4859"
+    "ghsaId": "GHSA-mcx4-f5f5-4859",
+    "epss": 0.00374
   },
   {
     "id": "CVE-2024-49958",
@@ -13704,6 +13704,45 @@
     ],
     "tags": [],
     "epss": 0.00182
+  },
+  {
+    "id": "CVE-2026-5194",
+    "cveId": "CVE-2026-5194",
+    "aliases": [
+      "CVE-2026-5194"
+    ],
+    "title": "Missing hash/digest size and OID checks allow digests smaller than allowed when verifying ECDSA certificates, or smaller than is appropriate for the relevant key type, to be accepted by signature veri",
+    "summary": "Missing hash/digest size and OID checks allow digests smaller than allowed when verifying ECDSA certificates, or smaller than is appropriate for the relevant key type, to be accepted by signature verification functions. This could lead to reduced security of ECDSA certificate-based authentication if the public CA key used is also known. This affects ECDSA/ECC verification when EdDSA or ML-DSA is also enabled.",
+    "severity": "critical",
+    "cvss": 9.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-295"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 17,
+    "publishedAt": "2026-04-09T20:16:28.420Z",
+    "modifiedAt": "2026-04-16T20:37:11.433Z",
+    "mergedAt": "2026-05-23T23:26:56.924Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-5194",
+        "url": "https://github.com/wolfSSL/wolfssl/pull/10131",
+        "fetchedAt": "2026-05-23T23:26:56.924Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00015
   },
   {
     "id": "CVE-2026-5121",
@@ -30159,7 +30198,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T12:00:00.000Z",
     "modifiedAt": "2026-05-22T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -32123,7 +32162,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:08:48.000Z",
     "modifiedAt": "2026-05-21T14:08:48.000Z",
-    "mergedAt": "2026-05-23T22:25:19.876Z",
+    "mergedAt": "2026-05-23T23:27:08.214Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -32549,7 +32588,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -32586,7 +32625,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -32623,7 +32662,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -32660,7 +32699,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -32697,7 +32736,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -32876,7 +32915,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T09:19:32.000Z",
     "modifiedAt": "2026-05-21T09:19:32.000Z",
-    "mergedAt": "2026-05-23T22:25:19.877Z",
+    "mergedAt": "2026-05-23T23:27:08.214Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -33136,7 +33175,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T21:07:38.000Z",
     "modifiedAt": "2026-05-20T21:07:38.000Z",
-    "mergedAt": "2026-05-23T22:25:19.882Z",
+    "mergedAt": "2026-05-23T23:27:08.223Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -33813,7 +33852,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:39:47.000Z",
     "modifiedAt": "2026-05-20T10:23:06.000Z",
-    "mergedAt": "2026-05-23T22:25:19.878Z",
+    "mergedAt": "2026-05-23T23:27:08.216Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -33854,7 +33893,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:29:56.000Z",
     "modifiedAt": "2026-05-20T09:34:33.000Z",
-    "mergedAt": "2026-05-23T22:25:19.879Z",
+    "mergedAt": "2026-05-23T23:27:08.217Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34250,7 +34289,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34287,7 +34326,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34324,7 +34363,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34361,7 +34400,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34398,7 +34437,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34648,7 +34687,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T00:00:00.000Z",
     "modifiedAt": "2026-05-19T00:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.889Z",
+    "mergedAt": "2026-05-23T23:27:08.230Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -34972,7 +35011,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T06:00:00.000Z",
     "modifiedAt": "2026-05-18T06:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -36449,7 +36488,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T14:00:00.000Z",
     "modifiedAt": "2026-05-15T14:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.882Z",
+    "mergedAt": "2026-05-23T23:27:08.223Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -36812,7 +36851,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -36868,7 +36907,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -36914,7 +36953,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -36969,7 +37008,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -37006,7 +37045,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -37080,7 +37119,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -37117,7 +37156,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -37154,7 +37193,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -37191,7 +37230,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -37228,7 +37267,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -37265,7 +37304,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.226Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -37336,7 +37375,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:23:05.000Z",
     "modifiedAt": "2026-05-14T10:23:05.000Z",
-    "mergedAt": "2026-05-23T22:25:19.880Z",
+    "mergedAt": "2026-05-23T23:27:08.218Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -37371,7 +37410,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:16:24.000Z",
     "modifiedAt": "2026-05-14T10:16:24.000Z",
-    "mergedAt": "2026-05-23T22:25:19.881Z",
+    "mergedAt": "2026-05-23T23:27:08.219Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -37826,7 +37865,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:12:36.000Z",
     "modifiedAt": "2026-05-13T10:12:36.000Z",
-    "mergedAt": "2026-05-23T22:25:19.881Z",
+    "mergedAt": "2026-05-23T23:27:08.219Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -37861,7 +37900,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:03:30.000Z",
     "modifiedAt": "2026-05-13T10:03:30.000Z",
-    "mergedAt": "2026-05-23T22:25:19.882Z",
+    "mergedAt": "2026-05-23T23:27:08.220Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -37896,7 +37935,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T00:00:00.000Z",
     "modifiedAt": "2026-05-13T00:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.885Z",
+    "mergedAt": "2026-05-23T23:27:08.225Z",
     "sources": [
       {
         "source": "project-zero",
@@ -37968,7 +38007,7 @@
     "priority": 6,
     "publishedAt": "2026-05-11T08:00:00.000Z",
     "modifiedAt": "2026-05-11T08:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.891Z",
+    "mergedAt": "2026-05-23T23:27:08.232Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -38003,7 +38042,7 @@
     "priority": 6,
     "publishedAt": "2026-05-10T14:00:00.000Z",
     "modifiedAt": "2026-05-10T14:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:19.892Z",
+    "mergedAt": "2026-05-23T23:27:08.233Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -41388,6 +41427,78 @@
     ],
     "tags": [],
     "epss": 0.00026
+  },
+  {
+    "id": "h-929c0c61045c",
+    "aliases": [
+      "/blog/vulnerability/march-2026-hashdos?1774385400000"
+    ],
+    "title": "Developing a minimally HashDoS resistant, yet quickly reversible integer hash for V8",
+    "summary": "",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "npm"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 5,
+    "publishedAt": "2026-03-24T20:50:00.000Z",
+    "modifiedAt": "2026-03-24T20:50:00.000Z",
+    "mergedAt": "2026-05-23T23:26:48.070Z",
+    "sources": [
+      {
+        "source": "nodejs-security",
+        "externalId": "/blog/vulnerability/march-2026-hashdos?1774385400000",
+        "url": "https://nodejs.org/en/blog/vulnerability/march-2026-hashdos",
+        "fetchedAt": "2026-05-23T23:26:48.070Z"
+      }
+    ],
+    "tags": [
+      "backend",
+      "frontend"
+    ]
+  },
+  {
+    "id": "h-8a1bacd87f30",
+    "aliases": [
+      "/blog/vulnerability/march-2026-security-releases?1774321200000"
+    ],
+    "title": "Tuesday, March 24, 2026 Security Releases",
+    "summary": "",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "npm"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 5,
+    "publishedAt": "2026-03-24T03:00:00.000Z",
+    "modifiedAt": "2026-03-24T03:00:00.000Z",
+    "mergedAt": "2026-05-23T23:26:48.070Z",
+    "sources": [
+      {
+        "source": "nodejs-security",
+        "externalId": "/blog/vulnerability/march-2026-security-releases?1774321200000",
+        "url": "https://nodejs.org/en/blog/vulnerability/march-2026-security-releases",
+        "fetchedAt": "2026-05-23T23:26:48.070Z"
+      }
+    ],
+    "tags": [
+      "backend",
+      "frontend"
+    ]
   },
   {
     "id": "CVE-2026-28809",
