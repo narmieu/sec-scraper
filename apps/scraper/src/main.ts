@@ -1,9 +1,9 @@
 import { CADENCE_MS, scoreStackMatch, type LastRun, type SourcesFile, type Vuln } from '@sec/shared';
 import type { Adapter } from './adapters/types.js';
-import { ADAPTERS, ENRICHERS } from './adapters/index.js';
-import { dedupeMerge } from './pipeline/dedupe.js';
-import { normalizeVuln } from './pipeline/normalize.js';
-import { computePriority } from './pipeline/score.js';
+import { buildAdapters, ENRICHERS } from './adapters/index.js';
+import { dedupeMerge } from '@/pipeline/dedupe.js';
+import { normalizeVuln } from '@/pipeline/normalize.js';
+import { computePriority } from '@/pipeline/score.js';
 import {
   buildPaths,
   loadAlerted,
@@ -12,16 +12,16 @@ import {
   persistVulns,
   writeLastRun,
   writeSources,
-} from './pipeline/persist.js';
+} from '@/pipeline/persist.js';
 import {
   defaultHealth,
   isAllowed,
   nextStateForAttempt,
   recordFailure,
   recordSuccess,
-} from './pipeline/circuit-breaker.js';
-import { loadStackIndex } from './stack.js';
-import { dispatchAlerts } from './notify/dispatch.js';
+} from '@/pipeline/circuit-breaker.js';
+import { loadStackBundle } from '@/stack.js';
+import { dispatchAlerts } from '@/notify/dispatch.js';
 
 export interface RunOpts {
   dryRun?: boolean;
@@ -56,10 +56,11 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   const paths = buildPaths(opts.dataRoot);
   const sources: SourcesFile = loadSources(paths);
   const existing = loadVulns(paths);
-  const stackIndex = loadStackIndex(paths);
+  const { index: stackIndex, targets: stackTargets } = loadStackBundle(paths);
+  const adapters = buildAdapters(stackTargets);
   const errors: LastRun['errors'] = [];
 
-  const eligible = pickEligibleAdapters(sources, opts.onlySource, now);
+  const eligible = pickEligibleAdapters(adapters, sources, opts.onlySource, now);
   const results = await Promise.all(eligible.map((a) => runAdapter(a, sources)));
 
   for (const r of results) {
@@ -128,6 +129,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
 
   if (!opts.dryRun) {
     persistVulns(paths, combined, now);
+    pruneStaleSources(sources, adapters);
     writeSources(paths, sources);
   }
 
@@ -163,11 +165,12 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
 }
 
 function pickEligibleAdapters(
+  adapters: Adapter[],
   sources: SourcesFile,
   onlySource: string | undefined,
   now: Date,
 ): Adapter[] {
-  return ADAPTERS.filter((a) => {
+  return adapters.filter((a) => {
     if (onlySource && a.id !== onlySource) return false;
     const health = sources[a.id];
     let h = health ?? defaultHealth();
@@ -180,6 +183,13 @@ function pickEligibleAdapters(
     }
     return true;
   });
+}
+
+function pruneStaleSources(sources: SourcesFile, adapters: Adapter[]): void {
+  const known = new Set(adapters.map((a) => a.id));
+  for (const id of Object.keys(sources)) {
+    if (!known.has(id)) delete sources[id];
+  }
 }
 
 async function runAdapter(adapter: Adapter, sources: SourcesFile): Promise<AdapterRunResult> {
@@ -217,4 +227,3 @@ async function runAdapter(adapter: Adapter, sources: SourcesFile): Promise<Adapt
     };
   }
 }
-
