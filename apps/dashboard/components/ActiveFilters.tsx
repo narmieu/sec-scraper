@@ -9,19 +9,11 @@ interface Chip {
 
 export function ActiveFilters() {
   const filters = useStore((s) => s.filters);
-  const query = useStore((s) => s.query);
   const setFilters = useStore((s) => s.setFilters);
   const setQuery = useStore((s) => s.setQuery);
 
   const chips: Chip[] = [];
 
-  if (query) {
-    chips.push({
-      key: 'query',
-      label: `"${query}"`,
-      onRemove: () => setQuery(''),
-    });
-  }
   for (const s of filters.severities) {
     chips.push({
       key: `sev:${s}`,
