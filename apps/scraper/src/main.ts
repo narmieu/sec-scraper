@@ -1,4 +1,11 @@
-import { CADENCE_MS, scoreStackMatch, type LastRun, type SourcesFile, type Vuln } from '@sec/shared';
+import {
+  CADENCE_MS,
+  ROLLING_WINDOW_DAYS,
+  scoreStackMatch,
+  type LastRun,
+  type SourcesFile,
+  type Vuln,
+} from '@sec/shared';
 import type { Adapter } from './adapters/types.js';
 import { buildAdapters, ENRICHERS } from './adapters/index.js';
 import { dedupeMerge } from '@/pipeline/dedupe.js';
@@ -34,6 +41,7 @@ export interface RunOpts {
 export interface RunReport {
   newCount: number;
   updatedCount: number;
+  archivedCount: number;
   droppedCount: number;
   alertCount: number;
   durationMs: number;
@@ -116,9 +124,14 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     return { ...withMatch, priority: computePriority(withMatch) };
   });
 
-  const newIds = new Set(existing.map((v) => v.id));
-  const newCount = combined.filter((v) => !newIds.has(v.id)).length;
-  const updatedCount = combined.length - newCount;
+  // Counts reflect the live (post-persist) set — items aged out by the
+  // 90d rolling window aren't "new" from the dashboard's perspective.
+  const cutoff = now.getTime() - ROLLING_WINDOW_DAYS * 86_400_000;
+  const live = combined.filter((v) => new Date(v.modifiedAt).getTime() >= cutoff);
+  const archivedCount = combined.length - live.length;
+  const existingLiveIds = new Set(existing.map((v) => v.id));
+  const newCount = live.filter((v) => !existingLiveIds.has(v.id)).length;
+  const updatedCount = live.length - newCount;
 
   let alertCount = 0;
   if (!opts.noNotify && !opts.dryRun) {
@@ -138,7 +151,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     startedAt,
     finishedAt: finishedAt.toISOString(),
     durationMs: finishedAt.getTime() - startedMs,
-    stats: { newCount, updatedCount, droppedCount, alertCount },
+    stats: { newCount, updatedCount, archivedCount, droppedCount, alertCount },
     sources: Object.fromEntries(
       results.map((r) => [
         r.adapter.id,
@@ -157,6 +170,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   return {
     newCount,
     updatedCount,
+    archivedCount,
     droppedCount,
     alertCount,
     durationMs: lastRun.durationMs,
