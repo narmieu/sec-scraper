@@ -1,9 +1,9 @@
 {
-  "startedAt": "2026-05-23T01:11:01.054Z",
-  "finishedAt": "2026-05-23T01:11:20.669Z",
-  "durationMs": 19615,
+  "startedAt": "2026-05-23T03:19:03.529Z",
+  "finishedAt": "2026-05-23T03:19:21.577Z",
+  "durationMs": 18048,
   "stats": {
-    "newCount": 1467,
+    "newCount": 1468,
     "updatedCount": 886,
     "droppedCount": 0,
     "alertCount": 0
@@ -12,82 +12,117 @@
     "osv": {
       "ok": true,
       "fetched": 264,
-      "durationMs": 13070
+      "durationMs": 13313
     },
     "nvd": {
       "ok": true,
-      "fetched": 3,
-      "durationMs": 9844
+      "fetched": 1,
+      "durationMs": 11382
     },
     "cve-org": {
       "ok": true,
-      "fetched": 3,
-      "durationMs": 1598
+      "fetched": 4,
+      "durationMs": 1197
     },
     "packagist": {
       "ok": true,
       "fetched": 206,
-      "durationMs": 812
+      "durationMs": 561
     },
     "friendsofphp-advisories": {
       "ok": true,
       "fetched": 10,
-      "durationMs": 401
+      "durationMs": 164
     },
     "symfony-security": {
       "ok": true,
       "fetched": 5,
-      "durationMs": 231
+      "durationMs": 154
     },
     "npm-blog": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 276
+      "durationMs": 91
     },
     "github-repo-advisories": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 6632
+      "durationMs": 4723
     },
     "nextjs-releases": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 891
+      "durationMs": 1185
     },
     "nodejs-security": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 237
+      "durationMs": 137
     },
     "php-security": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 2246
+      "durationMs": 1354
     },
     "github-security-lab": {
       "ok": true,
       "fetched": 2,
-      "durationMs": 302
+      "durationMs": 372
     },
     "project-zero": {
       "ok": true,
       "fetched": 1,
-      "durationMs": 1312
+      "durationMs": 1737
     },
     "cisa-alerts": {
       "ok": true,
       "fetched": 30,
-      "durationMs": 380
+      "durationMs": 475
     },
     "cloudflare-blog": {
       "ok": true,
       "fetched": 2,
-      "durationMs": 831
+      "durationMs": 663
     },
     "vercel-changelog": {
       "ok": true,
       "fetched": 4,
-      "durationMs": 784
+      "durationMs": 1172
+    },
+    "avid": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1183
+    },
+    "owasp-llm": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 541
+    },
+    "mitre-atlas": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 612
+    },
+    "anthropic-trust": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 760
+    },
+    "openai-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 661
+    },
+    "hackerone-ai": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1180
+    },
+    "arxiv-cs-cr": {
+      "ok": true,
+      "fetched": 42,
+      "durationMs": 786
     }
   },
   "errors": []
