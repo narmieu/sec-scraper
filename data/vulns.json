@@ -73,7 +73,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T18:20:52.863Z",
     "modifiedAt": "2026-05-23T03:55:38.207Z",
-    "mergedAt": "2026-05-23T07:08:52.518Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "nvd",
@@ -130,7 +130,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:20.771Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "osv",
@@ -296,7 +296,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-23T12:34:30.650Z",
+    "mergedAt": "2026-05-23T13:39:35.733Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -349,7 +349,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-23T12:34:30.650Z",
+    "mergedAt": "2026-05-23T13:39:35.733Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2080,14 +2080,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2103,7 +2103,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:30.650Z",
+    "mergedAt": "2026-05-23T13:39:35.733Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2121,7 +2121,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00197
   },
   {
     "id": "CVE-2026-20131",
@@ -2986,7 +2986,7 @@
     "priority": 71,
     "publishedAt": "2025-03-21T15:20:12.000Z",
     "modifiedAt": "2026-03-04T15:06:29.993Z",
-    "mergedAt": "2026-05-23T12:34:28.661Z",
+    "mergedAt": "2026-05-23T13:39:32.501Z",
     "sources": [
       {
         "source": "osv",
@@ -3034,7 +3034,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:55:15.000Z",
     "modifiedAt": "2026-05-14T20:50:45.445Z",
-    "mergedAt": "2026-05-23T12:34:28.660Z",
+    "mergedAt": "2026-05-23T13:39:32.501Z",
     "sources": [
       {
         "source": "osv",
@@ -3082,7 +3082,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:53:51.000Z",
     "modifiedAt": "2026-05-14T20:48:35.793Z",
-    "mergedAt": "2026-05-23T12:34:28.657Z",
+    "mergedAt": "2026-05-23T13:39:32.497Z",
     "sources": [
       {
         "source": "osv",
@@ -3127,7 +3127,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T14:50:27.000Z",
     "modifiedAt": "2026-05-13T03:44:29.651Z",
-    "mergedAt": "2026-05-23T12:34:28.660Z",
+    "mergedAt": "2026-05-23T13:39:32.500Z",
     "sources": [
       {
         "source": "osv",
@@ -3174,7 +3174,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:26:29.000Z",
     "modifiedAt": "2026-05-06T15:29:21.690Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -3223,7 +3223,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:25:47.000Z",
     "modifiedAt": "2026-05-06T15:29:22.420Z",
-    "mergedAt": "2026-05-23T12:34:28.668Z",
+    "mergedAt": "2026-05-23T13:39:32.509Z",
     "sources": [
       {
         "source": "osv",
@@ -3273,7 +3273,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:20:58.000Z",
     "modifiedAt": "2026-05-06T15:29:21.321Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -3321,7 +3321,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:18:38.000Z",
     "modifiedAt": "2026-05-12T17:16:38.232Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -3366,7 +3366,7 @@
     "priority": 67,
     "publishedAt": "2026-04-10T15:35:47.000Z",
     "modifiedAt": "2026-04-16T23:29:14.079Z",
-    "mergedAt": "2026-05-23T12:34:28.664Z",
+    "mergedAt": "2026-05-23T13:39:32.504Z",
     "sources": [
       {
         "source": "osv",
@@ -3431,7 +3431,7 @@
     "priority": 67,
     "publishedAt": "2026-04-01T23:51:12.000Z",
     "modifiedAt": "2026-04-02T17:29:57.498Z",
-    "mergedAt": "2026-05-23T12:34:28.672Z",
+    "mergedAt": "2026-05-23T13:39:32.511Z",
     "sources": [
       {
         "source": "osv",
@@ -3505,7 +3505,7 @@
     "priority": 66,
     "publishedAt": "2019-07-10T19:45:23.000Z",
     "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-23T12:34:28.671Z",
+    "mergedAt": "2026-05-23T13:39:32.511Z",
     "sources": [
       {
         "source": "osv",
@@ -3554,7 +3554,7 @@
     "priority": 65,
     "publishedAt": "2026-02-09T17:46:14.000Z",
     "modifiedAt": "2026-05-08T14:03:50.604Z",
-    "mergedAt": "2026-05-23T12:34:28.668Z",
+    "mergedAt": "2026-05-23T13:39:32.508Z",
     "sources": [
       {
         "source": "osv",
@@ -3644,7 +3644,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.830Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "osv",
@@ -3700,7 +3700,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.837Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "osv",
@@ -3754,7 +3754,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T15:44:33.359Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "packagist",
@@ -3811,7 +3811,7 @@
     "priority": 61,
     "publishedAt": "2021-11-11T13:30:00.000Z",
     "modifiedAt": "2026-03-13T22:00:38.072Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "osv",
@@ -3867,7 +3867,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.132Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "osv",
@@ -3923,7 +3923,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.214Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "osv",
@@ -3979,7 +3979,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T16:21:19.000Z",
     "modifiedAt": "2026-05-14T20:47:46.572Z",
-    "mergedAt": "2026-05-23T12:34:28.657Z",
+    "mergedAt": "2026-05-23T13:39:32.497Z",
     "sources": [
       {
         "source": "osv",
@@ -4033,7 +4033,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:56:24.000Z",
     "modifiedAt": "2026-05-14T20:50:54.621Z",
-    "mergedAt": "2026-05-23T12:34:28.664Z",
+    "mergedAt": "2026-05-23T13:39:32.504Z",
     "sources": [
       {
         "source": "osv",
@@ -4081,7 +4081,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:54:08.000Z",
     "modifiedAt": "2026-05-14T20:47:43.284Z",
-    "mergedAt": "2026-05-23T12:34:28.658Z",
+    "mergedAt": "2026-05-23T13:39:32.498Z",
     "sources": [
       {
         "source": "osv",
@@ -4125,7 +4125,7 @@
     "priority": 55,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "packagist",
@@ -4174,7 +4174,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:57:12.000Z",
     "modifiedAt": "2026-05-14T20:51:12.557Z",
-    "mergedAt": "2026-05-23T12:34:28.661Z",
+    "mergedAt": "2026-05-23T13:39:32.501Z",
     "sources": [
       {
         "source": "osv",
@@ -4222,7 +4222,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:38.000Z",
     "modifiedAt": "2026-05-14T20:51:25.401Z",
-    "mergedAt": "2026-05-23T12:34:28.663Z",
+    "mergedAt": "2026-05-23T13:39:32.503Z",
     "sources": [
       {
         "source": "osv",
@@ -4270,7 +4270,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:05.000Z",
     "modifiedAt": "2026-05-14T20:51:26.606Z",
-    "mergedAt": "2026-05-23T12:34:28.664Z",
+    "mergedAt": "2026-05-23T13:39:32.503Z",
     "sources": [
       {
         "source": "osv",
@@ -4318,7 +4318,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:54:46.000Z",
     "modifiedAt": "2026-05-14T20:52:45.704Z",
-    "mergedAt": "2026-05-23T12:34:28.666Z",
+    "mergedAt": "2026-05-23T13:39:32.506Z",
     "sources": [
       {
         "source": "osv",
@@ -4366,7 +4366,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:45.000Z",
     "modifiedAt": "2026-05-06T15:29:22.982Z",
-    "mergedAt": "2026-05-23T12:34:28.668Z",
+    "mergedAt": "2026-05-23T13:39:32.508Z",
     "sources": [
       {
         "source": "osv",
@@ -4414,7 +4414,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:17.000Z",
     "modifiedAt": "2026-05-06T15:29:25.469Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -4462,7 +4462,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:34:32.000Z",
     "modifiedAt": "2026-05-06T15:29:21.389Z",
-    "mergedAt": "2026-05-23T12:34:28.668Z",
+    "mergedAt": "2026-05-23T13:39:32.509Z",
     "sources": [
       {
         "source": "osv",
@@ -4510,7 +4510,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:33:25.000Z",
     "modifiedAt": "2026-05-06T15:29:22.484Z",
-    "mergedAt": "2026-05-23T12:34:28.668Z",
+    "mergedAt": "2026-05-23T13:39:32.509Z",
     "sources": [
       {
         "source": "osv",
@@ -4558,7 +4558,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:26:57.000Z",
     "modifiedAt": "2026-05-06T15:29:25.221Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -4607,7 +4607,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:25:22.000Z",
     "modifiedAt": "2026-05-06T15:29:24.391Z",
-    "mergedAt": "2026-05-23T12:34:28.670Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -4656,7 +4656,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:21:39.000Z",
     "modifiedAt": "2026-05-06T15:29:25.530Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -4705,7 +4705,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:19:33.000Z",
     "modifiedAt": "2026-05-06T15:29:23.367Z",
-    "mergedAt": "2026-05-23T12:34:28.667Z",
+    "mergedAt": "2026-05-23T13:39:32.507Z",
     "sources": [
       {
         "source": "osv",
@@ -4755,7 +4755,7 @@
     "priority": 52,
     "publishedAt": "2026-04-10T19:47:16.000Z",
     "modifiedAt": "2026-05-20T00:30:10.353Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.509Z",
     "sources": [
       {
         "source": "osv",
@@ -4804,7 +4804,7 @@
     "priority": 52,
     "publishedAt": "2026-04-09T17:32:19.000Z",
     "modifiedAt": "2026-05-08T13:46:43.000Z",
-    "mergedAt": "2026-05-23T12:34:28.667Z",
+    "mergedAt": "2026-05-23T13:39:32.507Z",
     "sources": [
       {
         "source": "osv",
@@ -4870,7 +4870,7 @@
     "priority": 52,
     "publishedAt": "2026-04-01T23:50:27.000Z",
     "modifiedAt": "2026-04-02T17:29:51.565Z",
-    "mergedAt": "2026-05-23T12:34:28.671Z",
+    "mergedAt": "2026-05-23T13:39:32.511Z",
     "sources": [
       {
         "source": "osv",
@@ -4918,7 +4918,7 @@
     "priority": 51,
     "publishedAt": "2021-12-07T21:12:09.000Z",
     "modifiedAt": "2026-03-13T22:00:36.554Z",
-    "mergedAt": "2026-05-23T12:34:28.657Z",
+    "mergedAt": "2026-05-23T13:39:32.497Z",
     "sources": [
       {
         "source": "osv",
@@ -4966,7 +4966,7 @@
     "priority": 51,
     "publishedAt": "2021-09-01T18:24:22.000Z",
     "modifiedAt": "2026-03-13T22:00:20.154Z",
-    "mergedAt": "2026-05-23T12:34:28.660Z",
+    "mergedAt": "2026-05-23T13:39:32.500Z",
     "sources": [
       {
         "source": "osv",
@@ -5023,7 +5023,7 @@
     "priority": 51,
     "publishedAt": "2020-09-02T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:14:38.594Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "osv",
@@ -5101,7 +5101,7 @@
     "priority": 51,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:03.504Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "osv",
@@ -5163,7 +5163,7 @@
     "priority": 51,
     "publishedAt": "2020-01-30T21:22:15.000Z",
     "modifiedAt": "2026-03-13T22:01:20.067Z",
-    "mergedAt": "2026-05-23T12:34:28.672Z",
+    "mergedAt": "2026-05-23T13:39:32.512Z",
     "sources": [
       {
         "source": "osv",
@@ -5212,7 +5212,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:22.410Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "osv",
@@ -5268,7 +5268,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:21.667Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "osv",
@@ -5316,7 +5316,7 @@
     "priority": 49,
     "publishedAt": "2026-05-01T14:16:20.720Z",
     "modifiedAt": "2026-05-06T20:26:38.560Z",
-    "mergedAt": "2026-05-23T12:34:22.388Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "nvd",
@@ -5357,7 +5357,7 @@
     "priority": 49,
     "publishedAt": "2026-04-24T15:16:40.560Z",
     "modifiedAt": "2026-04-28T15:13:18.267Z",
-    "mergedAt": "2026-05-23T12:34:22.388Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "nvd",
@@ -5401,7 +5401,7 @@
     "priority": 47,
     "publishedAt": "2026-03-31T03:15:49.000Z",
     "modifiedAt": "2026-04-07T14:52:30.013Z",
-    "mergedAt": "2026-05-23T12:34:28.670Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -5448,7 +5448,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T16:12:07.000Z",
     "modifiedAt": "2026-05-14T20:48:38.453Z",
-    "mergedAt": "2026-05-23T12:34:28.658Z",
+    "mergedAt": "2026-05-23T13:39:32.498Z",
     "sources": [
       {
         "source": "osv",
@@ -5496,7 +5496,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T15:56:48.000Z",
     "modifiedAt": "2026-05-14T20:52:41.365Z",
-    "mergedAt": "2026-05-23T12:34:28.666Z",
+    "mergedAt": "2026-05-23T13:39:32.505Z",
     "sources": [
       {
         "source": "osv",
@@ -5545,7 +5545,7 @@
     "priority": 45,
     "publishedAt": "2026-05-05T00:18:03.000Z",
     "modifiedAt": "2026-05-06T15:29:21.463Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -5595,7 +5595,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.716Z",
+    "mergedAt": "2026-05-23T13:39:32.551Z",
     "sources": [
       {
         "source": "packagist",
@@ -5647,7 +5647,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "packagist",
@@ -5694,7 +5694,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T13:37:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.725Z",
+    "mergedAt": "2026-05-23T13:39:32.560Z",
     "sources": [
       {
         "source": "packagist",
@@ -5753,7 +5753,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.716Z",
+    "mergedAt": "2026-05-23T13:39:32.551Z",
     "sources": [
       {
         "source": "packagist",
@@ -5805,7 +5805,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "packagist",
@@ -5851,7 +5851,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "packagist",
@@ -5898,7 +5898,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.725Z",
+    "mergedAt": "2026-05-23T13:39:32.560Z",
     "sources": [
       {
         "source": "packagist",
@@ -5951,7 +5951,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "packagist",
@@ -5998,7 +5998,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.725Z",
+    "mergedAt": "2026-05-23T13:39:32.560Z",
     "sources": [
       {
         "source": "packagist",
@@ -6051,7 +6051,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "packagist",
@@ -6103,7 +6103,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "packagist",
@@ -6155,7 +6155,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "packagist",
@@ -6201,7 +6201,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "packagist",
@@ -6247,7 +6247,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "packagist",
@@ -6294,7 +6294,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.725Z",
+    "mergedAt": "2026-05-23T13:39:32.560Z",
     "sources": [
       {
         "source": "packagist",
@@ -6353,7 +6353,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "packagist",
@@ -6405,7 +6405,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.546Z",
     "sources": [
       {
         "source": "packagist",
@@ -6451,7 +6451,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.546Z",
     "sources": [
       {
         "source": "packagist",
@@ -6497,7 +6497,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.546Z",
     "sources": [
       {
         "source": "packagist",
@@ -6549,7 +6549,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "packagist",
@@ -6607,7 +6607,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.716Z",
+    "mergedAt": "2026-05-23T13:39:32.551Z",
     "sources": [
       {
         "source": "packagist",
@@ -6659,7 +6659,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.546Z",
     "sources": [
       {
         "source": "packagist",
@@ -6717,7 +6717,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "packagist",
@@ -6775,7 +6775,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "packagist",
@@ -6820,7 +6820,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.717Z",
+    "mergedAt": "2026-05-23T13:39:32.552Z",
     "sources": [
       {
         "source": "packagist",
@@ -7071,7 +7071,7 @@
     "priority": 38,
     "publishedAt": "2026-04-08T15:51:48.000Z",
     "modifiedAt": "2026-05-05T16:10:10.879Z",
-    "mergedAt": "2026-05-23T12:34:28.669Z",
+    "mergedAt": "2026-05-23T13:39:32.510Z",
     "sources": [
       {
         "source": "osv",
@@ -7119,7 +7119,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:15.000Z",
     "modifiedAt": "2026-03-19T17:59:01.302Z",
-    "mergedAt": "2026-05-23T12:34:28.662Z",
+    "mergedAt": "2026-05-23T13:39:32.502Z",
     "sources": [
       {
         "source": "osv",
@@ -7167,7 +7167,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:06.000Z",
     "modifiedAt": "2026-03-20T14:59:12.698Z",
-    "mergedAt": "2026-05-23T12:34:28.658Z",
+    "mergedAt": "2026-05-23T13:39:32.498Z",
     "sources": [
       {
         "source": "osv",
@@ -7215,7 +7215,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:16:49.000Z",
     "modifiedAt": "2026-03-19T18:48:06.587Z",
-    "mergedAt": "2026-05-23T12:34:28.663Z",
+    "mergedAt": "2026-05-23T13:39:32.503Z",
     "sources": [
       {
         "source": "osv",
@@ -7263,7 +7263,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T15:30:14.000Z",
     "modifiedAt": "2026-03-19T18:31:23.523Z",
-    "mergedAt": "2026-05-23T12:34:28.664Z",
+    "mergedAt": "2026-05-23T13:39:32.504Z",
     "sources": [
       {
         "source": "osv",
@@ -7313,7 +7313,7 @@
     "priority": 36,
     "publishedAt": "2026-01-28T15:20:55.000Z",
     "modifiedAt": "2026-04-08T21:16:40.797Z",
-    "mergedAt": "2026-05-23T12:34:28.658Z",
+    "mergedAt": "2026-05-23T13:39:32.498Z",
     "sources": [
       {
         "source": "osv",
@@ -7370,7 +7370,7 @@
     "priority": 36,
     "publishedAt": "2021-11-15T10:47:04.000Z",
     "modifiedAt": "2026-03-13T21:59:52.395Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "osv",
@@ -7442,7 +7442,7 @@
     "priority": 36,
     "publishedAt": "2021-10-23T11:11:11.000Z",
     "modifiedAt": "2026-03-13T22:14:23.582Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "osv",
@@ -7514,7 +7514,7 @@
     "priority": 36,
     "publishedAt": "2021-10-09T12:10:44.000Z",
     "modifiedAt": "2026-03-13T22:00:11.423Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "osv",
@@ -7577,7 +7577,7 @@
     "priority": 36,
     "publishedAt": "2021-08-12T14:51:14.000Z",
     "modifiedAt": "2026-03-13T22:00:08.038Z",
-    "mergedAt": "2026-05-23T12:34:28.666Z",
+    "mergedAt": "2026-05-23T13:39:32.505Z",
     "sources": [
       {
         "source": "osv",
@@ -7634,7 +7634,7 @@
     "priority": 36,
     "publishedAt": "2021-06-17T15:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:16.333Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "osv",
@@ -7738,7 +7738,7 @@
     "priority": 36,
     "publishedAt": "2021-05-12T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:14.858Z",
-    "mergedAt": "2026-05-23T12:34:28.714Z",
+    "mergedAt": "2026-05-23T13:39:32.549Z",
     "sources": [
       {
         "source": "osv",
@@ -7807,7 +7807,7 @@
     "priority": 36,
     "publishedAt": "2020-10-08T19:28:07.000Z",
     "modifiedAt": "2026-03-13T22:14:13.665Z",
-    "mergedAt": "2026-05-23T12:34:28.666Z",
+    "mergedAt": "2026-05-23T13:39:32.506Z",
     "sources": [
       {
         "source": "osv",
@@ -7863,7 +7863,7 @@
     "priority": 36,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:15:59.230Z",
-    "mergedAt": "2026-05-23T12:34:28.712Z",
+    "mergedAt": "2026-05-23T13:39:32.547Z",
     "sources": [
       {
         "source": "osv",
@@ -7939,7 +7939,7 @@
     "priority": 36,
     "publishedAt": "2019-07-19T16:13:07.000Z",
     "modifiedAt": "2026-03-13T21:56:22.446Z",
-    "mergedAt": "2026-05-23T12:34:28.672Z",
+    "mergedAt": "2026-05-23T13:39:32.511Z",
     "sources": [
       {
         "source": "osv",
@@ -7976,7 +7976,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T17:00:00.000Z",
     "modifiedAt": "2026-05-21T17:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -8051,7 +8051,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T07:25:00.000Z",
     "modifiedAt": "2026-05-21T07:25:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.725Z",
+    "mergedAt": "2026-05-23T13:39:32.559Z",
     "sources": [
       {
         "source": "symfony-security",
@@ -8126,7 +8126,7 @@
     "priority": 34,
     "publishedAt": "2026-05-18T23:01:00.000Z",
     "modifiedAt": "2026-05-18T23:01:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.732Z",
+    "mergedAt": "2026-05-23T13:39:32.574Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -8240,7 +8240,7 @@
     "priority": 29,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -8368,7 +8368,7 @@
     "priority": 28,
     "publishedAt": "2026-03-17T15:29:48.000Z",
     "modifiedAt": "2026-03-25T19:49:01.129Z",
-    "mergedAt": "2026-05-23T12:34:28.664Z",
+    "mergedAt": "2026-05-23T13:39:32.503Z",
     "sources": [
       {
         "source": "osv",
@@ -8425,7 +8425,7 @@
     "priority": 26,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:08.748Z",
-    "mergedAt": "2026-05-23T12:34:28.715Z",
+    "mergedAt": "2026-05-23T13:39:32.550Z",
     "sources": [
       {
         "source": "osv",
@@ -11430,6 +11430,43 @@
     "epss": 0.0042
   },
   {
+    "id": "CVE-2026-8836",
+    "cveId": "CVE-2026-8836",
+    "aliases": [
+      "CVE-2026-8836"
+    ],
+    "title": "lwIP snmpv3 USM snmp_msg.c snmp_parse_inbound_frame stack-based overflow",
+    "summary": "A vulnerability was found in lwIP up to 2.2.1. Affected is the function snmp_parse_inbound_frame of the file src/apps/snmp/snmp_msg.c of the component snmpv3 USM Handler. Performing a manipulation of the argument msgAuthenticationParameters results in stack-based buffer overflow. The attack may be initiated remotely. The patch is named 0c957ec03054eb6c8205e9c9d1d05d90ada3898c. It is suggested to install a patch to address this issue.",
+    "severity": "critical",
+    "cvss": 9.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:X/RL:O/RC:C",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 20,
+    "publishedAt": "2026-05-18T18:45:12.791Z",
+    "modifiedAt": "2026-05-23T08:54:18.787Z",
+    "mergedAt": "2026-05-23T13:39:21.642Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8836",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8836.json",
+        "fetchedAt": "2026-05-23T13:39:21.642Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.0024
+  },
+  {
     "id": "CVE-2026-33117",
     "cveId": "CVE-2026-33117",
     "aliases": [
@@ -13060,7 +13097,7 @@
     "priority": 16,
     "publishedAt": "2026-05-21T20:34:37.893Z",
     "modifiedAt": "2026-05-23T03:55:45.020Z",
-    "mergedAt": "2026-05-23T07:08:52.512Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "nvd",
@@ -13105,7 +13142,7 @@
     "priority": 16,
     "publishedAt": "2026-05-21T20:33:30.163Z",
     "modifiedAt": "2026-05-23T03:55:46.656Z",
-    "mergedAt": "2026-05-23T07:08:52.512Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "nvd",
@@ -13229,9 +13266,9 @@
       "reason": "topic-mention"
     },
     "priority": 16,
-    "publishedAt": "2026-05-21T17:10:55.398Z",
+    "publishedAt": "2026-05-21T17:11:00.452Z",
     "modifiedAt": "2026-05-23T02:24:26.941Z",
-    "mergedAt": "2026-05-23T07:08:52.568Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -13398,6 +13435,50 @@
     "epss": 0.00024
   },
   {
+    "id": "CVE-2026-48236",
+    "cveId": "CVE-2026-48236",
+    "aliases": [
+      "CVE-2026-48231",
+      "CVE-2026-48236"
+    ],
+    "title": "Open ISES Tickets < 3.44.2 SQL Injection via db_loader.php Multiple Parameters",
+    "summary": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in db_loader.php where the multiple POST parameters (ticketsdb, ticketshost, ticketsuser, ticketspassword) are concatenated into mysqli connection arguments and dynamic SQL operating against an attacker-controlled database without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
+    "severity": "high",
+    "cvss": 7.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 16,
+    "publishedAt": "2026-05-21T17:10:40.515Z",
+    "modifiedAt": "2026-05-23T02:23:07.220Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48231",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48231.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-48236",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48236.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00024
+  },
+  {
     "id": "CVE-2026-48235",
     "cveId": "CVE-2026-48235",
     "aliases": [
@@ -13510,50 +13591,6 @@
         "externalId": "CVE-2026-48233",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48233.json",
         "fetchedAt": "2026-05-22T16:40:00.135Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00024
-  },
-  {
-    "id": "CVE-2026-48236",
-    "cveId": "CVE-2026-48236",
-    "aliases": [
-      "CVE-2026-48231",
-      "CVE-2026-48236"
-    ],
-    "title": "Open ISES Tickets < 3.44.2 SQL Injection via db_loader.php Multiple Parameters",
-    "summary": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in db_loader.php where the multiple POST parameters (ticketsdb, ticketshost, ticketsuser, ticketspassword) are concatenated into mysqli connection arguments and dynamic SQL operating against an attacker-controlled database without sanitization. Authenticated attackers can craft requests that alter query semantics to read, modify, or destroy database contents.",
-    "severity": "high",
-    "cvss": 7.1,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-21T17:10:19.878Z",
-    "modifiedAt": "2026-05-23T02:23:07.220Z",
-    "mergedAt": "2026-05-23T07:08:52.566Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-48231",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48231.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      },
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-48236",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/48xxx/CVE-2026-48236.json",
-        "fetchedAt": "2026-05-23T07:08:43.539Z"
       }
     ],
     "tags": [],
@@ -13750,52 +13787,6 @@
     "epss": 0.00028
   },
   {
-    "id": "CVE-2026-45760",
-    "cveId": "CVE-2026-45760",
-    "aliases": [
-      "CVE-2026-45760"
-    ],
-    "title": "Apache Camel K: Camel K Cross-Namespace Build Deputy Attack",
-    "summary": "(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace. This issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1. Users are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.",
-    "severity": "high",
-    "cvss": 8.1,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [
-      "CWE-610",
-      "CWE-639"
-    ],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-21T13:16:19.840Z",
-    "modifiedAt": "2026-05-23T02:17:48.106Z",
-    "mergedAt": "2026-05-23T07:08:52.582Z",
-    "sources": [
-      {
-        "source": "nvd",
-        "externalId": "CVE-2026-45760",
-        "url": "https://camel.apache.org/security/CVE-2026-45760.html",
-        "fetchedAt": "2026-05-23T03:19:14.929Z"
-      },
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-45760",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45760.json",
-        "fetchedAt": "2026-05-23T07:08:43.539Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00017
-  },
-  {
     "id": "CVE-2025-71214",
     "cveId": "CVE-2025-71214",
     "aliases": [
@@ -13884,6 +13875,52 @@
     ],
     "tags": [],
     "epss": 0.01247
+  },
+  {
+    "id": "CVE-2026-45760",
+    "cveId": "CVE-2026-45760",
+    "aliases": [
+      "CVE-2026-45760"
+    ],
+    "title": "Apache Camel K: Camel K Cross-Namespace Build Deputy Attack",
+    "summary": "(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace. This issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1. Users are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.",
+    "severity": "high",
+    "cvss": 8.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-610",
+      "CWE-639"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 16,
+    "publishedAt": "2026-05-21T11:43:44.844Z",
+    "modifiedAt": "2026-05-23T02:17:48.106Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-45760",
+        "url": "https://camel.apache.org/security/CVE-2026-45760.html",
+        "fetchedAt": "2026-05-23T03:19:14.929Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-45760",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45760.json",
+        "fetchedAt": "2026-05-23T07:08:43.539Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00017
   },
   {
     "id": "CVE-2026-28764",
@@ -17661,7 +17698,7 @@
     "priority": 14,
     "publishedAt": "2026-05-15T06:16:20.363Z",
     "modifiedAt": "2026-05-20T17:16:23.387Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "nvd",
@@ -19839,7 +19876,7 @@
     "priority": 14,
     "publishedAt": "2026-05-06T12:16:44.997Z",
     "modifiedAt": "2026-05-11T13:34:25.543Z",
-    "mergedAt": "2026-05-23T12:34:22.388Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "nvd",
@@ -20546,7 +20583,7 @@
     "priority": 13,
     "publishedAt": "2026-03-20T09:16:12.700Z",
     "modifiedAt": "2026-04-02T15:16:28.417Z",
-    "mergedAt": "2026-05-23T12:34:28.705Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "nvd",
@@ -24088,9 +24125,9 @@
       "reason": "topic-mention"
     },
     "priority": 10,
-    "publishedAt": "2026-05-21T17:11:15.088Z",
+    "publishedAt": "2026-05-21T17:11:17.519Z",
     "modifiedAt": "2026-05-23T02:25:36.453Z",
-    "mergedAt": "2026-05-23T07:08:53.317Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -24257,7 +24294,7 @@
     "priority": 10,
     "publishedAt": "2026-05-21T17:10:17.026Z",
     "modifiedAt": "2026-05-23T02:21:41.885Z",
-    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -24371,9 +24408,9 @@
       "reason": "topic-mention"
     },
     "priority": 10,
-    "publishedAt": "2026-05-21T17:09:57.698Z",
+    "publishedAt": "2026-05-21T17:10:00.514Z",
     "modifiedAt": "2026-05-23T02:20:45.255Z",
-    "mergedAt": "2026-05-23T07:08:52.590Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -24440,7 +24477,7 @@
     "priority": 10,
     "publishedAt": "2026-05-21T17:09:26.489Z",
     "modifiedAt": "2026-05-23T02:19:05.169Z",
-    "mergedAt": "2026-05-23T07:08:43.539Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -27174,7 +27211,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T12:00:00.000Z",
     "modifiedAt": "2026-05-22T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.562Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29138,7 +29175,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:08:48.000Z",
     "modifiedAt": "2026-05-21T14:08:48.000Z",
-    "mergedAt": "2026-05-23T12:34:28.719Z",
+    "mergedAt": "2026-05-23T13:39:32.553Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -29529,7 +29566,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:16:19.957Z",
     "modifiedAt": "2026-05-21T16:16:23.157Z",
-    "mergedAt": "2026-05-23T12:34:28.711Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "nvd",
@@ -29564,7 +29601,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.562Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29601,7 +29638,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29638,7 +29675,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.562Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29675,7 +29712,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29712,7 +29749,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29891,7 +29928,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T09:19:32.000Z",
     "modifiedAt": "2026-05-21T09:19:32.000Z",
-    "mergedAt": "2026-05-23T12:34:28.719Z",
+    "mergedAt": "2026-05-23T13:39:32.554Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -30151,7 +30188,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T21:07:38.000Z",
     "modifiedAt": "2026-05-20T21:07:38.000Z",
-    "mergedAt": "2026-05-23T12:34:28.725Z",
+    "mergedAt": "2026-05-23T13:39:32.560Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -30828,7 +30865,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:39:47.000Z",
     "modifiedAt": "2026-05-20T10:23:06.000Z",
-    "mergedAt": "2026-05-23T12:34:28.721Z",
+    "mergedAt": "2026-05-23T13:39:32.556Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -30869,7 +30906,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:29:56.000Z",
     "modifiedAt": "2026-05-20T09:34:33.000Z",
-    "mergedAt": "2026-05-23T12:34:28.722Z",
+    "mergedAt": "2026-05-23T13:39:32.557Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -31265,7 +31302,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -31302,7 +31339,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -31339,7 +31376,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -31376,7 +31413,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -31413,7 +31450,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -31663,7 +31700,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T00:00:00.000Z",
     "modifiedAt": "2026-05-19T00:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.732Z",
+    "mergedAt": "2026-05-23T13:39:32.574Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -31987,7 +32024,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T06:00:00.000Z",
     "modifiedAt": "2026-05-18T06:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -32630,7 +32667,7 @@
     "priority": 8,
     "publishedAt": "2026-05-06T12:16:31.007Z",
     "modifiedAt": "2026-05-12T21:15:52.423Z",
-    "mergedAt": "2026-05-23T12:34:22.388Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "nvd",
@@ -33459,7 +33496,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T14:00:00.000Z",
     "modifiedAt": "2026-05-15T14:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.725Z",
+    "mergedAt": "2026-05-23T13:39:32.560Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -33822,7 +33859,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33878,7 +33915,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33924,7 +33961,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33979,7 +34016,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34016,7 +34053,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34090,7 +34127,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34127,7 +34164,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34164,7 +34201,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34201,7 +34238,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34238,7 +34275,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34275,7 +34312,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.728Z",
+    "mergedAt": "2026-05-23T13:39:32.563Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -34346,7 +34383,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:23:05.000Z",
     "modifiedAt": "2026-05-14T10:23:05.000Z",
-    "mergedAt": "2026-05-23T12:34:28.723Z",
+    "mergedAt": "2026-05-23T13:39:32.558Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34381,7 +34418,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:16:24.000Z",
     "modifiedAt": "2026-05-14T10:16:24.000Z",
-    "mergedAt": "2026-05-23T12:34:28.723Z",
+    "mergedAt": "2026-05-23T13:39:32.558Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34836,7 +34873,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:12:36.000Z",
     "modifiedAt": "2026-05-13T10:12:36.000Z",
-    "mergedAt": "2026-05-23T12:34:28.724Z",
+    "mergedAt": "2026-05-23T13:39:32.559Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34871,7 +34908,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:03:30.000Z",
     "modifiedAt": "2026-05-13T10:03:30.000Z",
-    "mergedAt": "2026-05-23T12:34:28.725Z",
+    "mergedAt": "2026-05-23T13:39:32.559Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34906,7 +34943,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T00:00:00.000Z",
     "modifiedAt": "2026-05-13T00:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.727Z",
+    "mergedAt": "2026-05-23T13:39:32.562Z",
     "sources": [
       {
         "source": "project-zero",
@@ -34978,7 +35015,7 @@
     "priority": 6,
     "publishedAt": "2026-05-11T08:00:00.000Z",
     "modifiedAt": "2026-05-11T08:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.734Z",
+    "mergedAt": "2026-05-23T13:39:32.576Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -35013,7 +35050,7 @@
     "priority": 6,
     "publishedAt": "2026-05-10T14:00:00.000Z",
     "modifiedAt": "2026-05-10T14:00:00.000Z",
-    "mergedAt": "2026-05-23T12:34:28.736Z",
+    "mergedAt": "2026-05-23T13:39:32.579Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -35620,7 +35657,7 @@
     "priority": 6,
     "publishedAt": "2024-01-26T01:02:43.953Z",
     "modifiedAt": "2026-05-22T23:10:50.701Z",
-    "mergedAt": "2026-05-23T07:08:52.596Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -35657,7 +35694,7 @@
     "priority": 6,
     "publishedAt": "2024-01-12T13:56:31.881Z",
     "modifiedAt": "2026-05-22T23:10:50.549Z",
-    "mergedAt": "2026-05-23T07:08:52.596Z",
+    "mergedAt": "2026-05-23T13:39:32.569Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -36318,7 +36355,7 @@
     "priority": 4,
     "publishedAt": "2025-12-16T15:15:54.413Z",
     "modifiedAt": "2026-04-15T00:35:42.020Z",
-    "mergedAt": "2026-05-23T12:34:22.388Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
     "sources": [
       {
         "source": "nvd",
