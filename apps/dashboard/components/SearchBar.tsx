@@ -7,10 +7,17 @@ export function SearchBar() {
   const setQuery = useStore((s) => s.setQuery);
   const [local, setLocal] = useState(query);
 
+  // Sync local input when the store query is cleared/changed externally
+  // (e.g. by the "Clear all" / "Reset all" buttons).
   useEffect(() => {
+    setLocal(query);
+  }, [query]);
+
+  useEffect(() => {
+    if (local === query) return;
     const t = setTimeout(() => setQuery(local), 150);
     return () => clearTimeout(t);
-  }, [local, setQuery]);
+  }, [local, query, setQuery]);
 
   return (
     <input
