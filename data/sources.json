@@ -68,44 +68,44 @@
   "avid": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T03:19:03.529Z",
-    "lastFetchedAt": "2026-05-23T03:19:03.529Z"
+    "lastSuccess": "2026-05-23T09:42:56.589Z",
+    "lastFetchedAt": "2026-05-23T09:42:56.589Z"
   },
   "owasp-llm": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T03:19:03.529Z",
-    "lastFetchedAt": "2026-05-23T03:19:03.529Z"
+    "lastSuccess": "2026-05-23T09:42:56.589Z",
+    "lastFetchedAt": "2026-05-23T09:42:56.589Z"
   },
   "mitre-atlas": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T03:19:03.529Z",
-    "lastFetchedAt": "2026-05-23T03:19:03.529Z"
+    "lastSuccess": "2026-05-23T09:42:56.589Z",
+    "lastFetchedAt": "2026-05-23T09:42:56.589Z"
   },
   "anthropic-trust": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T03:19:03.529Z",
-    "lastFetchedAt": "2026-05-23T03:19:03.529Z"
+    "lastSuccess": "2026-05-23T09:42:56.589Z",
+    "lastFetchedAt": "2026-05-23T09:42:56.589Z"
   },
   "openai-security": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T03:19:03.529Z",
-    "lastFetchedAt": "2026-05-23T03:19:03.529Z"
+    "lastSuccess": "2026-05-23T09:42:56.589Z",
+    "lastFetchedAt": "2026-05-23T09:42:56.589Z"
   },
   "hackerone-ai": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T03:19:03.529Z",
-    "lastFetchedAt": "2026-05-23T03:19:03.529Z"
+    "lastSuccess": "2026-05-23T09:42:56.589Z",
+    "lastFetchedAt": "2026-05-23T09:42:56.589Z"
   },
   "arxiv-cs-cr": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T03:19:03.529Z",
-    "lastFetchedAt": "2026-05-23T03:19:03.529Z"
+    "lastSuccess": "2026-05-23T09:42:56.589Z",
+    "lastFetchedAt": "2026-05-23T09:42:56.589Z"
   },
   "nodejs-security": {
     "consecutiveFailures": 0,
