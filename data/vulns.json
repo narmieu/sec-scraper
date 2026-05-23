@@ -130,7 +130,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:20.771Z",
-    "mergedAt": "2026-05-22T23:33:30.367Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "osv",
@@ -296,7 +296,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-22T23:33:33.192Z",
+    "mergedAt": "2026-05-23T01:11:19.513Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2073,14 +2073,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-43520",
-    "cveId": "CVE-2025-43520",
+    "id": "CVE-2025-31277",
+    "cveId": "CVE-2025-31277",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
-    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
+    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
+    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2096,7 +2096,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:33.192Z",
+    "mergedAt": "2026-05-23T01:11:19.513Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2114,7 +2114,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00197
+    "epss": 0.00265
   },
   {
     "id": "CVE-2026-20131",
@@ -2979,7 +2979,7 @@
     "priority": 71,
     "publishedAt": "2025-03-21T15:20:12.000Z",
     "modifiedAt": "2026-03-04T15:06:29.993Z",
-    "mergedAt": "2026-05-22T23:33:30.317Z",
+    "mergedAt": "2026-05-23T01:11:15.597Z",
     "sources": [
       {
         "source": "osv",
@@ -3027,7 +3027,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:55:15.000Z",
     "modifiedAt": "2026-05-14T20:50:45.445Z",
-    "mergedAt": "2026-05-22T23:33:30.317Z",
+    "mergedAt": "2026-05-23T01:11:15.597Z",
     "sources": [
       {
         "source": "osv",
@@ -3075,7 +3075,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:53:51.000Z",
     "modifiedAt": "2026-05-14T20:48:35.793Z",
-    "mergedAt": "2026-05-22T23:33:30.314Z",
+    "mergedAt": "2026-05-23T01:11:15.594Z",
     "sources": [
       {
         "source": "osv",
@@ -3120,7 +3120,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T14:50:27.000Z",
     "modifiedAt": "2026-05-13T03:44:29.651Z",
-    "mergedAt": "2026-05-22T23:33:30.316Z",
+    "mergedAt": "2026-05-23T01:11:15.597Z",
     "sources": [
       {
         "source": "osv",
@@ -3167,7 +3167,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:26:29.000Z",
     "modifiedAt": "2026-05-06T15:29:21.690Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -3216,7 +3216,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:25:47.000Z",
     "modifiedAt": "2026-05-06T15:29:22.420Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.605Z",
     "sources": [
       {
         "source": "osv",
@@ -3266,7 +3266,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:20:58.000Z",
     "modifiedAt": "2026-05-06T15:29:21.321Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -3314,7 +3314,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:18:38.000Z",
     "modifiedAt": "2026-05-12T17:16:38.232Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -3359,7 +3359,7 @@
     "priority": 67,
     "publishedAt": "2026-04-10T15:35:47.000Z",
     "modifiedAt": "2026-04-16T23:29:14.079Z",
-    "mergedAt": "2026-05-22T23:33:30.320Z",
+    "mergedAt": "2026-05-23T01:11:15.601Z",
     "sources": [
       {
         "source": "osv",
@@ -3424,7 +3424,7 @@
     "priority": 67,
     "publishedAt": "2026-04-01T23:51:12.000Z",
     "modifiedAt": "2026-04-02T17:29:57.498Z",
-    "mergedAt": "2026-05-22T23:33:30.327Z",
+    "mergedAt": "2026-05-23T01:11:15.608Z",
     "sources": [
       {
         "source": "osv",
@@ -3498,7 +3498,7 @@
     "priority": 66,
     "publishedAt": "2019-07-10T19:45:23.000Z",
     "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-22T23:33:30.326Z",
+    "mergedAt": "2026-05-23T01:11:15.608Z",
     "sources": [
       {
         "source": "osv",
@@ -3547,7 +3547,7 @@
     "priority": 65,
     "publishedAt": "2026-02-09T17:46:14.000Z",
     "modifiedAt": "2026-05-08T14:03:50.604Z",
-    "mergedAt": "2026-05-22T23:33:30.323Z",
+    "mergedAt": "2026-05-23T01:11:15.605Z",
     "sources": [
       {
         "source": "osv",
@@ -3637,7 +3637,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.830Z",
-    "mergedAt": "2026-05-22T23:33:30.367Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "osv",
@@ -3693,7 +3693,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.837Z",
-    "mergedAt": "2026-05-22T23:33:30.367Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "osv",
@@ -3747,7 +3747,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T15:44:33.359Z",
-    "mergedAt": "2026-05-22T23:33:30.368Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "packagist",
@@ -3804,7 +3804,7 @@
     "priority": 61,
     "publishedAt": "2021-11-11T13:30:00.000Z",
     "modifiedAt": "2026-03-13T22:00:38.072Z",
-    "mergedAt": "2026-05-22T23:33:30.367Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "osv",
@@ -3860,7 +3860,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.132Z",
-    "mergedAt": "2026-05-22T23:33:30.368Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "osv",
@@ -3915,8 +3915,8 @@
     },
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
-    "modifiedAt": "2026-05-21T21:30:20.780Z",
-    "mergedAt": "2026-05-22T23:33:30.368Z",
+    "modifiedAt": "2026-05-22T22:44:48.214Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "osv",
@@ -3972,7 +3972,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T16:21:19.000Z",
     "modifiedAt": "2026-05-14T20:47:46.572Z",
-    "mergedAt": "2026-05-22T23:33:30.314Z",
+    "mergedAt": "2026-05-23T01:11:15.594Z",
     "sources": [
       {
         "source": "osv",
@@ -4026,7 +4026,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:56:24.000Z",
     "modifiedAt": "2026-05-14T20:50:54.621Z",
-    "mergedAt": "2026-05-22T23:33:30.320Z",
+    "mergedAt": "2026-05-23T01:11:15.601Z",
     "sources": [
       {
         "source": "osv",
@@ -4074,7 +4074,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:54:08.000Z",
     "modifiedAt": "2026-05-14T20:47:43.284Z",
-    "mergedAt": "2026-05-22T23:33:30.315Z",
+    "mergedAt": "2026-05-23T01:11:15.595Z",
     "sources": [
       {
         "source": "osv",
@@ -4118,7 +4118,7 @@
     "priority": 55,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.367Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "packagist",
@@ -4167,7 +4167,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:57:12.000Z",
     "modifiedAt": "2026-05-14T20:51:12.557Z",
-    "mergedAt": "2026-05-22T23:33:30.317Z",
+    "mergedAt": "2026-05-23T01:11:15.597Z",
     "sources": [
       {
         "source": "osv",
@@ -4215,7 +4215,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:38.000Z",
     "modifiedAt": "2026-05-14T20:51:25.401Z",
-    "mergedAt": "2026-05-22T23:33:30.319Z",
+    "mergedAt": "2026-05-23T01:11:15.600Z",
     "sources": [
       {
         "source": "osv",
@@ -4263,7 +4263,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:05.000Z",
     "modifiedAt": "2026-05-14T20:51:26.606Z",
-    "mergedAt": "2026-05-22T23:33:30.320Z",
+    "mergedAt": "2026-05-23T01:11:15.600Z",
     "sources": [
       {
         "source": "osv",
@@ -4311,7 +4311,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:54:46.000Z",
     "modifiedAt": "2026-05-14T20:52:45.704Z",
-    "mergedAt": "2026-05-22T23:33:30.322Z",
+    "mergedAt": "2026-05-23T01:11:15.603Z",
     "sources": [
       {
         "source": "osv",
@@ -4359,7 +4359,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:45.000Z",
     "modifiedAt": "2026-05-06T15:29:22.982Z",
-    "mergedAt": "2026-05-22T23:33:30.323Z",
+    "mergedAt": "2026-05-23T01:11:15.605Z",
     "sources": [
       {
         "source": "osv",
@@ -4407,7 +4407,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:17.000Z",
     "modifiedAt": "2026-05-06T15:29:25.469Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -4455,7 +4455,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:34:32.000Z",
     "modifiedAt": "2026-05-06T15:29:21.389Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.605Z",
     "sources": [
       {
         "source": "osv",
@@ -4503,7 +4503,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:33:25.000Z",
     "modifiedAt": "2026-05-06T15:29:22.484Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.605Z",
     "sources": [
       {
         "source": "osv",
@@ -4551,7 +4551,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:26:57.000Z",
     "modifiedAt": "2026-05-06T15:29:25.221Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -4600,7 +4600,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:25:22.000Z",
     "modifiedAt": "2026-05-06T15:29:24.391Z",
-    "mergedAt": "2026-05-22T23:33:30.325Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -4649,7 +4649,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:21:39.000Z",
     "modifiedAt": "2026-05-06T15:29:25.530Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -4698,7 +4698,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:19:33.000Z",
     "modifiedAt": "2026-05-06T15:29:23.367Z",
-    "mergedAt": "2026-05-22T23:33:30.323Z",
+    "mergedAt": "2026-05-23T01:11:15.604Z",
     "sources": [
       {
         "source": "osv",
@@ -4748,7 +4748,7 @@
     "priority": 52,
     "publishedAt": "2026-04-10T19:47:16.000Z",
     "modifiedAt": "2026-05-20T00:30:10.353Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -4797,7 +4797,7 @@
     "priority": 52,
     "publishedAt": "2026-04-09T17:32:19.000Z",
     "modifiedAt": "2026-05-08T13:46:43.000Z",
-    "mergedAt": "2026-05-22T23:33:30.323Z",
+    "mergedAt": "2026-05-23T01:11:15.604Z",
     "sources": [
       {
         "source": "osv",
@@ -4863,7 +4863,7 @@
     "priority": 52,
     "publishedAt": "2026-04-01T23:50:27.000Z",
     "modifiedAt": "2026-04-02T17:29:51.565Z",
-    "mergedAt": "2026-05-22T23:33:30.326Z",
+    "mergedAt": "2026-05-23T01:11:15.608Z",
     "sources": [
       {
         "source": "osv",
@@ -4911,7 +4911,7 @@
     "priority": 51,
     "publishedAt": "2021-12-07T21:12:09.000Z",
     "modifiedAt": "2026-03-13T22:00:36.554Z",
-    "mergedAt": "2026-05-22T23:33:30.313Z",
+    "mergedAt": "2026-05-23T01:11:15.594Z",
     "sources": [
       {
         "source": "osv",
@@ -4959,7 +4959,7 @@
     "priority": 51,
     "publishedAt": "2021-09-01T18:24:22.000Z",
     "modifiedAt": "2026-03-13T22:00:20.154Z",
-    "mergedAt": "2026-05-22T23:33:30.317Z",
+    "mergedAt": "2026-05-23T01:11:15.597Z",
     "sources": [
       {
         "source": "osv",
@@ -5016,7 +5016,7 @@
     "priority": 51,
     "publishedAt": "2020-09-02T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:14:38.594Z",
-    "mergedAt": "2026-05-22T23:33:30.364Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "osv",
@@ -5094,7 +5094,7 @@
     "priority": 51,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:03.504Z",
-    "mergedAt": "2026-05-22T23:33:30.365Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "osv",
@@ -5156,7 +5156,7 @@
     "priority": 51,
     "publishedAt": "2020-01-30T21:22:15.000Z",
     "modifiedAt": "2026-03-13T22:01:20.067Z",
-    "mergedAt": "2026-05-22T23:33:30.327Z",
+    "mergedAt": "2026-05-23T01:11:15.609Z",
     "sources": [
       {
         "source": "osv",
@@ -5205,7 +5205,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:22.410Z",
-    "mergedAt": "2026-05-22T23:33:30.367Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "osv",
@@ -5261,7 +5261,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:30:21.667Z",
-    "mergedAt": "2026-05-22T23:33:30.368Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "osv",
@@ -5312,7 +5312,7 @@
     "priority": 47,
     "publishedAt": "2026-03-31T03:15:49.000Z",
     "modifiedAt": "2026-04-07T14:52:30.013Z",
-    "mergedAt": "2026-05-22T23:33:30.325Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -5359,7 +5359,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T16:12:07.000Z",
     "modifiedAt": "2026-05-14T20:48:38.453Z",
-    "mergedAt": "2026-05-22T23:33:30.314Z",
+    "mergedAt": "2026-05-23T01:11:15.594Z",
     "sources": [
       {
         "source": "osv",
@@ -5407,7 +5407,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T15:56:48.000Z",
     "modifiedAt": "2026-05-14T20:52:41.365Z",
-    "mergedAt": "2026-05-22T23:33:30.321Z",
+    "mergedAt": "2026-05-23T01:11:15.602Z",
     "sources": [
       {
         "source": "osv",
@@ -5456,7 +5456,7 @@
     "priority": 45,
     "publishedAt": "2026-05-05T00:18:03.000Z",
     "modifiedAt": "2026-05-06T15:29:21.463Z",
-    "mergedAt": "2026-05-22T23:33:30.325Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -5506,7 +5506,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.366Z",
+    "mergedAt": "2026-05-23T01:11:15.648Z",
     "sources": [
       {
         "source": "packagist",
@@ -5558,7 +5558,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -5605,7 +5605,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T13:37:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.375Z",
+    "mergedAt": "2026-05-23T01:11:15.657Z",
     "sources": [
       {
         "source": "packagist",
@@ -5664,7 +5664,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.366Z",
+    "mergedAt": "2026-05-23T01:11:15.648Z",
     "sources": [
       {
         "source": "packagist",
@@ -5716,7 +5716,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -5762,7 +5762,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -5809,7 +5809,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.375Z",
+    "mergedAt": "2026-05-23T01:11:15.657Z",
     "sources": [
       {
         "source": "packagist",
@@ -5862,7 +5862,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -5909,7 +5909,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.375Z",
+    "mergedAt": "2026-05-23T01:11:15.657Z",
     "sources": [
       {
         "source": "packagist",
@@ -5962,7 +5962,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -6014,7 +6014,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.364Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "packagist",
@@ -6066,7 +6066,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -6112,7 +6112,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -6158,7 +6158,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -6205,7 +6205,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.375Z",
+    "mergedAt": "2026-05-23T01:11:15.657Z",
     "sources": [
       {
         "source": "packagist",
@@ -6264,7 +6264,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.365Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "packagist",
@@ -6316,7 +6316,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -6362,7 +6362,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -6408,7 +6408,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "packagist",
@@ -6460,7 +6460,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.365Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "packagist",
@@ -6518,7 +6518,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.366Z",
+    "mergedAt": "2026-05-23T01:11:15.648Z",
     "sources": [
       {
         "source": "packagist",
@@ -6570,7 +6570,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.362Z",
+    "mergedAt": "2026-05-23T01:11:15.643Z",
     "sources": [
       {
         "source": "packagist",
@@ -6628,7 +6628,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.365Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "packagist",
@@ -6686,7 +6686,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.367Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "packagist",
@@ -6731,7 +6731,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.368Z",
+    "mergedAt": "2026-05-23T01:11:15.649Z",
     "sources": [
       {
         "source": "packagist",
@@ -6937,7 +6937,7 @@
     "priority": 38,
     "publishedAt": "2026-04-08T15:51:48.000Z",
     "modifiedAt": "2026-05-05T16:10:10.879Z",
-    "mergedAt": "2026-05-22T23:33:30.324Z",
+    "mergedAt": "2026-05-23T01:11:15.606Z",
     "sources": [
       {
         "source": "osv",
@@ -6985,7 +6985,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:15.000Z",
     "modifiedAt": "2026-03-19T17:59:01.302Z",
-    "mergedAt": "2026-05-22T23:33:30.319Z",
+    "mergedAt": "2026-05-23T01:11:15.599Z",
     "sources": [
       {
         "source": "osv",
@@ -7033,7 +7033,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:06.000Z",
     "modifiedAt": "2026-03-20T14:59:12.698Z",
-    "mergedAt": "2026-05-22T23:33:30.314Z",
+    "mergedAt": "2026-05-23T01:11:15.595Z",
     "sources": [
       {
         "source": "osv",
@@ -7081,7 +7081,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:16:49.000Z",
     "modifiedAt": "2026-03-19T18:48:06.587Z",
-    "mergedAt": "2026-05-22T23:33:30.320Z",
+    "mergedAt": "2026-05-23T01:11:15.600Z",
     "sources": [
       {
         "source": "osv",
@@ -7129,7 +7129,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T15:30:14.000Z",
     "modifiedAt": "2026-03-19T18:31:23.523Z",
-    "mergedAt": "2026-05-22T23:33:30.320Z",
+    "mergedAt": "2026-05-23T01:11:15.601Z",
     "sources": [
       {
         "source": "osv",
@@ -7179,7 +7179,7 @@
     "priority": 36,
     "publishedAt": "2026-01-28T15:20:55.000Z",
     "modifiedAt": "2026-04-08T21:16:40.797Z",
-    "mergedAt": "2026-05-22T23:33:30.315Z",
+    "mergedAt": "2026-05-23T01:11:15.595Z",
     "sources": [
       {
         "source": "osv",
@@ -7236,7 +7236,7 @@
     "priority": 36,
     "publishedAt": "2021-11-15T10:47:04.000Z",
     "modifiedAt": "2026-03-13T21:59:52.395Z",
-    "mergedAt": "2026-05-22T23:33:30.365Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "osv",
@@ -7308,7 +7308,7 @@
     "priority": 36,
     "publishedAt": "2021-10-23T11:11:11.000Z",
     "modifiedAt": "2026-03-13T22:14:23.582Z",
-    "mergedAt": "2026-05-22T23:33:30.364Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "osv",
@@ -7380,7 +7380,7 @@
     "priority": 36,
     "publishedAt": "2021-10-09T12:10:44.000Z",
     "modifiedAt": "2026-03-13T22:00:11.423Z",
-    "mergedAt": "2026-05-22T23:33:30.364Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "osv",
@@ -7443,7 +7443,7 @@
     "priority": 36,
     "publishedAt": "2021-08-12T14:51:14.000Z",
     "modifiedAt": "2026-03-13T22:00:08.038Z",
-    "mergedAt": "2026-05-22T23:33:30.321Z",
+    "mergedAt": "2026-05-23T01:11:15.602Z",
     "sources": [
       {
         "source": "osv",
@@ -7500,7 +7500,7 @@
     "priority": 36,
     "publishedAt": "2021-06-17T15:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:16.333Z",
-    "mergedAt": "2026-05-22T23:33:30.365Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "osv",
@@ -7604,7 +7604,7 @@
     "priority": 36,
     "publishedAt": "2021-05-12T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:14.858Z",
-    "mergedAt": "2026-05-22T23:33:30.365Z",
+    "mergedAt": "2026-05-23T01:11:15.646Z",
     "sources": [
       {
         "source": "osv",
@@ -7673,7 +7673,7 @@
     "priority": 36,
     "publishedAt": "2020-10-08T19:28:07.000Z",
     "modifiedAt": "2026-03-13T22:14:13.665Z",
-    "mergedAt": "2026-05-22T23:33:30.322Z",
+    "mergedAt": "2026-05-23T01:11:15.603Z",
     "sources": [
       {
         "source": "osv",
@@ -7729,7 +7729,7 @@
     "priority": 36,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:15:59.230Z",
-    "mergedAt": "2026-05-22T23:33:30.363Z",
+    "mergedAt": "2026-05-23T01:11:15.644Z",
     "sources": [
       {
         "source": "osv",
@@ -7805,7 +7805,7 @@
     "priority": 36,
     "publishedAt": "2019-07-19T16:13:07.000Z",
     "modifiedAt": "2026-03-13T21:56:22.446Z",
-    "mergedAt": "2026-05-22T23:33:30.327Z",
+    "mergedAt": "2026-05-23T01:11:15.608Z",
     "sources": [
       {
         "source": "osv",
@@ -7842,7 +7842,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T17:00:00.000Z",
     "modifiedAt": "2026-05-21T17:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.712Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -7917,7 +7917,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T07:25:00.000Z",
     "modifiedAt": "2026-05-21T07:25:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.375Z",
+    "mergedAt": "2026-05-23T01:11:15.657Z",
     "sources": [
       {
         "source": "symfony-security",
@@ -7992,7 +7992,7 @@
     "priority": 34,
     "publishedAt": "2026-05-18T23:01:00.000Z",
     "modifiedAt": "2026-05-18T23:01:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.717Z",
+    "mergedAt": "2026-05-23T01:11:15.665Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -8106,7 +8106,7 @@
     "priority": 29,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -8234,7 +8234,7 @@
     "priority": 28,
     "publishedAt": "2026-03-17T15:29:48.000Z",
     "modifiedAt": "2026-03-25T19:49:01.129Z",
-    "mergedAt": "2026-05-22T23:33:30.320Z",
+    "mergedAt": "2026-05-23T01:11:15.600Z",
     "sources": [
       {
         "source": "osv",
@@ -8291,7 +8291,7 @@
     "priority": 26,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:08.748Z",
-    "mergedAt": "2026-05-22T23:33:30.366Z",
+    "mergedAt": "2026-05-23T01:11:15.647Z",
     "sources": [
       {
         "source": "osv",
@@ -11323,7 +11323,7 @@
     "priority": 18,
     "publishedAt": "2026-05-12T18:17:04.033Z",
     "modifiedAt": "2026-05-22T22:04:42.608Z",
-    "mergedAt": "2026-05-22T23:33:30.386Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "nvd",
@@ -17509,7 +17509,7 @@
     "priority": 14,
     "publishedAt": "2026-05-12T18:17:07.637Z",
     "modifiedAt": "2026-05-20T23:28:45.214Z",
-    "mergedAt": "2026-05-22T23:33:30.361Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -25208,7 +25208,7 @@
     "priority": 10,
     "publishedAt": "2026-05-20T00:16:44.380Z",
     "modifiedAt": "2026-05-21T03:55:18.708Z",
-    "mergedAt": "2026-05-22T23:33:30.419Z",
+    "mergedAt": "2026-05-23T01:11:15.642Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -26483,7 +26483,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T12:00:00.000Z",
     "modifiedAt": "2026-05-22T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.377Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -28447,7 +28447,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:08:48.000Z",
     "modifiedAt": "2026-05-21T14:08:48.000Z",
-    "mergedAt": "2026-05-22T23:33:30.369Z",
+    "mergedAt": "2026-05-23T01:11:15.650Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -28873,7 +28873,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.377Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -28910,7 +28910,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.377Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -28947,7 +28947,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.377Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -28984,7 +28984,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.377Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29021,7 +29021,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.377Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -29200,7 +29200,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T09:19:32.000Z",
     "modifiedAt": "2026-05-21T09:19:32.000Z",
-    "mergedAt": "2026-05-22T23:33:30.370Z",
+    "mergedAt": "2026-05-23T01:11:15.651Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -29460,7 +29460,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T21:07:38.000Z",
     "modifiedAt": "2026-05-20T21:07:38.000Z",
-    "mergedAt": "2026-05-22T23:33:30.375Z",
+    "mergedAt": "2026-05-23T01:11:15.657Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -30137,7 +30137,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:39:47.000Z",
     "modifiedAt": "2026-05-20T10:23:06.000Z",
-    "mergedAt": "2026-05-22T23:33:30.371Z",
+    "mergedAt": "2026-05-23T01:11:15.652Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -30178,7 +30178,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:29:56.000Z",
     "modifiedAt": "2026-05-20T09:34:33.000Z",
-    "mergedAt": "2026-05-22T23:33:30.372Z",
+    "mergedAt": "2026-05-23T01:11:15.654Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -30574,7 +30574,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.377Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30611,7 +30611,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30648,7 +30648,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30685,7 +30685,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30722,7 +30722,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -30972,7 +30972,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T00:00:00.000Z",
     "modifiedAt": "2026-05-19T00:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.716Z",
+    "mergedAt": "2026-05-23T01:11:15.665Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -31296,7 +31296,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T06:00:00.000Z",
     "modifiedAt": "2026-05-18T06:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.712Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -32729,7 +32729,7 @@
     "priority": 6,
     "publishedAt": "2026-05-15T14:00:00.000Z",
     "modifiedAt": "2026-05-15T14:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.375Z",
+    "mergedAt": "2026-05-23T01:11:15.657Z",
     "sources": [
       {
         "source": "github-security-lab",
@@ -33092,7 +33092,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33148,7 +33148,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33194,7 +33194,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33249,7 +33249,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33286,7 +33286,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33360,7 +33360,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33397,7 +33397,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33434,7 +33434,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33471,7 +33471,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33508,7 +33508,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33545,7 +33545,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.378Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33616,7 +33616,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:23:05.000Z",
     "modifiedAt": "2026-05-14T10:23:05.000Z",
-    "mergedAt": "2026-05-22T23:33:30.373Z",
+    "mergedAt": "2026-05-23T01:11:15.655Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -33651,7 +33651,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:16:24.000Z",
     "modifiedAt": "2026-05-14T10:16:24.000Z",
-    "mergedAt": "2026-05-22T23:33:30.373Z",
+    "mergedAt": "2026-05-23T01:11:15.656Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34106,7 +34106,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:12:36.000Z",
     "modifiedAt": "2026-05-13T10:12:36.000Z",
-    "mergedAt": "2026-05-22T23:33:30.374Z",
+    "mergedAt": "2026-05-23T01:11:15.656Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34141,7 +34141,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:03:30.000Z",
     "modifiedAt": "2026-05-13T10:03:30.000Z",
-    "mergedAt": "2026-05-22T23:33:30.375Z",
+    "mergedAt": "2026-05-23T01:11:15.657Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34176,7 +34176,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T00:00:00.000Z",
     "modifiedAt": "2026-05-13T00:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.377Z",
+    "mergedAt": "2026-05-23T01:11:15.660Z",
     "sources": [
       {
         "source": "project-zero",
@@ -34248,7 +34248,7 @@
     "priority": 6,
     "publishedAt": "2026-05-11T08:00:00.000Z",
     "modifiedAt": "2026-05-11T08:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.718Z",
+    "mergedAt": "2026-05-23T01:11:15.667Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -34283,7 +34283,7 @@
     "priority": 6,
     "publishedAt": "2026-05-10T14:00:00.000Z",
     "modifiedAt": "2026-05-10T14:00:00.000Z",
-    "mergedAt": "2026-05-22T23:33:30.719Z",
+    "mergedAt": "2026-05-23T01:11:15.669Z",
     "sources": [
       {
         "source": "vercel-changelog",
