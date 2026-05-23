@@ -1,5 +1,6 @@
 export const SOURCE_IDS = [
   'ghsa',
+  'ghsa-stack',
   'osv',
   'nvd',
   'cve-org',

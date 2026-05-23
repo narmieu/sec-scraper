@@ -1,6 +1,7 @@
 import type { StackTargets } from '@/pipeline/stack-targets.js';
 import type { Adapter, Enricher } from './types.js';
 import { ghsaAdapter } from './ghsa.js';
+import { makeGhsaStackAdapter } from './ghsa-stack.js';
 import { makeOsvAdapter } from './osv.js';
 import { nvdAdapter } from './nvd.js';
 import { makeCveOrgAdapter } from './cve-org.js';
@@ -24,6 +25,7 @@ import { arxivCsCrAdapter } from './arxiv-cs-cr.js';
 export function buildAdapters(targets: StackTargets): Adapter[] {
   return [
     ghsaAdapter,
+    makeGhsaStackAdapter(targets),
     makeOsvAdapter(targets),
     nvdAdapter,
     makeCveOrgAdapter(targets),
