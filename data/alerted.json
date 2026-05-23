@@ -9,5 +9,16 @@
       "kev": false,
       "severity": "critical"
     }
+  },
+  "CVE-2019-10910": {
+    "alertedAt": "2026-05-23T22:52:48.515Z",
+    "channels": {
+      "console": "ok"
+    },
+    "vulnSnapshot": {
+      "priority": 80,
+      "kev": false,
+      "severity": "critical"
+    }
   }
 }

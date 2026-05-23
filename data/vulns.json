@@ -1,5 +1,69 @@
 [
   {
+    "id": "CVE-2026-46633",
+    "cveId": "CVE-2026-46633",
+    "aliases": [
+      "CVE-2026-46633",
+      "PKSA-h8hf-ytnd-5t9q",
+      "GHSA-7p85-w9px-jpjp"
+    ],
+    "title": "Twig: PHP code injection via `{% use %}` template name",
+    "summary": "Twig: PHP code injection via `{% use %}` template name",
+    "details": "### Description `Compiler::string()` escapes `\"`, `$`, `\\`, NUL and TAB when generating PHP double-quoted string literals, but does not escape single quotes. In `ModuleNode::compileConstructor()`, the template name from a `{% use %}` tag is compiled via `subcompile()` -> `string()` and placed inside a surrounding PHP single-quoted string literal. A template name containing a single quote terminates that surrounding string early, allowing arbitrary PHP expressions to be injected into the compiled cache file. The injected code executes within the PHP process when the cache file is first loaded, bypassing the Twig sandbox entirely and achieving remote code execution. `SecurityPolicy` unconditionally allows `{% use %}` regardless of the configured `allowedTags`, so this primitive is reachable from sandboxed templates as well. ### Resolution `Compiler::string()` now also escapes single quotes so that template names placed inside single-quoted PHP literals can no longer break out of the surrounding context. ### Credits Twig would like to thank Anvil Secure in collaboration with Claude and Anthropic Research for reporting the issue and providing the fix.",
+    "severity": "critical",
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+    "kev": false,
+    "ecosystems": [
+      "composer"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "affected": [
+      {
+        "ecosystem": "composer",
+        "package": "twig/twig",
+        "versions": ">=0 <3.26.0",
+        "fixedIn": "3.26.0"
+      }
+    ],
+    "stackMatch": {
+      "score": 100,
+      "packages": [
+        "twig/twig"
+      ],
+      "reason": "direct-dep"
+    },
+    "priority": 85,
+    "publishedAt": "2026-05-21T21:24:53.000Z",
+    "modifiedAt": "2026-05-23T18:29:19.113Z",
+    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "sources": [
+      {
+        "source": "osv",
+        "externalId": "GHSA-7p85-w9px-jpjp",
+        "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-7p85-w9px-jpjp",
+        "fetchedAt": "2026-05-22T13:47:27.991Z"
+      },
+      {
+        "source": "packagist",
+        "externalId": "PKSA-h8hf-ytnd-5t9q",
+        "url": "https://symfony.com/cve-2026-46633",
+        "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-7p85-w9px-jpjp",
+        "url": "https://github.com/advisories/GHSA-7p85-w9px-jpjp",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
+      }
+    ],
+    "tags": [
+      "backend"
+    ],
+    "ghsaId": "GHSA-7p85-w9px-jpjp"
+  },
+  {
     "id": "CVE-2026-34926",
     "cveId": "CVE-2026-34926",
     "aliases": [
@@ -92,62 +156,6 @@
       "exploited"
     ],
     "epss": 0.12571
-  },
-  {
-    "id": "CVE-2026-46633",
-    "cveId": "CVE-2026-46633",
-    "aliases": [
-      "CVE-2026-46633",
-      "PKSA-h8hf-ytnd-5t9q"
-    ],
-    "title": "Twig: PHP code injection via `{% use %}` template name",
-    "summary": "Twig: PHP code injection via `{% use %}` template name",
-    "details": "### Description `Compiler::string()` escapes `\"`, `$`, `\\`, NUL and TAB when generating PHP double-quoted string literals, but does not escape single quotes. In `ModuleNode::compileConstructor()`, the template name from a `{% use %}` tag is compiled via `subcompile()` -> `string()` and placed inside a surrounding PHP single-quoted string literal. A template name containing a single quote terminates that surrounding string early, allowing arbitrary PHP expressions to be injected into the compiled cache file. The injected code executes within the PHP process when the cache file is first loaded, bypassing the Twig sandbox entirely and achieving remote code execution. `SecurityPolicy` unconditionally allows `{% use %}` regardless of the configured `allowedTags`, so this primitive is reachable from sandboxed templates as well. ### Resolution `Compiler::string()` now also escapes single quotes so that template names placed inside single-quoted PHP literals can no longer break out of the surrounding context. ### Credits Twig would like to thank Anvil Secure in collaboration with Claude and Anthropic Research for reporting the issue and providing the fix.",
-    "severity": "critical",
-    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-    "kev": false,
-    "ecosystems": [
-      "composer"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "affected": [
-      {
-        "ecosystem": "composer",
-        "package": "twig/twig",
-        "versions": ">=0 <3.26.0",
-        "fixedIn": "3.26.0"
-      }
-    ],
-    "stackMatch": {
-      "score": 100,
-      "packages": [
-        "twig/twig"
-      ],
-      "reason": "direct-dep"
-    },
-    "priority": 85,
-    "publishedAt": "2026-05-20T08:00:00.000Z",
-    "modifiedAt": "2026-05-23T18:29:19.113Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
-    "sources": [
-      {
-        "source": "osv",
-        "externalId": "GHSA-7p85-w9px-jpjp",
-        "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-7p85-w9px-jpjp",
-        "fetchedAt": "2026-05-22T13:47:27.991Z"
-      },
-      {
-        "source": "packagist",
-        "externalId": "PKSA-h8hf-ytnd-5t9q",
-        "url": "https://symfony.com/cve-2026-46633",
-        "fetchedAt": "2026-05-22T13:47:20.424Z"
-      }
-    ],
-    "tags": [
-      "backend"
-    ]
   },
   {
     "id": "CVE-2008-4250",
@@ -296,7 +304,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-23T22:25:22.120Z",
+    "mergedAt": "2026-05-23T22:52:59.396Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -349,7 +357,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-23T22:25:22.120Z",
+    "mergedAt": "2026-05-23T22:52:59.396Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2080,14 +2088,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2103,7 +2111,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-23T22:25:22.120Z",
+    "mergedAt": "2026-05-23T22:52:59.396Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2121,7 +2129,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00197
   },
   {
     "id": "CVE-2026-20131",
@@ -2953,7 +2961,8 @@
     "id": "CVE-2025-29927",
     "cveId": "CVE-2025-29927",
     "aliases": [
-      "CVE-2025-29927"
+      "CVE-2025-29927",
+      "GHSA-f82v-jwr5-mffw"
     ],
     "title": "Authorization Bypass in Next.js Middleware",
     "summary": "Authorization Bypass in Next.js Middleware",
@@ -2987,23 +2996,34 @@
     "priority": 71,
     "publishedAt": "2025-03-21T15:20:12.000Z",
     "modifiedAt": "2026-03-04T15:06:29.993Z",
-    "mergedAt": "2026-05-23T22:25:19.799Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-f82v-jwr5-mffw",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29927",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-f82v-jwr5-mffw",
+        "url": "https://github.com/advisories/GHSA-f82v-jwr5-mffw",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.9255
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.9255,
+    "ghsaId": "GHSA-f82v-jwr5-mffw"
   },
   {
     "id": "CVE-2026-44578",
     "cveId": "CVE-2026-44578",
     "aliases": [
-      "CVE-2026-44578"
+      "CVE-2026-44578",
+      "GHSA-c4j6-fc7j-m34r"
     ],
     "title": "Next.js vulnerable to server-side request forgery in applications using WebSocket upgrades",
     "summary": "Next.js vulnerable to server-side request forgery in applications using WebSocket upgrades",
@@ -3036,23 +3056,34 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:55:15.000Z",
     "modifiedAt": "2026-05-14T20:50:45.445Z",
-    "mergedAt": "2026-05-23T22:25:19.799Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-c4j6-fc7j-m34r",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44578",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-c4j6-fc7j-m34r",
+        "url": "https://github.com/advisories/GHSA-c4j6-fc7j-m34r",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.05039
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.05039,
+    "ghsaId": "GHSA-c4j6-fc7j-m34r"
   },
   {
     "id": "CVE-2026-44573",
     "cveId": "CVE-2026-44573",
     "aliases": [
-      "CVE-2026-44573"
+      "CVE-2026-44573",
+      "GHSA-36qx-fr4f-26g5"
     ],
     "title": "Next.js has a Middleware / Proxy bypass in Pages Router applications using i18n",
     "summary": "Next.js has a Middleware / Proxy bypass in Pages Router applications using i18n",
@@ -3085,21 +3116,33 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:53:51.000Z",
     "modifiedAt": "2026-05-14T20:48:35.793Z",
-    "mergedAt": "2026-05-23T22:25:19.794Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-36qx-fr4f-26g5",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44573",
         "fetchedAt": "2026-05-22T13:47:27.984Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-36qx-fr4f-26g5",
+        "url": "https://github.com/advisories/GHSA-36qx-fr4f-26g5",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00052
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00052,
+    "ghsaId": "GHSA-36qx-fr4f-26g5"
   },
   {
     "id": "GHSA-8h8q-6873-q5fj",
-    "aliases": [],
+    "aliases": [
+      "GHSA-8h8q-6873-q5fj"
+    ],
     "title": "Next.js Vulnerable to Denial of Service with Server Components",
     "summary": "Next.js Vulnerable to Denial of Service with Server Components",
     "details": "A vulnerability affects certain React Server Components packages for versions 19.x and frameworks that use the affected packages, including Next.js 13.x, 14.x, 15.x, and 16.x using the App Router. The issue is tracked upstream as [CVE-2026-23870](https://github.com/facebook/react/security/advisories/GHSA-rv78-f8rc-xrxh). A specially crafted HTTP request can be sent to any App Router Server Function endpoint that, when deserialized, may trigger excessive CPU usage. This can result in denial of service in unpatched environments.",
@@ -3131,22 +3174,33 @@
     "priority": 70,
     "publishedAt": "2026-05-11T14:50:27.000Z",
     "modifiedAt": "2026-05-13T03:44:29.651Z",
-    "mergedAt": "2026-05-23T22:25:19.798Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-8h8q-6873-q5fj",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23870",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-8h8q-6873-q5fj",
+        "url": "https://github.com/advisories/GHSA-8h8q-6873-q5fj",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": []
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "ghsaId": "GHSA-8h8q-6873-q5fj"
   },
   {
     "id": "CVE-2026-42039",
     "cveId": "CVE-2026-42039",
     "aliases": [
-      "CVE-2026-42039"
+      "CVE-2026-42039",
+      "GHSA-62hf-57xw-28j9"
     ],
     "title": "Axios: unbounded recursion in toFormData causes DoS via deeply nested request data",
     "summary": "Axios: unbounded recursion in toFormData causes DoS via deeply nested request data",
@@ -3179,23 +3233,33 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:34:32.000Z",
     "modifiedAt": "2026-05-06T15:29:21.389Z",
-    "mergedAt": "2026-05-23T22:25:19.820Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-62hf-57xw-28j9",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42039",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-62hf-57xw-28j9",
+        "url": "https://github.com/advisories/GHSA-62hf-57xw-28j9",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00065
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00065,
+    "ghsaId": "GHSA-62hf-57xw-28j9"
   },
   {
     "id": "CVE-2026-42033",
     "cveId": "CVE-2026-42033",
     "aliases": [
-      "CVE-2026-42033"
+      "CVE-2026-42033",
+      "GHSA-pf86-5x62-jrwf"
     ],
     "title": "Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking",
     "summary": "Axios: Prototype Pollution Gadgets - Response Tampering, Data Exfiltration, and Request Hijacking",
@@ -3228,23 +3292,33 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:26:29.000Z",
     "modifiedAt": "2026-05-06T15:29:21.690Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-pf86-5x62-jrwf",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42033",
         "fetchedAt": "2026-05-22T13:47:27.987Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-pf86-5x62-jrwf",
+        "url": "https://github.com/advisories/GHSA-pf86-5x62-jrwf",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.0004
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.0004,
+    "ghsaId": "GHSA-pf86-5x62-jrwf"
   },
   {
     "id": "CVE-2026-42035",
     "cveId": "CVE-2026-42035",
     "aliases": [
-      "CVE-2026-42035"
+      "CVE-2026-42035",
+      "GHSA-6chq-wfr3-2hj9"
     ],
     "title": "Axios: Header Injection via Prototype Pollution",
     "summary": "Axios: Header Injection via Prototype Pollution",
@@ -3278,23 +3352,33 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:25:47.000Z",
     "modifiedAt": "2026-05-06T15:29:22.420Z",
-    "mergedAt": "2026-05-23T22:25:19.820Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-6chq-wfr3-2hj9",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42035",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-6chq-wfr3-2hj9",
+        "url": "https://github.com/advisories/GHSA-6chq-wfr3-2hj9",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00032
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00032,
+    "ghsaId": "GHSA-6chq-wfr3-2hj9"
   },
   {
     "id": "CVE-2026-42043",
     "cveId": "CVE-2026-42043",
     "aliases": [
-      "CVE-2026-42043"
+      "CVE-2026-42043",
+      "GHSA-pmwg-cvhr-8vh7"
     ],
     "title": "Axios: Incomplete Fix for CVE-2025-62718 — NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0",
     "summary": "Axios: Incomplete Fix for CVE-2025-62718 — NO_PROXY Protection Bypassed via RFC 1122 Loopback Subnet (127.0.0.0/8) in Axios 1.15.0",
@@ -3329,23 +3413,33 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:20:58.000Z",
     "modifiedAt": "2026-05-06T15:29:21.321Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-pmwg-cvhr-8vh7",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42043",
         "fetchedAt": "2026-05-22T13:47:27.987Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-pmwg-cvhr-8vh7",
+        "url": "https://github.com/advisories/GHSA-pmwg-cvhr-8vh7",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00055
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00055,
+    "ghsaId": "GHSA-pmwg-cvhr-8vh7"
   },
   {
     "id": "CVE-2026-42264",
     "cveId": "CVE-2026-42264",
     "aliases": [
-      "CVE-2026-42264"
+      "CVE-2026-42264",
+      "GHSA-q8qp-cvcw-x6jj"
     ],
     "title": "Axios has prototype pollution read-side gadgets in HTTP adapter that allow credential injection and request hijacking",
     "summary": "Axios has prototype pollution read-side gadgets in HTTP adapter that allow credential injection and request hijacking",
@@ -3378,21 +3472,32 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:18:38.000Z",
     "modifiedAt": "2026-05-12T17:16:38.232Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-q8qp-cvcw-x6jj",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42264",
         "fetchedAt": "2026-05-22T13:47:27.987Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-q8qp-cvcw-x6jj",
+        "url": "https://github.com/advisories/GHSA-q8qp-cvcw-x6jj",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.0007
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.0007,
+    "ghsaId": "GHSA-q8qp-cvcw-x6jj"
   },
   {
     "id": "GHSA-q4gf-8mx6-v5v3",
-    "aliases": [],
+    "aliases": [
+      "GHSA-q4gf-8mx6-v5v3"
+    ],
     "title": "Next.js has a Denial of Service with Server Components",
     "summary": "Next.js has a Denial of Service with Server Components",
     "details": "A vulnerability affects certain React Server Components packages for versions 19.x and frameworks that use the affected packages, including Next.js 13.x, 14.x, 15.x, and 16.x using the App Router. The issue is tracked upstream as [CVE-2026-23869](https://github.com/facebook/react/security/advisories/GHSA-479c-33wc-g2pg). You can read more about this advisory our [this changelog](https://vercel.com/changelog/summary-of-cve-2026-23869). A specially crafted HTTP request can be sent to any App Router Server Function endpoint that, when deserialized, may trigger excessive CPU usage. This can result in denial of service in unpatched environments.",
@@ -3424,22 +3529,33 @@
     "priority": 67,
     "publishedAt": "2026-04-10T15:35:47.000Z",
     "modifiedAt": "2026-04-16T23:29:14.079Z",
-    "mergedAt": "2026-05-23T22:25:19.804Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-q4gf-8mx6-v5v3",
         "url": "https://github.com/vercel/next.js/security/advisories/GHSA-q4gf-8mx6-v5v3",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-q4gf-8mx6-v5v3",
+        "url": "https://github.com/advisories/GHSA-q4gf-8mx6-v5v3",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": []
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "ghsaId": "GHSA-q4gf-8mx6-v5v3"
   },
   {
     "id": "CVE-2026-4800",
     "cveId": "CVE-2026-4800",
     "aliases": [
-      "CVE-2026-4800"
+      "CVE-2026-4800",
+      "GHSA-r5fr-rjxr-66jc"
     ],
     "title": "lodash vulnerable to Code Injection via `_.template` imports key names",
     "summary": "lodash vulnerable to Code Injection via `_.template` imports key names",
@@ -3490,23 +3606,33 @@
     "priority": 67,
     "publishedAt": "2026-04-01T23:51:12.000Z",
     "modifiedAt": "2026-04-02T17:29:57.498Z",
-    "mergedAt": "2026-05-23T22:25:19.824Z",
+    "mergedAt": "2026-05-23T22:52:56.793Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-r5fr-rjxr-66jc",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4800",
         "fetchedAt": "2026-05-22T13:47:27.988Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-r5fr-rjxr-66jc",
+        "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00044
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00044,
+    "ghsaId": "GHSA-r5fr-rjxr-66jc"
   },
   {
     "id": "CVE-2019-10744",
     "cveId": "CVE-2019-10744",
     "aliases": [
-      "CVE-2019-10744"
+      "CVE-2019-10744",
+      "GHSA-jf85-cpcp-j695"
     ],
     "title": "Prototype Pollution in lodash",
     "summary": "Prototype Pollution in lodash",
@@ -3565,23 +3691,33 @@
     "priority": 66,
     "publishedAt": "2019-07-10T19:45:23.000Z",
     "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-23T22:25:19.824Z",
+    "mergedAt": "2026-05-23T22:52:56.795Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-jf85-cpcp-j695",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10744",
         "fetchedAt": "2026-05-22T13:47:27.988Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-jf85-cpcp-j695",
+        "url": "https://github.com/advisories/GHSA-jf85-cpcp-j695",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.14845
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.14845,
+    "ghsaId": "GHSA-jf85-cpcp-j695"
   },
   {
     "id": "CVE-2026-25639",
     "cveId": "CVE-2026-25639",
     "aliases": [
-      "CVE-2026-25639"
+      "CVE-2026-25639",
+      "GHSA-43fc-jf86-j433"
     ],
     "title": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig",
     "summary": "Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig",
@@ -3615,17 +3751,26 @@
     "priority": 65,
     "publishedAt": "2026-02-09T17:46:14.000Z",
     "modifiedAt": "2026-05-08T14:03:50.604Z",
-    "mergedAt": "2026-05-23T22:25:19.820Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-43fc-jf86-j433",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25639",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-43fc-jf86-j433",
+        "url": "https://github.com/advisories/GHSA-43fc-jf86-j433",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00044
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00044,
+    "ghsaId": "GHSA-43fc-jf86-j433"
   },
   {
     "id": "CVE-2026-2611",
@@ -3673,7 +3818,8 @@
     "cveId": "CVE-2026-46640",
     "aliases": [
       "CVE-2026-46640",
-      "PKSA-5k7f-wvjj-jrgw"
+      "PKSA-5k7f-wvjj-jrgw",
+      "GHSA-45vw-wh46-2vx8"
     ],
     "title": "Twig: Arbitrary PHP code execution via `_self.()` macro-reference compilation",
     "summary": "Twig: Arbitrary PHP code execution via `_self.()` macro-reference compilation",
@@ -3703,9 +3849,9 @@
       "reason": "direct-dep"
     },
     "priority": 61,
-    "publishedAt": "2026-05-20T08:00:00.000Z",
+    "publishedAt": "2026-05-21T21:31:08.000Z",
     "modifiedAt": "2026-05-23T18:29:18.836Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T22:52:56.826Z",
     "sources": [
       {
         "source": "osv",
@@ -3718,18 +3864,26 @@
         "externalId": "PKSA-5k7f-wvjj-jrgw",
         "url": "https://symfony.com/cve-2026-46640",
         "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-45vw-wh46-2vx8",
+        "url": "https://github.com/advisories/GHSA-45vw-wh46-2vx8",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend"
-    ]
+    ],
+    "ghsaId": "GHSA-45vw-wh46-2vx8"
   },
   {
     "id": "CVE-2026-46639",
     "cveId": "CVE-2026-46639",
     "aliases": [
       "CVE-2026-46639",
-      "PKSA-hgmw-wn4d-hpcy"
+      "PKSA-hgmw-wn4d-hpcy",
+      "GHSA-mm6w-gr99-p3jj"
     ],
     "title": "Twig: Sandbox property and method bypass via object-destructuring assignment",
     "summary": "Twig: Sandbox property and method bypass via object-destructuring assignment",
@@ -3759,9 +3913,9 @@
       "reason": "direct-dep"
     },
     "priority": 61,
-    "publishedAt": "2026-05-20T08:00:00.000Z",
+    "publishedAt": "2026-05-21T21:30:49.000Z",
     "modifiedAt": "2026-05-21T21:45:17.837Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T22:52:56.826Z",
     "sources": [
       {
         "source": "osv",
@@ -3774,11 +3928,18 @@
         "externalId": "PKSA-hgmw-wn4d-hpcy",
         "url": "https://symfony.com/cve-2026-46639",
         "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-mm6w-gr99-p3jj",
+        "url": "https://github.com/advisories/GHSA-mm6w-gr99-p3jj",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend"
-    ]
+    ],
+    "ghsaId": "GHSA-mm6w-gr99-p3jj"
   },
   {
     "id": "CVE-2026-24425",
@@ -3840,7 +4001,8 @@
     "cveId": "CVE-2021-43608",
     "aliases": [
       "CVE-2021-43608",
-      "PKSA-zr2w-r29k-4d9q"
+      "PKSA-zr2w-r29k-4d9q",
+      "GHSA-r7cj-8hjg-x622"
     ],
     "title": "DBAL 3 SQL Injection Security Vulnerability",
     "summary": "DBAL 3 SQL Injection Security Vulnerability",
@@ -3871,9 +4033,9 @@
       "reason": "direct-dep"
     },
     "priority": 61,
-    "publishedAt": "2021-11-11T13:30:00.000Z",
+    "publishedAt": "2021-11-16T17:25:57.000Z",
     "modifiedAt": "2026-03-13T22:00:38.072Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T22:52:56.826Z",
     "sources": [
       {
         "source": "osv",
@@ -3886,74 +4048,27 @@
         "externalId": "PKSA-zr2w-r29k-4d9q",
         "url": "https://github.com/doctrine/dbal/security/advisories/GHSA-r7cj-8hjg-x622",
         "fetchedAt": "2026-05-22T16:38:48.256Z"
-      }
-    ],
-    "tags": [
-      "backend"
-    ],
-    "epss": 0.01352
-  },
-  {
-    "id": "CVE-2026-46634",
-    "cveId": "CVE-2026-46634",
-    "aliases": [
-      "CVE-2026-46634",
-      "PKSA-21g2-dzjv-sky5"
-    ],
-    "title": "Twig: `template_from_string()` escapes a SourcePolicy-driven sandbox via synthesized template name",
-    "summary": "Twig: `template_from_string()` escapes a SourcePolicy-driven sandbox via synthesized template name",
-    "details": "### Description When the sandbox is enabled selectively via `SourcePolicyInterface` (and not globally), a sandboxed template that is allowed to call `template_from_string` and `include` can render an arbitrary inner template with no security policy enforcement. `Environment::createTemplate()` compiles the inner string under a synthesized name (`__string_template__`), so a name/path-based `SourcePolicy` returns `false` for it, and the inner template's `checkSecurity()` becomes a no-op. From a template the integrator believes is sandboxed, an attacker can use any tag/filter/function (including `constant()` to read secrets, or `|map(\"system\")` to execute shell commands). ### Resolution This is a configuration trap rather than a code bug: there is no legitimate use case for exposing `template_from_string` to untrusted template authors, and propagating the parent sandbox state through `template_from_string` would require invasive changes to `SourcePolicyInterface` semantics with their own risks. Starting with Twig 3.26.0, the documentation and the PHPDoc of `StringLoaderExtension::templateFromString()` explicitly warn against allowing `template_from_string` in a sandboxed environment (i.e. listing it in a `SecurityPolicy` allowed-functions list). Integrators using a `SourcePolicyInterface` MUST NOT allow `template_from_string` in their allowed functions; the safest option is not to register `StringLoaderExtension` at all when a sandbox is in use. ### Credits Twig would like to thank Claude Mythos Preview (via Project Glasswing) for reporting the issue.",
-    "severity": "medium",
-    "kev": false,
-    "ecosystems": [
-      "composer"
-    ],
-    "cwe": [
-      "CWE-693"
-    ],
-    "affected": [
-      {
-        "ecosystem": "composer",
-        "package": "twig/twig",
-        "versions": ">=3.9.0 <3.26.0",
-        "fixedIn": "3.26.0"
-      }
-    ],
-    "stackMatch": {
-      "score": 100,
-      "packages": [
-        "twig/twig"
-      ],
-      "reason": "direct-dep"
-    },
-    "priority": 60,
-    "publishedAt": "2026-05-20T08:00:00.000Z",
-    "modifiedAt": "2026-05-22T22:44:48.132Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
-    "sources": [
-      {
-        "source": "osv",
-        "externalId": "GHSA-24x9-r6q4-q93w",
-        "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-24x9-r6q4-q93w",
-        "fetchedAt": "2026-05-22T13:47:27.991Z"
       },
       {
-        "source": "packagist",
-        "externalId": "PKSA-21g2-dzjv-sky5",
-        "url": "https://symfony.com/cve-2026-46634",
-        "fetchedAt": "2026-05-22T13:47:20.424Z"
+        "source": "ghsa-stack",
+        "externalId": "GHSA-r7cj-8hjg-x622",
+        "url": "https://github.com/advisories/GHSA-r7cj-8hjg-x622",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend"
-    ]
+    ],
+    "epss": 0.01352,
+    "ghsaId": "GHSA-r7cj-8hjg-x622"
   },
   {
     "id": "CVE-2026-46638",
     "cveId": "CVE-2026-46638",
     "aliases": [
       "CVE-2026-46638",
-      "PKSA-3mcc-k66d-pydb"
+      "PKSA-3mcc-k66d-pydb",
+      "GHSA-7fxw-r6jv-74c8"
     ],
     "title": "Twig: `{% sandbox %}{% include %}` skips checkSecurity() on cached templates (incomplete fix for CVE-2024-45411)",
     "summary": "Twig: `{% sandbox %}{% include %}` skips checkSecurity() on cached templates (incomplete fix for CVE-2024-45411)",
@@ -3983,9 +4098,9 @@
       "reason": "direct-dep"
     },
     "priority": 60,
-    "publishedAt": "2026-05-20T08:00:00.000Z",
+    "publishedAt": "2026-05-21T21:28:28.000Z",
     "modifiedAt": "2026-05-22T22:44:48.214Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T22:52:56.826Z",
     "sources": [
       {
         "source": "osv",
@@ -3998,73 +4113,88 @@
         "externalId": "PKSA-3mcc-k66d-pydb",
         "url": "https://symfony.com/cve-2026-46638",
         "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-7fxw-r6jv-74c8",
+        "url": "https://github.com/advisories/GHSA-7fxw-r6jv-74c8",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend"
-    ]
+    ],
+    "ghsaId": "GHSA-7fxw-r6jv-74c8"
   },
   {
-    "id": "CVE-2026-44575",
-    "cveId": "CVE-2026-44575",
+    "id": "CVE-2026-46634",
+    "cveId": "CVE-2026-46634",
     "aliases": [
-      "CVE-2026-44575",
-      "CVE-2026-45109"
+      "CVE-2026-46634",
+      "PKSA-21g2-dzjv-sky5",
+      "GHSA-24x9-r6q4-q93w"
     ],
-    "title": "Next.js has a Middleware / Proxy bypass in App Router applications via segment-prefetch routes",
-    "summary": "Next.js has a Middleware / Proxy bypass in App Router applications via segment-prefetch routes",
-    "details": "### Impact App Router applications that rely on middleware or proxy-based checks for authorization can allow unauthorized access through transport-specific route variants used for segment prefetching. In affected configurations, specially crafted `.rsc` and segment-prefetch URLs can resolve to the same page without being matched by the intended middleware rule, which can allow protected content to be reached without the expected authorization check. ### Fix We now include App Router transport variants when generating middleware matchers, so middleware protections are applied consistently to those requests as well as to the normal page URL. ### Workarounds If you cannot upgrade immediately, enforce authorization in the underlying route or page logic instead of relying solely on middleware.",
-    "severity": "high",
-    "cvss": 7.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "title": "Twig: `template_from_string()` escapes a SourcePolicy-driven sandbox via synthesized template name",
+    "summary": "Twig: `template_from_string()` escapes a SourcePolicy-driven sandbox via synthesized template name",
+    "details": "### Description When the sandbox is enabled selectively via `SourcePolicyInterface` (and not globally), a sandboxed template that is allowed to call `template_from_string` and `include` can render an arbitrary inner template with no security policy enforcement. `Environment::createTemplate()` compiles the inner string under a synthesized name (`__string_template__`), so a name/path-based `SourcePolicy` returns `false` for it, and the inner template's `checkSecurity()` becomes a no-op. From a template the integrator believes is sandboxed, an attacker can use any tag/filter/function (including `constant()` to read secrets, or `|map(\"system\")` to execute shell commands). ### Resolution This is a configuration trap rather than a code bug: there is no legitimate use case for exposing `template_from_string` to untrusted template authors, and propagating the parent sandbox state through `template_from_string` would require invasive changes to `SourcePolicyInterface` semantics with their own risks. Starting with Twig 3.26.0, the documentation and the PHPDoc of `StringLoaderExtension::templateFromString()` explicitly warn against allowing `template_from_string` in a sandboxed environment (i.e. listing it in a `SecurityPolicy` allowed-functions list). Integrators using a `SourcePolicyInterface` MUST NOT allow `template_from_string` in their allowed functions; the safest option is not to register `StringLoaderExtension` at all when a sandbox is in use. ### Credits Twig would like to thank Claude Mythos Preview (via Project Glasswing) for reporting the issue.",
+    "severity": "medium",
     "kev": false,
     "ecosystems": [
-      "npm"
+      "composer"
     ],
     "cwe": [
-      "CWE-288"
+      "CWE-693"
     ],
     "affected": [
       {
-        "ecosystem": "npm",
-        "package": "next",
-        "versions": ">=15.2.0 <15.5.16",
-        "fixedIn": "15.5.16"
+        "ecosystem": "composer",
+        "package": "twig/twig",
+        "versions": ">=3.9.0 <3.26.0",
+        "fixedIn": "3.26.0"
       }
     ],
     "stackMatch": {
-      "score": 60,
+      "score": 100,
       "packages": [
-        "next"
+        "twig/twig"
       ],
       "reason": "direct-dep"
     },
-    "priority": 56,
-    "publishedAt": "2026-05-11T16:21:19.000Z",
-    "modifiedAt": "2026-05-14T20:47:46.572Z",
-    "mergedAt": "2026-05-23T22:25:19.794Z",
+    "priority": 60,
+    "publishedAt": "2026-05-21T21:25:12.000Z",
+    "modifiedAt": "2026-05-22T22:44:48.132Z",
+    "mergedAt": "2026-05-23T22:52:56.826Z",
     "sources": [
       {
         "source": "osv",
-        "externalId": "GHSA-267c-6grr-h53f",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44575",
-        "fetchedAt": "2026-05-22T13:47:27.984Z"
+        "externalId": "GHSA-24x9-r6q4-q93w",
+        "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-24x9-r6q4-q93w",
+        "fetchedAt": "2026-05-22T13:47:27.991Z"
       },
       {
-        "source": "osv",
-        "externalId": "GHSA-26hh-7cqf-hhc6",
-        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45109",
-        "fetchedAt": "2026-05-22T13:47:27.984Z"
+        "source": "packagist",
+        "externalId": "PKSA-21g2-dzjv-sky5",
+        "url": "https://symfony.com/cve-2026-46634",
+        "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-24x9-r6q4-q93w",
+        "url": "https://github.com/advisories/GHSA-24x9-r6q4-q93w",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00053
+    "tags": [
+      "backend"
+    ],
+    "ghsaId": "GHSA-24x9-r6q4-q93w"
   },
   {
     "id": "CVE-2026-44579",
     "cveId": "CVE-2026-44579",
     "aliases": [
-      "CVE-2026-44579"
+      "CVE-2026-44579",
+      "GHSA-mg66-mrh9-m8jx"
     ],
     "title": "Next.js vulnerable to Denial of Service via connection exhaustion in applications using Cache Components",
     "summary": "Next.js vulnerable to Denial of Service via connection exhaustion in applications using Cache Components",
@@ -4097,23 +4227,108 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:56:24.000Z",
     "modifiedAt": "2026-05-14T20:50:54.621Z",
-    "mergedAt": "2026-05-23T22:25:19.803Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-mg66-mrh9-m8jx",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44579",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-mg66-mrh9-m8jx",
+        "url": "https://github.com/advisories/GHSA-mg66-mrh9-m8jx",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00019
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00019,
+    "ghsaId": "GHSA-mg66-mrh9-m8jx"
+  },
+  {
+    "id": "CVE-2026-44575",
+    "cveId": "CVE-2026-44575",
+    "aliases": [
+      "CVE-2026-44575",
+      "CVE-2026-45109",
+      "GHSA-26hh-7cqf-hhc6",
+      "GHSA-267c-6grr-h53f"
+    ],
+    "title": "Next.js has a Middleware / Proxy bypass in App Router applications via segment-prefetch routes",
+    "summary": "Next.js has a Middleware / Proxy bypass in App Router applications via segment-prefetch routes",
+    "details": "### Impact App Router applications that rely on middleware or proxy-based checks for authorization can allow unauthorized access through transport-specific route variants used for segment prefetching. In affected configurations, specially crafted `.rsc` and segment-prefetch URLs can resolve to the same page without being matched by the intended middleware rule, which can allow protected content to be reached without the expected authorization check. ### Fix We now include App Router transport variants when generating middleware matchers, so middleware protections are applied consistently to those requests as well as to the normal page URL. ### Workarounds If you cannot upgrade immediately, enforce authorization in the underlying route or page logic instead of relying solely on middleware.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "npm"
+    ],
+    "cwe": [
+      "CWE-288"
+    ],
+    "affected": [
+      {
+        "ecosystem": "npm",
+        "package": "next",
+        "versions": ">=15.2.0 <15.5.16",
+        "fixedIn": "15.5.16"
+      }
+    ],
+    "stackMatch": {
+      "score": 60,
+      "packages": [
+        "next"
+      ],
+      "reason": "direct-dep"
+    },
+    "priority": 56,
+    "publishedAt": "2026-05-11T15:54:24.000Z",
+    "modifiedAt": "2026-05-14T20:47:46.572Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
+    "sources": [
+      {
+        "source": "osv",
+        "externalId": "GHSA-267c-6grr-h53f",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44575",
+        "fetchedAt": "2026-05-22T13:47:27.984Z"
+      },
+      {
+        "source": "osv",
+        "externalId": "GHSA-26hh-7cqf-hhc6",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45109",
+        "fetchedAt": "2026-05-22T13:47:27.984Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-26hh-7cqf-hhc6",
+        "url": "https://github.com/advisories/GHSA-26hh-7cqf-hhc6",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-267c-6grr-h53f",
+        "url": "https://github.com/advisories/GHSA-267c-6grr-h53f",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
+      }
+    ],
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00053,
+    "ghsaId": "GHSA-26hh-7cqf-hhc6"
   },
   {
     "id": "CVE-2026-44574",
     "cveId": "CVE-2026-44574",
     "aliases": [
-      "CVE-2026-44574"
+      "CVE-2026-44574",
+      "GHSA-492v-c6pp-mqqv"
     ],
     "title": "Next.js has a Middleware / Proxy bypass through dynamic route parameter injection",
     "summary": "Next.js has a Middleware / Proxy bypass through dynamic route parameter injection",
@@ -4146,17 +4361,27 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:54:08.000Z",
     "modifiedAt": "2026-05-14T20:47:43.284Z",
-    "mergedAt": "2026-05-23T22:25:19.796Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-492v-c6pp-mqqv",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44574",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-492v-c6pp-mqqv",
+        "url": "https://github.com/advisories/GHSA-492v-c6pp-mqqv",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00011
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00011,
+    "ghsaId": "GHSA-492v-c6pp-mqqv"
   },
   {
     "id": "CVE-2026-47730",
@@ -4207,7 +4432,8 @@
     "id": "CVE-2026-44581",
     "cveId": "CVE-2026-44581",
     "aliases": [
-      "CVE-2026-44581"
+      "CVE-2026-44581",
+      "GHSA-ffhc-5mcf-pf4q"
     ],
     "title": "Next.js vulnerable to cross-site scripting in App Router applications using CSP nonces",
     "summary": "Next.js vulnerable to cross-site scripting in App Router applications using CSP nonces",
@@ -4240,23 +4466,34 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:57:12.000Z",
     "modifiedAt": "2026-05-14T20:51:12.557Z",
-    "mergedAt": "2026-05-23T22:25:19.799Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-ffhc-5mcf-pf4q",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44581",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-ffhc-5mcf-pf4q",
+        "url": "https://github.com/advisories/GHSA-ffhc-5mcf-pf4q",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00011
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00011,
+    "ghsaId": "GHSA-ffhc-5mcf-pf4q"
   },
   {
     "id": "CVE-2026-44580",
     "cveId": "CVE-2026-44580",
     "aliases": [
-      "CVE-2026-44580"
+      "CVE-2026-44580",
+      "GHSA-gx5p-jg67-6x7h"
     ],
     "title": "Next.js has cross-site scripting in beforeInteractive scripts with untrusted input",
     "summary": "Next.js has cross-site scripting in beforeInteractive scripts with untrusted input",
@@ -4289,23 +4526,34 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:38.000Z",
     "modifiedAt": "2026-05-14T20:51:25.401Z",
-    "mergedAt": "2026-05-23T22:25:19.802Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-gx5p-jg67-6x7h",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44580",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-gx5p-jg67-6x7h",
+        "url": "https://github.com/advisories/GHSA-gx5p-jg67-6x7h",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00012
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00012,
+    "ghsaId": "GHSA-gx5p-jg67-6x7h"
   },
   {
     "id": "CVE-2026-44577",
     "cveId": "CVE-2026-44577",
     "aliases": [
-      "CVE-2026-44577"
+      "CVE-2026-44577",
+      "GHSA-h64f-5h5j-jqjh"
     ],
     "title": "Next.js has a Denial of Service in the Image Optimization API",
     "summary": "Next.js has a Denial of Service in the Image Optimization API",
@@ -4338,23 +4586,34 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:05.000Z",
     "modifiedAt": "2026-05-14T20:51:26.606Z",
-    "mergedAt": "2026-05-23T22:25:19.803Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-h64f-5h5j-jqjh",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44577",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-h64f-5h5j-jqjh",
+        "url": "https://github.com/advisories/GHSA-h64f-5h5j-jqjh",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00018
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00018,
+    "ghsaId": "GHSA-h64f-5h5j-jqjh"
   },
   {
     "id": "CVE-2026-44576",
     "cveId": "CVE-2026-44576",
     "aliases": [
-      "CVE-2026-44576"
+      "CVE-2026-44576",
+      "GHSA-wfc6-r584-vfw7"
     ],
     "title": "Next.js vulnerable to cache poisoning in React Server Component responses",
     "summary": "Next.js vulnerable to cache poisoning in React Server Component responses",
@@ -4387,23 +4646,34 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:54:46.000Z",
     "modifiedAt": "2026-05-14T20:52:45.704Z",
-    "mergedAt": "2026-05-23T22:25:19.806Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-wfc6-r584-vfw7",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44576",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-wfc6-r584-vfw7",
+        "url": "https://github.com/advisories/GHSA-wfc6-r584-vfw7",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00016
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00016,
+    "ghsaId": "GHSA-wfc6-r584-vfw7"
   },
   {
     "id": "CVE-2026-42037",
     "cveId": "CVE-2026-42037",
     "aliases": [
-      "CVE-2026-42037"
+      "CVE-2026-42037",
+      "GHSA-445q-vr5w-6q77"
     ],
     "title": "Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream",
     "summary": "Axios: CRLF Injection in multipart/form-data body via unsanitized blob.type in formDataToStream",
@@ -4436,23 +4706,33 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:45.000Z",
     "modifiedAt": "2026-05-06T15:29:22.982Z",
-    "mergedAt": "2026-05-23T22:25:19.820Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-445q-vr5w-6q77",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42037",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-445q-vr5w-6q77",
+        "url": "https://github.com/advisories/GHSA-445q-vr5w-6q77",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00078
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00078,
+    "ghsaId": "GHSA-445q-vr5w-6q77"
   },
   {
     "id": "CVE-2026-42038",
     "cveId": "CVE-2026-42038",
     "aliases": [
-      "CVE-2026-42038"
+      "CVE-2026-42038",
+      "GHSA-m7pr-hjqh-92cm"
     ],
     "title": "Axios: no_proxy bypass via IP alias allows SSRF",
     "summary": "Axios: no_proxy bypass via IP alias allows SSRF",
@@ -4485,23 +4765,33 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:17.000Z",
     "modifiedAt": "2026-05-06T15:29:25.469Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-m7pr-hjqh-92cm",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42038",
         "fetchedAt": "2026-05-22T13:47:27.987Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-m7pr-hjqh-92cm",
+        "url": "https://github.com/advisories/GHSA-m7pr-hjqh-92cm",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00056
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00056,
+    "ghsaId": "GHSA-m7pr-hjqh-92cm"
   },
   {
     "id": "CVE-2026-42034",
     "cveId": "CVE-2026-42034",
     "aliases": [
-      "CVE-2026-42034"
+      "CVE-2026-42034",
+      "GHSA-5c9x-8gcm-mpgx"
     ],
     "title": "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0",
     "summary": "Axios' HTTP adapter-streamed uploads bypass maxBodyLength when maxRedirects: 0",
@@ -4534,23 +4824,33 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:33:25.000Z",
     "modifiedAt": "2026-05-06T15:29:22.484Z",
-    "mergedAt": "2026-05-23T22:25:19.820Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-5c9x-8gcm-mpgx",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42034",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-5c9x-8gcm-mpgx",
+        "url": "https://github.com/advisories/GHSA-5c9x-8gcm-mpgx",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00065
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00065,
+    "ghsaId": "GHSA-5c9x-8gcm-mpgx"
   },
   {
     "id": "CVE-2026-42036",
     "cveId": "CVE-2026-42036",
     "aliases": [
-      "CVE-2026-42036"
+      "CVE-2026-42036",
+      "GHSA-vf2m-468p-8v99"
     ],
     "title": "Axios: HTTP adapter streamed responses bypass maxContentLength",
     "summary": "Axios: HTTP adapter streamed responses bypass maxContentLength",
@@ -4583,23 +4883,33 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:26:57.000Z",
     "modifiedAt": "2026-05-06T15:29:25.221Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-vf2m-468p-8v99",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42036",
         "fetchedAt": "2026-05-22T13:47:27.987Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-vf2m-468p-8v99",
+        "url": "https://github.com/advisories/GHSA-vf2m-468p-8v99",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00065
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00065,
+    "ghsaId": "GHSA-vf2m-468p-8v99"
   },
   {
     "id": "CVE-2026-42042",
     "cveId": "CVE-2026-42042",
     "aliases": [
-      "CVE-2026-42042"
+      "CVE-2026-42042",
+      "GHSA-xx6v-rp6x-q39c"
     ],
     "title": "Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion",
     "summary": "Axios: XSRF Token Cross-Origin Leakage via Prototype Pollution Gadget in `withXSRFToken` Boolean Coercion",
@@ -4633,23 +4943,33 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:25:22.000Z",
     "modifiedAt": "2026-05-06T15:29:24.391Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-xx6v-rp6x-q39c",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42042",
         "fetchedAt": "2026-05-22T13:47:27.988Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-xx6v-rp6x-q39c",
+        "url": "https://github.com/advisories/GHSA-xx6v-rp6x-q39c",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00044
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00044,
+    "ghsaId": "GHSA-xx6v-rp6x-q39c"
   },
   {
     "id": "CVE-2026-42041",
     "cveId": "CVE-2026-42041",
     "aliases": [
-      "CVE-2026-42041"
+      "CVE-2026-42041",
+      "GHSA-w9j2-pvgh-6h63"
     ],
     "title": "Axios: Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy",
     "summary": "Axios: Authentication Bypass via Prototype Pollution Gadget in `validateStatus` Merge Strategy",
@@ -4683,23 +5003,33 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:21:39.000Z",
     "modifiedAt": "2026-05-06T15:29:25.530Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-w9j2-pvgh-6h63",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42041",
         "fetchedAt": "2026-05-22T13:47:27.987Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-w9j2-pvgh-6h63",
+        "url": "https://github.com/advisories/GHSA-w9j2-pvgh-6h63",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00136
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00136,
+    "ghsaId": "GHSA-w9j2-pvgh-6h63"
   },
   {
     "id": "CVE-2026-42044",
     "cveId": "CVE-2026-42044",
     "aliases": [
-      "CVE-2026-42044"
+      "CVE-2026-42044",
+      "GHSA-3w6x-2g7m-8v23"
     ],
     "title": "Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`",
     "summary": "Axios: Invisible JSON Response Tampering via Prototype Pollution Gadget in `parseReviver`",
@@ -4733,23 +5063,33 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:19:33.000Z",
     "modifiedAt": "2026-05-06T15:29:23.367Z",
-    "mergedAt": "2026-05-23T22:25:19.819Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-3w6x-2g7m-8v23",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42044",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-3w6x-2g7m-8v23",
+        "url": "https://github.com/advisories/GHSA-3w6x-2g7m-8v23",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00127
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00127,
+    "ghsaId": "GHSA-3w6x-2g7m-8v23"
   },
   {
     "id": "CVE-2026-40175",
     "cveId": "CVE-2026-40175",
     "aliases": [
-      "CVE-2026-40175"
+      "CVE-2026-40175",
+      "GHSA-fvcv-3m26-pcqx"
     ],
     "title": "Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain",
     "summary": "Axios has Unrestricted Cloud Metadata Exfiltration via Header Injection Chain",
@@ -4784,23 +5124,33 @@
     "priority": 52,
     "publishedAt": "2026-04-10T19:47:16.000Z",
     "modifiedAt": "2026-05-20T00:30:10.353Z",
-    "mergedAt": "2026-05-23T22:25:19.821Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-fvcv-3m26-pcqx",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40175",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-fvcv-3m26-pcqx",
+        "url": "https://github.com/advisories/GHSA-fvcv-3m26-pcqx",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00063
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00063,
+    "ghsaId": "GHSA-fvcv-3m26-pcqx"
   },
   {
     "id": "CVE-2025-62718",
     "cveId": "CVE-2025-62718",
     "aliases": [
-      "CVE-2025-62718"
+      "CVE-2025-62718",
+      "GHSA-3p68-rc4w-qgx5"
     ],
     "title": "Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF",
     "summary": "Axios has a NO_PROXY Hostname Normalization Bypass that Leads to SSRF",
@@ -4834,23 +5184,33 @@
     "priority": 52,
     "publishedAt": "2026-04-09T17:32:19.000Z",
     "modifiedAt": "2026-05-08T13:46:43.000Z",
-    "mergedAt": "2026-05-23T22:25:19.819Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-3p68-rc4w-qgx5",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62718",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-3p68-rc4w-qgx5",
+        "url": "https://github.com/advisories/GHSA-3p68-rc4w-qgx5",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00069
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00069,
+    "ghsaId": "GHSA-3p68-rc4w-qgx5"
   },
   {
     "id": "CVE-2026-2950",
     "cveId": "CVE-2026-2950",
     "aliases": [
-      "CVE-2026-2950"
+      "CVE-2026-2950",
+      "GHSA-f23m-r3pf-42rh"
     ],
     "title": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
     "summary": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
@@ -4901,23 +5261,33 @@
     "priority": 52,
     "publishedAt": "2026-04-01T23:50:27.000Z",
     "modifiedAt": "2026-04-02T17:29:51.565Z",
-    "mergedAt": "2026-05-23T22:25:19.823Z",
+    "mergedAt": "2026-05-23T22:52:56.793Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-f23m-r3pf-42rh",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2950",
         "fetchedAt": "2026-05-22T13:47:27.988Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-f23m-r3pf-42rh",
+        "url": "https://github.com/advisories/GHSA-f23m-r3pf-42rh",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00025
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00025,
+    "ghsaId": "GHSA-f23m-r3pf-42rh"
   },
   {
     "id": "CVE-2021-43803",
     "cveId": "CVE-2021-43803",
     "aliases": [
-      "CVE-2021-43803"
+      "CVE-2021-43803",
+      "GHSA-25mp-g6fv-mqxx"
     ],
     "title": "Unexpected server crash in Next.js.",
     "summary": "Unexpected server crash in Next.js.",
@@ -4950,23 +5320,34 @@
     "priority": 51,
     "publishedAt": "2021-12-07T21:12:09.000Z",
     "modifiedAt": "2026-03-13T22:00:36.554Z",
-    "mergedAt": "2026-05-23T22:25:19.794Z",
+    "mergedAt": "2026-05-23T22:52:56.776Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-25mp-g6fv-mqxx",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-43803",
         "fetchedAt": "2026-05-22T13:47:27.984Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-25mp-g6fv-mqxx",
+        "url": "https://github.com/advisories/GHSA-25mp-g6fv-mqxx",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.0218
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.0218,
+    "ghsaId": "GHSA-25mp-g6fv-mqxx"
   },
   {
     "id": "CVE-2021-39178",
     "cveId": "CVE-2021-39178",
     "aliases": [
-      "CVE-2021-39178"
+      "CVE-2021-39178",
+      "GHSA-9gr3-7897-pp7m"
     ],
     "title": "XSS in Image Optimization API for Next.js",
     "summary": "XSS in Image Optimization API for Next.js",
@@ -4999,17 +5380,27 @@
     "priority": 51,
     "publishedAt": "2021-09-01T18:24:22.000Z",
     "modifiedAt": "2026-03-13T22:00:20.154Z",
-    "mergedAt": "2026-05-23T22:25:19.798Z",
+    "mergedAt": "2026-05-23T22:52:56.776Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-9gr3-7897-pp7m",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-39178",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-9gr3-7897-pp7m",
+        "url": "https://github.com/advisories/GHSA-9gr3-7897-pp7m",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.007
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.007,
+    "ghsaId": "GHSA-9gr3-7897-pp7m"
   },
   {
     "id": "CVE-2020-15094",
@@ -5018,7 +5409,8 @@
       "BIT-symfony-2020-15094",
       "CVE-2020-15094",
       "PKSA-6pwr-137g-8814",
-      "PKSA-8knv-7jsn-12w8"
+      "PKSA-8knv-7jsn-12w8",
+      "GHSA-754h-5r27-7x3r"
     ],
     "title": "RCE in Symfony",
     "summary": "RCE in Symfony",
@@ -5055,9 +5447,9 @@
       "reason": "direct-dep"
     },
     "priority": 51,
-    "publishedAt": "2020-09-02T08:00:00.000Z",
+    "publishedAt": "2020-09-02T17:29:56.000Z",
     "modifiedAt": "2026-03-13T22:14:38.594Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T22:52:56.807Z",
     "sources": [
       {
         "source": "osv",
@@ -5076,13 +5468,20 @@
         "externalId": "PKSA-8knv-7jsn-12w8",
         "url": "https://symfony.com/cve-2020-15094",
         "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-754h-5r27-7x3r",
+        "url": "https://github.com/advisories/GHSA-754h-5r27-7x3r",
+        "fetchedAt": "2026-05-23T22:52:54.995Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.02248
+    "epss": 0.02248,
+    "ghsaId": "GHSA-754h-5r27-7x3r"
   },
   {
     "id": "CVE-2020-5275",
@@ -5091,7 +5490,8 @@
       "BIT-symfony-2020-5275",
       "CVE-2020-5275",
       "PKSA-wq3f-5n85-pkzw",
-      "PKSA-srh1-bn3t-m6gg"
+      "PKSA-srh1-bn3t-m6gg",
+      "GHSA-g4m9-5hpf-hx72"
     ],
     "title": "Firewall configured with unanimous strategy was not actually unanimous in Symfony",
     "summary": "Firewall configured with unanimous strategy was not actually unanimous in Symfony",
@@ -5134,9 +5534,9 @@
       "reason": "direct-dep"
     },
     "priority": 51,
-    "publishedAt": "2020-03-30T14:00:00.000Z",
+    "publishedAt": "2020-03-30T20:09:44.000Z",
     "modifiedAt": "2026-03-13T22:16:03.504Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T22:52:56.816Z",
     "sources": [
       {
         "source": "osv",
@@ -5155,19 +5555,27 @@
         "externalId": "PKSA-srh1-bn3t-m6gg",
         "url": "https://symfony.com/cve-2020-5275",
         "fetchedAt": "2026-05-22T16:38:48.255Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-g4m9-5hpf-hx72",
+        "url": "https://github.com/advisories/GHSA-g4m9-5hpf-hx72",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.00274
+    "epss": 0.00274,
+    "ghsaId": "GHSA-g4m9-5hpf-hx72"
   },
   {
     "id": "CVE-2020-17480",
     "cveId": "CVE-2020-17480",
     "aliases": [
-      "CVE-2020-17480"
+      "CVE-2020-17480",
+      "GHSA-27gm-ghr9-4v95"
     ],
     "title": "Cross-site scripting vulnerability in TinyMCE",
     "summary": "Cross-site scripting vulnerability in TinyMCE",
@@ -5198,80 +5606,34 @@
     "priority": 51,
     "publishedAt": "2020-01-30T21:22:15.000Z",
     "modifiedAt": "2026-03-13T22:01:20.067Z",
-    "mergedAt": "2026-05-23T22:25:19.813Z",
+    "mergedAt": "2026-05-23T22:52:56.787Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-27gm-ghr9-4v95",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-17480",
         "fetchedAt": "2026-05-22T13:47:27.988Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00553
-  },
-  {
-    "id": "CVE-2026-46628",
-    "cveId": "CVE-2026-46628",
-    "aliases": [
-      "CVE-2026-46628",
-      "PKSA-sjvz-tbbr-vwth"
-    ],
-    "title": "Twig: The `spaceless` filter implicitly marks its output as safe",
-    "summary": "Twig: The `spaceless` filter implicitly marks its output as safe",
-    "details": "### Description The `spaceless` filter is registered with `is_safe => ['html']`, which means Twig's autoescaper does not escape its output in an HTML context. As a result, applying `spaceless` to attacker-controlled input that contains markup emits the markup unescaped even when the developer never wrote `|raw` and autoescape is enabled. Example: ```twig {% set payload = 'alert()' %} {{ payload }} {# escaped #} {{ payload|spaceless }} {# not escaped #} ``` The filter is deprecated but still functional. With the deprecation, some downstream projects (e.g. Drupal modules) have duplicated the filter and inherited the same `is_safe` flag. ### Resolution The `spaceless` filter no longer marks its output as safe. Documentation has been updated to warn that `spaceless` should not be applied to unsanitised user input. ### Credits Twig would like to thank Pierre Rudloff for reporting the issue.",
-    "severity": "low",
-    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:U",
-    "kev": false,
-    "ecosystems": [
-      "composer"
-    ],
-    "cwe": [
-      "CWE-116"
-    ],
-    "affected": [
-      {
-        "ecosystem": "composer",
-        "package": "twig/twig",
-        "versions": ">=0 <3.26.0",
-        "fixedIn": "3.26.0"
-      }
-    ],
-    "stackMatch": {
-      "score": 100,
-      "packages": [
-        "twig/twig"
-      ],
-      "reason": "direct-dep"
-    },
-    "priority": 50,
-    "publishedAt": "2026-05-20T08:00:00.000Z",
-    "modifiedAt": "2026-05-23T18:29:19.441Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
-    "sources": [
-      {
-        "source": "osv",
-        "externalId": "GHSA-4j38-f5cw-54h7",
-        "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-4j38-f5cw-54h7",
-        "fetchedAt": "2026-05-22T13:47:27.991Z"
       },
       {
-        "source": "packagist",
-        "externalId": "PKSA-sjvz-tbbr-vwth",
-        "url": "https://symfony.com/cve-2026-46628",
-        "fetchedAt": "2026-05-22T13:47:20.424Z"
+        "source": "ghsa-stack",
+        "externalId": "GHSA-27gm-ghr9-4v95",
+        "url": "https://github.com/advisories/GHSA-27gm-ghr9-4v95",
+        "fetchedAt": "2026-05-23T22:52:54.993Z"
       }
     ],
     "tags": [
-      "backend"
-    ]
+      "frontend"
+    ],
+    "epss": 0.00553,
+    "ghsaId": "GHSA-27gm-ghr9-4v95"
   },
   {
     "id": "CVE-2026-46635",
     "cveId": "CVE-2026-46635",
     "aliases": [
       "CVE-2026-46635",
-      "PKSA-n14z-jjjg-g8vd"
+      "PKSA-n14z-jjjg-g8vd",
+      "GHSA-vcc8-phrv-43wj"
     ],
     "title": "Twig: Sandbox property allowlist bypass via the `column` filter (array_column on objects)",
     "summary": "Twig: Sandbox property allowlist bypass via the `column` filter (array_column on objects)",
@@ -5301,9 +5663,9 @@
       "reason": "direct-dep"
     },
     "priority": 50,
-    "publishedAt": "2026-05-20T08:00:00.000Z",
+    "publishedAt": "2026-05-21T21:25:55.000Z",
     "modifiedAt": "2026-05-23T18:29:18.155Z",
-    "mergedAt": "2026-05-23T22:25:19.874Z",
+    "mergedAt": "2026-05-23T22:52:56.826Z",
     "sources": [
       {
         "source": "osv",
@@ -5316,11 +5678,82 @@
         "externalId": "PKSA-n14z-jjjg-g8vd",
         "url": "https://symfony.com/cve-2026-46635",
         "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-vcc8-phrv-43wj",
+        "url": "https://github.com/advisories/GHSA-vcc8-phrv-43wj",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend"
-    ]
+    ],
+    "ghsaId": "GHSA-vcc8-phrv-43wj"
+  },
+  {
+    "id": "CVE-2026-46628",
+    "cveId": "CVE-2026-46628",
+    "aliases": [
+      "CVE-2026-46628",
+      "PKSA-sjvz-tbbr-vwth",
+      "GHSA-4j38-f5cw-54h7"
+    ],
+    "title": "Twig: The `spaceless` filter implicitly marks its output as safe",
+    "summary": "Twig: The `spaceless` filter implicitly marks its output as safe",
+    "details": "### Description The `spaceless` filter is registered with `is_safe => ['html']`, which means Twig's autoescaper does not escape its output in an HTML context. As a result, applying `spaceless` to attacker-controlled input that contains markup emits the markup unescaped even when the developer never wrote `|raw` and autoescape is enabled. Example: ```twig {% set payload = 'alert()' %} {{ payload }} {# escaped #} {{ payload|spaceless }} {# not escaped #} ``` The filter is deprecated but still functional. With the deprecation, some downstream projects (e.g. Drupal modules) have duplicated the filter and inherited the same `is_safe` flag. ### Resolution The `spaceless` filter no longer marks its output as safe. Documentation has been updated to warn that `spaceless` should not be applied to unsanitised user input. ### Credits Twig would like to thank Pierre Rudloff for reporting the issue.",
+    "severity": "low",
+    "cvssVector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:U",
+    "kev": false,
+    "ecosystems": [
+      "composer"
+    ],
+    "cwe": [
+      "CWE-116"
+    ],
+    "affected": [
+      {
+        "ecosystem": "composer",
+        "package": "twig/twig",
+        "versions": ">=0 <3.26.0",
+        "fixedIn": "3.26.0"
+      }
+    ],
+    "stackMatch": {
+      "score": 100,
+      "packages": [
+        "twig/twig"
+      ],
+      "reason": "direct-dep"
+    },
+    "priority": 50,
+    "publishedAt": "2026-05-21T21:21:35.000Z",
+    "modifiedAt": "2026-05-23T18:29:19.441Z",
+    "mergedAt": "2026-05-23T22:52:56.826Z",
+    "sources": [
+      {
+        "source": "osv",
+        "externalId": "GHSA-4j38-f5cw-54h7",
+        "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-4j38-f5cw-54h7",
+        "fetchedAt": "2026-05-22T13:47:27.991Z"
+      },
+      {
+        "source": "packagist",
+        "externalId": "PKSA-sjvz-tbbr-vwth",
+        "url": "https://symfony.com/cve-2026-46628",
+        "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-4j38-f5cw-54h7",
+        "url": "https://github.com/advisories/GHSA-4j38-f5cw-54h7",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
+      }
+    ],
+    "tags": [
+      "backend"
+    ],
+    "ghsaId": "GHSA-4j38-f5cw-54h7"
   },
   {
     "id": "CVE-2026-31707",
@@ -5451,7 +5884,8 @@
     "id": "CVE-2026-44572",
     "cveId": "CVE-2026-44572",
     "aliases": [
-      "CVE-2026-44572"
+      "CVE-2026-44572",
+      "GHSA-3g8h-86w9-wvmq"
     ],
     "title": "Next.js's Middleware / Proxy redirects can be cache-poisoned",
     "summary": "Next.js's Middleware / Proxy redirects can be cache-poisoned",
@@ -5484,23 +5918,34 @@
     "priority": 45,
     "publishedAt": "2026-05-11T16:12:07.000Z",
     "modifiedAt": "2026-05-14T20:48:38.453Z",
-    "mergedAt": "2026-05-23T22:25:19.795Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-3g8h-86w9-wvmq",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44572",
         "fetchedAt": "2026-05-22T13:47:27.984Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-3g8h-86w9-wvmq",
+        "url": "https://github.com/advisories/GHSA-3g8h-86w9-wvmq",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00008
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00008,
+    "ghsaId": "GHSA-3g8h-86w9-wvmq"
   },
   {
     "id": "CVE-2026-44582",
     "cveId": "CVE-2026-44582",
     "aliases": [
-      "CVE-2026-44582"
+      "CVE-2026-44582",
+      "GHSA-vfv6-92ff-j949"
     ],
     "title": "Next.js vulnerable to cache poisoning via collisions in React Server Component cache-busting",
     "summary": "Next.js vulnerable to cache poisoning via collisions in React Server Component cache-busting",
@@ -5533,23 +5978,34 @@
     "priority": 45,
     "publishedAt": "2026-05-11T15:56:48.000Z",
     "modifiedAt": "2026-05-14T20:52:41.365Z",
-    "mergedAt": "2026-05-23T22:25:19.806Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-vfv6-92ff-j949",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44582",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-vfv6-92ff-j949",
+        "url": "https://github.com/advisories/GHSA-vfv6-92ff-j949",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00009
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00009,
+    "ghsaId": "GHSA-vfv6-92ff-j949"
   },
   {
     "id": "CVE-2026-42040",
     "cveId": "CVE-2026-42040",
     "aliases": [
-      "CVE-2026-42040"
+      "CVE-2026-42040",
+      "GHSA-xhjh-pmcv-23jw"
     ],
     "title": "Axios: Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams",
     "summary": "Axios: Null Byte Injection via Reverse-Encoding in AxiosURLSearchParams",
@@ -5583,17 +6039,26 @@
     "priority": 45,
     "publishedAt": "2026-05-05T00:18:03.000Z",
     "modifiedAt": "2026-05-06T15:29:21.463Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-xhjh-pmcv-23jw",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42040",
         "fetchedAt": "2026-05-22T13:47:27.987Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-xhjh-pmcv-23jw",
+        "url": "https://github.com/advisories/GHSA-xhjh-pmcv-23jw",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00056
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00056,
+    "ghsaId": "GHSA-xhjh-pmcv-23jw"
   },
   {
     "id": "CVE-2024-35955",
@@ -7116,7 +7581,8 @@
     "id": "CVE-2026-39865",
     "cveId": "CVE-2026-39865",
     "aliases": [
-      "CVE-2026-39865"
+      "CVE-2026-39865",
+      "GHSA-qj83-cq47-w5f8"
     ],
     "title": "Axios HTTP/2 Session Cleanup State Corruption Vulnerability",
     "summary": "Axios HTTP/2 Session Cleanup State Corruption Vulnerability",
@@ -7149,23 +7615,33 @@
     "priority": 38,
     "publishedAt": "2026-04-08T15:51:48.000Z",
     "modifiedAt": "2026-05-05T16:10:10.879Z",
-    "mergedAt": "2026-05-23T22:25:19.822Z",
+    "mergedAt": "2026-05-23T22:52:56.790Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-qj83-cq47-w5f8",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39865",
         "fetchedAt": "2026-05-22T13:47:27.987Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-qj83-cq47-w5f8",
+        "url": "https://github.com/advisories/GHSA-qj83-cq47-w5f8",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00021
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00021,
+    "ghsaId": "GHSA-qj83-cq47-w5f8"
   },
   {
     "id": "CVE-2026-29057",
     "cveId": "CVE-2026-29057",
     "aliases": [
-      "CVE-2026-29057"
+      "CVE-2026-29057",
+      "GHSA-ggv3-7p47-pfv8"
     ],
     "title": "Next.js: HTTP request smuggling in rewrites",
     "summary": "Next.js: HTTP request smuggling in rewrites",
@@ -7197,23 +7673,34 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:15.000Z",
     "modifiedAt": "2026-03-19T17:59:01.302Z",
-    "mergedAt": "2026-05-23T22:25:19.802Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-ggv3-7p47-pfv8",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29057",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-ggv3-7p47-pfv8",
+        "url": "https://github.com/advisories/GHSA-ggv3-7p47-pfv8",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.0004
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.0004,
+    "ghsaId": "GHSA-ggv3-7p47-pfv8"
   },
   {
     "id": "CVE-2026-27980",
     "cveId": "CVE-2026-27980",
     "aliases": [
-      "CVE-2026-27980"
+      "CVE-2026-27980",
+      "GHSA-3x4c-7xq6-9pq8"
     ],
     "title": "Next.js: Unbounded next/image disk cache growth can exhaust storage",
     "summary": "Next.js: Unbounded next/image disk cache growth can exhaust storage",
@@ -7245,23 +7732,34 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:06.000Z",
     "modifiedAt": "2026-03-20T14:59:12.698Z",
-    "mergedAt": "2026-05-23T22:25:19.795Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-3x4c-7xq6-9pq8",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27980",
         "fetchedAt": "2026-05-22T13:47:27.984Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-3x4c-7xq6-9pq8",
+        "url": "https://github.com/advisories/GHSA-3x4c-7xq6-9pq8",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00022
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00022,
+    "ghsaId": "GHSA-3x4c-7xq6-9pq8"
   },
   {
     "id": "CVE-2026-27979",
     "cveId": "CVE-2026-27979",
     "aliases": [
-      "CVE-2026-27979"
+      "CVE-2026-27979",
+      "GHSA-h27x-g6w4-24gq"
     ],
     "title": "Next.js: Unbounded postponed resume buffering can lead to DoS",
     "summary": "Next.js: Unbounded postponed resume buffering can lead to DoS",
@@ -7293,23 +7791,34 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:16:49.000Z",
     "modifiedAt": "2026-03-19T18:48:06.587Z",
-    "mergedAt": "2026-05-23T22:25:19.803Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-h27x-g6w4-24gq",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27979",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-h27x-g6w4-24gq",
+        "url": "https://github.com/advisories/GHSA-h27x-g6w4-24gq",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00019
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00019,
+    "ghsaId": "GHSA-h27x-g6w4-24gq"
   },
   {
     "id": "CVE-2026-27978",
     "cveId": "CVE-2026-27978",
     "aliases": [
-      "CVE-2026-27978"
+      "CVE-2026-27978",
+      "GHSA-mq59-m269-xvcx"
     ],
     "title": "Next.js: null origin can bypass Server Actions CSRF checks",
     "summary": "Next.js: null origin can bypass Server Actions CSRF checks",
@@ -7341,23 +7850,34 @@
     "priority": 38,
     "publishedAt": "2026-03-17T15:30:14.000Z",
     "modifiedAt": "2026-03-19T18:31:23.523Z",
-    "mergedAt": "2026-05-23T22:25:19.803Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-mq59-m269-xvcx",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27978",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-mq59-m269-xvcx",
+        "url": "https://github.com/advisories/GHSA-mq59-m269-xvcx",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00008
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00008,
+    "ghsaId": "GHSA-mq59-m269-xvcx"
   },
   {
     "id": "CVE-2025-59472",
     "cveId": "CVE-2025-59472",
     "aliases": [
-      "CVE-2025-59472"
+      "CVE-2025-59472",
+      "GHSA-5f7q-jpqc-wp7h"
     ],
     "title": "Next.js has Unbounded Memory Consumption via PPR Resume Endpoint",
     "summary": "Next.js has Unbounded Memory Consumption via PPR Resume Endpoint",
@@ -7392,17 +7912,27 @@
     "priority": 36,
     "publishedAt": "2026-01-28T15:20:55.000Z",
     "modifiedAt": "2026-04-08T21:16:40.797Z",
-    "mergedAt": "2026-05-23T22:25:19.796Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-5f7q-jpqc-wp7h",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59472",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-5f7q-jpqc-wp7h",
+        "url": "https://github.com/advisories/GHSA-5f7q-jpqc-wp7h",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00089
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00089,
+    "ghsaId": "GHSA-5f7q-jpqc-wp7h"
   },
   {
     "id": "CVE-2021-41270",
@@ -7411,7 +7941,8 @@
       "BIT-symfony-2021-41270",
       "CVE-2021-41270",
       "PKSA-t1qj-5z4b-g31v",
-      "PKSA-s1hc-69wj-fhpp"
+      "PKSA-s1hc-69wj-fhpp",
+      "GHSA-2xhg-w2g5-w95x"
     ],
     "title": "CSV Injection in symfony/serializer",
     "summary": "CSV Injection in symfony/serializer",
@@ -7448,9 +7979,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-11-15T10:47:04.000Z",
+    "publishedAt": "2021-11-24T21:01:23.000Z",
     "modifiedAt": "2026-03-13T21:59:52.395Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T22:52:56.816Z",
     "sources": [
       {
         "source": "osv",
@@ -7469,13 +8000,20 @@
         "externalId": "PKSA-s1hc-69wj-fhpp",
         "url": "https://symfony.com/cve-2021-41270",
         "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-2xhg-w2g5-w95x",
+        "url": "https://github.com/advisories/GHSA-2xhg-w2g5-w95x",
+        "fetchedAt": "2026-05-23T22:52:54.995Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.00871
+    "epss": 0.00871,
+    "ghsaId": "GHSA-2xhg-w2g5-w95x"
   },
   {
     "id": "CVE-2021-41268",
@@ -7484,7 +8022,8 @@
       "BIT-symfony-2021-41268",
       "CVE-2021-41268",
       "PKSA-wchw-45cr-1ddn",
-      "PKSA-zjt8-sfvq-83xx"
+      "PKSA-zjt8-sfvq-83xx",
+      "GHSA-qw36-p97w-vcqr"
     ],
     "title": "Cookie persistence after password changes in symfony/security-bundle",
     "summary": "Cookie persistence after password changes in symfony/security-bundle",
@@ -7521,9 +8060,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-10-23T11:11:11.000Z",
+    "publishedAt": "2021-11-24T20:05:22.000Z",
     "modifiedAt": "2026-03-13T22:14:23.582Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T22:52:56.816Z",
     "sources": [
       {
         "source": "osv",
@@ -7542,13 +8081,20 @@
         "externalId": "PKSA-zjt8-sfvq-83xx",
         "url": "https://symfony.com/cve-2021-41268",
         "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-qw36-p97w-vcqr",
+        "url": "https://github.com/advisories/GHSA-qw36-p97w-vcqr",
+        "fetchedAt": "2026-05-23T22:52:54.995Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.00476
+    "epss": 0.00476,
+    "ghsaId": "GHSA-qw36-p97w-vcqr"
   },
   {
     "id": "CVE-2021-41267",
@@ -7557,7 +8103,8 @@
       "BIT-symfony-2021-41267",
       "CVE-2021-41267",
       "PKSA-2dmf-r1fg-t642",
-      "PKSA-ftqt-8gzv-r53t"
+      "PKSA-ftqt-8gzv-r53t",
+      "GHSA-q3j3-w37x-hq2q"
     ],
     "title": "Webcache Poisoning in symfony/http-kernel",
     "summary": "Webcache Poisoning in symfony/http-kernel",
@@ -7594,9 +8141,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-10-09T12:10:44.000Z",
+    "publishedAt": "2021-11-24T20:04:25.000Z",
     "modifiedAt": "2026-03-13T22:00:11.423Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T22:52:56.816Z",
     "sources": [
       {
         "source": "osv",
@@ -7615,19 +8162,27 @@
         "externalId": "PKSA-ftqt-8gzv-r53t",
         "url": "https://symfony.com/cve-2021-41267",
         "fetchedAt": "2026-05-22T13:47:20.424Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-q3j3-w37x-hq2q",
+        "url": "https://github.com/advisories/GHSA-q3j3-w37x-hq2q",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.00462
+    "epss": 0.00462,
+    "ghsaId": "GHSA-q3j3-w37x-hq2q"
   },
   {
     "id": "CVE-2021-37699",
     "cveId": "CVE-2021-37699",
     "aliases": [
-      "CVE-2021-37699"
+      "CVE-2021-37699",
+      "GHSA-vxf5-wxwp-m7g9"
     ],
     "title": "Open Redirect in Next.js",
     "summary": "Open Redirect in Next.js",
@@ -7660,17 +8215,27 @@
     "priority": 36,
     "publishedAt": "2021-08-12T14:51:14.000Z",
     "modifiedAt": "2026-03-13T22:00:08.038Z",
-    "mergedAt": "2026-05-23T22:25:19.806Z",
+    "mergedAt": "2026-05-23T22:52:56.777Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-vxf5-wxwp-m7g9",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-37699",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-vxf5-wxwp-m7g9",
+        "url": "https://github.com/advisories/GHSA-vxf5-wxwp-m7g9",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.0043
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.0043,
+    "ghsaId": "GHSA-vxf5-wxwp-m7g9"
   },
   {
     "id": "CVE-2021-32693",
@@ -7679,7 +8244,8 @@
       "BIT-symfony-2021-32693",
       "CVE-2021-32693",
       "PKSA-z8x3-bp9m-qp6s",
-      "PKSA-gg1d-f43j-pd8z"
+      "PKSA-gg1d-f43j-pd8z",
+      "GHSA-rfcf-m67m-jcrq"
     ],
     "title": "Authentication granted to all firewalls instead of just one",
     "summary": "Authentication granted to all firewalls instead of just one",
@@ -7716,9 +8282,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-06-17T15:00:00.000Z",
+    "publishedAt": "2021-06-21T17:03:44.000Z",
     "modifiedAt": "2026-03-13T22:01:16.333Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T22:52:56.816Z",
     "sources": [
       {
         "source": "osv",
@@ -7737,13 +8303,20 @@
         "externalId": "PKSA-gg1d-f43j-pd8z",
         "url": "https://symfony.com/cve-2021-32693",
         "fetchedAt": "2026-05-22T16:38:48.255Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-rfcf-m67m-jcrq",
+        "url": "https://github.com/advisories/GHSA-rfcf-m67m-jcrq",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.00545
+    "epss": 0.00545,
+    "ghsaId": "GHSA-rfcf-m67m-jcrq"
   },
   {
     "id": "CVE-2021-21424",
@@ -7753,7 +8326,8 @@
       "CVE-2021-21424",
       "PKSA-hq66-h9fz-xgjz",
       "PKSA-9qm5-hby2-7bvn",
-      "PKSA-jjrg-2n5t-nkkj"
+      "PKSA-jjrg-2n5t-nkkj",
+      "GHSA-5pv8-ppvj-4h68"
     ],
     "title": "Prevent user enumeration using Guard or the new Authenticator-based Security",
     "summary": "Prevent user enumeration using Guard or the new Authenticator-based Security",
@@ -7821,9 +8395,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2021-05-12T08:00:00.000Z",
+    "publishedAt": "2021-05-13T20:23:02.000Z",
     "modifiedAt": "2026-03-13T22:16:14.858Z",
-    "mergedAt": "2026-05-23T22:25:19.870Z",
+    "mergedAt": "2026-05-23T22:52:56.807Z",
     "sources": [
       {
         "source": "osv",
@@ -7848,19 +8422,27 @@
         "externalId": "PKSA-jjrg-2n5t-nkkj",
         "url": "https://symfony.com/cve-2021-21424",
         "fetchedAt": "2026-05-22T16:38:48.256Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-5pv8-ppvj-4h68",
+        "url": "https://github.com/advisories/GHSA-5pv8-ppvj-4h68",
+        "fetchedAt": "2026-05-23T22:52:54.995Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.00266
+    "epss": 0.00266,
+    "ghsaId": "GHSA-5pv8-ppvj-4h68"
   },
   {
     "id": "CVE-2020-15242",
     "cveId": "CVE-2020-15242",
     "aliases": [
-      "CVE-2020-15242"
+      "CVE-2020-15242",
+      "GHSA-x56p-c8cg-q435"
     ],
     "title": "Open Redirect in Next.js versions",
     "summary": "Open Redirect in Next.js versions",
@@ -7893,17 +8475,27 @@
     "priority": 36,
     "publishedAt": "2020-10-08T19:28:07.000Z",
     "modifiedAt": "2026-03-13T22:14:13.665Z",
-    "mergedAt": "2026-05-23T22:25:19.808Z",
+    "mergedAt": "2026-05-23T22:52:56.778Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-x56p-c8cg-q435",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15242",
         "fetchedAt": "2026-05-22T13:47:27.986Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-x56p-c8cg-q435",
+        "url": "https://github.com/advisories/GHSA-x56p-c8cg-q435",
+        "fetchedAt": "2026-05-23T22:52:54.992Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00211
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00211,
+    "ghsaId": "GHSA-x56p-c8cg-q435"
   },
   {
     "id": "CVE-2020-5274",
@@ -7911,7 +8503,8 @@
     "aliases": [
       "BIT-symfony-2020-5274",
       "CVE-2020-5274",
-      "PKSA-jb88-5twc-8n28"
+      "PKSA-jb88-5twc-8n28",
+      "GHSA-m884-279h-32v2"
     ],
     "title": "Exceptions displayed in non-debug configurations in Symfony",
     "summary": "Exceptions displayed in non-debug configurations in Symfony",
@@ -7948,9 +8541,9 @@
       "reason": "direct-dep"
     },
     "priority": 36,
-    "publishedAt": "2020-03-30T14:00:00.000Z",
+    "publishedAt": "2020-03-30T20:09:31.000Z",
     "modifiedAt": "2026-03-13T22:15:59.230Z",
-    "mergedAt": "2026-05-23T22:25:19.867Z",
+    "mergedAt": "2026-05-23T22:52:56.816Z",
     "sources": [
       {
         "source": "osv",
@@ -7963,19 +8556,27 @@
         "externalId": "PKSA-jb88-5twc-8n28",
         "url": "https://symfony.com/cve-2020-5274",
         "fetchedAt": "2026-05-22T13:47:20.423Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-m884-279h-32v2",
+        "url": "https://github.com/advisories/GHSA-m884-279h-32v2",
+        "fetchedAt": "2026-05-23T22:52:54.995Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.00267
+    "epss": 0.00267,
+    "ghsaId": "GHSA-m884-279h-32v2"
   },
   {
     "id": "CVE-2019-1010266",
     "cveId": "CVE-2019-1010266",
     "aliases": [
-      "CVE-2019-1010266"
+      "CVE-2019-1010266",
+      "GHSA-x5rq-j2xg-h7qm"
     ],
     "title": "Regular Expression Denial of Service (ReDoS) in lodash",
     "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
@@ -8027,17 +8628,26 @@
     "priority": 36,
     "publishedAt": "2019-07-19T16:13:07.000Z",
     "modifiedAt": "2026-03-13T21:56:22.446Z",
-    "mergedAt": "2026-05-23T22:25:19.824Z",
+    "mergedAt": "2026-05-23T22:52:56.794Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-x5rq-j2xg-h7qm",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010266",
         "fetchedAt": "2026-05-22T13:47:27.988Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-x5rq-j2xg-h7qm",
+        "url": "https://github.com/advisories/GHSA-x5rq-j2xg-h7qm",
+        "fetchedAt": "2026-05-23T22:52:54.994Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00213
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00213,
+    "ghsaId": "GHSA-x5rq-j2xg-h7qm"
   },
   {
     "id": "h-b77627a0b21c",
@@ -8580,7 +9190,8 @@
     "id": "CVE-2026-27977",
     "cveId": "CVE-2026-27977",
     "aliases": [
-      "CVE-2026-27977"
+      "CVE-2026-27977",
+      "GHSA-jcc7-9wpm-mj36"
     ],
     "title": "Next.js: null origin can bypass dev HMR websocket CSRF checks",
     "summary": "Next.js: null origin can bypass dev HMR websocket CSRF checks",
@@ -8612,17 +9223,27 @@
     "priority": 28,
     "publishedAt": "2026-03-17T15:29:48.000Z",
     "modifiedAt": "2026-03-25T19:49:01.129Z",
-    "mergedAt": "2026-05-23T22:25:19.803Z",
+    "mergedAt": "2026-05-23T22:52:56.766Z",
     "sources": [
       {
         "source": "osv",
         "externalId": "GHSA-jcc7-9wpm-mj36",
         "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27977",
         "fetchedAt": "2026-05-22T13:47:27.985Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-jcc7-9wpm-mj36",
+        "url": "https://github.com/advisories/GHSA-jcc7-9wpm-mj36",
+        "fetchedAt": "2026-05-23T22:52:54.991Z"
       }
     ],
-    "tags": [],
-    "epss": 0.00006
+    "tags": [
+      "frontend",
+      "nextjs"
+    ],
+    "epss": 0.00006,
+    "ghsaId": "GHSA-jcc7-9wpm-mj36"
   },
   {
     "id": "CVE-2020-5255",
@@ -8631,7 +9252,8 @@
       "BIT-symfony-2020-5255",
       "CVE-2020-5255",
       "PKSA-5vcz-b73r-4b7v",
-      "PKSA-t4rz-hp2g-57t1"
+      "PKSA-t4rz-hp2g-57t1",
+      "GHSA-mcx4-f5f5-4859"
     ],
     "title": "Prevent cache poisoning via a Response Content-Type header in Symfony",
     "summary": "Prevent cache poisoning via a Response Content-Type header in Symfony",
@@ -8668,9 +9290,9 @@
       "reason": "direct-dep"
     },
     "priority": 26,
-    "publishedAt": "2020-03-30T14:00:00.000Z",
+    "publishedAt": "2020-03-30T20:09:16.000Z",
     "modifiedAt": "2026-03-13T22:01:08.748Z",
-    "mergedAt": "2026-05-23T22:25:19.871Z",
+    "mergedAt": "2026-05-23T22:52:56.816Z",
     "sources": [
       {
         "source": "osv",
@@ -8689,13 +9311,20 @@
         "externalId": "PKSA-t4rz-hp2g-57t1",
         "url": "https://symfony.com/cve-2020-5255",
         "fetchedAt": "2026-05-22T16:38:48.256Z"
+      },
+      {
+        "source": "ghsa-stack",
+        "externalId": "GHSA-mcx4-f5f5-4859",
+        "url": "https://github.com/advisories/GHSA-mcx4-f5f5-4859",
+        "fetchedAt": "2026-05-23T22:52:54.996Z"
       }
     ],
     "tags": [
       "backend",
       "symfony"
     ],
-    "epss": 0.00374
+    "epss": 0.00374,
+    "ghsaId": "GHSA-mcx4-f5f5-4859"
   },
   {
     "id": "CVE-2024-49958",

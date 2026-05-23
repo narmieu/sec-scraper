@@ -1,98 +1,23 @@
 {
-  "startedAt": "2026-05-23T22:25:03.231Z",
-  "finishedAt": "2026-05-23T22:25:23.463Z",
-  "durationMs": 20232,
+  "startedAt": "2026-05-23T22:52:48.515Z",
+  "finishedAt": "2026-05-23T22:53:00.764Z",
+  "durationMs": 12249,
   "stats": {
-    "newCount": 1473,
-    "updatedCount": 1379,
+    "newCount": 1469,
+    "updatedCount": 1380,
     "droppedCount": 0,
-    "alertCount": 0
+    "alertCount": 1
   },
   "sources": {
-    "ghsa": {
+    "ghsa-stack": {
       "ok": true,
-      "fetched": 1,
-      "durationMs": 242
+      "fetched": 232,
+      "durationMs": 6463
     },
-    "osv": {
-      "ok": true,
-      "fetched": 282,
-      "durationMs": 14744
-    },
-    "nvd": {
+    "arxiv-cs-cr": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 8230
-    },
-    "cve-org": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 594
-    },
-    "packagist": {
-      "ok": true,
-      "fetched": 206,
-      "durationMs": 349
-    },
-    "friendsofphp-advisories": {
-      "ok": true,
-      "fetched": 10,
-      "durationMs": 218
-    },
-    "symfony-security": {
-      "ok": true,
-      "fetched": 5,
-      "durationMs": 191
-    },
-    "npm-blog": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 436
-    },
-    "github-repo-advisories": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 8890
-    },
-    "nextjs-releases": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1021
-    },
-    "nodejs-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 202
-    },
-    "php-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1529
-    },
-    "github-security-lab": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 565
-    },
-    "project-zero": {
-      "ok": true,
-      "fetched": 1,
-      "durationMs": 1006
-    },
-    "cisa-alerts": {
-      "ok": true,
-      "fetched": 30,
-      "durationMs": 415
-    },
-    "cloudflare-blog": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 644
-    },
-    "vercel-changelog": {
-      "ok": true,
-      "fetched": 4,
-      "durationMs": 1363
+      "durationMs": 97
     }
   },
   "errors": []

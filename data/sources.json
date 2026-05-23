@@ -29,47 +29,11 @@
     "lastSuccess": "2026-05-23T22:25:03.231Z",
     "lastFetchedAt": "2026-05-23T22:25:03.231Z"
   },
-  "avid": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-23T16:29:33.075Z",
-    "lastFetchedAt": "2026-05-23T16:29:33.075Z"
-  },
-  "owasp-llm": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-23T16:29:33.075Z",
-    "lastFetchedAt": "2026-05-23T16:29:33.075Z"
-  },
-  "mitre-atlas": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-23T16:29:33.075Z",
-    "lastFetchedAt": "2026-05-23T16:29:33.075Z"
-  },
-  "anthropic-trust": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-23T16:29:33.075Z",
-    "lastFetchedAt": "2026-05-23T16:29:33.075Z"
-  },
-  "openai-security": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-23T16:29:33.075Z",
-    "lastFetchedAt": "2026-05-23T16:29:33.075Z"
-  },
-  "hackerone-ai": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-23T16:29:33.075Z",
-    "lastFetchedAt": "2026-05-23T16:29:33.075Z"
-  },
   "arxiv-cs-cr": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-23T16:29:33.075Z",
-    "lastFetchedAt": "2026-05-23T16:29:33.075Z"
+    "lastSuccess": "2026-05-23T22:52:48.515Z",
+    "lastFetchedAt": "2026-05-23T22:52:48.515Z"
   },
   "nodejs-security": {
     "consecutiveFailures": 0,
@@ -131,12 +95,6 @@
     "lastSuccess": "2026-05-23T22:25:03.231Z",
     "lastFetchedAt": "2026-05-23T22:25:03.231Z"
   },
-  "npm-blog": {
-    "consecutiveFailures": 0,
-    "state": "closed",
-    "lastSuccess": "2026-05-23T22:25:03.231Z",
-    "lastFetchedAt": "2026-05-23T22:25:03.231Z"
-  },
   "github-repo-advisories": {
     "consecutiveFailures": 0,
     "state": "closed",
@@ -148,5 +106,11 @@
     "state": "closed",
     "lastSuccess": "2026-05-23T20:25:21.217Z",
     "lastFetchedAt": "2026-05-23T20:25:21.217Z"
+  },
+  "ghsa-stack": {
+    "consecutiveFailures": 0,
+    "state": "closed",
+    "lastSuccess": "2026-05-23T22:52:48.515Z",
+    "lastFetchedAt": "2026-05-23T22:52:48.515Z"
   }
 }
