@@ -1,25 +1,41 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import { SEVERITIES, ECOSYSTEMS, type Ecosystem, type Severity } from '@sec/shared';
-import { useStore } from '../lib/store';
+import { useStore } from '@/lib/store';
+
+export interface SourceOption {
+  id: string;
+  count: number;
+  state: 'closed' | 'open' | 'half-open';
+}
+
+const STATE_DOT: Record<SourceOption['state'], string> = {
+  closed: 'bg-emerald-500',
+  'half-open': 'bg-yellow-400',
+  open: 'bg-red-500',
+};
+
+const STATE_TITLE: Record<SourceOption['state'], string> = {
+  closed: 'healthy',
+  'half-open': 'recovering',
+  open: 'failing',
+};
 
 function toggle<T>(arr: T[], item: T): T[] {
   return arr.includes(item) ? arr.filter((x) => x !== item) : [...arr, item];
 }
 
-export function FilterSidebar() {
+export function FilterSidebar({ sourceOptions }: { sourceOptions: SourceOption[] }) {
   const open = useStore((s) => s.filtersOpen);
   const setOpen = useStore((s) => s.setFiltersOpen);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 
-  // Body scroll lock while drawer is open
   useEffect(() => {
     if (!open) return;
     document.body.classList.add('overflow-hidden');
     return () => document.body.classList.remove('overflow-hidden');
   }, [open]);
 
-  // Esc-to-close
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -29,19 +45,16 @@ export function FilterSidebar() {
     return () => window.removeEventListener('keydown', onKey);
   }, [open, setOpen]);
 
-  // Move focus to Close button when drawer opens
   useEffect(() => {
     if (open) closeBtnRef.current?.focus();
   }, [open]);
 
   return (
     <>
-      {/* Inline aside on lg+ */}
-      <aside className="hidden lg:block w-56 shrink-0 border-r border-zinc-800 p-4">
-        <FilterPanel />
+      <aside className="hidden lg:block w-60 shrink-0 border-r border-zinc-800 p-4 overflow-y-auto sticky top-[57px] self-start max-h-[calc(100vh-57px)]">
+        <FilterPanel sourceOptions={sourceOptions} />
       </aside>
 
-      {/* Drawer + backdrop on <lg */}
       {open && (
         <div className="lg:hidden fixed inset-0 z-40">
           <div
@@ -65,7 +78,7 @@ export function FilterSidebar() {
                 Close
               </button>
             </div>
-            <FilterPanel />
+            <FilterPanel sourceOptions={sourceOptions} />
           </aside>
         </div>
       )}
@@ -73,20 +86,26 @@ export function FilterSidebar() {
   );
 }
 
-function FilterPanel() {
+function SectionHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-muted)]">
+      {children}
+    </h3>
+  );
+}
+
+function FilterPanel({ sourceOptions }: { sourceOptions: SourceOption[] }) {
   const filters = useStore((s) => s.filters);
   const setFilters = useStore((s) => s.setFilters);
   const reset = useStore((s) => s.reset);
 
   return (
     <>
-      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-[var(--color-muted)]">
-        Severity
-      </h3>
-      <ul className="mb-4 space-y-1">
+      <SectionHeading>Severity</SectionHeading>
+      <ul className="mb-5 space-y-0.5">
         {SEVERITIES.map((s) => (
           <li key={s}>
-            <label className="flex cursor-pointer items-center gap-2 text-sm py-1">
+            <label className="flex cursor-pointer items-center gap-2 text-sm py-1 hover:text-[var(--color-fg)]">
               <input
                 type="checkbox"
                 checked={filters.severities.includes(s)}
@@ -100,13 +119,11 @@ function FilterPanel() {
         ))}
       </ul>
 
-      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-[var(--color-muted)]">
-        Ecosystem
-      </h3>
-      <ul className="mb-4 space-y-1">
+      <SectionHeading>Ecosystem</SectionHeading>
+      <ul className="mb-5 space-y-0.5">
         {ECOSYSTEMS.map((e) => (
           <li key={e}>
-            <label className="flex cursor-pointer items-center gap-2 text-sm py-1">
+            <label className="flex cursor-pointer items-center gap-2 text-sm py-1 hover:text-[var(--color-fg)]">
               <input
                 type="checkbox"
                 checked={filters.ecosystems.includes(e)}
@@ -120,12 +137,10 @@ function FilterPanel() {
         ))}
       </ul>
 
-      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-[var(--color-muted)]">
-        Display
-      </h3>
-      <ul className="space-y-1 text-sm">
+      <SectionHeading>Display</SectionHeading>
+      <ul className="mb-5 space-y-0.5 text-sm">
         <li>
-          <label className="flex cursor-pointer items-center gap-2 py-1">
+          <label className="flex cursor-pointer items-center gap-2 py-1 hover:text-[var(--color-fg)]">
             <input
               type="checkbox"
               checked={filters.stackMatchOnly}
@@ -135,7 +150,7 @@ function FilterPanel() {
           </label>
         </li>
         <li>
-          <label className="flex cursor-pointer items-center gap-2 py-1">
+          <label className="flex cursor-pointer items-center gap-2 py-1 hover:text-[var(--color-fg)]">
             <input
               type="checkbox"
               checked={filters.kevOnly}
@@ -145,7 +160,7 @@ function FilterPanel() {
           </label>
         </li>
         <li>
-          <label className="flex cursor-pointer items-center gap-2 py-1">
+          <label className="flex cursor-pointer items-center gap-2 py-1 hover:text-[var(--color-fg)]">
             <input
               type="checkbox"
               checked={filters.hideRead}
@@ -155,7 +170,7 @@ function FilterPanel() {
           </label>
         </li>
         <li>
-          <label className="flex cursor-pointer items-center gap-2 py-1">
+          <label className="flex cursor-pointer items-center gap-2 py-1 hover:text-[var(--color-fg)]">
             <input
               type="checkbox"
               checked={filters.showDismissed}
@@ -166,12 +181,53 @@ function FilterPanel() {
         </li>
       </ul>
 
+      {sourceOptions.length > 0 && (
+        <>
+          <div className="mb-2 flex items-center justify-between">
+            <SectionHeading>Sources</SectionHeading>
+            {filters.sources.length > 0 && (
+              <button
+                type="button"
+                onClick={() => setFilters({ sources: [] })}
+                className="mb-2 text-[10px] uppercase tracking-wide text-[var(--color-muted)] hover:text-[var(--color-fg)]"
+              >
+                clear
+              </button>
+            )}
+          </div>
+          <ul className="mb-5 max-h-72 overflow-y-auto pr-1 space-y-0.5">
+            {sourceOptions.map((s) => {
+              const active = filters.sources.includes(s.id);
+              return (
+                <li key={s.id}>
+                  <label className="flex cursor-pointer items-center gap-2 py-1 text-sm hover:text-[var(--color-fg)]">
+                    <input
+                      type="checkbox"
+                      checked={active}
+                      onChange={() => setFilters({ sources: toggle(filters.sources, s.id) })}
+                    />
+                    <span
+                      title={STATE_TITLE[s.state]}
+                      className={`h-1.5 w-1.5 shrink-0 rounded-full ${STATE_DOT[s.state]}`}
+                    />
+                    <span className="truncate flex-1">{s.id}</span>
+                    <span className="text-[10px] tabular-nums text-[var(--color-muted)]">
+                      {s.count}
+                    </span>
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      )}
+
       <button
         type="button"
         onClick={reset}
-        className="mt-4 rounded border border-zinc-700 px-3 py-2 text-xs min-h-[36px] text-[var(--color-muted)] hover:text-[var(--color-fg)]"
+        className="mt-2 rounded border border-zinc-700 px-3 py-2 text-xs min-h-[36px] text-[var(--color-muted)] hover:text-[var(--color-fg)]"
       >
-        Reset
+        Reset all
       </button>
     </>
   );
