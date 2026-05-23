@@ -296,7 +296,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-23T14:40:19.339Z",
+    "mergedAt": "2026-05-23T15:31:55.379Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -349,7 +349,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-23T14:40:19.340Z",
+    "mergedAt": "2026-05-23T15:31:55.379Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2080,14 +2080,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2103,7 +2103,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-23T14:40:19.340Z",
+    "mergedAt": "2026-05-23T15:31:55.379Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2121,7 +2121,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00197
   },
   {
     "id": "CVE-2026-20131",
@@ -19987,6 +19987,43 @@
     "epss": 0.00015
   },
   {
+    "id": "CVE-2024-1451",
+    "cveId": "CVE-2024-1451",
+    "aliases": [
+      "CVE-2024-1451"
+    ],
+    "title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
+    "summary": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.9 before 16.9.1. A crafted payload added to the user profile page could lead to a stored XSS on the client side, allowing attackers to perform arbitrary actions on behalf of victims.\"",
+    "severity": "high",
+    "cvss": 8.7,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2024-02-21T23:30:49.790Z",
+    "modifiedAt": "2026-05-23T04:05:17.051Z",
+    "mergedAt": "2026-05-23T07:08:43.538Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-1451",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/1xxx/CVE-2024-1451.json",
+        "fetchedAt": "2026-05-23T07:08:43.538Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.29088
+  },
+  {
     "id": "CVE-2026-34003",
     "cveId": "CVE-2026-34003",
     "aliases": [
@@ -20008,7 +20045,7 @@
       "packages": [],
       "reason": "topic-mention"
     },
-    "priority": 14,
+    "priority": 13,
     "publishedAt": "2026-04-23T14:54:05.479Z",
     "modifiedAt": "2026-05-20T02:11:39.617Z",
     "mergedAt": "2026-05-22T16:40:00.132Z",
@@ -20045,7 +20082,7 @@
       "packages": [],
       "reason": "topic-mention"
     },
-    "priority": 14,
+    "priority": 13,
     "publishedAt": "2026-04-23T14:54:00.333Z",
     "modifiedAt": "2026-05-20T02:11:16.385Z",
     "mergedAt": "2026-05-22T16:40:00.132Z",
@@ -20082,7 +20119,7 @@
       "packages": [],
       "reason": "topic-mention"
     },
-    "priority": 14,
+    "priority": 13,
     "publishedAt": "2026-04-23T14:53:59.414Z",
     "modifiedAt": "2026-05-20T02:10:50.010Z",
     "mergedAt": "2026-05-22T16:40:00.132Z",
@@ -20096,43 +20133,6 @@
     ],
     "tags": [],
     "epss": 0.00005
-  },
-  {
-    "id": "CVE-2024-1451",
-    "cveId": "CVE-2024-1451",
-    "aliases": [
-      "CVE-2024-1451"
-    ],
-    "title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
-    "summary": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.9 before 16.9.1. A crafted payload added to the user profile page could lead to a stored XSS on the client side, allowing attackers to perform arbitrary actions on behalf of victims.\"",
-    "severity": "high",
-    "cvss": 8.7,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 14,
-    "publishedAt": "2024-02-21T23:30:49.790Z",
-    "modifiedAt": "2026-05-23T04:05:17.051Z",
-    "mergedAt": "2026-05-23T07:08:43.538Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2024-1451",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/1xxx/CVE-2024-1451.json",
-        "fetchedAt": "2026-05-23T07:08:43.538Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.29088
   },
   {
     "id": "CVE-2026-31433",
@@ -32173,42 +32173,6 @@
     ]
   },
   {
-    "id": "h-85924e98dc2f",
-    "aliases": [
-      "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html"
-    ],
-    "title": "Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming",
-    "summary": "A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It",
-    "details": "A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-16T15:20:48.000Z",
-    "modifiedAt": "2026-05-16T15:20:48.000Z",
-    "mergedAt": "2026-05-22T15:13:41.720Z",
-    "sources": [
-      {
-        "source": "thehackernews",
-        "externalId": "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html",
-        "url": "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html",
-        "fetchedAt": "2026-05-22T13:47:20.316Z"
-      }
-    ],
-    "tags": [
-      "general"
-    ]
-  },
-  {
     "id": "CVE-2026-44919",
     "cveId": "CVE-2026-44919",
     "aliases": [
@@ -33434,6 +33398,42 @@
     ],
     "tags": [],
     "epss": 0.00026
+  },
+  {
+    "id": "h-85924e98dc2f",
+    "aliases": [
+      "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html"
+    ],
+    "title": "Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming",
+    "summary": "A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It",
+    "details": "A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-16T15:20:48.000Z",
+    "modifiedAt": "2026-05-16T15:20:48.000Z",
+    "mergedAt": "2026-05-22T15:13:41.720Z",
+    "sources": [
+      {
+        "source": "thehackernews",
+        "externalId": "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html",
+        "url": "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html",
+        "fetchedAt": "2026-05-22T13:47:20.316Z"
+      }
+    ],
+    "tags": [
+      "general"
+    ]
   },
   {
     "id": "h-f75e48bde44d",
