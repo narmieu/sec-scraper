@@ -1,101 +1,15 @@
 {
-  "startedAt": "2026-05-24T16:29:52.880Z",
-  "finishedAt": "2026-05-24T16:30:13.248Z",
-  "durationMs": 20368,
+  "startedAt": "2026-05-24T17:28:37.459Z",
+  "finishedAt": "2026-05-24T17:28:43.808Z",
+  "durationMs": 6349,
   "stats": {
     "newCount": 1,
     "updatedCount": 1528,
-    "archivedCount": 1475,
+    "archivedCount": 1309,
     "droppedCount": 0,
-    "filteredCount": 23,
+    "filteredCount": 0,
     "alertCount": 0
   },
-  "sources": {
-    "ghsa": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 204
-    },
-    "osv": {
-      "ok": true,
-      "fetched": 282,
-      "durationMs": 13802
-    },
-    "nvd": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 199
-    },
-    "cve-org": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 738
-    },
-    "packagist": {
-      "ok": true,
-      "fetched": 206,
-      "durationMs": 230
-    },
-    "friendsofphp-advisories": {
-      "ok": true,
-      "fetched": 10,
-      "durationMs": 192
-    },
-    "symfony-security": {
-      "ok": true,
-      "fetched": 5,
-      "durationMs": 220
-    },
-    "github-repo-advisories": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 7967
-    },
-    "nextjs-releases": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1163
-    },
-    "nodejs-security": {
-      "ok": true,
-      "fetched": 6,
-      "durationMs": 199
-    },
-    "php-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1155
-    },
-    "github-security-lab": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 228
-    },
-    "project-zero": {
-      "ok": true,
-      "fetched": 1,
-      "durationMs": 1430
-    },
-    "cisa-alerts": {
-      "ok": true,
-      "fetched": 30,
-      "durationMs": 170
-    },
-    "cisa-vulnrichment": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 263
-    },
-    "cloudflare-blog": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 624
-    },
-    "vercel-changelog": {
-      "ok": true,
-      "fetched": 3,
-      "durationMs": 575
-    }
-  },
+  "sources": {},
   "errors": []
 }
