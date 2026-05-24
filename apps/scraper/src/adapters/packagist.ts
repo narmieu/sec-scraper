@@ -57,6 +57,7 @@ const PACKAGES = [
 
 export const packagistAdapter: Adapter = {
   id: 'packagist',
+  kind: 'advisory',
   cadence: 'hourly',
 
   async fetch(_cursor: SourceCursor): Promise<FetchResult> {

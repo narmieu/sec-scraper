@@ -50,6 +50,7 @@ function rangeToString(events: { introduced?: string; fixed?: string }[]): {
 export function makeOsvAdapter(targets: StackTargets): Adapter {
   return {
     id: 'osv',
+    kind: 'advisory',
     cadence: 'hourly',
 
     async fetch(_cursor: SourceCursor): Promise<FetchResult> {

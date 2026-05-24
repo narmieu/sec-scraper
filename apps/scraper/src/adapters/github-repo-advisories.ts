@@ -42,6 +42,7 @@ interface RawItem {
 export function makeGithubRepoAdvisoriesAdapter(targets: StackTargets): Adapter {
   return {
     id: 'github-repo-advisories',
+    kind: 'advisory',
     cadence: 'hourly',
 
     async fetch(cursor: SourceCursor): Promise<FetchResult> {

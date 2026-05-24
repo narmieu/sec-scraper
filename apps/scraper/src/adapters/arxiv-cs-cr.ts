@@ -22,6 +22,7 @@ function looksAiSecurity(item: RssItem): boolean {
 
 export const arxivCsCrAdapter = makeRssAdapter({
   id: 'arxiv-cs-cr',
+  kind: 'research',
   cadence: '6h',
   url: 'https://export.arxiv.org/rss/cs.CR',
   ecosystems: ['ai-llm'],

@@ -8,6 +8,7 @@ function looksSecurity(item: RssItem): boolean {
 
 export const nextjsReleasesAdapter = makeRssAdapter({
   id: 'nextjs-releases',
+  kind: 'changelog',
   url: 'https://github.com/vercel/next.js/releases.atom',
   ecosystems: ['npm'],
   tags: ['frontend', 'nextjs'],
