@@ -19,7 +19,12 @@ function main(): void {
 
   const rawStack = loadStack(paths);
   const parsed = StackSchema.safeParse(rawStack);
-  const stack = parsed.success ? parsed.data : { frontend: {}, backend: {}, tools: {} };
+  if (!parsed.success) {
+    console.warn('prune: stack.json parse failed — aborting to avoid over-pruning');
+    console.warn(parsed.error.message);
+    process.exit(1);
+  }
+  const stack = parsed.data;
   const stackIndex = buildStackIndex(stack);
   const targets = buildStackTargets(stack);
   const adapters = buildAdapters(targets);
