@@ -115,6 +115,7 @@ export const LastRun = z.object({
     updatedCount: z.number().int().nonnegative(),
     archivedCount: z.number().int().nonnegative().default(0),
     droppedCount: z.number().int().nonnegative(),
+    filteredCount: z.number().int().nonnegative().default(0),
     alertCount: z.number().int().nonnegative(),
   }),
   sources: z.record(z.string(), RunSourceStat),
