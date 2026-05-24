@@ -1,24 +1,94 @@
 {
-  "startedAt": "2026-05-24T11:36:10.731Z",
-  "finishedAt": "2026-05-24T11:36:27.073Z",
-  "durationMs": 16342,
+  "startedAt": "2026-05-24T12:36:56.162Z",
+  "finishedAt": "2026-05-24T12:37:18.143Z",
+  "durationMs": 21981,
   "stats": {
     "newCount": 1,
     "updatedCount": 1528,
-    "archivedCount": 1468,
+    "archivedCount": 1475,
     "droppedCount": 0,
     "alertCount": 0
   },
   "sources": {
-    "ghsa-stack": {
-      "ok": true,
-      "fetched": 232,
-      "durationMs": 8493
-    },
-    "arxiv-cs-cr": {
+    "ghsa": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 176
+      "durationMs": 123
+    },
+    "osv": {
+      "ok": true,
+      "fetched": 282,
+      "durationMs": 15723
+    },
+    "nvd": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 4250
+    },
+    "cve-org": {
+      "ok": true,
+      "fetched": 5,
+      "durationMs": 1306
+    },
+    "packagist": {
+      "ok": true,
+      "fetched": 206,
+      "durationMs": 211
+    },
+    "friendsofphp-advisories": {
+      "ok": true,
+      "fetched": 10,
+      "durationMs": 160
+    },
+    "symfony-security": {
+      "ok": true,
+      "fetched": 5,
+      "durationMs": 149
+    },
+    "github-repo-advisories": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 8106
+    },
+    "nextjs-releases": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 690
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 6,
+      "durationMs": 112
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 924
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 708
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 1236
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 293
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 726
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 4,
+      "durationMs": 655
     }
   },
   "errors": []
