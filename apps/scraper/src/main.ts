@@ -29,6 +29,7 @@ import {
 } from '@/pipeline/circuit-breaker.js';
 import { loadStackBundle } from '@/stack.js';
 import { dispatchAlerts } from '@/notify/dispatch.js';
+import { filterByRelevance } from '@/pipeline/relevance-filter.js';
 
 export interface RunOpts {
   dryRun?: boolean;
@@ -43,6 +44,7 @@ export interface RunReport {
   updatedCount: number;
   archivedCount: number;
   droppedCount: number;
+  filteredCount: number;
   alertCount: number;
   durationMs: number;
   errors: LastRun['errors'];
@@ -82,12 +84,23 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   }
 
   let droppedCount = 0;
+  let filteredCount = 0;
+  const kindBySourceId = new Map(adapters.map((a) => [a.id, a.kind]));
   const incoming: Vuln[] = [];
   for (const r of results) {
+    const kind = kindBySourceId.get(r.adapter.id) ?? 'advisory';
     for (const raw of r.items) {
       const parsed = normalizeVuln(raw);
       if (!parsed) {
         droppedCount++;
+        continue;
+      }
+      const verdict = filterByRelevance(parsed, kind, stackIndex);
+      if (!verdict.keep) {
+        filteredCount++;
+        if (opts.onlySource) {
+          console.warn(`[filter] drop ${r.adapter.id}: ${verdict.reason} :: ${parsed.title}`);
+        }
         continue;
       }
       incoming.push(parsed);
@@ -151,7 +164,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     startedAt,
     finishedAt: finishedAt.toISOString(),
     durationMs: finishedAt.getTime() - startedMs,
-    stats: { newCount, updatedCount, archivedCount, droppedCount, filteredCount: 0, alertCount },
+    stats: { newCount, updatedCount, archivedCount, droppedCount, filteredCount, alertCount },
     sources: Object.fromEntries(
       results.map((r) => [
         r.adapter.id,
@@ -172,6 +185,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     updatedCount,
     archivedCount,
     droppedCount,
+    filteredCount,
     alertCount,
     durationMs: lastRun.durationMs,
     errors,
