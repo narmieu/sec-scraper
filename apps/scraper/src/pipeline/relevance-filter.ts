@@ -105,10 +105,11 @@ function hasRelevanceSignal(vuln: Vuln, stack: StackIndex): boolean {
 
 function mentionsBlocklistedVendor(vuln: Vuln): boolean {
   const haystack = `${vuln.title} ${vuln.summary}`.toLowerCase();
-  return ICS_VENDOR_BLOCKLIST.some((vendor) => haystack.includes(vendor));
+  return ICS_VENDOR_BLOCKLIST.some((vendor) => containsWord(haystack, vendor));
 }
 
 function containsWord(haystack: string, needle: string): boolean {
+  if (!needle) return false;
   let idx = 0;
   while (idx < haystack.length) {
     const found = haystack.indexOf(needle, idx);
