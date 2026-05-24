@@ -55,6 +55,7 @@ interface RawItem {
 
 export const cisaVulnrichmentAdapter: Adapter = {
   id: 'cisa-vulnrichment',
+  kind: 'advisory',
   cadence: '6h',
 
   async fetch(cursor: SourceCursor): Promise<FetchResult> {

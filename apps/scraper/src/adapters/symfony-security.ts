@@ -6,6 +6,7 @@ import { makeRssAdapter } from './_make-rss-adapter';
 // keywords to surface CVE disclosures written by the Symfony core team.
 export const symfonySecurityAdapter = makeRssAdapter({
   id: 'symfony-security',
+  kind: 'advisory',
   url: 'https://feeds.feedburner.com/symfony/blog',
   ecosystems: ['composer'],
   tags: ['backend', 'symfony'],

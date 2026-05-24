@@ -41,6 +41,7 @@ const API_ECO: Record<'npm' | 'Packagist', string> = {
 export function makeGhsaStackAdapter(targets: StackTargets): Adapter {
   return {
     id: 'ghsa-stack',
+    kind: 'advisory',
     cadence: '6h',
 
     async fetch(_cursor: SourceCursor): Promise<FetchResult> {

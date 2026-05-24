@@ -38,6 +38,7 @@ function stripMillis(iso: string): string {
 
 export const ghsaAdapter: Adapter = {
   id: 'ghsa',
+  kind: 'advisory',
   cadence: 'hourly',
 
   async fetch(cursor: SourceCursor): Promise<FetchResult> {

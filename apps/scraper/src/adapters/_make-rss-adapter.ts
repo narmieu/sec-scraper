@@ -1,10 +1,11 @@
 import type { Cadence, Ecosystem, Tag, Vuln } from '@sec/shared';
 import { fetchRss, isRecent, type RssItem } from '../pipeline/rss.js';
-import type { Adapter, FetchResult, SourceCursor } from './types.js';
+import type { Adapter, FetchResult, SourceCursor, SourceKind } from './types.js';
 import { rssItemToVuln } from './_rss-helpers.js';
 
 export interface MakeRssAdapterOpts {
   id: string;
+  kind: SourceKind;
   cadence?: Cadence;
   url: string;
   ecosystems?: Ecosystem[];
@@ -15,9 +16,10 @@ export interface MakeRssAdapterOpts {
 }
 
 export function makeRssAdapter(opts: MakeRssAdapterOpts): Adapter {
-  const { id, cadence = 'hourly', url, maxAgeDays } = opts;
+  const { id, kind, cadence = 'hourly', url, maxAgeDays } = opts;
   return {
     id,
+    kind,
     cadence,
     async fetch(_cursor: SourceCursor): Promise<FetchResult> {
       const items = await fetchRss(url);

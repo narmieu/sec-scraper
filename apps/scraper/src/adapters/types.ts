@@ -10,8 +10,11 @@ export interface FetchResult {
   nextCursor?: string | undefined;
 }
 
+export type SourceKind = 'advisory' | 'changelog' | 'news' | 'research' | 'alert';
+
 export interface Adapter {
   id: string;
+  kind: SourceKind;
   cadence: Cadence;
   fetch(cursor: SourceCursor): Promise<FetchResult>;
   normalize(raw: unknown): Vuln | null;

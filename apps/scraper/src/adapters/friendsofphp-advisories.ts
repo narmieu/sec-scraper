@@ -5,6 +5,7 @@ import { makeRssAdapter } from './_make-rss-adapter';
 // commits.atom surfaces every new advisory as a commit.
 export const friendsofphpAdvisoriesAdapter = makeRssAdapter({
   id: 'friendsofphp-advisories',
+  kind: 'advisory',
   url: 'https://github.com/FriendsOfPHP/security-advisories/commits.atom',
   ecosystems: ['composer'],
   tags: ['backend', 'symfony'],

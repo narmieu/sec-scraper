@@ -27,6 +27,7 @@ interface NvdCve {
 
 export const nvdAdapter: Adapter = {
   id: 'nvd',
+  kind: 'advisory',
   cadence: 'hourly',
 
   async fetch(cursor: SourceCursor): Promise<FetchResult> {
