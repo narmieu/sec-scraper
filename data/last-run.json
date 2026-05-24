@@ -1,15 +1,96 @@
 {
-  "startedAt": "2026-05-24T20:28:47.422Z",
-  "finishedAt": "2026-05-24T20:28:53.273Z",
-  "durationMs": 5851,
+  "startedAt": "2026-05-24T21:26:34.395Z",
+  "finishedAt": "2026-05-24T21:26:54.283Z",
+  "durationMs": 19888,
   "stats": {
     "newCount": 1,
     "updatedCount": 1528,
-    "archivedCount": 1309,
+    "archivedCount": 1475,
     "droppedCount": 0,
-    "filteredCount": 0,
+    "filteredCount": 23,
     "alertCount": 0
   },
-  "sources": {},
+  "sources": {
+    "ghsa": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 136
+    },
+    "osv": {
+      "ok": true,
+      "fetched": 282,
+      "durationMs": 13655
+    },
+    "nvd": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 278
+    },
+    "cve-org": {
+      "ok": true,
+      "fetched": 8,
+      "durationMs": 1985
+    },
+    "packagist": {
+      "ok": true,
+      "fetched": 206,
+      "durationMs": 255
+    },
+    "friendsofphp-advisories": {
+      "ok": true,
+      "fetched": 10,
+      "durationMs": 237
+    },
+    "symfony-security": {
+      "ok": true,
+      "fetched": 5,
+      "durationMs": 152
+    },
+    "github-repo-advisories": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 8180
+    },
+    "nextjs-releases": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 752
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 6,
+      "durationMs": 129
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1192
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 253
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 1033
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 218
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 701
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 3,
+      "durationMs": 658
+    }
+  },
   "errors": []
 }
