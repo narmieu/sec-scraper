@@ -1,95 +1,15 @@
 {
-  "startedAt": "2026-05-24T13:39:13.349Z",
-  "finishedAt": "2026-05-24T13:39:32.666Z",
-  "durationMs": 19317,
+  "startedAt": "2026-05-24T13:45:01.690Z",
+  "finishedAt": "2026-05-24T13:45:10.765Z",
+  "durationMs": 9075,
   "stats": {
     "newCount": 1,
     "updatedCount": 1528,
-    "archivedCount": 1475,
+    "archivedCount": 1309,
     "droppedCount": 0,
+    "filteredCount": 0,
     "alertCount": 0
   },
-  "sources": {
-    "ghsa": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 115
-    },
-    "osv": {
-      "ok": true,
-      "fetched": 282,
-      "durationMs": 13270
-    },
-    "nvd": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 7790
-    },
-    "cve-org": {
-      "ok": true,
-      "fetched": 3,
-      "durationMs": 1267
-    },
-    "packagist": {
-      "ok": true,
-      "fetched": 206,
-      "durationMs": 231
-    },
-    "friendsofphp-advisories": {
-      "ok": true,
-      "fetched": 10,
-      "durationMs": 206
-    },
-    "symfony-security": {
-      "ok": true,
-      "fetched": 5,
-      "durationMs": 216
-    },
-    "github-repo-advisories": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 7990
-    },
-    "nextjs-releases": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1047
-    },
-    "nodejs-security": {
-      "ok": true,
-      "fetched": 6,
-      "durationMs": 115
-    },
-    "php-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1213
-    },
-    "github-security-lab": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 239
-    },
-    "project-zero": {
-      "ok": true,
-      "fetched": 1,
-      "durationMs": 1035
-    },
-    "cisa-alerts": {
-      "ok": true,
-      "fetched": 30,
-      "durationMs": 188
-    },
-    "cloudflare-blog": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 645
-    },
-    "vercel-changelog": {
-      "ok": true,
-      "fetched": 4,
-      "durationMs": 606
-    }
-  },
+  "sources": {},
   "errors": []
 }
