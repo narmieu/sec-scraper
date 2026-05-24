@@ -304,7 +304,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-24T14:40:15.381Z",
+    "mergedAt": "2026-05-24T15:32:31.097Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -357,7 +357,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-24T14:40:15.381Z",
+    "mergedAt": "2026-05-24T15:32:31.097Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2088,14 +2088,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2111,7 +2111,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-24T14:40:15.381Z",
+    "mergedAt": "2026-05-24T15:32:31.097Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2129,7 +2129,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00197
   },
   {
     "id": "CVE-2026-20131",
@@ -5797,47 +5797,6 @@
     "epss": 0.00013
   },
   {
-    "id": "CVE-2026-31613",
-    "cveId": "CVE-2026-31613",
-    "aliases": [
-      "CVE-2026-31613"
-    ],
-    "title": "In the Linux kernel, the following vulnerability has been resolved: smb: client: fix OOB reads parsing symlink error response When a CREATE returns STATUS_STOPPED_ON_SYMLINK, smb2_check_message() re",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved: smb: client: fix OOB reads parsing symlink error response When a CREATE returns STATUS_STOPPED_ON_SYMLINK, smb2_check_message() returns success without any length validation, leaving the symlink parsers as the only defense against an untrusted server. symlink_data() walks SMB 3.1.1 error contexts with the loop test \"p ErrorId at offset 4 and p->ErrorDataLength at offset 0. When the server-controlled ErrorDataLength advances p to within 1-7 bytes of end, the next iteration will read past it. When the matching context is found, sym->SymLinkErrorTag is read at offset 4 from p->ErrorContextData with no check that the symlink header itself fits. smb2_parse_symlink_response() then bounds-checks the substitute name using SMB2_SYMLINK_STRUCT_SIZE as the offset of PathBuffer from iov_base. That value is computed as sizeof(smb2_err_rsp) + sizeof(smb2_symlink_err_rsp), which is correct only when ErrorContextCount == 0. With at least one error context the symlink data sits 8 bytes deeper, and each skipped non-matching context shifts it further by 8 + ALIGN(ErrorDataLength, 8). The check is too short, allowing the substitute name read to run past iov_len. The out-of-bound heap bytes are UTF-16-decoded into the symlink target and returned to userspace via readlink(2). Fix this all up by making the loops test require the full context header to fit, rejecting sym if its header runs past end, and bound the substitute name against the actual position of sym->PathBuffer rather than a fixed offset. Because sub_offs and sub_len are 16bits, the pointer math will not overflow here with the new greater-than.",
-    "severity": "high",
-    "cvss": 8.1,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [
-      "CWE-125"
-    ],
-    "affected": [],
-    "stackMatch": {
-      "score": 40,
-      "packages": [
-        "next"
-      ],
-      "reason": "topic-mention"
-    },
-    "priority": 49,
-    "publishedAt": "2026-04-24T15:16:40.560Z",
-    "modifiedAt": "2026-04-28T15:13:18.267Z",
-    "mergedAt": "2026-05-23T13:39:32.545Z",
-    "sources": [
-      {
-        "source": "nvd",
-        "externalId": "CVE-2026-31613",
-        "url": "https://git.kernel.org/stable/c/3df690bba28edec865cf7190be10708ad0ddd67e",
-        "fetchedAt": "2026-05-23T12:34:22.388Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00066
-  },
-  {
     "id": "GHSA-fw8c-xr5c-95f9",
     "ghsaId": "GHSA-fw8c-xr5c-95f9",
     "aliases": [
@@ -5879,6 +5838,47 @@
       }
     ],
     "tags": []
+  },
+  {
+    "id": "CVE-2026-31613",
+    "cveId": "CVE-2026-31613",
+    "aliases": [
+      "CVE-2026-31613"
+    ],
+    "title": "In the Linux kernel, the following vulnerability has been resolved: smb: client: fix OOB reads parsing symlink error response When a CREATE returns STATUS_STOPPED_ON_SYMLINK, smb2_check_message() re",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: smb: client: fix OOB reads parsing symlink error response When a CREATE returns STATUS_STOPPED_ON_SYMLINK, smb2_check_message() returns success without any length validation, leaving the symlink parsers as the only defense against an untrusted server. symlink_data() walks SMB 3.1.1 error contexts with the loop test \"p ErrorId at offset 4 and p->ErrorDataLength at offset 0. When the server-controlled ErrorDataLength advances p to within 1-7 bytes of end, the next iteration will read past it. When the matching context is found, sym->SymLinkErrorTag is read at offset 4 from p->ErrorContextData with no check that the symlink header itself fits. smb2_parse_symlink_response() then bounds-checks the substitute name using SMB2_SYMLINK_STRUCT_SIZE as the offset of PathBuffer from iov_base. That value is computed as sizeof(smb2_err_rsp) + sizeof(smb2_symlink_err_rsp), which is correct only when ErrorContextCount == 0. With at least one error context the symlink data sits 8 bytes deeper, and each skipped non-matching context shifts it further by 8 + ALIGN(ErrorDataLength, 8). The check is too short, allowing the substitute name read to run past iov_len. The out-of-bound heap bytes are UTF-16-decoded into the symlink target and returned to userspace via readlink(2). Fix this all up by making the loops test require the full context header to fit, rejecting sym if its header runs past end, and bound the substitute name against the actual position of sym->PathBuffer rather than a fixed offset. Because sub_offs and sub_len are 16bits, the pointer math will not overflow here with the new greater-than.",
+    "severity": "high",
+    "cvss": 8.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-125"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 40,
+      "packages": [
+        "next"
+      ],
+      "reason": "topic-mention"
+    },
+    "priority": 46,
+    "publishedAt": "2026-04-24T15:16:40.560Z",
+    "modifiedAt": "2026-04-28T15:13:18.267Z",
+    "mergedAt": "2026-05-23T13:39:32.545Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-31613",
+        "url": "https://git.kernel.org/stable/c/3df690bba28edec865cf7190be10708ad0ddd67e",
+        "fetchedAt": "2026-05-23T12:34:22.388Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00066
   },
   {
     "id": "CVE-2015-20118",
