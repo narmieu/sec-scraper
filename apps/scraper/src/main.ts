@@ -151,7 +151,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     startedAt,
     finishedAt: finishedAt.toISOString(),
     durationMs: finishedAt.getTime() - startedMs,
-    stats: { newCount, updatedCount, archivedCount, droppedCount, alertCount },
+    stats: { newCount, updatedCount, archivedCount, droppedCount, filteredCount: 0, alertCount },
     sources: Object.fromEntries(
       results.map((r) => [
         r.adapter.id,
