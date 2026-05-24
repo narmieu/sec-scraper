@@ -51,7 +51,7 @@ async function main() {
   });
 
   console.warn(
-    `scrape: new=${report.newCount} updated=${report.updatedCount} archived=${report.archivedCount} dropped=${report.droppedCount} alerts=${report.alertCount} duration=${report.durationMs}ms`,
+    `scrape: new=${report.newCount} updated=${report.updatedCount} archived=${report.archivedCount} dropped=${report.droppedCount} filtered=${report.filteredCount} alerts=${report.alertCount} duration=${report.durationMs}ms`,
   );
   if (report.errors.length > 0) {
     console.warn(`errors: ${report.errors.length}`);
