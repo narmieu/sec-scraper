@@ -304,7 +304,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-24T09:03:14.057Z",
+    "mergedAt": "2026-05-24T09:44:54.819Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -357,7 +357,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-24T09:03:14.057Z",
+    "mergedAt": "2026-05-24T09:44:54.819Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2088,14 +2088,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-43520",
-    "cveId": "CVE-2025-43520",
+    "id": "CVE-2025-31277",
+    "cveId": "CVE-2025-31277",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
-    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
+    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
+    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2111,7 +2111,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-24T09:03:14.057Z",
+    "mergedAt": "2026-05-24T09:44:54.819Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2129,7 +2129,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00197
+    "epss": 0.00265
   },
   {
     "id": "CVE-2026-20131",
@@ -46821,7 +46821,7 @@
     "priority": 6,
     "publishedAt": "2024-01-12T13:56:31.881Z",
     "modifiedAt": "2026-05-23T23:00:07.150Z",
-    "mergedAt": "2026-05-24T03:21:47.647Z",
+    "mergedAt": "2026-05-24T09:44:52.414Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",

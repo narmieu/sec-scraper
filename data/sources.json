@@ -104,8 +104,8 @@
   "cisa-vulnrichment": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-24T03:21:23.336Z",
-    "lastFetchedAt": "2026-05-24T03:21:23.336Z"
+    "lastSuccess": "2026-05-24T09:44:49.913Z",
+    "lastFetchedAt": "2026-05-24T09:44:49.913Z"
   },
   "ghsa-stack": {
     "consecutiveFailures": 0,
