@@ -1,96 +1,15 @@
 {
-  "startedAt": "2026-05-24T19:36:52.455Z",
-  "finishedAt": "2026-05-24T19:37:12.545Z",
-  "durationMs": 20090,
+  "startedAt": "2026-05-24T20:28:47.422Z",
+  "finishedAt": "2026-05-24T20:28:53.273Z",
+  "durationMs": 5851,
   "stats": {
     "newCount": 1,
     "updatedCount": 1528,
-    "archivedCount": 1475,
+    "archivedCount": 1309,
     "droppedCount": 0,
-    "filteredCount": 23,
+    "filteredCount": 0,
     "alertCount": 0
   },
-  "sources": {
-    "ghsa": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 130
-    },
-    "osv": {
-      "ok": true,
-      "fetched": 282,
-      "durationMs": 13906
-    },
-    "nvd": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 6660
-    },
-    "cve-org": {
-      "ok": true,
-      "fetched": 1,
-      "durationMs": 486
-    },
-    "packagist": {
-      "ok": true,
-      "fetched": 206,
-      "durationMs": 354
-    },
-    "friendsofphp-advisories": {
-      "ok": true,
-      "fetched": 10,
-      "durationMs": 187
-    },
-    "symfony-security": {
-      "ok": true,
-      "fetched": 5,
-      "durationMs": 172
-    },
-    "github-repo-advisories": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 8308
-    },
-    "nextjs-releases": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 816
-    },
-    "nodejs-security": {
-      "ok": true,
-      "fetched": 6,
-      "durationMs": 141
-    },
-    "php-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1095
-    },
-    "github-security-lab": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 451
-    },
-    "project-zero": {
-      "ok": true,
-      "fetched": 1,
-      "durationMs": 1627
-    },
-    "cisa-alerts": {
-      "ok": true,
-      "fetched": 30,
-      "durationMs": 414
-    },
-    "cloudflare-blog": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 847
-    },
-    "vercel-changelog": {
-      "ok": true,
-      "fetched": 3,
-      "durationMs": 799
-    }
-  },
+  "sources": {},
   "errors": []
 }
