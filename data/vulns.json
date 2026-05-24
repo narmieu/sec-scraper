@@ -131,7 +131,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:19.113Z",
-    "mergedAt": "2026-05-24T22:28:06.535Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "osv",
@@ -304,7 +304,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-24T22:28:08.997Z",
+    "mergedAt": "2026-05-24T23:29:57.363Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -357,7 +357,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-24T22:28:08.997Z",
+    "mergedAt": "2026-05-24T23:29:57.363Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2088,14 +2088,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2111,7 +2111,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:08.997Z",
+    "mergedAt": "2026-05-24T23:29:57.363Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2129,7 +2129,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00197
   },
   {
     "id": "CVE-2026-20131",
@@ -2919,6 +2919,84 @@
     "epss": 0.34063
   },
   {
+    "id": "CVE-2024-53150",
+    "cveId": "CVE-2024-53150",
+    "aliases": [
+      "CVE-2024-53150"
+    ],
+    "title": "ALSA: usb-audio: Fix out of bounds reads when finding clock sources",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: ALSA: usb-audio: Fix out of bounds reads when finding clock sources The current USB-audio driver code doesn't check bLength of each descriptor at traversing for clock descriptors. That is, when a device provides a bogus descriptor with a shorter bLength, the driver might hit out-of-bounds reads. For addressing it, this patch adds sanity checks to the validator functions for the clock descriptor traversal. When the descriptor length is shorter than expected, it's skipped in the loop. For the clock source and clock multiplier descriptors, we can just check bLength against the sizeof() of each descriptor type. OTOH, the clock selector descriptor of UAC2 and UAC3 has an array of bNrInPins elements and two more fields at its tail, hence those have to be checked in addition to the sizeof() check.",
+    "severity": "high",
+    "cvss": 7.1,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+    "kev": true,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 85,
+    "publishedAt": "2024-12-24T11:28:50.175Z",
+    "modifiedAt": "2026-05-23T15:55:17.404Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-53150",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/53xxx/CVE-2024-53150.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [
+      "exploited"
+    ],
+    "epss": 0.01125
+  },
+  {
+    "id": "CVE-2024-50302",
+    "cveId": "CVE-2024-50302",
+    "aliases": [
+      "CVE-2024-50302"
+    ],
+    "title": "HID: core: zero-initialize the report buffer",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: HID: core: zero-initialize the report buffer Since the report buffer is used by all kinds of drivers in various ways, let's zero-initialize it during allocation to make sure that it can't be ever used to leak kernel memory via specially-crafted report.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "kev": true,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 85,
+    "publishedAt": "2024-11-19T01:30:51.300Z",
+    "modifiedAt": "2026-05-23T15:55:02.106Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-50302",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/50xxx/CVE-2024-50302.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [
+      "exploited"
+    ],
+    "epss": 0.02781
+  },
+  {
     "id": "CVE-2018-4063",
     "cveId": "CVE-2018-4063",
     "aliases": [
@@ -2996,7 +3074,7 @@
     "priority": 71,
     "publishedAt": "2025-03-21T15:20:12.000Z",
     "modifiedAt": "2026-03-04T15:06:29.993Z",
-    "mergedAt": "2026-05-24T22:28:06.441Z",
+    "mergedAt": "2026-05-24T23:29:54.830Z",
     "sources": [
       {
         "source": "osv",
@@ -3056,7 +3134,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:55:15.000Z",
     "modifiedAt": "2026-05-14T20:50:45.445Z",
-    "mergedAt": "2026-05-24T22:28:06.440Z",
+    "mergedAt": "2026-05-24T23:29:54.829Z",
     "sources": [
       {
         "source": "osv",
@@ -3116,7 +3194,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:53:51.000Z",
     "modifiedAt": "2026-05-14T20:48:35.793Z",
-    "mergedAt": "2026-05-24T22:28:06.435Z",
+    "mergedAt": "2026-05-24T23:29:54.824Z",
     "sources": [
       {
         "source": "osv",
@@ -3174,7 +3252,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T14:50:27.000Z",
     "modifiedAt": "2026-05-13T03:44:29.651Z",
-    "mergedAt": "2026-05-24T22:28:06.439Z",
+    "mergedAt": "2026-05-24T23:29:54.828Z",
     "sources": [
       {
         "source": "osv",
@@ -3233,7 +3311,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:34:32.000Z",
     "modifiedAt": "2026-05-06T15:29:21.389Z",
-    "mergedAt": "2026-05-24T22:28:06.469Z",
+    "mergedAt": "2026-05-24T23:29:54.851Z",
     "sources": [
       {
         "source": "osv",
@@ -3292,7 +3370,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:26:29.000Z",
     "modifiedAt": "2026-05-06T15:29:21.690Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.852Z",
     "sources": [
       {
         "source": "osv",
@@ -3352,7 +3430,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:25:47.000Z",
     "modifiedAt": "2026-05-06T15:29:22.420Z",
-    "mergedAt": "2026-05-24T22:28:06.469Z",
+    "mergedAt": "2026-05-24T23:29:54.851Z",
     "sources": [
       {
         "source": "osv",
@@ -3413,7 +3491,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:20:58.000Z",
     "modifiedAt": "2026-05-06T15:29:21.321Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.852Z",
     "sources": [
       {
         "source": "osv",
@@ -3472,7 +3550,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:18:38.000Z",
     "modifiedAt": "2026-05-12T17:16:38.232Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.852Z",
     "sources": [
       {
         "source": "osv",
@@ -3529,7 +3607,7 @@
     "priority": 67,
     "publishedAt": "2026-04-10T15:35:47.000Z",
     "modifiedAt": "2026-04-16T23:29:14.079Z",
-    "mergedAt": "2026-05-24T22:28:06.449Z",
+    "mergedAt": "2026-05-24T23:29:54.835Z",
     "sources": [
       {
         "source": "osv",
@@ -3606,7 +3684,7 @@
     "priority": 67,
     "publishedAt": "2026-04-01T23:51:12.000Z",
     "modifiedAt": "2026-04-02T17:29:57.498Z",
-    "mergedAt": "2026-05-24T22:28:06.475Z",
+    "mergedAt": "2026-05-24T23:29:54.856Z",
     "sources": [
       {
         "source": "osv",
@@ -3691,7 +3769,7 @@
     "priority": 66,
     "publishedAt": "2019-07-10T19:45:23.000Z",
     "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-24T22:28:06.474Z",
+    "mergedAt": "2026-05-24T23:29:54.856Z",
     "sources": [
       {
         "source": "osv",
@@ -3751,7 +3829,7 @@
     "priority": 65,
     "publishedAt": "2026-02-09T17:46:14.000Z",
     "modifiedAt": "2026-05-08T14:03:50.604Z",
-    "mergedAt": "2026-05-24T22:28:06.468Z",
+    "mergedAt": "2026-05-24T23:29:54.850Z",
     "sources": [
       {
         "source": "osv",
@@ -3851,7 +3929,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:18.836Z",
-    "mergedAt": "2026-05-24T22:28:06.535Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "osv",
@@ -3915,7 +3993,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.837Z",
-    "mergedAt": "2026-05-24T22:28:06.536Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "osv",
@@ -3976,7 +4054,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T15:44:33.359Z",
-    "mergedAt": "2026-05-24T22:28:06.536Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -4035,7 +4113,7 @@
     "priority": 61,
     "publishedAt": "2021-11-11T13:30:00.000Z",
     "modifiedAt": "2026-03-13T22:00:38.072Z",
-    "mergedAt": "2026-05-24T22:28:06.535Z",
+    "mergedAt": "2026-05-24T23:29:54.916Z",
     "sources": [
       {
         "source": "osv",
@@ -4100,7 +4178,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.214Z",
-    "mergedAt": "2026-05-24T22:28:06.536Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "osv",
@@ -4163,7 +4241,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.132Z",
-    "mergedAt": "2026-05-24T22:28:06.536Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "osv",
@@ -4229,7 +4307,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T16:21:19.000Z",
     "modifiedAt": "2026-05-14T20:47:46.572Z",
-    "mergedAt": "2026-05-24T22:28:06.435Z",
+    "mergedAt": "2026-05-24T23:29:54.824Z",
     "sources": [
       {
         "source": "osv",
@@ -4301,7 +4379,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:56:24.000Z",
     "modifiedAt": "2026-05-14T20:50:54.621Z",
-    "mergedAt": "2026-05-24T22:28:06.448Z",
+    "mergedAt": "2026-05-24T23:29:54.835Z",
     "sources": [
       {
         "source": "osv",
@@ -4361,7 +4439,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:54:08.000Z",
     "modifiedAt": "2026-05-14T20:47:43.284Z",
-    "mergedAt": "2026-05-24T22:28:06.437Z",
+    "mergedAt": "2026-05-24T23:29:54.825Z",
     "sources": [
       {
         "source": "osv",
@@ -4415,7 +4493,7 @@
     "priority": 55,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.535Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -4466,7 +4544,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:57:12.000Z",
     "modifiedAt": "2026-05-14T20:51:12.557Z",
-    "mergedAt": "2026-05-24T22:28:06.441Z",
+    "mergedAt": "2026-05-24T23:29:54.830Z",
     "sources": [
       {
         "source": "osv",
@@ -4526,7 +4604,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:38.000Z",
     "modifiedAt": "2026-05-14T20:51:25.401Z",
-    "mergedAt": "2026-05-24T22:28:06.447Z",
+    "mergedAt": "2026-05-24T23:29:54.834Z",
     "sources": [
       {
         "source": "osv",
@@ -4586,7 +4664,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:05.000Z",
     "modifiedAt": "2026-05-14T20:51:26.606Z",
-    "mergedAt": "2026-05-24T22:28:06.448Z",
+    "mergedAt": "2026-05-24T23:29:54.834Z",
     "sources": [
       {
         "source": "osv",
@@ -4646,7 +4724,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:54:46.000Z",
     "modifiedAt": "2026-05-14T20:52:45.704Z",
-    "mergedAt": "2026-05-24T22:28:06.451Z",
+    "mergedAt": "2026-05-24T23:29:54.837Z",
     "sources": [
       {
         "source": "osv",
@@ -4706,7 +4784,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:45.000Z",
     "modifiedAt": "2026-05-06T15:29:22.982Z",
-    "mergedAt": "2026-05-24T22:28:06.468Z",
+    "mergedAt": "2026-05-24T23:29:54.850Z",
     "sources": [
       {
         "source": "osv",
@@ -4765,7 +4843,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:17.000Z",
     "modifiedAt": "2026-05-06T15:29:25.469Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.852Z",
     "sources": [
       {
         "source": "osv",
@@ -4824,7 +4902,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:33:25.000Z",
     "modifiedAt": "2026-05-06T15:29:22.484Z",
-    "mergedAt": "2026-05-24T22:28:06.469Z",
+    "mergedAt": "2026-05-24T23:29:54.851Z",
     "sources": [
       {
         "source": "osv",
@@ -4883,7 +4961,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:26:57.000Z",
     "modifiedAt": "2026-05-06T15:29:25.221Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.852Z",
     "sources": [
       {
         "source": "osv",
@@ -4943,7 +5021,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:25:22.000Z",
     "modifiedAt": "2026-05-06T15:29:24.391Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.853Z",
     "sources": [
       {
         "source": "osv",
@@ -5003,7 +5081,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:21:39.000Z",
     "modifiedAt": "2026-05-06T15:29:25.530Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.852Z",
     "sources": [
       {
         "source": "osv",
@@ -5063,7 +5141,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:19:33.000Z",
     "modifiedAt": "2026-05-06T15:29:23.367Z",
-    "mergedAt": "2026-05-24T22:28:06.468Z",
+    "mergedAt": "2026-05-24T23:29:54.850Z",
     "sources": [
       {
         "source": "osv",
@@ -5124,7 +5202,7 @@
     "priority": 52,
     "publishedAt": "2026-04-10T19:47:16.000Z",
     "modifiedAt": "2026-05-20T00:30:10.353Z",
-    "mergedAt": "2026-05-24T22:28:06.470Z",
+    "mergedAt": "2026-05-24T23:29:54.852Z",
     "sources": [
       {
         "source": "osv",
@@ -5184,7 +5262,7 @@
     "priority": 52,
     "publishedAt": "2026-04-09T17:32:19.000Z",
     "modifiedAt": "2026-05-08T13:46:43.000Z",
-    "mergedAt": "2026-05-24T22:28:06.468Z",
+    "mergedAt": "2026-05-24T23:29:54.850Z",
     "sources": [
       {
         "source": "osv",
@@ -5261,7 +5339,7 @@
     "priority": 52,
     "publishedAt": "2026-04-01T23:50:27.000Z",
     "modifiedAt": "2026-04-02T17:29:51.565Z",
-    "mergedAt": "2026-05-24T22:28:06.473Z",
+    "mergedAt": "2026-05-24T23:29:54.855Z",
     "sources": [
       {
         "source": "osv",
@@ -5320,7 +5398,7 @@
     "priority": 51,
     "publishedAt": "2021-12-07T21:12:09.000Z",
     "modifiedAt": "2026-03-13T22:00:36.554Z",
-    "mergedAt": "2026-05-24T22:28:06.435Z",
+    "mergedAt": "2026-05-24T23:29:54.824Z",
     "sources": [
       {
         "source": "osv",
@@ -5380,7 +5458,7 @@
     "priority": 51,
     "publishedAt": "2021-09-01T18:24:22.000Z",
     "modifiedAt": "2026-03-13T22:00:20.154Z",
-    "mergedAt": "2026-05-24T22:28:06.440Z",
+    "mergedAt": "2026-05-24T23:29:54.829Z",
     "sources": [
       {
         "source": "osv",
@@ -5449,7 +5527,7 @@
     "priority": 51,
     "publishedAt": "2020-09-02T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:14:38.594Z",
-    "mergedAt": "2026-05-24T22:28:06.529Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "osv",
@@ -5536,7 +5614,7 @@
     "priority": 51,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:03.504Z",
-    "mergedAt": "2026-05-24T22:28:06.530Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "osv",
@@ -5606,7 +5684,7 @@
     "priority": 51,
     "publishedAt": "2020-01-30T21:22:15.000Z",
     "modifiedAt": "2026-03-13T22:01:20.067Z",
-    "mergedAt": "2026-05-24T22:28:06.456Z",
+    "mergedAt": "2026-05-24T23:29:54.841Z",
     "sources": [
       {
         "source": "osv",
@@ -5665,7 +5743,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:18.155Z",
-    "mergedAt": "2026-05-24T22:28:06.536Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "osv",
@@ -5729,7 +5807,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:19.441Z",
-    "mergedAt": "2026-05-24T22:28:06.535Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "osv",
@@ -5828,7 +5906,7 @@
     "priority": 47,
     "publishedAt": "2026-03-31T03:15:49.000Z",
     "modifiedAt": "2026-04-07T14:52:30.013Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.853Z",
     "sources": [
       {
         "source": "osv",
@@ -6003,7 +6081,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T16:12:07.000Z",
     "modifiedAt": "2026-05-14T20:48:38.453Z",
-    "mergedAt": "2026-05-24T22:28:06.436Z",
+    "mergedAt": "2026-05-24T23:29:54.825Z",
     "sources": [
       {
         "source": "osv",
@@ -6063,7 +6141,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T15:56:48.000Z",
     "modifiedAt": "2026-05-14T20:52:41.365Z",
-    "mergedAt": "2026-05-24T22:28:06.451Z",
+    "mergedAt": "2026-05-24T23:29:54.836Z",
     "sources": [
       {
         "source": "osv",
@@ -6124,7 +6202,7 @@
     "priority": 45,
     "publishedAt": "2026-05-05T00:18:03.000Z",
     "modifiedAt": "2026-05-06T15:29:21.463Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.853Z",
     "sources": [
       {
         "source": "osv",
@@ -6222,7 +6300,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.533Z",
+    "mergedAt": "2026-05-24T23:29:54.915Z",
     "sources": [
       {
         "source": "packagist",
@@ -6274,7 +6352,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6321,7 +6399,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T13:37:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.545Z",
+    "mergedAt": "2026-05-24T23:29:54.925Z",
     "sources": [
       {
         "source": "packagist",
@@ -6380,7 +6458,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.533Z",
+    "mergedAt": "2026-05-24T23:29:54.915Z",
     "sources": [
       {
         "source": "packagist",
@@ -6432,7 +6510,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6478,7 +6556,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6525,7 +6603,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.545Z",
+    "mergedAt": "2026-05-24T23:29:54.925Z",
     "sources": [
       {
         "source": "packagist",
@@ -6578,7 +6656,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6625,7 +6703,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6678,7 +6756,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6730,7 +6808,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.529Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "packagist",
@@ -6782,7 +6860,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6828,7 +6906,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6874,7 +6952,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -6921,7 +6999,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.545Z",
+    "mergedAt": "2026-05-24T23:29:54.925Z",
     "sources": [
       {
         "source": "packagist",
@@ -6980,7 +7058,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.529Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "packagist",
@@ -7032,7 +7110,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -7078,7 +7156,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -7124,7 +7202,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -7176,7 +7254,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.529Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "packagist",
@@ -7234,7 +7312,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.533Z",
+    "mergedAt": "2026-05-24T23:29:54.915Z",
     "sources": [
       {
         "source": "packagist",
@@ -7286,7 +7364,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.524Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "packagist",
@@ -7344,7 +7422,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.529Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "packagist",
@@ -7402,7 +7480,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.536Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -7447,7 +7525,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.536Z",
+    "mergedAt": "2026-05-24T23:29:54.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -7742,7 +7820,7 @@
     "priority": 38,
     "publishedAt": "2026-04-08T15:51:48.000Z",
     "modifiedAt": "2026-05-05T16:10:10.879Z",
-    "mergedAt": "2026-05-24T22:28:06.471Z",
+    "mergedAt": "2026-05-24T23:29:54.852Z",
     "sources": [
       {
         "source": "osv",
@@ -7800,7 +7878,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:15.000Z",
     "modifiedAt": "2026-03-19T17:59:01.302Z",
-    "mergedAt": "2026-05-24T22:28:06.446Z",
+    "mergedAt": "2026-05-24T23:29:54.833Z",
     "sources": [
       {
         "source": "osv",
@@ -7859,7 +7937,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:06.000Z",
     "modifiedAt": "2026-03-20T14:59:12.698Z",
-    "mergedAt": "2026-05-24T22:28:06.436Z",
+    "mergedAt": "2026-05-24T23:29:54.825Z",
     "sources": [
       {
         "source": "osv",
@@ -7918,7 +7996,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:16:49.000Z",
     "modifiedAt": "2026-03-19T18:48:06.587Z",
-    "mergedAt": "2026-05-24T22:28:06.448Z",
+    "mergedAt": "2026-05-24T23:29:54.834Z",
     "sources": [
       {
         "source": "osv",
@@ -7977,7 +8055,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T15:30:14.000Z",
     "modifiedAt": "2026-03-19T18:31:23.523Z",
-    "mergedAt": "2026-05-24T22:28:06.448Z",
+    "mergedAt": "2026-05-24T23:29:54.835Z",
     "sources": [
       {
         "source": "osv",
@@ -8039,7 +8117,7 @@
     "priority": 36,
     "publishedAt": "2026-01-28T15:20:55.000Z",
     "modifiedAt": "2026-04-08T21:16:40.797Z",
-    "mergedAt": "2026-05-24T22:28:06.437Z",
+    "mergedAt": "2026-05-24T23:29:54.826Z",
     "sources": [
       {
         "source": "osv",
@@ -8108,7 +8186,7 @@
     "priority": 36,
     "publishedAt": "2021-11-15T10:47:04.000Z",
     "modifiedAt": "2026-03-13T21:59:52.395Z",
-    "mergedAt": "2026-05-24T22:28:06.530Z",
+    "mergedAt": "2026-05-24T23:29:54.913Z",
     "sources": [
       {
         "source": "osv",
@@ -8189,7 +8267,7 @@
     "priority": 36,
     "publishedAt": "2021-10-23T11:11:11.000Z",
     "modifiedAt": "2026-03-13T22:14:23.582Z",
-    "mergedAt": "2026-05-24T22:28:06.529Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "osv",
@@ -8270,7 +8348,7 @@
     "priority": 36,
     "publishedAt": "2021-10-09T12:10:44.000Z",
     "modifiedAt": "2026-03-13T22:00:11.423Z",
-    "mergedAt": "2026-05-24T22:28:06.529Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "osv",
@@ -8342,7 +8420,7 @@
     "priority": 36,
     "publishedAt": "2021-08-12T14:51:14.000Z",
     "modifiedAt": "2026-03-13T22:00:08.038Z",
-    "mergedAt": "2026-05-24T22:28:06.451Z",
+    "mergedAt": "2026-05-24T23:29:54.836Z",
     "sources": [
       {
         "source": "osv",
@@ -8411,7 +8489,7 @@
     "priority": 36,
     "publishedAt": "2021-06-17T15:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:16.333Z",
-    "mergedAt": "2026-05-24T22:28:06.529Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "osv",
@@ -8524,7 +8602,7 @@
     "priority": 36,
     "publishedAt": "2021-05-12T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:14.858Z",
-    "mergedAt": "2026-05-24T22:28:06.530Z",
+    "mergedAt": "2026-05-24T23:29:54.912Z",
     "sources": [
       {
         "source": "osv",
@@ -8602,7 +8680,7 @@
     "priority": 36,
     "publishedAt": "2020-10-08T19:28:07.000Z",
     "modifiedAt": "2026-03-13T22:14:13.665Z",
-    "mergedAt": "2026-05-24T22:28:06.452Z",
+    "mergedAt": "2026-05-24T23:29:54.838Z",
     "sources": [
       {
         "source": "osv",
@@ -8670,7 +8748,7 @@
     "priority": 36,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:15:59.230Z",
-    "mergedAt": "2026-05-24T22:28:06.526Z",
+    "mergedAt": "2026-05-24T23:29:54.909Z",
     "sources": [
       {
         "source": "osv",
@@ -8755,7 +8833,7 @@
     "priority": 36,
     "publishedAt": "2019-07-19T16:13:07.000Z",
     "modifiedAt": "2026-03-13T21:56:22.446Z",
-    "mergedAt": "2026-05-24T22:28:06.475Z",
+    "mergedAt": "2026-05-24T23:29:54.856Z",
     "sources": [
       {
         "source": "osv",
@@ -8801,7 +8879,7 @@
     "priority": 34,
     "publishedAt": "2026-05-24T07:40:00.000Z",
     "modifiedAt": "2026-05-24T07:40:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.545Z",
+    "mergedAt": "2026-05-24T23:29:54.925Z",
     "sources": [
       {
         "source": "symfony-security",
@@ -8840,7 +8918,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T17:00:00.000Z",
     "modifiedAt": "2026-05-21T17:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.951Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -8915,7 +8993,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T07:25:00.000Z",
     "modifiedAt": "2026-05-21T07:25:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.545Z",
+    "mergedAt": "2026-05-24T23:29:54.925Z",
     "sources": [
       {
         "source": "symfony-security",
@@ -8990,7 +9068,7 @@
     "priority": 34,
     "publishedAt": "2026-05-18T23:01:00.000Z",
     "modifiedAt": "2026-05-18T23:01:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.561Z",
+    "mergedAt": "2026-05-24T23:29:54.956Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -9514,7 +9592,7 @@
     "priority": 28,
     "publishedAt": "2026-03-17T15:29:48.000Z",
     "modifiedAt": "2026-03-25T19:49:01.129Z",
-    "mergedAt": "2026-05-24T22:28:06.448Z",
+    "mergedAt": "2026-05-24T23:29:54.834Z",
     "sources": [
       {
         "source": "osv",
@@ -9583,7 +9661,7 @@
     "priority": 26,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:08.748Z",
-    "mergedAt": "2026-05-24T22:28:06.532Z",
+    "mergedAt": "2026-05-24T23:29:54.914Z",
     "sources": [
       {
         "source": "osv",
@@ -10539,7 +10617,7 @@
     "priority": 20,
     "publishedAt": "2026-05-22T15:01:21.462Z",
     "modifiedAt": "2026-05-23T03:55:57.406Z",
-    "mergedAt": "2026-05-24T03:21:47.675Z",
+    "mergedAt": "2026-05-24T23:29:54.951Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -12494,7 +12572,7 @@
     "priority": 20,
     "publishedAt": "2026-05-22T00:43:49.096Z",
     "modifiedAt": "2026-05-23T03:55:51.245Z",
-    "mergedAt": "2026-05-24T03:21:47.663Z",
+    "mergedAt": "2026-05-24T23:29:54.951Z",
     "sources": [
       {
         "source": "nvd",
@@ -12551,7 +12629,7 @@
     "priority": 20,
     "publishedAt": "2026-05-22T00:43:49.077Z",
     "modifiedAt": "2026-05-23T03:55:49.702Z",
-    "mergedAt": "2026-05-24T03:21:47.663Z",
+    "mergedAt": "2026-05-24T23:29:54.951Z",
     "sources": [
       {
         "source": "nvd",
@@ -24599,6 +24677,43 @@
     "epss": 0.00017
   },
   {
+    "id": "CVE-2023-53374",
+    "cveId": "CVE-2023-53374",
+    "aliases": [
+      "CVE-2023-53374"
+    ],
+    "title": "Bluetooth: hci_conn: fail SCO/ISO via hci_conn_failed if ACL gone early",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: hci_conn: fail SCO/ISO via hci_conn_failed if ACL gone early Not calling hci_(dis)connect_cfm before deleting conn referred to by a socket generally results to use-after-free. When cleaning up SCO connections when the parent ACL is deleted too early, use hci_conn_failed to do the connection cleanup properly. We also need to clean up ISO connections in a similar situation when connecting has started but LE Create CIS is not yet sent, so do it too here.",
+    "severity": "high",
+    "cvss": 7.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 12,
+    "publishedAt": "2025-09-18T13:33:20.965Z",
+    "modifiedAt": "2026-05-23T15:28:37.982Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-53374",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/53xxx/CVE-2023-53374.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00014
+  },
+  {
     "id": "CVE-2022-49921",
     "cveId": "CVE-2022-49921",
     "aliases": [
@@ -24671,6 +24786,43 @@
     ],
     "tags": [],
     "epss": 0.00039
+  },
+  {
+    "id": "CVE-2023-52999",
+    "cveId": "CVE-2023-52999",
+    "aliases": [
+      "CVE-2023-52999"
+    ],
+    "title": "net: fix UaF in netns ops registration error path",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: net: fix UaF in netns ops registration error path If net_assign_generic() fails, the current error path in ops_init() tries to clear the gen pointer slot. Anyway, in such error path, the gen pointer itself has not been modified yet, and the existing and accessed one is smaller than the accessed index, causing an out-of-bounds error: BUG: KASAN: slab-out-of-bounds in ops_init+0x2de/0x320 Write of size 8 at addr ffff888109124978 by task modprobe/1018 CPU: 2 PID: 1018 Comm: modprobe Not tainted 6.2.0-rc2.mptcp_ae5ac65fbed5+ #1641 Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.1-2.fc37 04/01/2014 Call Trace: dump_stack_lvl+0x6a/0x9f print_address_description.constprop.0+0x86/0x2b5 print_report+0x11b/0x1fb kasan_report+0x87/0xc0 ops_init+0x2de/0x320 register_pernet_operations+0x2e4/0x750 register_pernet_subsys+0x24/0x40 tcf_register_action+0x9f/0x560 do_one_initcall+0xf9/0x570 do_init_module+0x190/0x650 load_module+0x1fa5/0x23c0 __do_sys_finit_module+0x10d/0x1b0 do_syscall_64+0x58/0x80 entry_SYSCALL_64_after_hwframe+0x72/0xdc RIP: 0033:0x7f42518f778d Code: 00 c3 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 3d 01 f0 ff ff 73 01 c3 48 8b 0d cb 56 2c 00 f7 d8 64 89 01 48 RSP: 002b:00007fff96869688 EFLAGS: 00000246 ORIG_RAX: 0000000000000139 RAX: ffffffffffffffda RBX: 00005568ef7f7c90 RCX: 00007f42518f778d RDX: 0000000000000000 RSI: 00005568ef41d796 RDI: 0000000000000003 RBP: 00005568ef41d796 R08: 0000000000000000 R09: 0000000000000000 R10: 0000000000000003 R11: 0000000000000246 R12: 0000000000000000 R13: 00005568ef7f7d30 R14: 0000000000040000 R15: 0000000000000000 This change addresses the issue by skipping the gen pointer de-reference in the mentioned error-path. Found by code inspection and verified with explicit error injection on a kasan-enabled kernel.",
+    "severity": "high",
+    "cvss": 7.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 12,
+    "publishedAt": "2025-03-27T16:43:32.497Z",
+    "modifiedAt": "2026-05-23T15:27:42.577Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-52999",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/52xxx/CVE-2023-52999.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00013
   },
   {
     "id": "CVE-2022-49696",
@@ -25111,6 +25263,154 @@
         "externalId": "CVE-2021-47634",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2021/47xxx/CVE-2021-47634.json",
         "fetchedAt": "2026-05-23T20:26:04.958Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00019
+  },
+  {
+    "id": "CVE-2024-57910",
+    "cveId": "CVE-2024-57910",
+    "aliases": [
+      "CVE-2024-57910"
+    ],
+    "title": "iio: light: vcnl4035: fix information leak in triggered buffer",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: iio: light: vcnl4035: fix information leak in triggered buffer The 'buffer' local array is used to push data to userspace from a triggered buffer, but it does not set an initial value for the single data element, which is an u16 aligned to 8 bytes. That leaves at least 4 bytes uninitialized even after writing an integer value with regmap_read(). Initialize the array to zero before using it to avoid pushing uninitialized information to userspace.",
+    "severity": "high",
+    "cvss": 7.1,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 12,
+    "publishedAt": "2025-01-19T11:52:33.140Z",
+    "modifiedAt": "2026-05-23T15:56:19.890Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-57910",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/57xxx/CVE-2024-57910.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00016
+  },
+  {
+    "id": "CVE-2024-56548",
+    "cveId": "CVE-2024-56548",
+    "aliases": [
+      "CVE-2024-56548"
+    ],
+    "title": "hfsplus: don't query the device logical block size multiple times",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: hfsplus: don't query the device logical block size multiple times Devices block sizes may change. One of these cases is a loop device by using ioctl LOOP_SET_BLOCK_SIZE. While this may cause other issues like IO being rejected, in the case of hfsplus, it will allocate a block by using that size and potentially write out-of-bounds when hfsplus_read_wrapper calls hfsplus_submit_bio and the latter function reads a different io_size. Using a new min_io_size initally set to sb_min_blocksize works for the purposes of the original fix, since it will be set to the max between HFSPLUS_SECTOR_SIZE and the first seen logical block size. We still use the max between HFSPLUS_SECTOR_SIZE and min_io_size in case the latter is not initialized. Tested by mounting an hfsplus filesystem with loop block sizes 512, 1024 and 4096. The produced KASAN report before the fix looks like this: [ 419.944641] ================================================================== [ 419.945655] BUG: KASAN: slab-use-after-free in hfsplus_read_wrapper+0x659/0xa0a [ 419.946703] Read of size 2 at addr ffff88800721fc00 by task repro/10678 [ 419.947612] [ 419.947846] CPU: 0 UID: 0 PID: 10678 Comm: repro Not tainted 6.12.0-rc5-00008-gdf56e0f2f3ca #84 [ 419.949007] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.15.0-1 04/01/2014 [ 419.950035] Call Trace: [ 419.950384] [ 419.950676] dump_stack_lvl+0x57/0x78 [ 419.951212] ? hfsplus_read_wrapper+0x659/0xa0a [ 419.951830] print_report+0x14c/0x49e [ 419.952361] ? __virt_addr_valid+0x267/0x278 [ 419.952979] ? kmem_cache_debug_flags+0xc/0x1d [ 419.953561] ? hfsplus_read_wrapper+0x659/0xa0a [ 419.954231] kasan_report+0x89/0xb0 [ 419.954748] ? hfsplus_read_wrapper+0x659/0xa0a [ 419.955367] hfsplus_read_wrapper+0x659/0xa0a [ 419.955948] ? __pfx_hfsplus_read_wrapper+0x10/0x10 [ 419.956618] ? do_raw_spin_unlock+0x59/0x1a9 [ 419.957214] ? _raw_spin_unlock+0x1a/0x2e [ 419.957772] hfsplus_fill_super+0x348/0x1590 [ 419.958355] ? hlock_class+0x4c/0x109 [ 419.958867] ? __pfx_hfsplus_fill_super+0x10/0x10 [ 419.959499] ? __pfx_string+0x10/0x10 [ 419.960006] ? lock_acquire+0x3e2/0x454 [ 419.960532] ? bdev_name.constprop.0+0xce/0x243 [ 419.961129] ? __pfx_bdev_name.constprop.0+0x10/0x10 [ 419.961799] ? pointer+0x3f0/0x62f [ 419.962277] ? __pfx_pointer+0x10/0x10 [ 419.962761] ? vsnprintf+0x6c4/0xfba [ 419.963178] ? __pfx_vsnprintf+0x10/0x10 [ 419.963621] ? setup_bdev_super+0x376/0x3b3 [ 419.964029] ? snprintf+0x9d/0xd2 [ 419.964344] ? __pfx_snprintf+0x10/0x10 [ 419.964675] ? lock_acquired+0x45c/0x5e9 [ 419.965016] ? set_blocksize+0x139/0x1c1 [ 419.965381] ? sb_set_blocksize+0x6d/0xae [ 419.965742] ? __pfx_hfsplus_fill_super+0x10/0x10 [ 419.966179] mount_bdev+0x12f/0x1bf [ 419.966512] ? __pfx_mount_bdev+0x10/0x10 [ 419.966886] ? vfs_parse_fs_string+0xce/0x111 [ 419.967293] ? __pfx_vfs_parse_fs_string+0x10/0x10 [ 419.967702] ? __pfx_hfsplus_mount+0x10/0x10 [ 419.968073] legacy_get_tree+0x104/0x178 [ 419.968414] vfs_get_tree+0x86/0x296 [ 419.968751] path_mount+0xba3/0xd0b [ 419.969157] ? __pfx_path_mount+0x10/0x10 [ 419.969594] ? kmem_cache_free+0x1e2/0x260 [ 419.970311] do_mount+0x99/0xe0 [ 419.970630] ? __pfx_do_mount+0x10/0x10 [ 419.971008] __do_sys_mount+0x199/0x1c9 [ 419.971397] do_syscall_64+0xd0/0x135 [ 419.971761] entry_SYSCALL_64_after_hwframe+0x76/0x7e [ 419.972233] RIP: 0033:0x7c3cb812972e [ 419.972564] Code: 48 8b 0d f5 46 0d 00 f7 d8 64 89 01 48 83 c8 ff c3 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa 49 89 ca b8 a5 00 00 00 0f 05 3d 01 f0 ff ff 73 01 c3 48 8b 0d c2 46 0d 00 f7 d8 64 89 01 48 [ 419.974371] RSP: 002b:00007ffe30632548 EFLAGS: 00000286 ORIG_RAX: 00000000000000a5 [ 419.975048] RAX: ffffffffffffffda RBX: 00007ffe306328d8 RCX: 00007c3cb812972e [ 419.975701] RDX: 0000000020000000 RSI: 0000000020000c80 RDI: ---truncated---",
+    "severity": "high",
+    "cvss": 7.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 12,
+    "publishedAt": "2024-12-27T14:11:29.373Z",
+    "modifiedAt": "2026-05-23T15:55:37.481Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-56548",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/56xxx/CVE-2024-56548.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00021
+  },
+  {
+    "id": "CVE-2024-53237",
+    "cveId": "CVE-2024-53237",
+    "aliases": [
+      "CVE-2024-53237"
+    ],
+    "title": "Bluetooth: fix use-after-free in device_for_each_child()",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: Bluetooth: fix use-after-free in device_for_each_child() Syzbot has reported the following KASAN splat: BUG: KASAN: slab-use-after-free in device_for_each_child+0x18f/0x1a0 Read of size 8 at addr ffff88801f605308 by task kbnepd bnep0/4980 CPU: 0 UID: 0 PID: 4980 Comm: kbnepd bnep0 Not tainted 6.12.0-rc4-00161-gae90f6a6170d #1 Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.16.3-2.fc40 04/01/2014 Call Trace: dump_stack_lvl+0x100/0x190 ? device_for_each_child+0x18f/0x1a0 print_report+0x13a/0x4cb ? __virt_addr_valid+0x5e/0x590 ? __phys_addr+0xc6/0x150 ? device_for_each_child+0x18f/0x1a0 kasan_report+0xda/0x110 ? device_for_each_child+0x18f/0x1a0 ? __pfx_dev_memalloc_noio+0x10/0x10 device_for_each_child+0x18f/0x1a0 ? __pfx_device_for_each_child+0x10/0x10 pm_runtime_set_memalloc_noio+0xf2/0x180 netdev_unregister_kobject+0x1ed/0x270 unregister_netdevice_many_notify+0x123c/0x1d80 ? __mutex_trylock_common+0xde/0x250 ? __pfx_unregister_netdevice_many_notify+0x10/0x10 ? trace_contention_end+0xe6/0x140 ? __mutex_lock+0x4e7/0x8f0 ? __pfx_lock_acquire.part.0+0x10/0x10 ? rcu_is_watching+0x12/0xc0 ? unregister_netdev+0x12/0x30 unregister_netdevice_queue+0x30d/0x3f0 ? __pfx_unregister_netdevice_queue+0x10/0x10 ? __pfx_down_write+0x10/0x10 unregister_netdev+0x1c/0x30 bnep_session+0x1fb3/0x2ab0 ? __pfx_bnep_session+0x10/0x10 ? __pfx_lock_release+0x10/0x10 ? __pfx_woken_wake_function+0x10/0x10 ? __kthread_parkme+0x132/0x200 ? __pfx_bnep_session+0x10/0x10 ? kthread+0x13a/0x370 ? __pfx_bnep_session+0x10/0x10 kthread+0x2b7/0x370 ? __pfx_kthread+0x10/0x10 ret_from_fork+0x48/0x80 ? __pfx_kthread+0x10/0x10 ret_from_fork_asm+0x1a/0x30 Allocated by task 4974: kasan_save_stack+0x30/0x50 kasan_save_track+0x14/0x30 __kasan_kmalloc+0xaa/0xb0 __kmalloc_noprof+0x1d1/0x440 hci_alloc_dev_priv+0x1d/0x2820 __vhci_create_device+0xef/0x7d0 vhci_write+0x2c7/0x480 vfs_write+0x6a0/0xfc0 ksys_write+0x12f/0x260 do_syscall_64+0xc7/0x250 entry_SYSCALL_64_after_hwframe+0x77/0x7f Freed by task 4979: kasan_save_stack+0x30/0x50 kasan_save_track+0x14/0x30 kasan_save_free_info+0x3b/0x60 __kasan_slab_free+0x4f/0x70 kfree+0x141/0x490 hci_release_dev+0x4d9/0x600 bt_host_release+0x6a/0xb0 device_release+0xa4/0x240 kobject_put+0x1ec/0x5a0 put_device+0x1f/0x30 vhci_release+0x81/0xf0 __fput+0x3f6/0xb30 task_work_run+0x151/0x250 do_exit+0xa79/0x2c30 do_group_exit+0xd5/0x2a0 get_signal+0x1fcd/0x2210 arch_do_signal_or_restart+0x93/0x780 syscall_exit_to_user_mode+0x140/0x290 do_syscall_64+0xd4/0x250 entry_SYSCALL_64_after_hwframe+0x77/0x7f In 'hci_conn_del_sysfs()', 'device_unregister()' may be called when an underlying (kobject) reference counter is greater than 1. This means that reparenting (happened when the device is actually freed) is delayed and, during that delay, parent controller device (hciX) may be deleted. Since the latter may create a dangling pointer to freed parent, avoid that scenario by reparenting to NULL explicitly.",
+    "severity": "high",
+    "cvss": 7.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 12,
+    "publishedAt": "2024-12-27T13:50:23.150Z",
+    "modifiedAt": "2026-05-23T15:55:30.598Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-53237",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/53xxx/CVE-2024-53237.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00022
+  },
+  {
+    "id": "CVE-2024-50280",
+    "cveId": "CVE-2024-50280",
+    "aliases": [
+      "CVE-2024-50280"
+    ],
+    "title": "dm cache: fix flushing uninitialized delayed_work on cache_ctr error",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: dm cache: fix flushing uninitialized delayed_work on cache_ctr error An unexpected WARN_ON from flush_work() may occur when cache creation fails, caused by destroying the uninitialized delayed_work waker in the error path of cache_create(). For example, the warning appears on the superblock checksum error. Reproduce steps: dmsetup create cmeta --table \"0 8192 linear /dev/sdc 0\" dmsetup create cdata --table \"0 65536 linear /dev/sdc 8192\" dmsetup create corig --table \"0 524288 linear /dev/sdc 262144\" dd if=/dev/urandom of=/dev/mapper/cmeta bs=4k count=1 oflag=direct dmsetup create cache --table \"0 524288 cache /dev/mapper/cmeta \\ /dev/mapper/cdata /dev/mapper/corig 128 2 metadata2 writethrough smq 0\" Kernel logs: (snip) WARNING: CPU: 0 PID: 84 at kernel/workqueue.c:4178 __flush_work+0x5d4/0x890 Fix by pulling out the cancel_delayed_work_sync() from the constructor's error path. This patch doesn't affect the use-after-free fix for concurrent dm_resume and dm_destroy (commit 6a459d8edbdb (\"dm cache: Fix UAF in destroy()\")) as cache_dtr is not changed.",
+    "severity": "high",
+    "cvss": 7.8,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 12,
+    "publishedAt": "2024-11-19T01:30:21.999Z",
+    "modifiedAt": "2026-05-23T15:54:56.616Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-50280",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/50xxx/CVE-2024-50280.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
       }
     ],
     "tags": [],
@@ -28776,7 +29076,7 @@
     "priority": 10,
     "publishedAt": "2026-05-21T17:11:17.519Z",
     "modifiedAt": "2026-05-23T02:25:36.453Z",
-    "mergedAt": "2026-05-23T13:39:32.569Z",
+    "mergedAt": "2026-05-24T23:29:54.951Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -31661,8 +31961,8 @@
     },
     "priority": 8,
     "publishedAt": "2026-05-22T18:43:05.549Z",
-    "modifiedAt": "2026-05-22T19:20:33.074Z",
-    "mergedAt": "2026-05-22T23:33:29.080Z",
+    "modifiedAt": "2026-05-24T19:30:09.123Z",
+    "mergedAt": "2026-05-24T23:29:54.951Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -31980,7 +32280,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T12:00:00.000Z",
     "modifiedAt": "2026-05-22T12:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.933Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -33944,7 +34244,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:08:48.000Z",
     "modifiedAt": "2026-05-21T14:08:48.000Z",
-    "mergedAt": "2026-05-24T22:28:06.538Z",
+    "mergedAt": "2026-05-24T23:29:54.919Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34697,7 +34997,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T09:19:32.000Z",
     "modifiedAt": "2026-05-21T09:19:32.000Z",
-    "mergedAt": "2026-05-24T22:28:06.539Z",
+    "mergedAt": "2026-05-24T23:29:54.919Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -34878,9 +35178,9 @@
       "reason": "topic-mention"
     },
     "priority": 8,
-    "publishedAt": "2026-05-21T00:38:04.489Z",
+    "publishedAt": "2026-05-21T02:16:33.760Z",
     "modifiedAt": "2026-05-22T19:29:57.531Z",
-    "mergedAt": "2026-05-24T03:21:47.792Z",
+    "mergedAt": "2026-05-24T23:29:54.907Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
@@ -35634,7 +35934,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:39:47.000Z",
     "modifiedAt": "2026-05-20T10:23:06.000Z",
-    "mergedAt": "2026-05-24T22:28:06.540Z",
+    "mergedAt": "2026-05-24T23:29:54.921Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -35675,7 +35975,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:29:56.000Z",
     "modifiedAt": "2026-05-20T09:34:33.000Z",
-    "mergedAt": "2026-05-24T22:28:06.541Z",
+    "mergedAt": "2026-05-24T23:29:54.922Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -36145,7 +36445,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.933Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -36182,7 +36482,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.933Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -36219,7 +36519,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T12:00:00.000Z",
     "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.933Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -36469,7 +36769,7 @@
     "priority": 8,
     "publishedAt": "2026-05-19T00:00:00.000Z",
     "modifiedAt": "2026-05-19T00:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.561Z",
+    "mergedAt": "2026-05-24T23:29:54.956Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -36793,7 +37093,7 @@
     "priority": 8,
     "publishedAt": "2026-05-18T06:00:00.000Z",
     "modifiedAt": "2026-05-18T06:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.951Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -41154,7 +41454,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.933Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -41348,7 +41648,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.933Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -41678,7 +41978,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:23:05.000Z",
     "modifiedAt": "2026-05-14T10:23:05.000Z",
-    "mergedAt": "2026-05-24T22:28:06.542Z",
+    "mergedAt": "2026-05-24T23:29:54.923Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -41713,7 +42013,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:16:24.000Z",
     "modifiedAt": "2026-05-14T10:16:24.000Z",
-    "mergedAt": "2026-05-24T22:28:06.543Z",
+    "mergedAt": "2026-05-24T23:29:54.924Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -42168,7 +42468,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:12:36.000Z",
     "modifiedAt": "2026-05-13T10:12:36.000Z",
-    "mergedAt": "2026-05-24T22:28:06.544Z",
+    "mergedAt": "2026-05-24T23:29:54.924Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -42203,7 +42503,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:03:30.000Z",
     "modifiedAt": "2026-05-13T10:03:30.000Z",
-    "mergedAt": "2026-05-24T22:28:06.545Z",
+    "mergedAt": "2026-05-24T23:29:54.925Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -42238,7 +42538,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T00:00:00.000Z",
     "modifiedAt": "2026-05-13T00:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.556Z",
+    "mergedAt": "2026-05-24T23:29:54.933Z",
     "sources": [
       {
         "source": "project-zero",
@@ -42310,7 +42610,7 @@
     "priority": 6,
     "publishedAt": "2026-05-11T08:00:00.000Z",
     "modifiedAt": "2026-05-11T08:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.563Z",
+    "mergedAt": "2026-05-24T23:29:54.958Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -44416,6 +44716,80 @@
     "epss": 0.00024
   },
   {
+    "id": "CVE-2023-53415",
+    "cveId": "CVE-2023-53415",
+    "aliases": [
+      "CVE-2023-53415"
+    ],
+    "title": "USB: dwc3: fix memory leak with using debugfs_lookup()",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: USB: dwc3: fix memory leak with using debugfs_lookup() When calling debugfs_lookup() the result must have dput() called on it, otherwise the memory will leak over time. To make things simpler, just call debugfs_lookup_and_remove() instead which handles all of the logic at once. Note, the root dentry for the debugfs directory for the device needs to be saved so we don't have to keep looking it up, which required a bit more refactoring to properly create and remove it when needed.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-09-18T13:58:51.771Z",
+    "modifiedAt": "2026-05-23T15:28:51.090Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-53415",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/53xxx/CVE-2023-53415.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00017
+  },
+  {
+    "id": "CVE-2023-53408",
+    "cveId": "CVE-2023-53408",
+    "aliases": [
+      "CVE-2023-53408"
+    ],
+    "title": "trace/blktrace: fix memory leak with using debugfs_lookup()",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: trace/blktrace: fix memory leak with using debugfs_lookup() When calling debugfs_lookup() the result must have dput() called on it, otherwise the memory will leak over time. To make things simpler, just call debugfs_lookup_and_remove() instead which handles all of the logic at once.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-09-18T13:58:46.767Z",
+    "modifiedAt": "2026-05-23T15:28:48.312Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-53408",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/53xxx/CVE-2023-53408.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00017
+  },
+  {
     "id": "CVE-2022-50373",
     "cveId": "CVE-2022-50373",
     "aliases": [
@@ -44488,6 +44862,117 @@
     ],
     "tags": [],
     "epss": 0.00016
+  },
+  {
+    "id": "CVE-2023-53230",
+    "cveId": "CVE-2023-53230",
+    "aliases": [
+      "CVE-2023-53230"
+    ],
+    "title": "smb: client: fix warning in cifs_smb3_do_mount()",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: smb: client: fix warning in cifs_smb3_do_mount() This fixes the following warning reported by kernel test robot fs/smb/client/cifsfs.c:982 cifs_smb3_do_mount() warn: possible memory leak of 'cifs_sb'",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-09-15T14:22:02.687Z",
+    "modifiedAt": "2026-05-23T15:28:20.095Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-53230",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/53xxx/CVE-2023-53230.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00014
+  },
+  {
+    "id": "CVE-2023-53228",
+    "cveId": "CVE-2023-53228",
+    "aliases": [
+      "CVE-2023-53228"
+    ],
+    "title": "drm/amdgpu: drop redundant sched job cleanup when cs is aborted",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: drm/amdgpu: drop redundant sched job cleanup when cs is aborted Once command submission failed due to userptr invalidation in amdgpu_cs_submit, legacy code will perform cleanup of scheduler job. However, it's not needed at all, as former commit has integrated job cleanup stuff into amdgpu_job_free. Otherwise, because of double free, a NULL pointer dereference will occur in such scenario. Bug: https://gitlab.freedesktop.org/drm/amd/-/issues/2457",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-09-15T14:21:59.550Z",
+    "modifiedAt": "2026-05-23T15:28:19.017Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-53228",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/53xxx/CVE-2023-53228.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00018
+  },
+  {
+    "id": "CVE-2023-53221",
+    "cveId": "CVE-2023-53221",
+    "aliases": [
+      "CVE-2023-53221"
+    ],
+    "title": "bpf: Fix memleak due to fentry attach failure",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: bpf: Fix memleak due to fentry attach failure If it fails to attach fentry, the allocated bpf trampoline image will be left in the system. That can be verified by checking /proc/kallsyms. This meamleak can be verified by a simple bpf program as follows: SEC(\"fentry/trap_init\") int fentry_run() { return 0; } It will fail to attach trap_init because this function is freed after kernel init, and then we can find the trampoline image is left in the system by checking /proc/kallsyms. $ tail /proc/kallsyms ffffffffc0613000 t bpf_trampoline_6442453466_1 [bpf] ffffffffc06c3000 t bpf_trampoline_6442453466_1 [bpf] $ bpftool btf dump file /sys/kernel/btf/vmlinux | grep \"FUNC 'trap_init'\" [2522] FUNC 'trap_init' type_id=119 linkage=static $ echo $((6442453466 & 0x7fffffff)) 2522 Note that there are two left bpf trampoline images, that is because the libbpf will fallback to raw tracepoint if -EINVAL is returned.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-09-15T14:21:50.053Z",
+    "modifiedAt": "2026-05-23T15:28:16.750Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-53221",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/53xxx/CVE-2023-53221.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00023
   },
   {
     "id": "CVE-2022-49931",
@@ -44821,6 +45306,43 @@
     ],
     "tags": [],
     "epss": 0.00012
+  },
+  {
+    "id": "CVE-2025-21792",
+    "cveId": "CVE-2025-21792",
+    "aliases": [
+      "CVE-2025-21792"
+    ],
+    "title": "ax25: Fix refcount leak caused by setting SO_BINDTODEVICE sockopt",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: ax25: Fix refcount leak caused by setting SO_BINDTODEVICE sockopt If an AX25 device is bound to a socket by setting the SO_BINDTODEVICE socket option, a refcount leak will occur in ax25_release(). Commit 9fd75b66b8f6 (\"ax25: Fix refcount leaks caused by ax25_cb_del()\") added decrement of device refcounts in ax25_release(). In order for that to work correctly the refcounts must already be incremented when the device is bound to the socket. An AX25 device can be bound to a socket by either calling ax25_bind() or setting SO_BINDTODEVICE socket option. In both cases the refcounts should be incremented, but in fact it is done only in ax25_bind(). This bug leads to the following issue reported by Syzkaller: ================================================================ refcount_t: decrement hit 0; leaking memory. WARNING: CPU: 1 PID: 5932 at lib/refcount.c:31 refcount_warn_saturate+0x1ed/0x210 lib/refcount.c:31 Modules linked in: CPU: 1 UID: 0 PID: 5932 Comm: syz-executor424 Not tainted 6.13.0-rc4-syzkaller-00110-g4099a71718b0 #0 Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-debian-1.16.3-2~bpo12+1 04/01/2014 RIP: 0010:refcount_warn_saturate+0x1ed/0x210 lib/refcount.c:31 Call Trace: __refcount_dec include/linux/refcount.h:336 [inline] refcount_dec include/linux/refcount.h:351 [inline] ref_tracker_free+0x710/0x820 lib/ref_tracker.c:236 netdev_tracker_free include/linux/netdevice.h:4156 [inline] netdev_put include/linux/netdevice.h:4173 [inline] netdev_put include/linux/netdevice.h:4169 [inline] ax25_release+0x33f/0xa10 net/ax25/af_ax25.c:1069 __sock_release+0xb0/0x270 net/socket.c:640 sock_close+0x1c/0x30 net/socket.c:1408 ... do_syscall_x64 arch/x86/entry/common.c:52 [inline] do_syscall_64+0xcd/0x250 arch/x86/entry/common.c:83 entry_SYSCALL_64_after_hwframe+0x77/0x7f ... ================================================================ Fix the implementation of ax25_setsockopt() by adding increment of refcounts for the new device bound, and decrement of refcounts for the old unbound device.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-02-27T02:18:29.653Z",
+    "modifiedAt": "2026-05-23T15:57:08.933Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2025-21792",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2025/21xxx/CVE-2025-21792.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00008
   },
   {
     "id": "CVE-2022-49713",
@@ -45526,6 +46048,80 @@
     "epss": 0.00017
   },
   {
+    "id": "CVE-2025-21694",
+    "cveId": "CVE-2025-21694",
+    "aliases": [
+      "CVE-2025-21694"
+    ],
+    "title": "fs/proc: fix softlockup in __read_vmcore (part 2)",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: fs/proc: fix softlockup in __read_vmcore (part 2) Since commit 5cbcb62dddf5 (\"fs/proc: fix softlockup in __read_vmcore\") the number of softlockups in __read_vmcore at kdump time have gone down, but they still happen sometimes. In a memory constrained environment like the kdump image, a softlockup is not just a harmless message, but it can interfere with things like RCU freeing memory, causing the crashdump to get stuck. The second loop in __read_vmcore has a lot more opportunities for natural sleep points, like scheduling out while waiting for a data write to happen, but apparently that is not always enough. Add a cond_resched() to the second loop in __read_vmcore to (hopefully) get rid of the softlockups.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-02-12T13:27:53.763Z",
+    "modifiedAt": "2026-05-23T15:56:54.899Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2025-21694",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2025/21xxx/CVE-2025-21694.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00007
+  },
+  {
+    "id": "CVE-2024-57901",
+    "cveId": "CVE-2024-57901",
+    "aliases": [
+      "CVE-2024-57901"
+    ],
+    "title": "af_packet: fix vlan_get_protocol_dgram() vs MSG_PEEK",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: af_packet: fix vlan_get_protocol_dgram() vs MSG_PEEK Blamed commit forgot MSG_PEEK case, allowing a crash [1] as found by syzbot. Rework vlan_get_protocol_dgram() to not touch skb at all, so that it can be used from many cpus on the same skb. Add a const qualifier to skb argument. [1] skbuff: skb_under_panic: text:ffffffff8a8ccd05 len:29 put:14 head:ffff88807fc8e400 data:ffff88807fc8e3f4 tail:0x11 end:0x140 dev: ------------[ cut here ]------------ kernel BUG at net/core/skbuff.c:206 ! Oops: invalid opcode: 0000 [#1] PREEMPT SMP KASAN PTI CPU: 1 UID: 0 PID: 5892 Comm: syz-executor883 Not tainted 6.13.0-rc4-syzkaller-00054-gd6ef8b40d075 #0 Hardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 09/13/2024 RIP: 0010:skb_panic net/core/skbuff.c:206 [inline] RIP: 0010:skb_under_panic+0x14b/0x150 net/core/skbuff.c:216 Code: 0b 8d 48 c7 c6 86 d5 25 8e 48 8b 54 24 08 8b 0c 24 44 8b 44 24 04 4d 89 e9 50 41 54 41 57 41 56 e8 5a 69 79 f7 48 83 c4 20 90 0b 0f 1f 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 f3 RSP: 0018:ffffc900038d7638 EFLAGS: 00010282 RAX: 0000000000000087 RBX: dffffc0000000000 RCX: 609ffd18ea660600 RDX: 0000000000000000 RSI: 0000000080000000 RDI: 0000000000000000 RBP: ffff88802483c8d0 R08: ffffffff817f0a8c R09: 1ffff9200071ae60 R10: dffffc0000000000 R11: fffff5200071ae61 R12: 0000000000000140 R13: ffff88807fc8e400 R14: ffff88807fc8e3f4 R15: 0000000000000011 FS: 00007fbac5e006c0(0000) GS:ffff8880b8700000(0000) knlGS:0000000000000000 CS: 0010 DS: 0000 ES: 0000 CR0: 0000000080050033 CR2: 00007fbac5e00d58 CR3: 000000001238e000 CR4: 00000000003526f0 DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000 DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400 Call Trace: skb_push+0xe5/0x100 net/core/skbuff.c:2636 vlan_get_protocol_dgram+0x165/0x290 net/packet/af_packet.c:585 packet_recvmsg+0x948/0x1ef0 net/packet/af_packet.c:3552 sock_recvmsg_nosec net/socket.c:1033 [inline] sock_recvmsg+0x22f/0x280 net/socket.c:1055 ____sys_recvmsg+0x1c6/0x480 net/socket.c:2803 ___sys_recvmsg net/socket.c:2845 [inline] do_recvmmsg+0x426/0xab0 net/socket.c:2940 __sys_recvmmsg net/socket.c:3014 [inline] __do_sys_recvmmsg net/socket.c:3037 [inline] __se_sys_recvmmsg net/socket.c:3030 [inline] __x64_sys_recvmmsg+0x199/0x250 net/socket.c:3030 do_syscall_x64 arch/x86/entry/common.c:52 [inline] do_syscall_64+0xf3/0x230 arch/x86/entry/common.c:83 entry_SYSCALL_64_after_hwframe+0x77/0x7f",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-01-15T13:05:57.527Z",
+    "modifiedAt": "2026-05-23T15:56:15.814Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-57901",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/57xxx/CVE-2024-57901.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00013
+  },
+  {
     "id": "CVE-2024-48881",
     "cveId": "CVE-2024-48881",
     "aliases": [
@@ -45557,6 +46153,80 @@
         "externalId": "CVE-2024-48881",
         "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/48xxx/CVE-2024-48881.json",
         "fetchedAt": "2026-05-23T20:26:04.956Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00008
+  },
+  {
+    "id": "CVE-2024-56783",
+    "cveId": "CVE-2024-56783",
+    "aliases": [
+      "CVE-2024-56783"
+    ],
+    "title": "netfilter: nft_socket: remove WARN_ON_ONCE on maximum cgroup level",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nft_socket: remove WARN_ON_ONCE on maximum cgroup level cgroup maximum depth is INT_MAX by default, there is a cgroup toggle to restrict this maximum depth to a more reasonable value not to harm performance. Remove unnecessary WARN_ON_ONCE which is reachable from userspace.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2025-01-08T17:51:59.704Z",
+    "modifiedAt": "2026-05-23T15:56:06.343Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-56783",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/56xxx/CVE-2024-56783.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00036
+  },
+  {
+    "id": "CVE-2024-53226",
+    "cveId": "CVE-2024-53226",
+    "aliases": [
+      "CVE-2024-53226"
+    ],
+    "title": "RDMA/hns: Fix NULL pointer derefernce in hns_roce_map_mr_sg()",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: RDMA/hns: Fix NULL pointer derefernce in hns_roce_map_mr_sg() ib_map_mr_sg() allows ULPs to specify NULL as the sg_offset argument. The driver needs to check whether it is a NULL pointer before dereferencing it.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2024-12-27T13:50:15.488Z",
+    "modifiedAt": "2026-05-23T15:55:28.333Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-53226",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/53xxx/CVE-2024-53226.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
       }
     ],
     "tags": [],
@@ -46042,6 +46712,43 @@
     ],
     "tags": [],
     "epss": 0.00019
+  },
+  {
+    "id": "CVE-2023-52872",
+    "cveId": "CVE-2023-52872",
+    "aliases": [
+      "CVE-2023-52872"
+    ],
+    "title": "tty: n_gsm: fix race condition in status line change on dead connections",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: tty: n_gsm: fix race condition in status line change on dead connections gsm_cleanup_mux() cleans up the gsm by closing all DLCIs, stopping all timers, removing the virtual tty devices and clearing the data queues. This procedure, however, may cause subsequent changes of the virtual modem status lines of a DLCI. More data is being added the outgoing data queue and the deleted kick timer is restarted to handle this. At this point many resources have already been removed by the cleanup procedure. Thus, a kernel panic occurs. Fix this by proving in gsm_modem_update() that the cleanup procedure has not been started and the mux is still alive. Note that writing to a virtual tty is already protected by checks against the DLCI specific connection state.",
+    "severity": "medium",
+    "cvss": 5.5,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2024-05-21T15:32:06.610Z",
+    "modifiedAt": "2026-05-23T15:27:25.906Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-52872",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/52xxx/CVE-2023-52872.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00026
   },
   {
     "id": "CVE-2021-47419",
@@ -46724,6 +47431,43 @@
     "epss": 0.00014
   },
   {
+    "id": "CVE-2023-52529",
+    "cveId": "CVE-2023-52529",
+    "aliases": [
+      "CVE-2023-52529"
+    ],
+    "title": "HID: sony: Fix a potential memory leak in sony_probe()",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: HID: sony: Fix a potential memory leak in sony_probe() If an error occurs after a successful usb_alloc_urb() call, usb_free_urb() should be called.",
+    "severity": "medium",
+    "cvss": 6,
+    "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2024-03-02T21:52:34.217Z",
+    "modifiedAt": "2026-05-23T15:25:55.362Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-52529",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/52xxx/CVE-2023-52529.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00014
+  },
+  {
     "id": "CVE-2021-47060",
     "cveId": "CVE-2021-47060",
     "aliases": [
@@ -47195,7 +47939,7 @@
     "priority": 5,
     "publishedAt": "2026-03-24T20:50:00.000Z",
     "modifiedAt": "2026-03-24T20:50:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.545Z",
+    "mergedAt": "2026-05-24T23:29:54.925Z",
     "sources": [
       {
         "source": "nodejs-security",
@@ -47231,7 +47975,7 @@
     "priority": 5,
     "publishedAt": "2026-03-24T03:00:00.000Z",
     "modifiedAt": "2026-03-24T03:00:00.000Z",
-    "mergedAt": "2026-05-24T22:28:06.545Z",
+    "mergedAt": "2026-05-24T23:29:54.925Z",
     "sources": [
       {
         "source": "nodejs-security",
@@ -54988,6 +55732,76 @@
     "epss": 0.00012
   },
   {
+    "id": "CVE-2023-52857",
+    "cveId": "CVE-2023-52857",
+    "aliases": [
+      "CVE-2023-52857"
+    ],
+    "title": "drm/mediatek: Fix coverity issue with unintentional integer overflow",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: drm/mediatek: Fix coverity issue with unintentional integer overflow 1. Instead of multiplying 2 variable of different types. Change to assign a value of one variable and then multiply the other variable. 2. Add a int variable for multiplier calculation instead of calculating different types multiplier with dma_addr_t variable directly.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 4,
+    "publishedAt": "2024-05-21T15:31:51.232Z",
+    "modifiedAt": "2026-05-23T15:27:24.499Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-52857",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/52xxx/CVE-2023-52857.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00016
+  },
+  {
+    "id": "CVE-2023-52788",
+    "cveId": "CVE-2023-52788",
+    "aliases": [
+      "CVE-2023-52788"
+    ],
+    "title": "i915/perf: Fix NULL deref bugs with drm_dbg() calls",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: i915/perf: Fix NULL deref bugs with drm_dbg() calls When i915 perf interface is not available dereferencing it will lead to NULL dereferences. As returning -ENOTSUPP is pretty clear return when perf interface is not available. [tursulin: added stable tag] (cherry picked from commit 36f27350ff745bd228ab04d7845dfbffc177a889)",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 4,
+    "publishedAt": "2024-05-21T15:31:04.980Z",
+    "modifiedAt": "2026-05-23T15:27:07.396Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-52788",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/52xxx/CVE-2023-52788.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.0002
+  },
+  {
     "id": "CVE-2021-47392",
     "cveId": "CVE-2021-47392",
     "aliases": [
@@ -58495,6 +59309,41 @@
     "epss": 0.00011
   },
   {
+    "id": "CVE-2024-26715",
+    "cveId": "CVE-2024-26715",
+    "aliases": [
+      "CVE-2024-26715"
+    ],
+    "title": "usb: dwc3: gadget: Fix NULL pointer dereference in dwc3_gadget_suspend",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: usb: dwc3: gadget: Fix NULL pointer dereference in dwc3_gadget_suspend In current scenario if Plug-out and Plug-In performed continuously there could be a chance while checking for dwc->gadget_driver in dwc3_gadget_suspend, a NULL pointer dereference may occur. Call Stack: CPU1: CPU2: gadget_unbind_driver dwc3_suspend_common dwc3_gadget_stop dwc3_gadget_suspend dwc3_disconnect_gadget CPU1 basically clears the variable and CPU2 checks the variable. Consider CPU1 is running and right before gadget_driver is cleared and in parallel CPU2 executes dwc3_gadget_suspend where it finds dwc->gadget_driver which is not NULL and resumes execution and then CPU1 completes execution. CPU2 executes dwc3_disconnect_gadget where it checks dwc->gadget_driver is already NULL because of which the NULL pointer deference occur.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 4,
+    "publishedAt": "2024-04-03T14:55:16.395Z",
+    "modifiedAt": "2026-05-23T15:37:13.226Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-26715",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/26xxx/CVE-2024-26715.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00022
+  },
+  {
     "id": "CVE-2021-47179",
     "cveId": "CVE-2021-47179",
     "aliases": [
@@ -58668,6 +59517,41 @@
     ],
     "tags": [],
     "epss": 0.00015
+  },
+  {
+    "id": "CVE-2024-26643",
+    "cveId": "CVE-2024-26643",
+    "aliases": [
+      "CVE-2024-26643"
+    ],
+    "title": "netfilter: nf_tables: mark set as dead when unbinding anonymous set with timeout",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: netfilter: nf_tables: mark set as dead when unbinding anonymous set with timeout While the rhashtable set gc runs asynchronously, a race allows it to collect elements from anonymous sets with timeouts while it is being released from the commit path. Mingi Cho originally reported this issue in a different path in 6.1.x with a pipapo set with low timeouts which is not possible upstream since 7395dfacfff6 (\"netfilter: nf_tables: use timestamp to check for set element timeout\"). Fix this by setting on the dead flag for anonymous sets to skip async gc in this case. According to 08e4c8c5919f (\"netfilter: nf_tables: mark newset as dead on transaction abort\"), Florian plans to accelerate abort path by releasing objects via workqueue, therefore, this sets on the dead flag for abort path too.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 4,
+    "publishedAt": "2024-03-21T10:43:44.103Z",
+    "modifiedAt": "2026-05-23T15:36:19.531Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-26643",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/26xxx/CVE-2024-26643.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00009
   },
   {
     "id": "CVE-2021-47132",
@@ -58948,6 +59832,76 @@
     ],
     "tags": [],
     "epss": 0.00038
+  },
+  {
+    "id": "CVE-2023-52564",
+    "cveId": "CVE-2023-52564",
+    "aliases": [
+      "CVE-2023-52564"
+    ],
+    "title": "Revert \"tty: n_gsm: fix UAF in gsm_cleanup_mux\"",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: Revert \"tty: n_gsm: fix UAF in gsm_cleanup_mux\" This reverts commit 9b9c8195f3f0d74a826077fc1c01b9ee74907239. The commit above is reverted as it did not solve the original issue. gsm_cleanup_mux() tries to free up the virtual ttys by calling gsm_dlci_release() for each available DLCI. There, dlci_put() is called to decrease the reference counter for the DLCI via tty_port_put() which finally calls gsm_dlci_free(). This already clears the pointer which is being checked in gsm_cleanup_mux() before calling gsm_dlci_release(). Therefore, it is not necessary to clear this pointer in gsm_cleanup_mux() as done in the reverted commit. The commit introduces a null pointer dereference: ? __die+0x1f/0x70 ? page_fault_oops+0x156/0x420 ? search_exception_tables+0x37/0x50 ? fixup_exception+0x21/0x310 ? exc_page_fault+0x69/0x150 ? asm_exc_page_fault+0x26/0x30 ? tty_port_put+0x19/0xa0 gsmtty_cleanup+0x29/0x80 [n_gsm] release_one_tty+0x37/0xe0 process_one_work+0x1e6/0x3e0 worker_thread+0x4c/0x3d0 ? __pfx_worker_thread+0x10/0x10 kthread+0xe1/0x110 ? __pfx_kthread+0x10/0x10 ret_from_fork+0x2f/0x50 ? __pfx_kthread+0x10/0x10 ret_from_fork_asm+0x1b/0x30 The actual issue is that nothing guards dlci_put() from being called multiple times while the tty driver was triggered but did not yet finished calling gsm_dlci_free().",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 4,
+    "publishedAt": "2024-03-02T21:59:36.867Z",
+    "modifiedAt": "2026-05-23T15:26:08.197Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-52564",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/52xxx/CVE-2023-52564.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00016
+  },
+  {
+    "id": "CVE-2023-52563",
+    "cveId": "CVE-2023-52563",
+    "aliases": [
+      "CVE-2023-52563"
+    ],
+    "title": "drm/meson: fix memory leak on ->hpd_notify callback",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: drm/meson: fix memory leak on ->hpd_notify callback The EDID returned by drm_bridge_get_edid() needs to be freed.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 4,
+    "publishedAt": "2024-03-02T21:59:36.220Z",
+    "modifiedAt": "2026-05-23T15:26:06.551Z",
+    "mergedAt": "2026-05-24T23:29:41.339Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2023-52563",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2023/52xxx/CVE-2023-52563.json",
+        "fetchedAt": "2026-05-24T23:29:41.339Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00015
   },
   {
     "id": "CVE-2021-47061",
@@ -59795,6 +60749,41 @@
     ],
     "tags": [],
     "epss": 0.00011
+  },
+  {
+    "id": "CVE-2024-26605",
+    "cveId": "CVE-2024-26605",
+    "aliases": [
+      "CVE-2024-26605"
+    ],
+    "title": "PCI/ASPM: Fix deadlock when enabling ASPM",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: PCI/ASPM: Fix deadlock when enabling ASPM A last minute revert in 6.7-final introduced a potential deadlock when enabling ASPM during probe of Qualcomm PCIe controllers as reported by lockdep: ============================================ WARNING: possible recursive locking detected 6.7.0 #40 Not tainted -------------------------------------------- kworker/u16:5/90 is trying to acquire lock: ffffacfa78ced000 (pci_bus_sem){++++}-{3:3}, at: pcie_aspm_pm_state_change+0x58/0xdc but task is already holding lock: ffffacfa78ced000 (pci_bus_sem){++++}-{3:3}, at: pci_walk_bus+0x34/0xbc other info that might help us debug this: Possible unsafe locking scenario: CPU0 ---- lock(pci_bus_sem); lock(pci_bus_sem); *** DEADLOCK *** Call trace: print_deadlock_bug+0x25c/0x348 __lock_acquire+0x10a4/0x2064 lock_acquire+0x1e8/0x318 down_read+0x60/0x184 pcie_aspm_pm_state_change+0x58/0xdc pci_set_full_power_state+0xa8/0x114 pci_set_power_state+0xc4/0x120 qcom_pcie_enable_aspm+0x1c/0x3c [pcie_qcom] pci_walk_bus+0x64/0xbc qcom_pcie_host_post_init_2_7_0+0x28/0x34 [pcie_qcom] The deadlock can easily be reproduced on machines like the Lenovo ThinkPad X13s by adding a delay to increase the race window during asynchronous probe where another thread can take a write lock. Add a new pci_set_power_state_locked() and associated helper functions that can be called with the PCI bus semaphore held to avoid taking the read lock twice.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 4,
+    "publishedAt": "2024-02-24T15:17:13.899Z",
+    "modifiedAt": "2026-05-23T15:35:58.041Z",
+    "mergedAt": "2026-05-24T23:29:41.340Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2024-26605",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2024/26xxx/CVE-2024-26605.json",
+        "fetchedAt": "2026-05-24T23:29:41.340Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00022
   },
   {
     "id": "CVE-2022-23305",
