@@ -115,6 +115,14 @@ describe('filterByRelevance: alert kind uses ICS blocklist', () => {
     const v = makeVuln({ title: 'CISA Adds One Known Exploited Vulnerability to Catalog', summary: '' });
     assert.equal(filterByRelevance(v, 'alert', idx).keep, true);
   });
+  it('does NOT drop CISA alerts that merely contain "abb" as a substring', () => {
+    const v = makeVuln({ title: 'CISA Alert: Abbreviation standards for ICS protocols', summary: '' });
+    assert.equal(filterByRelevance(v, 'alert', idx).keep, true);
+  });
+  it('still drops items led by multi-word vendor entries (delta electronics)', () => {
+    const v = makeVuln({ title: 'Delta Electronics WPLSoft critical RCE', summary: '' });
+    assert.equal(filterByRelevance(v, 'alert', idx).keep, false);
+  });
 });
 
 describe('filterByRelevance: word-boundary edge cases', () => {
