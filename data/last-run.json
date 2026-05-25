@@ -1,20 +1,95 @@
 {
-  "startedAt": "2026-05-25T19:39:53.086Z",
-  "finishedAt": "2026-05-25T19:40:03.077Z",
-  "durationMs": 9991,
+  "startedAt": "2026-05-25T20:39:13.152Z",
+  "finishedAt": "2026-05-25T20:39:39.982Z",
+  "durationMs": 26830,
   "stats": {
     "newCount": 1,
     "updatedCount": 1576,
-    "archivedCount": 1309,
+    "archivedCount": 1475,
     "droppedCount": 0,
-    "filteredCount": 0,
+    "filteredCount": 23,
     "alertCount": 0
   },
   "sources": {
-    "cisa-vulnrichment": {
+    "ghsa": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 389
+      "durationMs": 253
+    },
+    "osv": {
+      "ok": true,
+      "fetched": 282,
+      "durationMs": 16779
+    },
+    "nvd": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 8346
+    },
+    "cve-org": {
+      "ok": true,
+      "fetched": 16,
+      "durationMs": 3502
+    },
+    "packagist": {
+      "ok": true,
+      "fetched": 206,
+      "durationMs": 735
+    },
+    "friendsofphp-advisories": {
+      "ok": true,
+      "fetched": 10,
+      "durationMs": 289
+    },
+    "symfony-security": {
+      "ok": true,
+      "fetched": 5,
+      "durationMs": 275
+    },
+    "github-repo-advisories": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 12469
+    },
+    "nextjs-releases": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 823
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 6,
+      "durationMs": 235
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1808
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 263
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 1137
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 216
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 313
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 696
     }
   },
   "errors": []
