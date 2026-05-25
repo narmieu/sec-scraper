@@ -304,7 +304,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-25T16:52:53.219Z",
+    "mergedAt": "2026-05-25T17:40:12.894Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -357,7 +357,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-25T16:52:53.220Z",
+    "mergedAt": "2026-05-25T17:40:12.894Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2088,14 +2088,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2111,7 +2111,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-25T16:52:53.220Z",
+    "mergedAt": "2026-05-25T17:40:12.894Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2129,7 +2129,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00253
   },
   {
     "id": "CVE-2026-20131",
@@ -18622,93 +18622,6 @@
     "epss": 0.00047
   },
   {
-    "id": "CVE-2026-8162",
-    "cveId": "CVE-2026-8162",
-    "ghsaId": "GHSA-xh3c-6gcq-g4rv",
-    "aliases": [
-      "CVE-2026-8162"
-    ],
-    "title": "multiparty vulnerable to Denial of Service via Uncaught Exception in filename* parameter parsing",
-    "summary": "multiparty vulnerable to Denial of Service via Uncaught Exception in filename* parameter parsing",
-    "details": "### Impact multiparty@4.2.3 and lower versions are vulnerable to denial of service via uncaught exception. By sending a `multipart/form-data` request with a `Content-Disposition: filename*=utf-8''` header containing a malformed percent-encoding (e.g., `%FF`, `%GG`), the parser invokes `decodeURI` on the value without try/catch. The resulting `URIError` propagates as an uncaught exception and crashes the process. Any service accepting multipart uploads via multiparty is affected. ### Patches Users should upgrade to multiparty@4.3.0 or higher. ### Workarounds None.",
-    "severity": "high",
-    "cvss": 7.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-    "kev": false,
-    "ecosystems": [
-      "npm"
-    ],
-    "cwe": [
-      "CWE-755"
-    ],
-    "affected": [
-      {
-        "ecosystem": "npm",
-        "package": "multiparty",
-        "versions": "<= 4.2.3",
-        "fixedIn": "4.3.0"
-      }
-    ],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-18T17:35:24.000Z",
-    "modifiedAt": "2026-05-23T21:35:24.000Z",
-    "mergedAt": "2026-05-23T22:25:03.490Z",
-    "sources": [
-      {
-        "source": "ghsa",
-        "externalId": "GHSA-xh3c-6gcq-g4rv",
-        "url": "https://github.com/advisories/GHSA-xh3c-6gcq-g4rv",
-        "fetchedAt": "2026-05-23T22:25:03.490Z"
-      }
-    ],
-    "tags": [
-      "frontend"
-    ],
-    "epss": 0.00055
-  },
-  {
-    "id": "CVE-2026-45495",
-    "cveId": "CVE-2026-45495",
-    "aliases": [
-      "CVE-2026-45495"
-    ],
-    "title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
-    "summary": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
-    "severity": "high",
-    "cvss": 8.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-18T17:03:18.245Z",
-    "modifiedAt": "2026-05-22T22:04:30.942Z",
-    "mergedAt": "2026-05-24T03:21:47.792Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-45495",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45495.json",
-        "fetchedAt": "2026-05-22T16:40:00.133Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00195
-  },
-  {
     "id": "CVE-2024-12802",
     "cveId": "CVE-2024-12802",
     "aliases": [
@@ -20541,6 +20454,93 @@
     ],
     "tags": [],
     "epss": 0.00344
+  },
+  {
+    "id": "CVE-2026-8162",
+    "cveId": "CVE-2026-8162",
+    "ghsaId": "GHSA-xh3c-6gcq-g4rv",
+    "aliases": [
+      "CVE-2026-8162"
+    ],
+    "title": "multiparty vulnerable to Denial of Service via Uncaught Exception in filename* parameter parsing",
+    "summary": "multiparty vulnerable to Denial of Service via Uncaught Exception in filename* parameter parsing",
+    "details": "### Impact multiparty@4.2.3 and lower versions are vulnerable to denial of service via uncaught exception. By sending a `multipart/form-data` request with a `Content-Disposition: filename*=utf-8''` header containing a malformed percent-encoding (e.g., `%FF`, `%GG`), the parser invokes `decodeURI` on the value without try/catch. The resulting `URIError` propagates as an uncaught exception and crashes the process. Any service accepting multipart uploads via multiparty is affected. ### Patches Users should upgrade to multiparty@4.3.0 or higher. ### Workarounds None.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "npm"
+    ],
+    "cwe": [
+      "CWE-755"
+    ],
+    "affected": [
+      {
+        "ecosystem": "npm",
+        "package": "multiparty",
+        "versions": "<= 4.2.3",
+        "fixedIn": "4.3.0"
+      }
+    ],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-18T17:35:24.000Z",
+    "modifiedAt": "2026-05-23T21:35:24.000Z",
+    "mergedAt": "2026-05-23T22:25:03.490Z",
+    "sources": [
+      {
+        "source": "ghsa",
+        "externalId": "GHSA-xh3c-6gcq-g4rv",
+        "url": "https://github.com/advisories/GHSA-xh3c-6gcq-g4rv",
+        "fetchedAt": "2026-05-23T22:25:03.490Z"
+      }
+    ],
+    "tags": [
+      "frontend"
+    ],
+    "epss": 0.00055
+  },
+  {
+    "id": "CVE-2026-45495",
+    "cveId": "CVE-2026-45495",
+    "aliases": [
+      "CVE-2026-45495"
+    ],
+    "title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
+    "summary": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-18T17:03:18.245Z",
+    "modifiedAt": "2026-05-22T22:04:30.942Z",
+    "mergedAt": "2026-05-24T03:21:47.792Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-45495",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45495.json",
+        "fetchedAt": "2026-05-22T16:40:00.133Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00195
   },
   {
     "id": "CVE-2026-42009",
@@ -31948,43 +31948,6 @@
     "epss": 0.00187
   },
   {
-    "id": "CVE-2026-45492",
-    "cveId": "CVE-2026-45492",
-    "aliases": [
-      "CVE-2026-45492"
-    ],
-    "title": "Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability",
-    "summary": "Improper input validation in Microsoft Edge (Chromium-based) allows an unauthorized attacker to bypass a security feature over a network.",
-    "severity": "medium",
-    "cvss": 5.4,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N/E:U/RL:O/RC:C",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 10,
-    "publishedAt": "2026-05-18T17:03:16.830Z",
-    "modifiedAt": "2026-05-22T22:04:29.843Z",
-    "mergedAt": "2026-05-24T03:21:45.521Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-45492",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45492.json",
-        "fetchedAt": "2026-05-24T03:21:45.521Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00139
-  },
-  {
     "id": "CVE-2013-2566",
     "cveId": "CVE-2013-2566",
     "aliases": [
@@ -37006,14 +36969,16 @@
     "epss": 0.00477
   },
   {
-    "id": "h-ac147b91170f",
+    "id": "CVE-2026-45492",
+    "cveId": "CVE-2026-45492",
     "aliases": [
-      "https://thehackernews.com/2026/05/interpol-operation-ramz-disrupts-mena.html"
+      "CVE-2026-45492"
     ],
-    "title": "INTERPOL Operation Ramz Disrupts MENA Cybercrime Networks with 201 Arrests",
-    "summary": "INTERPOL has coordinated a first-of-its-kind cybercrime crackdown across the Middle East and North Africa (MENA) that led to 201 arrests and the identification of an additional 382 suspects. The initiative involved the efforts of 13 countries from the region between October 2025 and February 2026, aiming to investigate and neutralize malicious infrastructure, arrest perpetrators behind these",
-    "details": "INTERPOL has coordinated a first-of-its-kind cybercrime crackdown across the Middle East and North Africa (MENA) that led to 201 arrests and the identification of an additional 382 suspects. The initiative involved the efforts of 13 countries from the region between October 2025 and February 2026, aiming to investigate and neutralize malicious infrastructure, arrest perpetrators behind these",
-    "severity": "unknown",
+    "title": "Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability",
+    "summary": "Improper input validation in Microsoft Edge (Chromium-based) allows an unauthorized attacker to bypass a security feature over a network.",
+    "severity": "medium",
+    "cvss": 5.4,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N/E:U/RL:O/RC:C",
     "kev": false,
     "ecosystems": [
       "generic"
@@ -37026,20 +36991,19 @@
       "reason": "topic-mention"
     },
     "priority": 8,
-    "publishedAt": "2026-05-18T17:21:18.000Z",
-    "modifiedAt": "2026-05-18T17:21:18.000Z",
-    "mergedAt": "2026-05-22T15:13:41.719Z",
+    "publishedAt": "2026-05-18T17:03:16.830Z",
+    "modifiedAt": "2026-05-22T22:04:29.843Z",
+    "mergedAt": "2026-05-24T03:21:45.521Z",
     "sources": [
       {
-        "source": "thehackernews",
-        "externalId": "https://thehackernews.com/2026/05/interpol-operation-ramz-disrupts-mena.html",
-        "url": "https://thehackernews.com/2026/05/interpol-operation-ramz-disrupts-mena.html",
-        "fetchedAt": "2026-05-22T13:47:20.315Z"
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-45492",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/45xxx/CVE-2026-45492.json",
+        "fetchedAt": "2026-05-24T03:21:45.521Z"
       }
     ],
-    "tags": [
-      "general"
-    ]
+    "tags": [],
+    "epss": 0.00139
   },
   {
     "id": "CVE-2018-25334",
@@ -40843,6 +40807,42 @@
     ],
     "tags": [],
     "epss": 0.00035
+  },
+  {
+    "id": "h-ac147b91170f",
+    "aliases": [
+      "https://thehackernews.com/2026/05/interpol-operation-ramz-disrupts-mena.html"
+    ],
+    "title": "INTERPOL Operation Ramz Disrupts MENA Cybercrime Networks with 201 Arrests",
+    "summary": "INTERPOL has coordinated a first-of-its-kind cybercrime crackdown across the Middle East and North Africa (MENA) that led to 201 arrests and the identification of an additional 382 suspects. The initiative involved the efforts of 13 countries from the region between October 2025 and February 2026, aiming to investigate and neutralize malicious infrastructure, arrest perpetrators behind these",
+    "details": "INTERPOL has coordinated a first-of-its-kind cybercrime crackdown across the Middle East and North Africa (MENA) that led to 201 arrests and the identification of an additional 382 suspects. The initiative involved the efforts of 13 countries from the region between October 2025 and February 2026, aiming to investigate and neutralize malicious infrastructure, arrest perpetrators behind these",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-18T17:21:18.000Z",
+    "modifiedAt": "2026-05-18T17:21:18.000Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
+    "sources": [
+      {
+        "source": "thehackernews",
+        "externalId": "https://thehackernews.com/2026/05/interpol-operation-ramz-disrupts-mena.html",
+        "url": "https://thehackernews.com/2026/05/interpol-operation-ramz-disrupts-mena.html",
+        "fetchedAt": "2026-05-22T13:47:20.315Z"
+      }
+    ],
+    "tags": [
+      "general"
+    ]
   },
   {
     "id": "h-2696c9e39b03",
