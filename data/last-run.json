@@ -1,95 +1,25 @@
 {
-  "startedAt": "2026-05-25T20:39:13.152Z",
-  "finishedAt": "2026-05-25T20:39:39.982Z",
-  "durationMs": 26830,
+  "startedAt": "2026-05-25T21:33:12.563Z",
+  "finishedAt": "2026-05-25T21:33:27.325Z",
+  "durationMs": 14762,
   "stats": {
     "newCount": 1,
     "updatedCount": 1576,
-    "archivedCount": 1475,
+    "archivedCount": 1468,
     "droppedCount": 0,
-    "filteredCount": 23,
+    "filteredCount": 32,
     "alertCount": 0
   },
   "sources": {
-    "ghsa": {
+    "ghsa-stack": {
       "ok": true,
-      "fetched": 0,
-      "durationMs": 253
+      "fetched": 232,
+      "durationMs": 8817
     },
-    "osv": {
+    "arxiv-cs-cr": {
       "ok": true,
-      "fetched": 282,
-      "durationMs": 16779
-    },
-    "nvd": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 8346
-    },
-    "cve-org": {
-      "ok": true,
-      "fetched": 16,
-      "durationMs": 3502
-    },
-    "packagist": {
-      "ok": true,
-      "fetched": 206,
-      "durationMs": 735
-    },
-    "friendsofphp-advisories": {
-      "ok": true,
-      "fetched": 10,
-      "durationMs": 289
-    },
-    "symfony-security": {
-      "ok": true,
-      "fetched": 5,
-      "durationMs": 275
-    },
-    "github-repo-advisories": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 12469
-    },
-    "nextjs-releases": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 823
-    },
-    "nodejs-security": {
-      "ok": true,
-      "fetched": 6,
-      "durationMs": 235
-    },
-    "php-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1808
-    },
-    "github-security-lab": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 263
-    },
-    "project-zero": {
-      "ok": true,
-      "fetched": 1,
-      "durationMs": 1137
-    },
-    "cisa-alerts": {
-      "ok": true,
-      "fetched": 30,
-      "durationMs": 216
-    },
-    "cloudflare-blog": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 313
-    },
-    "vercel-changelog": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 696
+      "fetched": 32,
+      "durationMs": 158
     }
   },
   "errors": []
