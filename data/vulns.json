@@ -131,7 +131,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:19.113Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "osv",
@@ -304,7 +304,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-21T03:55:30.221Z",
-    "mergedAt": "2026-05-26T09:27:13.350Z",
+    "mergedAt": "2026-05-26T13:20:26.617Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -357,7 +357,7 @@
     "priority": 85,
     "publishedAt": "2026-05-20T00:00:00.000Z",
     "modifiedAt": "2026-05-23T03:19:46.156Z",
-    "mergedAt": "2026-05-26T09:27:13.350Z",
+    "mergedAt": "2026-05-26T13:20:26.617Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2088,14 +2088,14 @@
     "epss": 0.00303
   },
   {
-    "id": "CVE-2025-31277",
-    "cveId": "CVE-2025-31277",
+    "id": "CVE-2025-43520",
+    "cveId": "CVE-2025-43520",
     "aliases": [
       "CVE-2025-43520",
       "CVE-2025-31277"
     ],
-    "title": "Apple Multiple Products Buffer Overflow Vulnerability",
-    "summary": "Apple Safari, iOS, watchOS, visionOS, iPadOS, macOS, and tvOS contain a buffer overflow vulnerability that could allow the processing of maliciously crafted web content which may lead to memory corruption.",
+    "title": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+    "summary": "Apple watchOS, iOS, iPadOS, macOS, visionOS, and tvOS contain a classic buffer overflow vulnerability which could allow a malicious application to cause unexpected system termination or write kernel memory.",
     "severity": "high",
     "ecosystems": [
       "infrastructure"
@@ -2111,7 +2111,7 @@
     "kev": true,
     "publishedAt": "2026-03-20T00:00:00.000Z",
     "modifiedAt": "2026-03-20T00:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:13.350Z",
+    "mergedAt": "2026-05-26T13:20:26.617Z",
     "sources": [
       {
         "source": "cisa-kev",
@@ -2129,7 +2129,7 @@
     "tags": [
       "exploited"
     ],
-    "epss": 0.00265
+    "epss": 0.00253
   },
   {
     "id": "CVE-2026-20131",
@@ -3002,7 +3002,7 @@
     "priority": 71,
     "publishedAt": "2025-03-21T15:20:12.000Z",
     "modifiedAt": "2026-03-04T15:06:29.993Z",
-    "mergedAt": "2026-05-26T09:27:06.123Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -3062,7 +3062,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:55:15.000Z",
     "modifiedAt": "2026-05-14T20:50:45.445Z",
-    "mergedAt": "2026-05-26T09:27:06.123Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -3122,7 +3122,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T15:53:51.000Z",
     "modifiedAt": "2026-05-14T20:48:35.793Z",
-    "mergedAt": "2026-05-26T09:27:06.114Z",
+    "mergedAt": "2026-05-26T13:20:21.902Z",
     "sources": [
       {
         "source": "osv",
@@ -3180,7 +3180,7 @@
     "priority": 70,
     "publishedAt": "2026-05-11T14:50:27.000Z",
     "modifiedAt": "2026-05-13T03:44:29.651Z",
-    "mergedAt": "2026-05-26T09:27:06.122Z",
+    "mergedAt": "2026-05-26T13:20:21.903Z",
     "sources": [
       {
         "source": "osv",
@@ -3239,7 +3239,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:34:32.000Z",
     "modifiedAt": "2026-05-06T15:29:21.389Z",
-    "mergedAt": "2026-05-26T09:27:06.149Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -3298,7 +3298,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:26:29.000Z",
     "modifiedAt": "2026-05-06T15:29:21.690Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -3358,7 +3358,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:25:47.000Z",
     "modifiedAt": "2026-05-06T15:29:22.420Z",
-    "mergedAt": "2026-05-26T09:27:06.150Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -3419,7 +3419,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:20:58.000Z",
     "modifiedAt": "2026-05-06T15:29:21.321Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -3478,7 +3478,7 @@
     "priority": 70,
     "publishedAt": "2026-05-05T00:18:38.000Z",
     "modifiedAt": "2026-05-12T17:16:38.232Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -3535,7 +3535,7 @@
     "priority": 67,
     "publishedAt": "2026-04-10T15:35:47.000Z",
     "modifiedAt": "2026-04-16T23:29:14.079Z",
-    "mergedAt": "2026-05-26T09:27:06.129Z",
+    "mergedAt": "2026-05-26T13:20:21.905Z",
     "sources": [
       {
         "source": "osv",
@@ -3612,7 +3612,7 @@
     "priority": 67,
     "publishedAt": "2026-04-01T23:51:12.000Z",
     "modifiedAt": "2026-04-02T17:29:57.498Z",
-    "mergedAt": "2026-05-26T09:27:06.156Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -3697,7 +3697,7 @@
     "priority": 66,
     "publishedAt": "2019-07-10T19:45:23.000Z",
     "modifiedAt": "2026-03-14T09:41:05.242Z",
-    "mergedAt": "2026-05-26T09:27:06.155Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -3757,7 +3757,7 @@
     "priority": 65,
     "publishedAt": "2026-02-09T17:46:14.000Z",
     "modifiedAt": "2026-05-08T14:03:50.604Z",
-    "mergedAt": "2026-05-26T09:27:06.148Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -3777,47 +3777,6 @@
     ],
     "ghsaId": "GHSA-43fc-jf86-j433",
     "epss": 0.00044
-  },
-  {
-    "id": "CVE-2026-2611",
-    "cveId": "CVE-2026-2611",
-    "aliases": [
-      "CVE-2026-2611"
-    ],
-    "title": "In MLflow version 3.9.0, the MLflow Assistant feature introduced improper origin validation in its /ajax-api endpoints. This vulnerability allows a remote attacker to exploit cross-origin requests fro",
-    "summary": "In MLflow version 3.9.0, the MLflow Assistant feature introduced improper origin validation in its /ajax-api endpoints. This vulnerability allows a remote attacker to exploit cross-origin requests from a malicious webpage to interact with the MLflow Assistant running on a victim's local machine. By bypassing the loopback-only restriction, the attacker can modify the Assistant's configuration to enable full access, which in turn allows the execution of arbitrary commands via the Claude Code sub-agent. This issue is resolved in version 3.10.0.",
-    "severity": "critical",
-    "cvss": 9.6,
-    "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [
-      "CWE-346"
-    ],
-    "affected": [],
-    "stackMatch": {
-      "score": 40,
-      "packages": [
-        "claude"
-      ],
-      "reason": "topic-mention"
-    },
-    "priority": 64,
-    "publishedAt": "2026-05-19T10:16:22.983Z",
-    "modifiedAt": "2026-05-19T15:03:31.370Z",
-    "mergedAt": "2026-05-22T22:30:45.999Z",
-    "sources": [
-      {
-        "source": "nvd",
-        "externalId": "CVE-2026-2611",
-        "url": "https://github.com/mlflow/mlflow/commit/8f9c8a53af90842944101eb8b7d60706822c81bc",
-        "fetchedAt": "2026-05-22T22:30:45.999Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00037
   },
   {
     "id": "CVE-2026-46640",
@@ -3857,7 +3816,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:18.836Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "osv",
@@ -3921,7 +3880,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-21T21:45:17.837Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "osv",
@@ -3982,7 +3941,7 @@
     "priority": 61,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T15:44:33.359Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "packagist",
@@ -4041,7 +4000,7 @@
     "priority": 61,
     "publishedAt": "2021-11-11T13:30:00.000Z",
     "modifiedAt": "2026-03-13T22:00:38.072Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.924Z",
     "sources": [
       {
         "source": "osv",
@@ -4106,7 +4065,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.214Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "osv",
@@ -4169,7 +4128,7 @@
     "priority": 60,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-22T22:44:48.132Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "osv",
@@ -4194,6 +4153,47 @@
       "backend"
     ],
     "ghsaId": "GHSA-24x9-r6q4-q93w"
+  },
+  {
+    "id": "CVE-2026-2611",
+    "cveId": "CVE-2026-2611",
+    "aliases": [
+      "CVE-2026-2611"
+    ],
+    "title": "In MLflow version 3.9.0, the MLflow Assistant feature introduced improper origin validation in its /ajax-api endpoints. This vulnerability allows a remote attacker to exploit cross-origin requests fro",
+    "summary": "In MLflow version 3.9.0, the MLflow Assistant feature introduced improper origin validation in its /ajax-api endpoints. This vulnerability allows a remote attacker to exploit cross-origin requests from a malicious webpage to interact with the MLflow Assistant running on a victim's local machine. By bypassing the loopback-only restriction, the attacker can modify the Assistant's configuration to enable full access, which in turn allows the execution of arbitrary commands via the Claude Code sub-agent. This issue is resolved in version 3.10.0.",
+    "severity": "critical",
+    "cvss": 9.6,
+    "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [
+      "CWE-346"
+    ],
+    "affected": [],
+    "stackMatch": {
+      "score": 40,
+      "packages": [
+        "claude"
+      ],
+      "reason": "topic-mention"
+    },
+    "priority": 59,
+    "publishedAt": "2026-05-19T10:16:22.983Z",
+    "modifiedAt": "2026-05-19T15:03:31.370Z",
+    "mergedAt": "2026-05-22T22:30:45.999Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-2611",
+        "url": "https://github.com/mlflow/mlflow/commit/8f9c8a53af90842944101eb8b7d60706822c81bc",
+        "fetchedAt": "2026-05-22T22:30:45.999Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00037
   },
   {
     "id": "CVE-2026-44575",
@@ -4235,7 +4235,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T16:21:19.000Z",
     "modifiedAt": "2026-05-14T20:47:46.572Z",
-    "mergedAt": "2026-05-26T09:27:06.114Z",
+    "mergedAt": "2026-05-26T13:20:21.902Z",
     "sources": [
       {
         "source": "osv",
@@ -4307,7 +4307,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:56:24.000Z",
     "modifiedAt": "2026-05-14T20:50:54.621Z",
-    "mergedAt": "2026-05-26T09:27:06.128Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -4367,7 +4367,7 @@
     "priority": 56,
     "publishedAt": "2026-05-11T15:54:08.000Z",
     "modifiedAt": "2026-05-14T20:47:43.284Z",
-    "mergedAt": "2026-05-26T09:27:06.117Z",
+    "mergedAt": "2026-05-26T13:20:21.902Z",
     "sources": [
       {
         "source": "osv",
@@ -4421,7 +4421,7 @@
     "priority": 55,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "packagist",
@@ -4472,7 +4472,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:57:12.000Z",
     "modifiedAt": "2026-05-14T20:51:12.557Z",
-    "mergedAt": "2026-05-26T09:27:06.123Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -4532,7 +4532,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:38.000Z",
     "modifiedAt": "2026-05-14T20:51:25.401Z",
-    "mergedAt": "2026-05-26T09:27:06.127Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -4592,7 +4592,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:56:05.000Z",
     "modifiedAt": "2026-05-14T20:51:26.606Z",
-    "mergedAt": "2026-05-26T09:27:06.128Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -4652,7 +4652,7 @@
     "priority": 55,
     "publishedAt": "2026-05-11T15:54:46.000Z",
     "modifiedAt": "2026-05-14T20:52:45.704Z",
-    "mergedAt": "2026-05-26T09:27:06.131Z",
+    "mergedAt": "2026-05-26T13:20:21.905Z",
     "sources": [
       {
         "source": "osv",
@@ -4712,7 +4712,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:45.000Z",
     "modifiedAt": "2026-05-06T15:29:22.982Z",
-    "mergedAt": "2026-05-26T09:27:06.148Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -4771,7 +4771,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:40:17.000Z",
     "modifiedAt": "2026-05-06T15:29:25.469Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -4830,7 +4830,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:33:25.000Z",
     "modifiedAt": "2026-05-06T15:29:22.484Z",
-    "mergedAt": "2026-05-26T09:27:06.149Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -4889,7 +4889,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:26:57.000Z",
     "modifiedAt": "2026-05-06T15:29:25.221Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -4949,7 +4949,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:25:22.000Z",
     "modifiedAt": "2026-05-06T15:29:24.391Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -5009,7 +5009,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:21:39.000Z",
     "modifiedAt": "2026-05-06T15:29:25.530Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -5069,7 +5069,7 @@
     "priority": 55,
     "publishedAt": "2026-05-05T00:19:33.000Z",
     "modifiedAt": "2026-05-06T15:29:23.367Z",
-    "mergedAt": "2026-05-26T09:27:06.148Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -5130,7 +5130,7 @@
     "priority": 52,
     "publishedAt": "2026-04-10T19:47:16.000Z",
     "modifiedAt": "2026-05-20T00:30:10.353Z",
-    "mergedAt": "2026-05-26T09:27:06.150Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -5190,7 +5190,7 @@
     "priority": 52,
     "publishedAt": "2026-04-09T17:32:19.000Z",
     "modifiedAt": "2026-05-08T13:46:43.000Z",
-    "mergedAt": "2026-05-26T09:27:06.148Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -5267,7 +5267,7 @@
     "priority": 52,
     "publishedAt": "2026-04-01T23:50:27.000Z",
     "modifiedAt": "2026-04-02T17:29:51.565Z",
-    "mergedAt": "2026-05-26T09:27:06.154Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -5326,7 +5326,7 @@
     "priority": 51,
     "publishedAt": "2021-12-07T21:12:09.000Z",
     "modifiedAt": "2026-03-13T22:00:36.554Z",
-    "mergedAt": "2026-05-26T09:27:06.114Z",
+    "mergedAt": "2026-05-26T13:20:21.902Z",
     "sources": [
       {
         "source": "osv",
@@ -5386,7 +5386,7 @@
     "priority": 51,
     "publishedAt": "2021-09-01T18:24:22.000Z",
     "modifiedAt": "2026-03-13T22:00:20.154Z",
-    "mergedAt": "2026-05-26T09:27:06.122Z",
+    "mergedAt": "2026-05-26T13:20:21.903Z",
     "sources": [
       {
         "source": "osv",
@@ -5455,7 +5455,7 @@
     "priority": 51,
     "publishedAt": "2020-09-02T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:14:38.594Z",
-    "mergedAt": "2026-05-26T09:27:06.215Z",
+    "mergedAt": "2026-05-26T13:20:21.920Z",
     "sources": [
       {
         "source": "osv",
@@ -5542,7 +5542,7 @@
     "priority": 51,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:03.504Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.921Z",
     "sources": [
       {
         "source": "osv",
@@ -5612,7 +5612,7 @@
     "priority": 51,
     "publishedAt": "2020-01-30T21:22:15.000Z",
     "modifiedAt": "2026-03-13T22:01:20.067Z",
-    "mergedAt": "2026-05-26T09:27:06.139Z",
+    "mergedAt": "2026-05-26T13:20:21.906Z",
     "sources": [
       {
         "source": "osv",
@@ -5671,7 +5671,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:18.155Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "osv",
@@ -5735,7 +5735,7 @@
     "priority": 50,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-23T18:29:19.441Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "osv",
@@ -5873,7 +5873,7 @@
     "priority": 47,
     "publishedAt": "2026-03-31T03:15:49.000Z",
     "modifiedAt": "2026-04-07T14:52:30.013Z",
-    "mergedAt": "2026-05-26T09:27:06.152Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -6048,7 +6048,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T16:12:07.000Z",
     "modifiedAt": "2026-05-14T20:48:38.453Z",
-    "mergedAt": "2026-05-26T09:27:06.115Z",
+    "mergedAt": "2026-05-26T13:20:21.902Z",
     "sources": [
       {
         "source": "osv",
@@ -6108,7 +6108,7 @@
     "priority": 45,
     "publishedAt": "2026-05-11T15:56:48.000Z",
     "modifiedAt": "2026-05-14T20:52:41.365Z",
-    "mergedAt": "2026-05-26T09:27:06.130Z",
+    "mergedAt": "2026-05-26T13:20:21.905Z",
     "sources": [
       {
         "source": "osv",
@@ -6169,7 +6169,7 @@
     "priority": 45,
     "publishedAt": "2026-05-05T00:18:03.000Z",
     "modifiedAt": "2026-05-06T15:29:21.463Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -6267,7 +6267,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.219Z",
+    "mergedAt": "2026-05-26T13:20:21.923Z",
     "sources": [
       {
         "source": "packagist",
@@ -6319,7 +6319,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.210Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6366,7 +6366,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T13:37:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.230Z",
+    "mergedAt": "2026-05-26T13:20:21.931Z",
     "sources": [
       {
         "source": "packagist",
@@ -6425,7 +6425,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.219Z",
+    "mergedAt": "2026-05-26T13:20:21.923Z",
     "sources": [
       {
         "source": "packagist",
@@ -6477,7 +6477,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.210Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6523,7 +6523,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.210Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6570,7 +6570,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.230Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6623,7 +6623,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.210Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6670,7 +6670,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.210Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6723,7 +6723,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.210Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6775,7 +6775,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.920Z",
     "sources": [
       {
         "source": "packagist",
@@ -6827,7 +6827,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.210Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6873,7 +6873,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.210Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6919,7 +6919,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.211Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -6966,7 +6966,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T10:56:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.211Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -7025,7 +7025,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.920Z",
     "sources": [
       {
         "source": "packagist",
@@ -7077,7 +7077,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.211Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -7123,7 +7123,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.211Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -7169,7 +7169,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.211Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -7221,7 +7221,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.920Z",
     "sources": [
       {
         "source": "packagist",
@@ -7279,7 +7279,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.219Z",
+    "mergedAt": "2026-05-26T13:20:21.923Z",
     "sources": [
       {
         "source": "packagist",
@@ -7331,7 +7331,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.211Z",
+    "mergedAt": "2026-05-26T13:20:21.917Z",
     "sources": [
       {
         "source": "packagist",
@@ -7389,7 +7389,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.920Z",
     "sources": [
       {
         "source": "packagist",
@@ -7447,7 +7447,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "packagist",
@@ -7492,7 +7492,7 @@
     "priority": 41,
     "publishedAt": "2026-05-20T08:00:00.000Z",
     "modifiedAt": "2026-05-20T08:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.221Z",
+    "mergedAt": "2026-05-26T13:20:21.925Z",
     "sources": [
       {
         "source": "packagist",
@@ -7787,7 +7787,7 @@
     "priority": 38,
     "publishedAt": "2026-04-08T15:51:48.000Z",
     "modifiedAt": "2026-05-05T16:10:10.879Z",
-    "mergedAt": "2026-05-26T09:27:06.151Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -7845,7 +7845,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:15.000Z",
     "modifiedAt": "2026-03-19T17:59:01.302Z",
-    "mergedAt": "2026-05-26T09:27:06.127Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -7904,7 +7904,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:17:06.000Z",
     "modifiedAt": "2026-03-20T14:59:12.698Z",
-    "mergedAt": "2026-05-26T09:27:06.116Z",
+    "mergedAt": "2026-05-26T13:20:21.902Z",
     "sources": [
       {
         "source": "osv",
@@ -7963,7 +7963,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T16:16:49.000Z",
     "modifiedAt": "2026-03-19T18:48:06.587Z",
-    "mergedAt": "2026-05-26T09:27:06.128Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -8022,7 +8022,7 @@
     "priority": 38,
     "publishedAt": "2026-03-17T15:30:14.000Z",
     "modifiedAt": "2026-03-19T18:31:23.523Z",
-    "mergedAt": "2026-05-26T09:27:06.128Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -8084,7 +8084,7 @@
     "priority": 36,
     "publishedAt": "2026-01-28T15:20:55.000Z",
     "modifiedAt": "2026-04-08T21:16:40.797Z",
-    "mergedAt": "2026-05-26T09:27:06.117Z",
+    "mergedAt": "2026-05-26T13:20:21.902Z",
     "sources": [
       {
         "source": "osv",
@@ -8153,7 +8153,7 @@
     "priority": 36,
     "publishedAt": "2021-11-15T10:47:04.000Z",
     "modifiedAt": "2026-03-13T21:59:52.395Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.921Z",
     "sources": [
       {
         "source": "osv",
@@ -8234,7 +8234,7 @@
     "priority": 36,
     "publishedAt": "2021-10-23T11:11:11.000Z",
     "modifiedAt": "2026-03-13T22:14:23.582Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.920Z",
     "sources": [
       {
         "source": "osv",
@@ -8315,7 +8315,7 @@
     "priority": 36,
     "publishedAt": "2021-10-09T12:10:44.000Z",
     "modifiedAt": "2026-03-13T22:00:11.423Z",
-    "mergedAt": "2026-05-26T09:27:06.215Z",
+    "mergedAt": "2026-05-26T13:20:21.920Z",
     "sources": [
       {
         "source": "osv",
@@ -8387,7 +8387,7 @@
     "priority": 36,
     "publishedAt": "2021-08-12T14:51:14.000Z",
     "modifiedAt": "2026-03-13T22:00:08.038Z",
-    "mergedAt": "2026-05-26T09:27:06.130Z",
+    "mergedAt": "2026-05-26T13:20:21.905Z",
     "sources": [
       {
         "source": "osv",
@@ -8456,7 +8456,7 @@
     "priority": 36,
     "publishedAt": "2021-06-17T15:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:16.333Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.920Z",
     "sources": [
       {
         "source": "osv",
@@ -8569,7 +8569,7 @@
     "priority": 36,
     "publishedAt": "2021-05-12T08:00:00.000Z",
     "modifiedAt": "2026-03-13T22:16:14.858Z",
-    "mergedAt": "2026-05-26T09:27:06.216Z",
+    "mergedAt": "2026-05-26T13:20:21.921Z",
     "sources": [
       {
         "source": "osv",
@@ -8647,7 +8647,7 @@
     "priority": 36,
     "publishedAt": "2020-10-08T19:28:07.000Z",
     "modifiedAt": "2026-03-13T22:14:13.665Z",
-    "mergedAt": "2026-05-26T09:27:06.132Z",
+    "mergedAt": "2026-05-26T13:20:21.905Z",
     "sources": [
       {
         "source": "osv",
@@ -8715,7 +8715,7 @@
     "priority": 36,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:15:59.230Z",
-    "mergedAt": "2026-05-26T09:27:06.213Z",
+    "mergedAt": "2026-05-26T13:20:21.918Z",
     "sources": [
       {
         "source": "osv",
@@ -8800,7 +8800,7 @@
     "priority": 36,
     "publishedAt": "2019-07-19T16:13:07.000Z",
     "modifiedAt": "2026-03-13T21:56:22.446Z",
-    "mergedAt": "2026-05-26T09:27:06.156Z",
+    "mergedAt": "2026-05-26T13:20:21.907Z",
     "sources": [
       {
         "source": "osv",
@@ -8846,7 +8846,7 @@
     "priority": 34,
     "publishedAt": "2026-05-24T07:40:00.000Z",
     "modifiedAt": "2026-05-24T07:40:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.230Z",
+    "mergedAt": "2026-05-26T13:20:21.931Z",
     "sources": [
       {
         "source": "symfony-security",
@@ -8885,7 +8885,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T17:00:00.000Z",
     "modifiedAt": "2026-05-21T17:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.246Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -8960,7 +8960,7 @@
     "priority": 34,
     "publishedAt": "2026-05-21T07:25:00.000Z",
     "modifiedAt": "2026-05-21T07:25:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.230Z",
+    "mergedAt": "2026-05-26T13:20:21.931Z",
     "sources": [
       {
         "source": "symfony-security",
@@ -9113,7 +9113,7 @@
     "priority": 29,
     "publishedAt": "2026-05-18T23:01:00.000Z",
     "modifiedAt": "2026-05-18T23:01:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.251Z",
+    "mergedAt": "2026-05-26T13:20:21.941Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -9598,7 +9598,7 @@
     "priority": 28,
     "publishedAt": "2026-03-17T15:29:48.000Z",
     "modifiedAt": "2026-03-25T19:49:01.129Z",
-    "mergedAt": "2026-05-26T09:27:06.128Z",
+    "mergedAt": "2026-05-26T13:20:21.904Z",
     "sources": [
       {
         "source": "osv",
@@ -9667,7 +9667,7 @@
     "priority": 26,
     "publishedAt": "2020-03-30T14:00:00.000Z",
     "modifiedAt": "2026-03-13T22:01:08.748Z",
-    "mergedAt": "2026-05-26T09:27:06.218Z",
+    "mergedAt": "2026-05-26T13:20:21.922Z",
     "sources": [
       {
         "source": "osv",
@@ -13274,6 +13274,43 @@
     "epss": 0.00146
   },
   {
+    "id": "CVE-2026-8679",
+    "cveId": "CVE-2026-8679",
+    "aliases": [
+      "CVE-2026-8679"
+    ],
+    "title": "AudioIgniter Music Player <= 2.0.2 - Unauthenticated Insecure Direct Object Reference to 'audioigniter_playlist_id' Parameter",
+    "summary": "The AudioIgniter plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 2.0.2. This is due to the handle_playlist_endpoint() function (hooked to template_redirect) accepting a user-controlled playlist ID via the audioigniter_playlist_id query var or the /audioigniter/playlist/{id}/ rewrite rule and returning playlist track data without performing any authentication, capability, or post_status check — only the post_type is validated. This makes it possible for unauthenticated attackers to view track metadata (titles, artists, audio URLs, buy links, download URLs, and cover images) of any playlist on the site, including those in draft, private, pending, or trash status.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 18,
+    "publishedAt": "2026-05-22T07:50:27.202Z",
+    "modifiedAt": "2026-05-22T10:20:11.498Z",
+    "mergedAt": "2026-05-22T16:40:00.130Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8679",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8679.json",
+        "fetchedAt": "2026-05-22T16:40:00.130Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.24534
+  },
+  {
     "id": "CVE-2026-47323",
     "cveId": "CVE-2026-47323",
     "aliases": [
@@ -13295,7 +13332,7 @@
       "packages": [],
       "reason": "topic-mention"
     },
-    "priority": 20,
+    "priority": 18,
     "publishedAt": "2026-05-19T12:25:49.373Z",
     "modifiedAt": "2026-05-21T03:55:16.379Z",
     "mergedAt": "2026-05-22T23:33:30.419Z",
@@ -13332,7 +13369,7 @@
       "packages": [],
       "reason": "topic-mention"
     },
-    "priority": 20,
+    "priority": 18,
     "publishedAt": "2026-05-19T12:16:19.020Z",
     "modifiedAt": "2026-05-20T17:16:23.517Z",
     "mergedAt": "2026-05-22T17:43:10.384Z",
@@ -13346,43 +13383,6 @@
     ],
     "tags": [],
     "epss": 0.0006
-  },
-  {
-    "id": "CVE-2026-8679",
-    "cveId": "CVE-2026-8679",
-    "aliases": [
-      "CVE-2026-8679"
-    ],
-    "title": "AudioIgniter Music Player <= 2.0.2 - Unauthenticated Insecure Direct Object Reference to 'audioigniter_playlist_id' Parameter",
-    "summary": "The AudioIgniter plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 2.0.2. This is due to the handle_playlist_endpoint() function (hooked to template_redirect) accepting a user-controlled playlist ID via the audioigniter_playlist_id query var or the /audioigniter/playlist/{id}/ rewrite rule and returning playlist track data without performing any authentication, capability, or post_status check — only the post_type is validated. This makes it possible for unauthenticated attackers to view track metadata (titles, artists, audio URLs, buy links, download URLs, and cover images) of any playlist on the site, including those in draft, private, pending, or trash status.",
-    "severity": "high",
-    "cvss": 7.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 18,
-    "publishedAt": "2026-05-22T07:50:27.202Z",
-    "modifiedAt": "2026-05-22T10:20:11.498Z",
-    "mergedAt": "2026-05-22T16:40:00.130Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8679",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8679.json",
-        "fetchedAt": "2026-05-22T16:40:00.130Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.24534
   },
   {
     "id": "CVE-2026-30117",
@@ -18360,531 +18360,6 @@
     "epss": 0.00096
   },
   {
-    "id": "CVE-2026-8975",
-    "cveId": "CVE-2026-8975",
-    "aliases": [
-      "CVE-2026-8974",
-      "CVE-2026-8975"
-    ],
-    "title": "Memory safety bugs fixed in Thunderbird 140.11 and Thunderbird 151",
-    "summary": "Memory safety bugs present in Thunderbird 140.10 and Thunderbird 150. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 151, Firefox ESR 115.36, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
-    "severity": "high",
-    "cvss": 8.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:30:23.092Z",
-    "modifiedAt": "2026-05-20T15:39:49.342Z",
-    "mergedAt": "2026-05-22T16:40:01.201Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8974",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8974.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      },
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8975",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8975.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00046
-  },
-  {
-    "id": "CVE-2026-8973",
-    "cveId": "CVE-2026-8973",
-    "aliases": [
-      "CVE-2026-8973"
-    ],
-    "title": "Memory safety bugs fixed in Thunderbird 151",
-    "summary": "Memory safety bugs present in Thunderbird 150. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
-    "severity": "high",
-    "cvss": 8.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:30:21.692Z",
-    "modifiedAt": "2026-05-20T15:39:05.247Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8973",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8973.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00042
-  },
-  {
-    "id": "CVE-2026-8972",
-    "cveId": "CVE-2026-8972",
-    "aliases": [
-      "CVE-2026-8972"
-    ],
-    "title": "Privilege escalation in the WebRTC: Audio/Video component",
-    "summary": "Privilege escalation in the WebRTC: Audio/Video component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
-    "severity": "high",
-    "cvss": 8.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:30:20.122Z",
-    "modifiedAt": "2026-05-20T15:38:39.203Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8972",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8972.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00041
-  },
-  {
-    "id": "CVE-2026-8970",
-    "cveId": "CVE-2026-8970",
-    "aliases": [
-      "CVE-2026-8970"
-    ],
-    "title": "Privilege escalation in the Security component",
-    "summary": "Privilege escalation in the Security component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
-    "severity": "high",
-    "cvss": 8.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:30:17.224Z",
-    "modifiedAt": "2026-05-20T15:38:16.007Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8970",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8970.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00044
-  },
-  {
-    "id": "CVE-2026-8967",
-    "cveId": "CVE-2026-8967",
-    "aliases": [
-      "CVE-2026-8967"
-    ],
-    "title": "Information disclosure in the Graphics: WebGPU component",
-    "summary": "Information disclosure in the Graphics: WebGPU component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
-    "severity": "high",
-    "cvss": 7.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:30:12.611Z",
-    "modifiedAt": "2026-05-20T15:46:08.917Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8967",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8967.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.0004
-  },
-  {
-    "id": "CVE-2026-8966",
-    "cveId": "CVE-2026-8966",
-    "aliases": [
-      "CVE-2026-8966"
-    ],
-    "title": "Information disclosure in the IP Protection component",
-    "summary": "Information disclosure in the IP Protection component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
-    "severity": "high",
-    "cvss": 7.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:30:11.238Z",
-    "modifiedAt": "2026-05-20T15:46:14.208Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8966",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8966.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.0004
-  },
-  {
-    "id": "CVE-2026-8962",
-    "cveId": "CVE-2026-8962",
-    "aliases": [
-      "CVE-2026-8962"
-    ],
-    "title": "Mitigation bypass in the DOM: Security component",
-    "summary": "Mitigation bypass in the DOM: Security component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
-    "severity": "high",
-    "cvss": 8.1,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:29:59.947Z",
-    "modifiedAt": "2026-05-20T15:46:25.018Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8962",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8962.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00048
-  },
-  {
-    "id": "CVE-2026-8957",
-    "cveId": "CVE-2026-8957",
-    "aliases": [
-      "CVE-2026-8957"
-    ],
-    "title": "Privilege escalation in the Enterprise Policies component",
-    "summary": "Privilege escalation in the Enterprise Policies component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
-    "severity": "high",
-    "cvss": 8.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:29:52.576Z",
-    "modifiedAt": "2026-05-20T15:37:58.532Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8957",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8957.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00044
-  },
-  {
-    "id": "CVE-2026-8955",
-    "cveId": "CVE-2026-8955",
-    "aliases": [
-      "CVE-2026-8955"
-    ],
-    "title": "Privilege escalation in the DOM: Workers component",
-    "summary": "Privilege escalation in the DOM: Workers component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
-    "severity": "high",
-    "cvss": 8.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:29:49.649Z",
-    "modifiedAt": "2026-05-20T15:37:35.207Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8955",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8955.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00044
-  },
-  {
-    "id": "CVE-2026-8952",
-    "cveId": "CVE-2026-8952",
-    "aliases": [
-      "CVE-2026-8952"
-    ],
-    "title": "Privilege escalation in the Application Update component",
-    "summary": "Privilege escalation in the Application Update component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
-    "severity": "high",
-    "cvss": 8.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T12:29:45.268Z",
-    "modifiedAt": "2026-05-20T15:37:12.685Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8952",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8952.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00041
-  },
-  {
-    "id": "CVE-2026-7571",
-    "cveId": "CVE-2026-7571",
-    "aliases": [
-      "CVE-2026-7571"
-    ],
-    "title": "Keycloak: keycloak: access token disclosure and implicit flow bypass via forged client data",
-    "summary": "A flaw was found in Keycloak. A low-privilege user, with knowledge of user credentials and client ID, can bypass a security control intended to disable the implicit flow in OpenID Connect (OIDC) clients. By manipulating client data during a session restart, an attacker can obtain an access token that should not be available. This vulnerability can also lead to the exposure of these access tokens in server logs, proxy logs, and HTTP Referrer headers, resulting in sensitive information disclosure.",
-    "severity": "high",
-    "cvss": 7.1,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T11:01:26.987Z",
-    "modifiedAt": "2026-05-20T16:08:52.363Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-7571",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7571.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00012
-  },
-  {
-    "id": "CVE-2026-7507",
-    "cveId": "CVE-2026-7507",
-    "aliases": [
-      "CVE-2026-7507"
-    ],
-    "title": "Org.keycloak/keycloak-services: session fixation in oidc login flow that can lead to account takeover",
-    "summary": "A session fixation vulnerability was found in Keycloak's login-actions endpoints. An unauthenticated attacker could exploit this flaw by pre-creating an authentication session and tricking a victim into visiting a maliciously crafted link. By leveraging the /login-actions/restart endpoint—which processes session handles without adequate CSRF protection or cookie ownership validation—an attacker can reset the authentication flow state. This causes Single Sign-On (SSO) to authenticate the victim transparently upon clicking the link, allowing the attacker to hijack the required-action form without needing the victim's credentials. A successful exploit could lead to complete account takeover, including highly privileged administrative accounts.",
-    "severity": "high",
-    "cvss": 7.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T11:01:25.443Z",
-    "modifiedAt": "2026-05-20T15:48:23.138Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-7507",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7507.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00021
-  },
-  {
-    "id": "CVE-2026-7504",
-    "cveId": "CVE-2026-7504",
-    "aliases": [
-      "CVE-2026-7504"
-    ],
-    "title": "Org.keycloak/keycloak-services: open redirect when using wildcard valid redirect uris in keycloak",
-    "summary": "A flaw was found in Keycloak's URL validation logic during redirect operations. By crafting a malicious request, an attacker could bypass validation to redirect users to unauthorized URLs, potentially leading to the exposure of sensitive information within the domain or facilitating further attacks. This vulnerability specifically affects Keycloak clients configured with a wildcard (*) in the \"Valid Redirect URIs\" field and requires user interaction to be successfully exploited. The issue stems from a discrepancy in how Keycloak and the underlying Java URI implementation handle the user-info component of a URL. If a malicious redirect URL is constructed using multiple @ characters in the user-info section, Java's URI parser fails to extract the user-info, leaving only the raw authority field. Consequently, Keycloak's validation check fails to detect the malformed user-info, falls back to a wildcard comparison, and incorrectly permits the malicious redirect.",
-    "severity": "high",
-    "cvss": 8.1,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T11:01:19.663Z",
-    "modifiedAt": "2026-05-20T15:48:19.026Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-7504",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7504.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00013
-  },
-  {
-    "id": "CVE-2026-7307",
-    "cveId": "CVE-2026-7307",
-    "aliases": [
-      "CVE-2026-7307"
-    ],
-    "title": "Keycloak: keycloak: denial of service via specially crafted saml input",
-    "summary": "A flaw was found in Keycloak. A remote, unauthenticated attacker can send a specially crafted XML input to the Security Assertion Markup Language (SAML) endpoint. This malicious input can cause high CPU usage and worker thread starvation, leading to a Denial of Service (DoS) where the server becomes unavailable.",
-    "severity": "high",
-    "cvss": 7.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 16,
-    "publishedAt": "2026-05-19T10:52:24.684Z",
-    "modifiedAt": "2026-05-20T15:48:13.891Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-7307",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7307.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00053
-  },
-  {
     "id": "CVE-2026-27743",
     "cveId": "CVE-2026-27743",
     "aliases": [
@@ -20830,6 +20305,531 @@
     "epss": 0.00344
   },
   {
+    "id": "CVE-2026-8975",
+    "cveId": "CVE-2026-8975",
+    "aliases": [
+      "CVE-2026-8974",
+      "CVE-2026-8975"
+    ],
+    "title": "Memory safety bugs fixed in Thunderbird 140.11 and Thunderbird 151",
+    "summary": "Memory safety bugs present in Thunderbird 140.10 and Thunderbird 150. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 151, Firefox ESR 115.36, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:30:23.092Z",
+    "modifiedAt": "2026-05-20T15:39:49.342Z",
+    "mergedAt": "2026-05-22T16:40:01.201Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8974",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8974.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      },
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8975",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8975.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00046
+  },
+  {
+    "id": "CVE-2026-8973",
+    "cveId": "CVE-2026-8973",
+    "aliases": [
+      "CVE-2026-8973"
+    ],
+    "title": "Memory safety bugs fixed in Thunderbird 151",
+    "summary": "Memory safety bugs present in Thunderbird 150. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:30:21.692Z",
+    "modifiedAt": "2026-05-20T15:39:05.247Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8973",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8973.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00042
+  },
+  {
+    "id": "CVE-2026-8972",
+    "cveId": "CVE-2026-8972",
+    "aliases": [
+      "CVE-2026-8972"
+    ],
+    "title": "Privilege escalation in the WebRTC: Audio/Video component",
+    "summary": "Privilege escalation in the WebRTC: Audio/Video component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:30:20.122Z",
+    "modifiedAt": "2026-05-20T15:38:39.203Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8972",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8972.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00041
+  },
+  {
+    "id": "CVE-2026-8970",
+    "cveId": "CVE-2026-8970",
+    "aliases": [
+      "CVE-2026-8970"
+    ],
+    "title": "Privilege escalation in the Security component",
+    "summary": "Privilege escalation in the Security component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:30:17.224Z",
+    "modifiedAt": "2026-05-20T15:38:16.007Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8970",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8970.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00044
+  },
+  {
+    "id": "CVE-2026-8967",
+    "cveId": "CVE-2026-8967",
+    "aliases": [
+      "CVE-2026-8967"
+    ],
+    "title": "Information disclosure in the Graphics: WebGPU component",
+    "summary": "Information disclosure in the Graphics: WebGPU component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:30:12.611Z",
+    "modifiedAt": "2026-05-20T15:46:08.917Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8967",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8967.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.0004
+  },
+  {
+    "id": "CVE-2026-8966",
+    "cveId": "CVE-2026-8966",
+    "aliases": [
+      "CVE-2026-8966"
+    ],
+    "title": "Information disclosure in the IP Protection component",
+    "summary": "Information disclosure in the IP Protection component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:30:11.238Z",
+    "modifiedAt": "2026-05-20T15:46:14.208Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8966",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8966.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.0004
+  },
+  {
+    "id": "CVE-2026-8962",
+    "cveId": "CVE-2026-8962",
+    "aliases": [
+      "CVE-2026-8962"
+    ],
+    "title": "Mitigation bypass in the DOM: Security component",
+    "summary": "Mitigation bypass in the DOM: Security component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
+    "severity": "high",
+    "cvss": 8.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:29:59.947Z",
+    "modifiedAt": "2026-05-20T15:46:25.018Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8962",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8962.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00048
+  },
+  {
+    "id": "CVE-2026-8957",
+    "cveId": "CVE-2026-8957",
+    "aliases": [
+      "CVE-2026-8957"
+    ],
+    "title": "Privilege escalation in the Enterprise Policies component",
+    "summary": "Privilege escalation in the Enterprise Policies component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:29:52.576Z",
+    "modifiedAt": "2026-05-20T15:37:58.532Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8957",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8957.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00044
+  },
+  {
+    "id": "CVE-2026-8955",
+    "cveId": "CVE-2026-8955",
+    "aliases": [
+      "CVE-2026-8955"
+    ],
+    "title": "Privilege escalation in the DOM: Workers component",
+    "summary": "Privilege escalation in the DOM: Workers component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:29:49.649Z",
+    "modifiedAt": "2026-05-20T15:37:35.207Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8955",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8955.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00044
+  },
+  {
+    "id": "CVE-2026-8952",
+    "cveId": "CVE-2026-8952",
+    "aliases": [
+      "CVE-2026-8952"
+    ],
+    "title": "Privilege escalation in the Application Update component",
+    "summary": "Privilege escalation in the Application Update component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
+    "severity": "high",
+    "cvss": 8.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T12:29:45.268Z",
+    "modifiedAt": "2026-05-20T15:37:12.685Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-8952",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8952.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00041
+  },
+  {
+    "id": "CVE-2026-7571",
+    "cveId": "CVE-2026-7571",
+    "aliases": [
+      "CVE-2026-7571"
+    ],
+    "title": "Keycloak: keycloak: access token disclosure and implicit flow bypass via forged client data",
+    "summary": "A flaw was found in Keycloak. A low-privilege user, with knowledge of user credentials and client ID, can bypass a security control intended to disable the implicit flow in OpenID Connect (OIDC) clients. By manipulating client data during a session restart, an attacker can obtain an access token that should not be available. This vulnerability can also lead to the exposure of these access tokens in server logs, proxy logs, and HTTP Referrer headers, resulting in sensitive information disclosure.",
+    "severity": "high",
+    "cvss": 7.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T11:01:26.987Z",
+    "modifiedAt": "2026-05-20T16:08:52.363Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-7571",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7571.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00012
+  },
+  {
+    "id": "CVE-2026-7507",
+    "cveId": "CVE-2026-7507",
+    "aliases": [
+      "CVE-2026-7507"
+    ],
+    "title": "Org.keycloak/keycloak-services: session fixation in oidc login flow that can lead to account takeover",
+    "summary": "A session fixation vulnerability was found in Keycloak's login-actions endpoints. An unauthenticated attacker could exploit this flaw by pre-creating an authentication session and tricking a victim into visiting a maliciously crafted link. By leveraging the /login-actions/restart endpoint—which processes session handles without adequate CSRF protection or cookie ownership validation—an attacker can reset the authentication flow state. This causes Single Sign-On (SSO) to authenticate the victim transparently upon clicking the link, allowing the attacker to hijack the required-action form without needing the victim's credentials. A successful exploit could lead to complete account takeover, including highly privileged administrative accounts.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T11:01:25.443Z",
+    "modifiedAt": "2026-05-20T15:48:23.138Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-7507",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7507.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00021
+  },
+  {
+    "id": "CVE-2026-7504",
+    "cveId": "CVE-2026-7504",
+    "aliases": [
+      "CVE-2026-7504"
+    ],
+    "title": "Org.keycloak/keycloak-services: open redirect when using wildcard valid redirect uris in keycloak",
+    "summary": "A flaw was found in Keycloak's URL validation logic during redirect operations. By crafting a malicious request, an attacker could bypass validation to redirect users to unauthorized URLs, potentially leading to the exposure of sensitive information within the domain or facilitating further attacks. This vulnerability specifically affects Keycloak clients configured with a wildcard (*) in the \"Valid Redirect URIs\" field and requires user interaction to be successfully exploited. The issue stems from a discrepancy in how Keycloak and the underlying Java URI implementation handle the user-info component of a URL. If a malicious redirect URL is constructed using multiple @ characters in the user-info section, Java's URI parser fails to extract the user-info, leaving only the raw authority field. Consequently, Keycloak's validation check fails to detect the malformed user-info, falls back to a wildcard comparison, and incorrectly permits the malicious redirect.",
+    "severity": "high",
+    "cvss": 8.1,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T11:01:19.663Z",
+    "modifiedAt": "2026-05-20T15:48:19.026Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-7504",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7504.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00013
+  },
+  {
+    "id": "CVE-2026-7307",
+    "cveId": "CVE-2026-7307",
+    "aliases": [
+      "CVE-2026-7307"
+    ],
+    "title": "Keycloak: keycloak: denial of service via specially crafted saml input",
+    "summary": "A flaw was found in Keycloak. A remote, unauthenticated attacker can send a specially crafted XML input to the Security Assertion Markup Language (SAML) endpoint. This malicious input can cause high CPU usage and worker thread starvation, leading to a Denial of Service (DoS) where the server becomes unavailable.",
+    "severity": "high",
+    "cvss": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 14,
+    "publishedAt": "2026-05-19T10:52:24.684Z",
+    "modifiedAt": "2026-05-20T15:48:13.891Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-7307",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7307.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00053
+  },
+  {
     "id": "CVE-2026-32323",
     "cveId": "CVE-2026-32323",
     "aliases": [
@@ -21381,7 +21381,8 @@
     "cveId": "CVE-2026-45012",
     "ghsaId": "GHSA-pr28-mf3q-qpg6",
     "aliases": [
-      "CVE-2026-45012"
+      "CVE-2026-45012",
+      "GHSA-pr28-mf3q-qpg6"
     ],
     "title": "Apostrophe has authenticated SSRF in rich-text widget import via @apostrophecms/area/validate-widget",
     "summary": "Apostrophe has authenticated SSRF in rich-text widget import via @apostrophecms/area/validate-widget",
@@ -21411,7 +21412,7 @@
     "priority": 14,
     "publishedAt": "2026-05-14T18:26:45.000Z",
     "modifiedAt": "2026-05-26T09:03:08.000Z",
-    "mergedAt": "2026-05-26T09:26:49.795Z",
+    "mergedAt": "2026-05-26T13:20:21.835Z",
     "sources": [
       {
         "source": "ghsa",
@@ -33635,228 +33636,6 @@
     "epss": 0.00041
   },
   {
-    "id": "CVE-2026-8961",
-    "cveId": "CVE-2026-8961",
-    "aliases": [
-      "CVE-2026-8961"
-    ],
-    "title": "Spoofing issue in the Form Autofill component",
-    "summary": "Spoofing issue in the Form Autofill component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
-    "severity": "medium",
-    "cvss": 6.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 10,
-    "publishedAt": "2026-05-19T12:29:58.485Z",
-    "modifiedAt": "2026-05-20T15:46:30.150Z",
-    "mergedAt": "2026-05-22T16:40:00.134Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-8961",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8961.json",
-        "fetchedAt": "2026-05-22T16:40:00.134Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00034
-  },
-  {
-    "id": "CVE-2026-37982",
-    "cveId": "CVE-2026-37982",
-    "aliases": [
-      "CVE-2026-37982"
-    ],
-    "title": "Keycloak: org.keycloak.authentication: keycloak: unauthorized account takeover via webauthn token replay",
-    "summary": "A flaw was found in Keycloak. This authentication vulnerability allows a remote attacker to replay `ExecuteActionsActionToken` tokens within Keycloak's WebAuthn (Web Authentication) flow. By intercepting an execute-actions email link, an attacker can register their own authenticator to a victim's account. This leads to unauthorized enrollment of a hardware-backed credential, enabling persistent account takeover.",
-    "severity": "medium",
-    "cvss": 6.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 10,
-    "publishedAt": "2026-05-19T10:52:32.486Z",
-    "modifiedAt": "2026-05-20T16:08:55.881Z",
-    "mergedAt": "2026-05-22T16:40:00.132Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-37982",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/37xxx/CVE-2026-37982.json",
-        "fetchedAt": "2026-05-22T16:40:00.132Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00017
-  },
-  {
-    "id": "CVE-2026-37979",
-    "cveId": "CVE-2026-37979",
-    "aliases": [
-      "CVE-2026-37979"
-    ],
-    "title": "Keycloak: keycloak: information disclosure via oidc token introspection endpoint audience bypass",
-    "summary": "A flaw was found in Keycloak. This access control vulnerability in Keycloak's OpenID Connect (OIDC) token introspection endpoint allows a confidential client to bypass audience restrictions. An attacker-controlled client with valid credentials can retrieve sensitive token claims intended for other resource servers, compromising the confidentiality of lightweight access tokens. This issue can be exploited remotely by any confidential client in the realm with valid credentials.",
-    "severity": "medium",
-    "cvss": 6.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 10,
-    "publishedAt": "2026-05-19T10:52:30.442Z",
-    "modifiedAt": "2026-05-20T16:08:52.747Z",
-    "mergedAt": "2026-05-22T16:40:00.132Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-37979",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/37xxx/CVE-2026-37979.json",
-        "fetchedAt": "2026-05-22T16:40:00.132Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00012
-  },
-  {
-    "id": "CVE-2026-37981",
-    "cveId": "CVE-2026-37981",
-    "aliases": [
-      "CVE-2026-37981"
-    ],
-    "title": "Keycloak: org.keycloak.authorization: keycloak: information disclosure via broken access control in user lookup endpoint",
-    "summary": "A flaw was found in Keycloak. A broken access control vulnerability in the Account Resources user lookup endpoint allows a remote authenticated user, who owns at least one User-Managed Access (UMA) resource, to enumerate and harvest personally identifiable information (PII) for all realm users. By sending crafted requests with arbitrary usernames or email values, the endpoint returns full profile objects for unrelated users. This leads to broad profile-level information disclosure.",
-    "severity": "medium",
-    "cvss": 4.3,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 10,
-    "publishedAt": "2026-05-19T10:28:24.207Z",
-    "modifiedAt": "2026-05-20T16:08:56.545Z",
-    "mergedAt": "2026-05-22T16:40:00.132Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-37981",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/37xxx/CVE-2026-37981.json",
-        "fetchedAt": "2026-05-22T16:40:00.132Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00013
-  },
-  {
-    "id": "CVE-2026-4630",
-    "cveId": "CVE-2026-4630",
-    "aliases": [
-      "CVE-2026-4630"
-    ],
-    "title": "Keycloak: keycloak: unauthorized resource access and data modification via insecure direct object reference",
-    "summary": "A flaw was found in Keycloak. An authenticated client could exploit an Insecure Direct Object Reference (IDOR) vulnerability in the Authorization Services Protection API endpoint. By knowing or obtaining a resource's unique identifier (UUID) belonging to another Resource Server within the same realm, the client could bypass authorization checks. This allows the client to perform unauthorized GET, PUT, and DELETE operations on resources, leading to information disclosure and potential unauthorized modification or deletion of data.",
-    "severity": "medium",
-    "cvss": 6.8,
-    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 10,
-    "publishedAt": "2026-05-19T10:28:15.936Z",
-    "modifiedAt": "2026-05-20T16:08:47.221Z",
-    "mergedAt": "2026-05-22T16:40:00.133Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-4630",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/4xxx/CVE-2026-4630.json",
-        "fetchedAt": "2026-05-22T16:40:00.133Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00011
-  },
-  {
-    "id": "CVE-2026-35086",
-    "cveId": "CVE-2026-35086",
-    "aliases": [
-      "CVE-2026-35086"
-    ],
-    "title": "Apache OFBiz: Authenticated Remote Code Execution via Unsafe Template Expansion in email services",
-    "summary": "Improper Control of Generation of Code ('Code Injection') vulnerability in email services of Apache OFBiz. This issue affects Apache OFBiz: before 24.09.06. Users are recommended to upgrade to version 24.09.06, which fixes the issue.",
-    "severity": "medium",
-    "cvss": 6.5,
-    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 10,
-    "publishedAt": "2026-05-19T09:36:00.229Z",
-    "modifiedAt": "2026-05-20T03:55:19.849Z",
-    "mergedAt": "2026-05-22T16:40:00.132Z",
-    "sources": [
-      {
-        "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-35086",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/35xxx/CVE-2026-35086.json",
-        "fetchedAt": "2026-05-22T16:40:00.132Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00187
-  },
-  {
     "id": "CVE-2013-2566",
     "cveId": "CVE-2013-2566",
     "aliases": [
@@ -34339,7 +34118,7 @@
     "priority": 8,
     "publishedAt": "2026-05-22T12:00:00.000Z",
     "modifiedAt": "2026-05-22T12:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.236Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -36303,7 +36082,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T14:08:48.000Z",
     "modifiedAt": "2026-05-21T14:08:48.000Z",
-    "mergedAt": "2026-05-26T09:27:06.223Z",
+    "mergedAt": "2026-05-26T13:20:21.926Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -37056,7 +36835,7 @@
     "priority": 8,
     "publishedAt": "2026-05-21T09:19:32.000Z",
     "modifiedAt": "2026-05-21T09:19:32.000Z",
-    "mergedAt": "2026-05-26T09:27:06.224Z",
+    "mergedAt": "2026-05-26T13:20:21.927Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -37993,7 +37772,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:39:47.000Z",
     "modifiedAt": "2026-05-20T10:23:06.000Z",
-    "mergedAt": "2026-05-26T09:27:06.225Z",
+    "mergedAt": "2026-05-26T13:20:21.928Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -38034,7 +37813,7 @@
     "priority": 8,
     "publishedAt": "2026-05-20T09:29:56.000Z",
     "modifiedAt": "2026-05-20T09:34:33.000Z",
-    "mergedAt": "2026-05-26T09:27:06.227Z",
+    "mergedAt": "2026-05-26T13:20:21.929Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -38338,14 +38117,16 @@
     ]
   },
   {
-    "id": "CVE-2026-43492",
-    "cveId": "CVE-2026-43492",
+    "id": "CVE-2026-8961",
+    "cveId": "CVE-2026-8961",
     "aliases": [
-      "CVE-2026-43492"
+      "CVE-2026-8961"
     ],
-    "title": "In the Linux kernel, the following vulnerability has been resolved: lib/crypto: mpi: Fix integer underflow in mpi_read_raw_from_sgl() Yiming reports an integer underflow in mpi_read_raw_from_sgl() w",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved: lib/crypto: mpi: Fix integer underflow in mpi_read_raw_from_sgl() Yiming reports an integer underflow in mpi_read_raw_from_sgl() when subtracting \"lzeros\" from the unsigned \"nbytes\". For this to happen, the scatterlist \"sgl\" needs to occupy more bytes than the \"nbytes\" parameter and the first \"nbytes + 1\" bytes of the scatterlist must be zero. Under these conditions, the while loop iterating over the scatterlist will count more zeroes than \"nbytes\", subtract the number of zeroes from \"nbytes\" and cause the underflow. When commit 2d4d1eea540b (\"lib/mpi: Add mpi sgl helpers\") originally introduced the bug, it couldn't be triggered because all callers of mpi_read_raw_from_sgl() passed a scatterlist whose length was equal to \"nbytes\". However since commit 63ba4d67594a (\"KEYS: asymmetric: Use new crypto interface without scatterlists\"), the underflow can now actually be triggered. When invoking a KEYCTL_PKEY_ENCRYPT system call with a larger \"out_len\" than \"in_len\" and filling the \"in\" buffer with zeroes, crypto_akcipher_sync_prep() will create an all-zero scatterlist used for both the \"src\" and \"dst\" member of struct akcipher_request and thereby fulfil the conditions to trigger the bug: sys_keyctl() keyctl_pkey_e_d_s() asymmetric_key_eds_op() software_key_eds_op() crypto_akcipher_sync_encrypt() crypto_akcipher_sync_prep() crypto_akcipher_encrypt() rsa_enc() mpi_read_raw_from_sgl() To the user this will be visible as a DoS as the kernel spins forever, causing soft lockup splats as a side effect. Fix it.",
-    "severity": "unknown",
+    "title": "Spoofing issue in the Form Autofill component",
+    "summary": "Spoofing issue in the Form Autofill component. This vulnerability was fixed in Firefox 151, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
+    "severity": "medium",
+    "cvss": 6.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
     "kev": false,
     "ecosystems": [
       "generic"
@@ -38358,320 +38139,31 @@
       "reason": "topic-mention"
     },
     "priority": 8,
-    "publishedAt": "2026-05-19T12:16:18.880Z",
-    "modifiedAt": "2026-05-19T12:16:18.880Z",
-    "mergedAt": "2026-05-22T17:43:10.384Z",
-    "sources": [
-      {
-        "source": "nvd",
-        "externalId": "CVE-2026-43492",
-        "url": "https://git.kernel.org/stable/c/26d3a97ad46c7a9226ec04d4bf35bd4998a97d16",
-        "fetchedAt": "2026-05-22T16:38:48.268Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00024
-  },
-  {
-    "id": "CVE-2026-43491",
-    "cveId": "CVE-2026-43491",
-    "aliases": [
-      "CVE-2026-43491"
-    ],
-    "title": "In the Linux kernel, the following vulnerability has been resolved: net: qrtr: ns: Limit the maximum server registration per node Current code does no bound checking on the number of servers added p",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved: net: qrtr: ns: Limit the maximum server registration per node Current code does no bound checking on the number of servers added per node. A malicious client can flood NEW_SERVER messages and exhaust memory. Fix this issue by limiting the maximum number of server registrations to 256 per node. If the NEW_SERVER message is received for an old port, then don't restrict it as it will get replaced. While at it, also rate limit the error messages in the failure path of qrtr_ns_worker(). Note that the limit of 256 is chosen based on the current platform requirements. If requirement changes in the future, this limit can be increased.",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-19T12:16:18.747Z",
-    "modifiedAt": "2026-05-19T12:16:18.747Z",
-    "mergedAt": "2026-05-22T17:43:10.384Z",
-    "sources": [
-      {
-        "source": "nvd",
-        "externalId": "CVE-2026-43491",
-        "url": "https://git.kernel.org/stable/c/35fb4a0c077c5d1049c2628b769e0a1b1e65df0d",
-        "fetchedAt": "2026-05-22T16:38:48.268Z"
-      }
-    ],
-    "tags": [],
-    "epss": 0.00024
-  },
-  {
-    "id": "h-bb1e4f0c8a66",
-    "aliases": [
-      "/node/24890"
-    ],
-    "title": "Siemens RUGGEDCOM APE1808 Devices",
-    "summary": "View CSAF Summary A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. Siemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications. [1] https://security.paloaltonetwor",
-    "details": "View CSAF Summary A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. Siemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications. [1] https://security.paloaltonetworks.com/ The following versions of Siemens RUGGEDCOM APE1808 Devices are affected: RUGGEDCOM APE1808 vers:all/* (CVE-2026-0300) CVSS Vendor Equipment Vulnerabilities v3 10 Siemens Siemens RUGGEDCOM APE1808 Devices Out-of-bounds Write Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-0300 A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. View CVE Details Affected Products Siemens RUGGEDCOM APE1808 Devices Vendor:Siemens Product Version:RUGGEDCOM APE1808 Product Status:known_affected Remediations MitigationDisable Response Pages in the Interface Management Profile attached to every L3 interface in any zone where untrusted/internet traffic can ingress. Keep Response Pages enabled only on interfaces in trust/internal zones where legitimate users' browsers ingress MitigationDisable User-ID™ Authentication Portal if not required MitigationRestrict access to the User-ID Authentication Portal to trusted internal IP addresses only Vendor fixContact customer support to receive patch and update information Relevant CWE: CWE-787 Out-of-bounds Write Metrics CVSS Version Base Score Base Severity Vector String 3.1 10 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Acknowledgments Siemens ProductCERT reported this vulnerability to CISA. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. CISA reminds organizations to ",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "infrastructure"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-19T12:00:00.000Z",
-    "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-24T13:39:28.845Z",
-    "sources": [
-      {
-        "source": "cisa-alerts",
-        "externalId": "/node/24890",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02",
-        "fetchedAt": "2026-05-22T14:02:52.731Z"
-      }
-    ],
-    "tags": [
-      "exploited",
-      "general"
-    ]
-  },
-  {
-    "id": "h-336d10ec29e2",
-    "aliases": [
-      "/node/24889"
-    ],
-    "title": "ABB CoreSense HM and CoreSense M10",
-    "summary": "View CSAF Summary An update is available that resolves vulnerability in the product versions listed as affected in this advisory. A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. The following versions of ABB CoreSense HM and CoreSense M10 are affected: CoreSense™ HM &lt;=2.3.1, 2.3.4 (CVE-2025-3465) CoreSense™ M10 &lt;=1.4.1.12, 1.4.1.31 (CVE-2025-3465) CVSS Vendor Equipment Vulnerabilities v3 7.1 ABB ABB CoreSens",
-    "details": "View CSAF Summary An update is available that resolves vulnerability in the product versions listed as affected in this advisory. A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. The following versions of ABB CoreSense HM and CoreSense M10 are affected: CoreSense™ HM &lt;=2.3.1, 2.3.4 (CVE-2025-3465) CoreSense™ M10 &lt;=1.4.1.12, 1.4.1.31 (CVE-2025-3465) CVSS Vendor Equipment Vulnerabilities v3 7.1 ABB ABB CoreSense HM and CoreSense M10 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') Background Critical Infrastructure Sectors: Food and Agriculture, Commercial Facilities, Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2025-3465 A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. View CVE Details Affected Products ABB CoreSense HM and CoreSense M10 Vendor:ABB Product Version:CoreSense™ HM&lt;=2.3.1, CoreSense™ M10&lt;=1.4.1.12 Product Status:fixed, known_affected Remediations Vendor fixThe vulnerabilities are corrected in the following version: CoreSense™ HM v2.3.4 &amp; CoreSense™ M10 v1.4.1.31 ABB recommends that customers apply the update at the earliest convenience. Relevant CWE: CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.1 HIGH CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Acknowledgments ABB reported this vulnerability to CISA. Notice The information in this document is subject to change without notice and should not be construed as a commitment by ABB. ABB provides no warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, for the information contained in this document, and assumes no responsibility for any errors that may appear in this document. In no event shall ABB or any of its suppliers be liable for direct, indirect, special, incidental or consequential damage of any nature or kind arising from the use of this document, or from the use of any hardware or software described in this document, even if ABB or its suppliers have been advised of the possibility of such damage. This document and parts hereof must not be reproduced or copied without written permission from ABB, and the contents hereof must not be imparted to a third party nor used for any unauthorized purpose. All rights to registrations and trademarks reside with their respective owners. Mitigating factors The path traversal vulnerability is only exploitable when the attacker has local access to the machine hosting the web application (i.e., access to localhost). To mitigate this vulnerability, the affected products should be configured to restrict local access to authorized users only, ensuring that untrusted users cannot interact with the application directly on the host system. ABB has restricted file downloads to a specific directory designated solely for downloadable content. Strict input validation and path sanitization are implemented to ensure that only legitimate file paths within this directory can be accessed. Refer to section “General Security Recommendations” for further advise on how to keep your system secure. Frequently Asked Questions What causes the vulnerability? The vulnerability is caused by unchecked input data in the file parameter in the CoreSense products. What might an attacker use the vulnerability to do? An attacker who successfully exploited this vulnerability can allow unauthenticated users to gain access to restricted directories and can lead to complete system compromise and exposure of sensitive",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "infrastructure"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-19T12:00:00.000Z",
-    "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-24T13:39:28.845Z",
-    "sources": [
-      {
-        "source": "cisa-alerts",
-        "externalId": "/node/24889",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-01",
-        "fetchedAt": "2026-05-22T14:02:52.731Z"
-      }
-    ],
-    "tags": [
-      "exploited",
-      "general"
-    ]
-  },
-  {
-    "id": "h-d55b731bc1f4",
-    "aliases": [
-      "/node/24891"
-    ],
-    "title": "ScadaBR",
-    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to perform unauthenticated remote code execution. The following versions of ScadaBR are affected: ScadaBR 1.2.0 (CVE-2026-8602, CVE-2026-8603, CVE-2026-8604, CVE-2026-8605) CVSS Vendor Equipment Vulnerabilities v3 9.1 ScadaBR ScadaBR Missing Authentication for Critical Function, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'), Cross-Site Request Forgery (CSRF), Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Critical Manufacturing, Dams",
-    "details": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to perform unauthenticated remote code execution. The following versions of ScadaBR are affected: ScadaBR 1.2.0 (CVE-2026-8602, CVE-2026-8603, CVE-2026-8604, CVE-2026-8605) CVSS Vendor Equipment Vulnerabilities v3 9.1 ScadaBR ScadaBR Missing Authentication for Critical Function, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'), Cross-Site Request Forgery (CSRF), Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Critical Manufacturing, Dams, Chemical, Energy, Water and Wastewater Countries/Areas Deployed: Worldwide Company Headquarters Location: Brazil Vulnerabilities Expand All + CVE-2026-8602 In ScadaBR version 1.2.0, a Missing Authentication for Critical Function vulnerability could allow an unauthenticated attacker to send a HTTP GET requests to the SCADA system and inject arbitrary sensor readings. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-306 Missing Authentication for Critical Function Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.1 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H CVE-2026-8603 In ScadaBR version 1.2.0, an OS Command Injection vulnerability could allow an attacker to execute commands as root on the SCADA system. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') Metrics CVSS Version Base Score Base Severity Vector String 3.1 8.8 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H CVE-2026-8604 In ScadaBR version 1.2.0, a CSRF vulnerability could allow an attacker to trigger any authenticated action through a victim's session by luring any logged-in user to a malicious webpage. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-352 Cross-Site Request Forgery (CSRF) Metrics CVSS Version Base Score Base Severity Vector String 3.1 8.8 HIGH CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H CVE-2026-8605 In ScadaBR version 1.2.0, a Use of Hard-Coded Credentials vulnerability could allow an attacker to access the SCADA system as admin. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-798 Use of Hard-coded Credentials Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.1 MEDIUM CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Acknowledgments Arad Inbar, Nir Somech, Ben Grinberg, Daniel Lubel, Erez Cohen, and Adiel Sol of DREAM reported these vulnerabilities to CISA Leg",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "infrastructure"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-19T12:00:00.000Z",
-    "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.236Z",
-    "sources": [
-      {
-        "source": "cisa-alerts",
-        "externalId": "/node/24891",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-03",
-        "fetchedAt": "2026-05-22T14:02:52.731Z"
-      }
-    ],
-    "tags": [
-      "exploited",
-      "general"
-    ]
-  },
-  {
-    "id": "h-21a4b339a955",
-    "aliases": [
-      "/node/24893"
-    ],
-    "title": "Kieback & Peter DDC Building Controllers",
-    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to take control of the victim's browser. The following versions of Kieback &amp; Peter DDC Building Controllers are affected: DDC4002 &lt;=1.12.14 (CVE-2026-4293) DDC4100 &lt;=1.12.14 (CVE-2026-4293) DDC4200 &lt;=1.12.14 (CVE-2026-4293) DDC4200-L &lt;=1.12.14 (CVE-2026-4293) DDC4400 &lt;=1.12.14 (CVE-2026-4293) DDC4002e &lt;=1.23.4 (CVE-2026-4293) DDC4200e &lt;=1.23.4 (CVE-2026-4293) DDC4400e &lt;=1.23.4 (CVE-2026-4293) DDC4020e &lt;=1.23.4 (CVE-2026-4293) DDC4040e &lt;=1.23.4 (CVE-2026-4293) DDC520 &lt;=1.",
-    "details": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to take control of the victim's browser. The following versions of Kieback &amp; Peter DDC Building Controllers are affected: DDC4002 &lt;=1.12.14 (CVE-2026-4293) DDC4100 &lt;=1.12.14 (CVE-2026-4293) DDC4200 &lt;=1.12.14 (CVE-2026-4293) DDC4200-L &lt;=1.12.14 (CVE-2026-4293) DDC4400 &lt;=1.12.14 (CVE-2026-4293) DDC4002e &lt;=1.23.4 (CVE-2026-4293) DDC4200e &lt;=1.23.4 (CVE-2026-4293) DDC4400e &lt;=1.23.4 (CVE-2026-4293) DDC4020e &lt;=1.23.4 (CVE-2026-4293) DDC4040e &lt;=1.23.4 (CVE-2026-4293) DDC520 &lt;=1.24.1 (CVE-2026-4293) CVSS Vendor Equipment Vulnerabilities v3 5.3 Kieback &amp; Peter Kieback &amp; Peter DDC Building Controllers Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Background Critical Infrastructure Sectors: Commercial Facilities, Communications, Financial Services, Food and Agriculture, Government Services and Facilities, Healthcare and Public Health, Information Technology Countries/Areas Deployed: Austria, China, France, Germany, United Arab Emirates Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-4293 The affected products are vulnerable to cross-site scripting (XSS), enabling JavaScript to be executed by the victim's browser, which allows the attacker to control the browser. View CVE Details Affected Products Kieback &amp; Peter DDC Building Controllers Vendor:Kieback &amp; Peter Product Version:Kieback &amp; Peter DDC4002: &lt;=1.12.14, Kieback &amp; Peter DDC4100: &lt;=1.12.14, Kieback &amp; Peter DDC4200: &lt;=1.12.14, Kieback &amp; Peter DDC4200-L: &lt;=1.12.14, Kieback &amp; Peter DDC4400: &lt;=1.12.14, Kieback &amp; Peter DDC4002e: &lt;=1.23.4, Kieback &amp; Peter DDC4200e: &lt;=1.23.4, Kieback &amp; Peter DDC4400e: &lt;=1.23.4, Kieback &amp; Peter DDC4020e: &lt;=1.23.4, Kieback &amp; Peter DDC4040e: &lt;=1.23.4, Kieback &amp; Peter DDC520: &lt;=1.24.1 Product Status:known_affected Remediations MitigationKieback &amp; Peter DDC Building Controllers are developed and designed for use in closed building automation networks. The system is protected by a multi-level perimeter against attacks, especially from outside, by dividing it into operational technology (OT) zones with firewalls. Building automation systems (BA systems) in general should not be directly accessible from untrusted networks, especially from the Internet, but should be protected by consistently applying the defense-in-depth strategy. This concept is supported by organizational measures in the building as part of a safety management system. In order to achieve safety, measures are required at all levels. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: These devices must be operated in a strictly separate OT environment. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Only trusted individuals should be granted network access to the DDC web portal. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Access to the web portal should be disabled in the device configuration if not required. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Users should be informed that only links from trusted sources should be used to access the web service. Vendor fixFor the DDC520, DDC4002e, DDC4200e, DDC4400e, DDC4020e, and DDC4040e controllers, Kieback &amp; Peter recommends the following safety measure: Restrict network access to the device Vendor fixFor the DDC520, DDC4002e, DDC4200e, DDC4400e, DDC4020e, and DDC4040e controllers, Kieback &amp; Peter recomm",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "infrastructure"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-19T12:00:00.000Z",
-    "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.236Z",
-    "sources": [
-      {
-        "source": "cisa-alerts",
-        "externalId": "/node/24893",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-05",
-        "fetchedAt": "2026-05-22T14:02:52.732Z"
-      }
-    ],
-    "tags": [
-      "exploited",
-      "general"
-    ]
-  },
-  {
-    "id": "h-ca054a90fd7d",
-    "aliases": [
-      "/node/24892"
-    ],
-    "title": "ZKTeco CCTV Cameras",
-    "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in information disclosure, including capture of camera account credentials. The following versions of ZKTeco CCTV Cameras are affected: SSC335-GC2063-Face-0b77 Solution CVSS Vendor Equipment Vulnerabilities v3 9.1 ZKTeco ZKTeco CCTV Cameras Authentication Bypass Using an Alternate Path or Channel Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-8598 An undocumented configuration export port i",
-    "details": "View CSAF Summary Successful exploitation of this vulnerability could result in information disclosure, including capture of camera account credentials. The following versions of ZKTeco CCTV Cameras are affected: SSC335-GC2063-Face-0b77 Solution CVSS Vendor Equipment Vulnerabilities v3 9.1 ZKTeco ZKTeco CCTV Cameras Authentication Bypass Using an Alternate Path or Channel Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-8598 An undocumented configuration export port is accessible on some models of ZKTeco CCTV cameras. This port does not require authentication and exposes critical information about the camera such as open services and camera account credentials. View CVE Details Affected Products ZKTeco CCTV Cameras Vendor:ZKTeco Product Version:ZKTeco SSC335-GC2063-Face-0b77 Solution: &lt;V5.0.1.2.20260421 Product Status:known_affected Remediations MitigationZKTeco has patched this vulnerability in firmware version V5.0.1.2.20260421. ZKTeco recommends that users upgrade to firmware version V5.0.1.2.20260421 or later at their earliest opportunity. MitigationPlease see the security advisory from ZKTeco here: https://www.zkteco.com/en/announcement/23 for further information.https://www.zkteco.com/en/announcement/23 Relevant CWE: CWE-288 Authentication Bypass Using an Alternate Path or Channel Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.1 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Acknowledgments Souvik Kandar reported this vulnerability to CISA Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability. Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet. Locate control system networks and remote devices behind firewalls and isolating them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents. No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time. Revision History Initial Release Date: 2026-05-19 Date Revision Summary 2026-05-19 1 Initial Publication Legal Notice and Terms of Use",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "infrastructure"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-19T12:00:00.000Z",
-    "modifiedAt": "2026-05-19T12:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.236Z",
-    "sources": [
-      {
-        "source": "cisa-alerts",
-        "externalId": "/node/24892",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-04",
-        "fetchedAt": "2026-05-22T14:02:52.732Z"
-      }
-    ],
-    "tags": [
-      "exploited",
-      "general"
-    ]
-  },
-  {
-    "id": "h-3ba003cb7f92",
-    "aliases": [
-      "https://thehackernews.com/2026/05/the-new-phishing-click-how-oauth.html"
-    ],
-    "title": "The New Phishing Click: How OAuth Consent Bypasses MFA",
-    "summary": "In February 2026, a phishing-as-a-service (PhaaS) platform called EvilTokens went live. Within five weeks, it had compromised more than 340 Microsoft 365 organizations across five countries.&nbsp; The targets of the platform received a message asking them to enter a short code at microsoft.com/devicelogin and complete their normal MFA challenge, then walked away believing they had verified a",
-    "details": "In February 2026, a phishing-as-a-service (PhaaS) platform called EvilTokens went live. Within five weeks, it had compromised more than 340 Microsoft 365 organizations across five countries.&nbsp; The targets of the platform received a message asking them to enter a short code at microsoft.com/devicelogin and complete their normal MFA challenge, then walked away believing they had verified a",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-19T11:30:00.000Z",
-    "modifiedAt": "2026-05-19T11:30:00.000Z",
-    "mergedAt": "2026-05-22T15:13:41.719Z",
-    "sources": [
-      {
-        "source": "thehackernews",
-        "externalId": "https://thehackernews.com/2026/05/the-new-phishing-click-how-oauth.html",
-        "url": "https://thehackernews.com/2026/05/the-new-phishing-click-how-oauth.html",
-        "fetchedAt": "2026-05-22T13:47:20.315Z"
-      }
-    ],
-    "tags": [
-      "general"
-    ]
-  },
-  {
-    "id": "CVE-2026-7860",
-    "cveId": "CVE-2026-7860",
-    "aliases": [
-      "CVE-2026-7860"
-    ],
-    "title": "Possible information disclosure of environment variables in Vaadin Build Plugins via Failed Frontend Build",
-    "summary": "A possible information disclosure vulnerability exists in the Vaadin Maven plugin and Vaadin Gradle plugin that exposes the full set of environment variables in build logs whenever the frontend build process exits with a non-zero status. Because the build environment may contain credentials supplied as secrets, any failed frontend build can expose those secrets in clear text in CI logs and archived build artifacts. Users of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include: Product version Vaadin 23.0.0 - 23.6.9 Vaadin 24.0.0 - 24.9.16 Vaadin 24.10.0 - 24.10.3 Vaadin 25.0.0 - 25.0.10 Vaadin 25.1.0 - 25.1.4 Mitigation Upgrade to 23.6.10 Upgrade to 24.9.17 or newer Upgrade to 24.10.4 or newer Upgrade to 25.0.11 or newer Upgrade to 25.1.5 or newer Please note that Vaadin versions 10-13 and 15-22 are no longer supported and you should update either to the latest 23, 24, or 25 version. ArtifactsMaven coordinatesVulnerable versionsFixed versioncom.vaadin:flow-plugin-base23.0.0 - 23.6.10≥23.6.11com.vaadin:flow-plugin-base24.0.0 - 24.9.17≥24.9.18com.vaadin:flow-plugin-base24.10.0 - 24.10.3≥24.10.4com.vaadin:flow-plugin-base25.0.0 - 25.0.11≥25.0.12com.vaadin:flow-plugin-base25.1.0 - 25.1.4≥25.1.5com.vaadin:flow-maven-plugin23.0.0 - 23.6.10≥23.6.11com.vaadin:flow-maven-plugin24.0.0 - 24.9.17≥24.9.18com.vaadin:flow-maven-plugin24.10.0 - 24.10.3≥24.10.4com.vaadin:flow-maven-plugin25.0.0 - 25.0.11≥25.0.12com.vaadin:flow-maven-plugin25.1.0 - 25.1.4≥25.1.5com.vaadin:flow-gradle-plugin24.0.0 - 24.9.17≥24.9.18com.vaadin:flow-gradle-plugin24.10.0 - 24.10.3≥24.10.4com.vaadin:flow-gradle-plugin25.0.0 - 25.0.11≥25.0.12com.vaadin:flow-gradle-plugin25.1.0 - 25.1.4≥25.1.5",
-    "severity": "unknown",
-    "kev": false,
-    "ecosystems": [
-      "generic"
-    ],
-    "cwe": [],
-    "affected": [],
-    "stackMatch": {
-      "score": 0,
-      "packages": [],
-      "reason": "topic-mention"
-    },
-    "priority": 8,
-    "publishedAt": "2026-05-19T11:01:47.212Z",
-    "modifiedAt": "2026-05-21T18:09:14.990Z",
-    "mergedAt": "2026-05-22T16:40:00.135Z",
+    "publishedAt": "2026-05-19T12:29:58.485Z",
+    "modifiedAt": "2026-05-20T15:46:30.150Z",
+    "mergedAt": "2026-05-22T16:40:00.134Z",
     "sources": [
       {
         "source": "cisa-vulnrichment",
-        "externalId": "CVE-2026-7860",
-        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7860.json",
-        "fetchedAt": "2026-05-22T16:40:00.135Z"
+        "externalId": "CVE-2026-8961",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/8xxx/CVE-2026-8961.json",
+        "fetchedAt": "2026-05-22T16:40:00.134Z"
       }
     ],
     "tags": [],
-    "epss": 0.00016
+    "epss": 0.00034
   },
   {
-    "id": "h-1248b848848c",
+    "id": "CVE-2026-37982",
+    "cveId": "CVE-2026-37982",
     "aliases": [
-      "https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html"
+      "CVE-2026-37982"
     ],
-    "title": "Drupal to Release Urgent Core Security Updates on May 20, Sites Told to Prepare",
-    "summary": "Drupal has issued an alert stating that it intends to release a \"core security release\" for all supported branches on May 20, 2026, from 5-9 p.m. UTC. \"The Drupal Security Team urges you to reserve time for core updates at that time because exploits might be developed within hours or days,\" the maintainers of the PHP-based content management system (CMS) said. \"Not all configurations are",
-    "details": "Drupal has issued an alert stating that it intends to release a \"core security release\" for all supported branches on May 20, 2026, from 5-9 p.m. UTC. \"The Drupal Security Team urges you to reserve time for core updates at that time because exploits might be developed within hours or days,\" the maintainers of the PHP-based content management system (CMS) said. \"Not all configurations are",
-    "severity": "unknown",
+    "title": "Keycloak: org.keycloak.authentication: keycloak: unauthorized account takeover via webauthn token replay",
+    "summary": "A flaw was found in Keycloak. This authentication vulnerability allows a remote attacker to replay `ExecuteActionsActionToken` tokens within Keycloak's WebAuthn (Web Authentication) flow. By intercepting an execute-actions email link, an attacker can register their own authenticator to a victim's account. This leads to unauthorized enrollment of a hardware-backed credential, enabling persistent account takeover.",
+    "severity": "medium",
+    "cvss": 6.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
     "kev": false,
     "ecosystems": [
       "generic"
@@ -38684,20 +38176,167 @@
       "reason": "topic-mention"
     },
     "priority": 8,
-    "publishedAt": "2026-05-19T10:44:45.000Z",
-    "modifiedAt": "2026-05-19T10:44:45.000Z",
-    "mergedAt": "2026-05-22T15:13:41.719Z",
+    "publishedAt": "2026-05-19T10:52:32.486Z",
+    "modifiedAt": "2026-05-20T16:08:55.881Z",
+    "mergedAt": "2026-05-22T16:40:00.132Z",
     "sources": [
       {
-        "source": "thehackernews",
-        "externalId": "https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html",
-        "url": "https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html",
-        "fetchedAt": "2026-05-22T13:47:20.315Z"
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-37982",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/37xxx/CVE-2026-37982.json",
+        "fetchedAt": "2026-05-22T16:40:00.132Z"
       }
     ],
-    "tags": [
-      "general"
-    ]
+    "tags": [],
+    "epss": 0.00017
+  },
+  {
+    "id": "CVE-2026-37979",
+    "cveId": "CVE-2026-37979",
+    "aliases": [
+      "CVE-2026-37979"
+    ],
+    "title": "Keycloak: keycloak: information disclosure via oidc token introspection endpoint audience bypass",
+    "summary": "A flaw was found in Keycloak. This access control vulnerability in Keycloak's OpenID Connect (OIDC) token introspection endpoint allows a confidential client to bypass audience restrictions. An attacker-controlled client with valid credentials can retrieve sensitive token claims intended for other resource servers, compromising the confidentiality of lightweight access tokens. This issue can be exploited remotely by any confidential client in the realm with valid credentials.",
+    "severity": "medium",
+    "cvss": 6.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T10:52:30.442Z",
+    "modifiedAt": "2026-05-20T16:08:52.747Z",
+    "mergedAt": "2026-05-22T16:40:00.132Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-37979",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/37xxx/CVE-2026-37979.json",
+        "fetchedAt": "2026-05-22T16:40:00.132Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00012
+  },
+  {
+    "id": "CVE-2026-37981",
+    "cveId": "CVE-2026-37981",
+    "aliases": [
+      "CVE-2026-37981"
+    ],
+    "title": "Keycloak: org.keycloak.authorization: keycloak: information disclosure via broken access control in user lookup endpoint",
+    "summary": "A flaw was found in Keycloak. A broken access control vulnerability in the Account Resources user lookup endpoint allows a remote authenticated user, who owns at least one User-Managed Access (UMA) resource, to enumerate and harvest personally identifiable information (PII) for all realm users. By sending crafted requests with arbitrary usernames or email values, the endpoint returns full profile objects for unrelated users. This leads to broad profile-level information disclosure.",
+    "severity": "medium",
+    "cvss": 4.3,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T10:28:24.207Z",
+    "modifiedAt": "2026-05-20T16:08:56.545Z",
+    "mergedAt": "2026-05-22T16:40:00.132Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-37981",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/37xxx/CVE-2026-37981.json",
+        "fetchedAt": "2026-05-22T16:40:00.132Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00013
+  },
+  {
+    "id": "CVE-2026-4630",
+    "cveId": "CVE-2026-4630",
+    "aliases": [
+      "CVE-2026-4630"
+    ],
+    "title": "Keycloak: keycloak: unauthorized resource access and data modification via insecure direct object reference",
+    "summary": "A flaw was found in Keycloak. An authenticated client could exploit an Insecure Direct Object Reference (IDOR) vulnerability in the Authorization Services Protection API endpoint. By knowing or obtaining a resource's unique identifier (UUID) belonging to another Resource Server within the same realm, the client could bypass authorization checks. This allows the client to perform unauthorized GET, PUT, and DELETE operations on resources, leading to information disclosure and potential unauthorized modification or deletion of data.",
+    "severity": "medium",
+    "cvss": 6.8,
+    "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T10:28:15.936Z",
+    "modifiedAt": "2026-05-20T16:08:47.221Z",
+    "mergedAt": "2026-05-22T16:40:00.133Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-4630",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/4xxx/CVE-2026-4630.json",
+        "fetchedAt": "2026-05-22T16:40:00.133Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00011
+  },
+  {
+    "id": "CVE-2026-35086",
+    "cveId": "CVE-2026-35086",
+    "aliases": [
+      "CVE-2026-35086"
+    ],
+    "title": "Apache OFBiz: Authenticated Remote Code Execution via Unsafe Template Expansion in email services",
+    "summary": "Improper Control of Generation of Code ('Code Injection') vulnerability in email services of Apache OFBiz. This issue affects Apache OFBiz: before 24.09.06. Users are recommended to upgrade to version 24.09.06, which fixes the issue.",
+    "severity": "medium",
+    "cvss": 6.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 8,
+    "publishedAt": "2026-05-19T09:36:00.229Z",
+    "modifiedAt": "2026-05-20T03:55:19.849Z",
+    "mergedAt": "2026-05-22T16:40:00.132Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-35086",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/35xxx/CVE-2026-35086.json",
+        "fetchedAt": "2026-05-22T16:40:00.132Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00187
   },
   {
     "id": "CVE-2026-45492",
@@ -44121,6 +43760,368 @@
     "epss": 0.00035
   },
   {
+    "id": "CVE-2026-43492",
+    "cveId": "CVE-2026-43492",
+    "aliases": [
+      "CVE-2026-43492"
+    ],
+    "title": "In the Linux kernel, the following vulnerability has been resolved: lib/crypto: mpi: Fix integer underflow in mpi_read_raw_from_sgl() Yiming reports an integer underflow in mpi_read_raw_from_sgl() w",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: lib/crypto: mpi: Fix integer underflow in mpi_read_raw_from_sgl() Yiming reports an integer underflow in mpi_read_raw_from_sgl() when subtracting \"lzeros\" from the unsigned \"nbytes\". For this to happen, the scatterlist \"sgl\" needs to occupy more bytes than the \"nbytes\" parameter and the first \"nbytes + 1\" bytes of the scatterlist must be zero. Under these conditions, the while loop iterating over the scatterlist will count more zeroes than \"nbytes\", subtract the number of zeroes from \"nbytes\" and cause the underflow. When commit 2d4d1eea540b (\"lib/mpi: Add mpi sgl helpers\") originally introduced the bug, it couldn't be triggered because all callers of mpi_read_raw_from_sgl() passed a scatterlist whose length was equal to \"nbytes\". However since commit 63ba4d67594a (\"KEYS: asymmetric: Use new crypto interface without scatterlists\"), the underflow can now actually be triggered. When invoking a KEYCTL_PKEY_ENCRYPT system call with a larger \"out_len\" than \"in_len\" and filling the \"in\" buffer with zeroes, crypto_akcipher_sync_prep() will create an all-zero scatterlist used for both the \"src\" and \"dst\" member of struct akcipher_request and thereby fulfil the conditions to trigger the bug: sys_keyctl() keyctl_pkey_e_d_s() asymmetric_key_eds_op() software_key_eds_op() crypto_akcipher_sync_encrypt() crypto_akcipher_sync_prep() crypto_akcipher_encrypt() rsa_enc() mpi_read_raw_from_sgl() To the user this will be visible as a DoS as the kernel spins forever, causing soft lockup splats as a side effect. Fix it.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T12:16:18.880Z",
+    "modifiedAt": "2026-05-19T12:16:18.880Z",
+    "mergedAt": "2026-05-22T17:43:10.384Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-43492",
+        "url": "https://git.kernel.org/stable/c/26d3a97ad46c7a9226ec04d4bf35bd4998a97d16",
+        "fetchedAt": "2026-05-22T16:38:48.268Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00024
+  },
+  {
+    "id": "CVE-2026-43491",
+    "cveId": "CVE-2026-43491",
+    "aliases": [
+      "CVE-2026-43491"
+    ],
+    "title": "In the Linux kernel, the following vulnerability has been resolved: net: qrtr: ns: Limit the maximum server registration per node Current code does no bound checking on the number of servers added p",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved: net: qrtr: ns: Limit the maximum server registration per node Current code does no bound checking on the number of servers added per node. A malicious client can flood NEW_SERVER messages and exhaust memory. Fix this issue by limiting the maximum number of server registrations to 256 per node. If the NEW_SERVER message is received for an old port, then don't restrict it as it will get replaced. While at it, also rate limit the error messages in the failure path of qrtr_ns_worker(). Note that the limit of 256 is chosen based on the current platform requirements. If requirement changes in the future, this limit can be increased.",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T12:16:18.747Z",
+    "modifiedAt": "2026-05-19T12:16:18.747Z",
+    "mergedAt": "2026-05-22T17:43:10.384Z",
+    "sources": [
+      {
+        "source": "nvd",
+        "externalId": "CVE-2026-43491",
+        "url": "https://git.kernel.org/stable/c/35fb4a0c077c5d1049c2628b769e0a1b1e65df0d",
+        "fetchedAt": "2026-05-22T16:38:48.268Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00024
+  },
+  {
+    "id": "h-bb1e4f0c8a66",
+    "aliases": [
+      "/node/24890"
+    ],
+    "title": "Siemens RUGGEDCOM APE1808 Devices",
+    "summary": "View CSAF Summary A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. Siemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications. [1] https://security.paloaltonetwor",
+    "details": "View CSAF Summary A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. Siemens is preparing fix versions and recommends countermeasures for products where fixes are not, or not yet available. Customers are advised to consult and implement the workarounds provided in Palo Alto Networks' upstream security notifications. [1] https://security.paloaltonetworks.com/ The following versions of Siemens RUGGEDCOM APE1808 Devices are affected: RUGGEDCOM APE1808 vers:all/* (CVE-2026-0300) CVSS Vendor Equipment Vulnerabilities v3 10 Siemens Siemens RUGGEDCOM APE1808 Devices Out-of-bounds Write Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-0300 A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. View CVE Details Affected Products Siemens RUGGEDCOM APE1808 Devices Vendor:Siemens Product Version:RUGGEDCOM APE1808 Product Status:known_affected Remediations MitigationDisable Response Pages in the Interface Management Profile attached to every L3 interface in any zone where untrusted/internet traffic can ingress. Keep Response Pages enabled only on interfaces in trust/internal zones where legitimate users' browsers ingress MitigationDisable User-ID™ Authentication Portal if not required MitigationRestrict access to the User-ID Authentication Portal to trusted internal IP addresses only Vendor fixContact customer support to receive patch and update information Relevant CWE: CWE-787 Out-of-bounds Write Metrics CVSS Version Base Score Base Severity Vector String 3.1 10 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H Acknowledgments Siemens ProductCERT reported this vulnerability to CISA. General Recommendations As a general security measure, Siemens strongly recommends to protect network access to devices with appropriate mechanisms. In order to operate the devices in a protected IT environment, Siemens recommends to configure the environment according to Siemens' operational guidelines for Industrial Security (Download: https://www.siemens.com/cert/operational-guidelines-industrial-security), and to follow the recommendations in the product manuals. Additional information on Industrial Security by Siemens can be found at: https://www.siemens.com/industrialsecurity Additional Resources For further inquiries on security vulnerabilities in Siemens products and solutions, please contact the Siemens ProductCERT: https://www.siemens.com/cert/advisories Terms of Use The use of Siemens Security Advisories is subject to the terms and conditions listed on: https://www.siemens.com/productcert/terms-of-use. Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the exploitation risk of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, and ensure they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolate them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most recent version available. Also recognize VPN is only as secure as its connected devices. CISA reminds organizations to ",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-24T13:39:28.845Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24890",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-336d10ec29e2",
+    "aliases": [
+      "/node/24889"
+    ],
+    "title": "ABB CoreSense HM and CoreSense M10",
+    "summary": "View CSAF Summary An update is available that resolves vulnerability in the product versions listed as affected in this advisory. A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. The following versions of ABB CoreSense HM and CoreSense M10 are affected: CoreSense™ HM &lt;=2.3.1, 2.3.4 (CVE-2025-3465) CoreSense™ M10 &lt;=1.4.1.12, 1.4.1.31 (CVE-2025-3465) CVSS Vendor Equipment Vulnerabilities v3 7.1 ABB ABB CoreSens",
+    "details": "View CSAF Summary An update is available that resolves vulnerability in the product versions listed as affected in this advisory. A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. The following versions of ABB CoreSense HM and CoreSense M10 are affected: CoreSense™ HM &lt;=2.3.1, 2.3.4 (CVE-2025-3465) CoreSense™ M10 &lt;=1.4.1.12, 1.4.1.31 (CVE-2025-3465) CVSS Vendor Equipment Vulnerabilities v3 7.1 ABB ABB CoreSense HM and CoreSense M10 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') Background Critical Infrastructure Sectors: Food and Agriculture, Commercial Facilities, Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2025-3465 A path traversal vulnerability in these products can allow unauthenticated users to gain access to restricted directories. Exploiting this vulnerability can lead to complete system compromise and exposure of sensitive information. View CVE Details Affected Products ABB CoreSense HM and CoreSense M10 Vendor:ABB Product Version:CoreSense™ HM&lt;=2.3.1, CoreSense™ M10&lt;=1.4.1.12 Product Status:fixed, known_affected Remediations Vendor fixThe vulnerabilities are corrected in the following version: CoreSense™ HM v2.3.4 &amp; CoreSense™ M10 v1.4.1.31 ABB recommends that customers apply the update at the earliest convenience. Relevant CWE: CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') Metrics CVSS Version Base Score Base Severity Vector String 3.1 7.1 HIGH CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N Acknowledgments ABB reported this vulnerability to CISA. Notice The information in this document is subject to change without notice and should not be construed as a commitment by ABB. ABB provides no warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, for the information contained in this document, and assumes no responsibility for any errors that may appear in this document. In no event shall ABB or any of its suppliers be liable for direct, indirect, special, incidental or consequential damage of any nature or kind arising from the use of this document, or from the use of any hardware or software described in this document, even if ABB or its suppliers have been advised of the possibility of such damage. This document and parts hereof must not be reproduced or copied without written permission from ABB, and the contents hereof must not be imparted to a third party nor used for any unauthorized purpose. All rights to registrations and trademarks reside with their respective owners. Mitigating factors The path traversal vulnerability is only exploitable when the attacker has local access to the machine hosting the web application (i.e., access to localhost). To mitigate this vulnerability, the affected products should be configured to restrict local access to authorized users only, ensuring that untrusted users cannot interact with the application directly on the host system. ABB has restricted file downloads to a specific directory designated solely for downloadable content. Strict input validation and path sanitization are implemented to ensure that only legitimate file paths within this directory can be accessed. Refer to section “General Security Recommendations” for further advise on how to keep your system secure. Frequently Asked Questions What causes the vulnerability? The vulnerability is caused by unchecked input data in the file parameter in the CoreSense products. What might an attacker use the vulnerability to do? An attacker who successfully exploited this vulnerability can allow unauthenticated users to gain access to restricted directories and can lead to complete system compromise and exposure of sensitive",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-24T13:39:28.845Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24889",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-01",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-d55b731bc1f4",
+    "aliases": [
+      "/node/24891"
+    ],
+    "title": "ScadaBR",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to perform unauthenticated remote code execution. The following versions of ScadaBR are affected: ScadaBR 1.2.0 (CVE-2026-8602, CVE-2026-8603, CVE-2026-8604, CVE-2026-8605) CVSS Vendor Equipment Vulnerabilities v3 9.1 ScadaBR ScadaBR Missing Authentication for Critical Function, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'), Cross-Site Request Forgery (CSRF), Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Critical Manufacturing, Dams",
+    "details": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to perform unauthenticated remote code execution. The following versions of ScadaBR are affected: ScadaBR 1.2.0 (CVE-2026-8602, CVE-2026-8603, CVE-2026-8604, CVE-2026-8605) CVSS Vendor Equipment Vulnerabilities v3 9.1 ScadaBR ScadaBR Missing Authentication for Critical Function, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'), Cross-Site Request Forgery (CSRF), Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Critical Manufacturing, Dams, Chemical, Energy, Water and Wastewater Countries/Areas Deployed: Worldwide Company Headquarters Location: Brazil Vulnerabilities Expand All + CVE-2026-8602 In ScadaBR version 1.2.0, a Missing Authentication for Critical Function vulnerability could allow an unauthenticated attacker to send a HTTP GET requests to the SCADA system and inject arbitrary sensor readings. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-306 Missing Authentication for Critical Function Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.1 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H CVE-2026-8603 In ScadaBR version 1.2.0, an OS Command Injection vulnerability could allow an attacker to execute commands as root on the SCADA system. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') Metrics CVSS Version Base Score Base Severity Vector String 3.1 8.8 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H CVE-2026-8604 In ScadaBR version 1.2.0, a CSRF vulnerability could allow an attacker to trigger any authenticated action through a victim's session by luring any logged-in user to a malicious webpage. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-352 Cross-Site Request Forgery (CSRF) Metrics CVSS Version Base Score Base Severity Vector String 3.1 8.8 HIGH CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H CVE-2026-8605 In ScadaBR version 1.2.0, a Use of Hard-Coded Credentials vulnerability could allow an attacker to access the SCADA system as admin. View CVE Details Affected Products ScadaBR Vendor:ScadaBR Product Version:ScadaBR ScadaBR: 1.2.0 Product Status:known_affected Remediations Vendor fixScadaBR has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of ScadaBR are invited to contact ScadaBR customer support for additional information https://github.com/ScadaBR.https://github.com/ScadaBR Relevant CWE: CWE-798 Use of Hard-coded Credentials Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.1 MEDIUM CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N Acknowledgments Arad Inbar, Nir Somech, Ben Grinberg, Daniel Lubel, Erez Cohen, and Adiel Sol of DREAM reported these vulnerabilities to CISA Leg",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24891",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-03",
+        "fetchedAt": "2026-05-22T14:02:52.731Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-21a4b339a955",
+    "aliases": [
+      "/node/24893"
+    ],
+    "title": "Kieback & Peter DDC Building Controllers",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to take control of the victim's browser. The following versions of Kieback &amp; Peter DDC Building Controllers are affected: DDC4002 &lt;=1.12.14 (CVE-2026-4293) DDC4100 &lt;=1.12.14 (CVE-2026-4293) DDC4200 &lt;=1.12.14 (CVE-2026-4293) DDC4200-L &lt;=1.12.14 (CVE-2026-4293) DDC4400 &lt;=1.12.14 (CVE-2026-4293) DDC4002e &lt;=1.23.4 (CVE-2026-4293) DDC4200e &lt;=1.23.4 (CVE-2026-4293) DDC4400e &lt;=1.23.4 (CVE-2026-4293) DDC4020e &lt;=1.23.4 (CVE-2026-4293) DDC4040e &lt;=1.23.4 (CVE-2026-4293) DDC520 &lt;=1.",
+    "details": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to take control of the victim's browser. The following versions of Kieback &amp; Peter DDC Building Controllers are affected: DDC4002 &lt;=1.12.14 (CVE-2026-4293) DDC4100 &lt;=1.12.14 (CVE-2026-4293) DDC4200 &lt;=1.12.14 (CVE-2026-4293) DDC4200-L &lt;=1.12.14 (CVE-2026-4293) DDC4400 &lt;=1.12.14 (CVE-2026-4293) DDC4002e &lt;=1.23.4 (CVE-2026-4293) DDC4200e &lt;=1.23.4 (CVE-2026-4293) DDC4400e &lt;=1.23.4 (CVE-2026-4293) DDC4020e &lt;=1.23.4 (CVE-2026-4293) DDC4040e &lt;=1.23.4 (CVE-2026-4293) DDC520 &lt;=1.24.1 (CVE-2026-4293) CVSS Vendor Equipment Vulnerabilities v3 5.3 Kieback &amp; Peter Kieback &amp; Peter DDC Building Controllers Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Background Critical Infrastructure Sectors: Commercial Facilities, Communications, Financial Services, Food and Agriculture, Government Services and Facilities, Healthcare and Public Health, Information Technology Countries/Areas Deployed: Austria, China, France, Germany, United Arab Emirates Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-4293 The affected products are vulnerable to cross-site scripting (XSS), enabling JavaScript to be executed by the victim's browser, which allows the attacker to control the browser. View CVE Details Affected Products Kieback &amp; Peter DDC Building Controllers Vendor:Kieback &amp; Peter Product Version:Kieback &amp; Peter DDC4002: &lt;=1.12.14, Kieback &amp; Peter DDC4100: &lt;=1.12.14, Kieback &amp; Peter DDC4200: &lt;=1.12.14, Kieback &amp; Peter DDC4200-L: &lt;=1.12.14, Kieback &amp; Peter DDC4400: &lt;=1.12.14, Kieback &amp; Peter DDC4002e: &lt;=1.23.4, Kieback &amp; Peter DDC4200e: &lt;=1.23.4, Kieback &amp; Peter DDC4400e: &lt;=1.23.4, Kieback &amp; Peter DDC4020e: &lt;=1.23.4, Kieback &amp; Peter DDC4040e: &lt;=1.23.4, Kieback &amp; Peter DDC520: &lt;=1.24.1 Product Status:known_affected Remediations MitigationKieback &amp; Peter DDC Building Controllers are developed and designed for use in closed building automation networks. The system is protected by a multi-level perimeter against attacks, especially from outside, by dividing it into operational technology (OT) zones with firewalls. Building automation systems (BA systems) in general should not be directly accessible from untrusted networks, especially from the Internet, but should be protected by consistently applying the defense-in-depth strategy. This concept is supported by organizational measures in the building as part of a safety management system. In order to achieve safety, measures are required at all levels. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: These devices must be operated in a strictly separate OT environment. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Only trusted individuals should be granted network access to the DDC web portal. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Access to the web portal should be disabled in the device configuration if not required. Vendor fixThe DDC4002, DDC4100, DDC4200, DDC4200-L and DDC4400 controllers are end-of-maintenance, therefore the recommendations for these devices are as follows: Users should be informed that only links from trusted sources should be used to access the web service. Vendor fixFor the DDC520, DDC4002e, DDC4200e, DDC4400e, DDC4020e, and DDC4040e controllers, Kieback &amp; Peter recommends the following safety measure: Restrict network access to the device Vendor fixFor the DDC520, DDC4002e, DDC4200e, DDC4400e, DDC4020e, and DDC4040e controllers, Kieback &amp; Peter recomm",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24893",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-05",
+        "fetchedAt": "2026-05-22T14:02:52.732Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-ca054a90fd7d",
+    "aliases": [
+      "/node/24892"
+    ],
+    "title": "ZKTeco CCTV Cameras",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in information disclosure, including capture of camera account credentials. The following versions of ZKTeco CCTV Cameras are affected: SSC335-GC2063-Face-0b77 Solution CVSS Vendor Equipment Vulnerabilities v3 9.1 ZKTeco ZKTeco CCTV Cameras Authentication Bypass Using an Alternate Path or Channel Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-8598 An undocumented configuration export port i",
+    "details": "View CSAF Summary Successful exploitation of this vulnerability could result in information disclosure, including capture of camera account credentials. The following versions of ZKTeco CCTV Cameras are affected: SSC335-GC2063-Face-0b77 Solution CVSS Vendor Equipment Vulnerabilities v3 9.1 ZKTeco ZKTeco CCTV Cameras Authentication Bypass Using an Alternate Path or Channel Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-8598 An undocumented configuration export port is accessible on some models of ZKTeco CCTV cameras. This port does not require authentication and exposes critical information about the camera such as open services and camera account credentials. View CVE Details Affected Products ZKTeco CCTV Cameras Vendor:ZKTeco Product Version:ZKTeco SSC335-GC2063-Face-0b77 Solution: &lt;V5.0.1.2.20260421 Product Status:known_affected Remediations MitigationZKTeco has patched this vulnerability in firmware version V5.0.1.2.20260421. ZKTeco recommends that users upgrade to firmware version V5.0.1.2.20260421 or later at their earliest opportunity. MitigationPlease see the security advisory from ZKTeco here: https://www.zkteco.com/en/announcement/23 for further information.https://www.zkteco.com/en/announcement/23 Relevant CWE: CWE-288 Authentication Bypass Using an Alternate Path or Channel Metrics CVSS Version Base Score Base Severity Vector String 3.1 9.1 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N Acknowledgments Souvik Kandar reported this vulnerability to CISA Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy &amp; Use policy (https://www.cisa.gov/privacy-policy). Recommended Practices CISA recommends users take defensive measures to minimize the risk of exploitation of this vulnerability. Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet. Locate control system networks and remote devices behind firewalls and isolating them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents. No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time. Revision History Initial Release Date: 2026-05-19 Date Revision Summary 2026-05-19 1 Initial Publication Legal Notice and Terms of Use",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "infrastructure"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T12:00:00.000Z",
+    "modifiedAt": "2026-05-19T12:00:00.000Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
+    "sources": [
+      {
+        "source": "cisa-alerts",
+        "externalId": "/node/24892",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-04",
+        "fetchedAt": "2026-05-22T14:02:52.732Z"
+      }
+    ],
+    "tags": [
+      "exploited",
+      "general"
+    ]
+  },
+  {
+    "id": "h-3ba003cb7f92",
+    "aliases": [
+      "https://thehackernews.com/2026/05/the-new-phishing-click-how-oauth.html"
+    ],
+    "title": "The New Phishing Click: How OAuth Consent Bypasses MFA",
+    "summary": "In February 2026, a phishing-as-a-service (PhaaS) platform called EvilTokens went live. Within five weeks, it had compromised more than 340 Microsoft 365 organizations across five countries.&nbsp; The targets of the platform received a message asking them to enter a short code at microsoft.com/devicelogin and complete their normal MFA challenge, then walked away believing they had verified a",
+    "details": "In February 2026, a phishing-as-a-service (PhaaS) platform called EvilTokens went live. Within five weeks, it had compromised more than 340 Microsoft 365 organizations across five countries.&nbsp; The targets of the platform received a message asking them to enter a short code at microsoft.com/devicelogin and complete their normal MFA challenge, then walked away believing they had verified a",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T11:30:00.000Z",
+    "modifiedAt": "2026-05-19T11:30:00.000Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
+    "sources": [
+      {
+        "source": "thehackernews",
+        "externalId": "https://thehackernews.com/2026/05/the-new-phishing-click-how-oauth.html",
+        "url": "https://thehackernews.com/2026/05/the-new-phishing-click-how-oauth.html",
+        "fetchedAt": "2026-05-22T13:47:20.315Z"
+      }
+    ],
+    "tags": [
+      "general"
+    ]
+  },
+  {
+    "id": "CVE-2026-7860",
+    "cveId": "CVE-2026-7860",
+    "aliases": [
+      "CVE-2026-7860"
+    ],
+    "title": "Possible information disclosure of environment variables in Vaadin Build Plugins via Failed Frontend Build",
+    "summary": "A possible information disclosure vulnerability exists in the Vaadin Maven plugin and Vaadin Gradle plugin that exposes the full set of environment variables in build logs whenever the frontend build process exits with a non-zero status. Because the build environment may contain credentials supplied as secrets, any failed frontend build can expose those secrets in clear text in CI logs and archived build artifacts. Users of affected versions should apply the following mitigation or upgrade. Releases that have fixed this issue include: Product version Vaadin 23.0.0 - 23.6.9 Vaadin 24.0.0 - 24.9.16 Vaadin 24.10.0 - 24.10.3 Vaadin 25.0.0 - 25.0.10 Vaadin 25.1.0 - 25.1.4 Mitigation Upgrade to 23.6.10 Upgrade to 24.9.17 or newer Upgrade to 24.10.4 or newer Upgrade to 25.0.11 or newer Upgrade to 25.1.5 or newer Please note that Vaadin versions 10-13 and 15-22 are no longer supported and you should update either to the latest 23, 24, or 25 version. ArtifactsMaven coordinatesVulnerable versionsFixed versioncom.vaadin:flow-plugin-base23.0.0 - 23.6.10≥23.6.11com.vaadin:flow-plugin-base24.0.0 - 24.9.17≥24.9.18com.vaadin:flow-plugin-base24.10.0 - 24.10.3≥24.10.4com.vaadin:flow-plugin-base25.0.0 - 25.0.11≥25.0.12com.vaadin:flow-plugin-base25.1.0 - 25.1.4≥25.1.5com.vaadin:flow-maven-plugin23.0.0 - 23.6.10≥23.6.11com.vaadin:flow-maven-plugin24.0.0 - 24.9.17≥24.9.18com.vaadin:flow-maven-plugin24.10.0 - 24.10.3≥24.10.4com.vaadin:flow-maven-plugin25.0.0 - 25.0.11≥25.0.12com.vaadin:flow-maven-plugin25.1.0 - 25.1.4≥25.1.5com.vaadin:flow-gradle-plugin24.0.0 - 24.9.17≥24.9.18com.vaadin:flow-gradle-plugin24.10.0 - 24.10.3≥24.10.4com.vaadin:flow-gradle-plugin25.0.0 - 25.0.11≥25.0.12com.vaadin:flow-gradle-plugin25.1.0 - 25.1.4≥25.1.5",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T11:01:47.212Z",
+    "modifiedAt": "2026-05-21T18:09:14.990Z",
+    "mergedAt": "2026-05-22T16:40:00.135Z",
+    "sources": [
+      {
+        "source": "cisa-vulnrichment",
+        "externalId": "CVE-2026-7860",
+        "url": "https://github.com/cisagov/vulnrichment/blob/main/2026/7xxx/CVE-2026-7860.json",
+        "fetchedAt": "2026-05-22T16:40:00.135Z"
+      }
+    ],
+    "tags": [],
+    "epss": 0.00016
+  },
+  {
+    "id": "h-1248b848848c",
+    "aliases": [
+      "https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html"
+    ],
+    "title": "Drupal to Release Urgent Core Security Updates on May 20, Sites Told to Prepare",
+    "summary": "Drupal has issued an alert stating that it intends to release a \"core security release\" for all supported branches on May 20, 2026, from 5-9 p.m. UTC. \"The Drupal Security Team urges you to reserve time for core updates at that time because exploits might be developed within hours or days,\" the maintainers of the PHP-based content management system (CMS) said. \"Not all configurations are",
+    "details": "Drupal has issued an alert stating that it intends to release a \"core security release\" for all supported branches on May 20, 2026, from 5-9 p.m. UTC. \"The Drupal Security Team urges you to reserve time for core updates at that time because exploits might be developed within hours or days,\" the maintainers of the PHP-based content management system (CMS) said. \"Not all configurations are",
+    "severity": "unknown",
+    "kev": false,
+    "ecosystems": [
+      "generic"
+    ],
+    "cwe": [],
+    "affected": [],
+    "stackMatch": {
+      "score": 0,
+      "packages": [],
+      "reason": "topic-mention"
+    },
+    "priority": 6,
+    "publishedAt": "2026-05-19T10:44:45.000Z",
+    "modifiedAt": "2026-05-19T10:44:45.000Z",
+    "mergedAt": "2026-05-22T15:13:41.719Z",
+    "sources": [
+      {
+        "source": "thehackernews",
+        "externalId": "https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html",
+        "url": "https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html",
+        "fetchedAt": "2026-05-22T13:47:20.315Z"
+      }
+    ],
+    "tags": [
+      "general"
+    ]
+  },
+  {
     "id": "h-d4f42a8af408",
     "aliases": [
       "https://thehackernews.com/2026/05/seppmail-secure-e-mail-gateway.html"
@@ -44249,7 +44250,7 @@
     "priority": 6,
     "publishedAt": "2026-05-19T00:00:00.000Z",
     "modifiedAt": "2026-05-19T00:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.251Z",
+    "mergedAt": "2026-05-26T13:20:21.940Z",
     "sources": [
       {
         "source": "vercel-changelog",
@@ -44573,7 +44574,7 @@
     "priority": 6,
     "publishedAt": "2026-05-18T06:00:00.000Z",
     "modifiedAt": "2026-05-18T06:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.246Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
     "sources": [
       {
         "source": "cloudflare-blog",
@@ -45186,7 +45187,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-21T12:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.236Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -45380,7 +45381,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T12:00:00.000Z",
     "modifiedAt": "2026-05-14T12:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.236Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
     "sources": [
       {
         "source": "cisa-alerts",
@@ -45710,7 +45711,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:23:05.000Z",
     "modifiedAt": "2026-05-14T10:23:05.000Z",
-    "mergedAt": "2026-05-26T09:27:06.227Z",
+    "mergedAt": "2026-05-26T13:20:21.930Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -45745,7 +45746,7 @@
     "priority": 6,
     "publishedAt": "2026-05-14T10:16:24.000Z",
     "modifiedAt": "2026-05-14T10:16:24.000Z",
-    "mergedAt": "2026-05-26T09:27:06.228Z",
+    "mergedAt": "2026-05-26T13:20:21.930Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -46200,7 +46201,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:12:36.000Z",
     "modifiedAt": "2026-05-13T10:12:36.000Z",
-    "mergedAt": "2026-05-26T09:27:06.229Z",
+    "mergedAt": "2026-05-26T13:20:21.931Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -46235,7 +46236,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T10:03:30.000Z",
     "modifiedAt": "2026-05-13T10:03:30.000Z",
-    "mergedAt": "2026-05-26T09:27:06.229Z",
+    "mergedAt": "2026-05-26T13:20:21.931Z",
     "sources": [
       {
         "source": "friendsofphp-advisories",
@@ -46270,7 +46271,7 @@
     "priority": 6,
     "publishedAt": "2026-05-13T00:00:00.000Z",
     "modifiedAt": "2026-05-13T00:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.236Z",
+    "mergedAt": "2026-05-26T13:20:21.936Z",
     "sources": [
       {
         "source": "project-zero",
@@ -52323,7 +52324,7 @@
     "priority": 5,
     "publishedAt": "2026-03-24T20:50:00.000Z",
     "modifiedAt": "2026-03-24T20:50:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.230Z",
+    "mergedAt": "2026-05-26T13:20:21.931Z",
     "sources": [
       {
         "source": "nodejs-security",
@@ -52359,7 +52360,7 @@
     "priority": 5,
     "publishedAt": "2026-03-24T03:00:00.000Z",
     "modifiedAt": "2026-03-24T03:00:00.000Z",
-    "mergedAt": "2026-05-26T09:27:06.230Z",
+    "mergedAt": "2026-05-26T13:20:21.931Z",
     "sources": [
       {
         "source": "nodejs-security",
