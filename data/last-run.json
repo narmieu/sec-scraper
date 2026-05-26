@@ -1,100 +1,105 @@
 {
-  "startedAt": "2026-05-26T03:22:26.433Z",
-  "finishedAt": "2026-05-26T03:22:50.816Z",
-  "durationMs": 24383,
+  "startedAt": "2026-05-26T05:32:13.364Z",
+  "finishedAt": "2026-05-26T05:32:39.956Z",
+  "durationMs": 26592,
   "stats": {
-    "newCount": 121,
-    "updatedCount": 1574,
-    "archivedCount": 1477,
+    "newCount": 1,
+    "updatedCount": 1694,
+    "archivedCount": 1482,
     "droppedCount": 0,
-    "filteredCount": 23,
+    "filteredCount": 105,
     "alertCount": 0
   },
   "sources": {
     "ghsa": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 190
+      "durationMs": 259
+    },
+    "ghsa-stack": {
+      "ok": true,
+      "fetched": 232,
+      "durationMs": 9281
     },
     "osv": {
       "ok": true,
       "fetched": 282,
-      "durationMs": 13398
+      "durationMs": 15718
     },
     "nvd": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 16043
+      "durationMs": 3428
     },
     "cve-org": {
       "ok": true,
-      "fetched": 14,
-      "durationMs": 2138
+      "fetched": 20,
+      "durationMs": 4274
     },
     "packagist": {
       "ok": true,
       "fetched": 206,
-      "durationMs": 351
+      "durationMs": 426
     },
     "friendsofphp-advisories": {
       "ok": true,
       "fetched": 10,
-      "durationMs": 309
+      "durationMs": 395
     },
     "symfony-security": {
       "ok": true,
       "fetched": 5,
-      "durationMs": 325
+      "durationMs": 280
     },
     "github-repo-advisories": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 9348
+      "durationMs": 10916
     },
     "nextjs-releases": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 1040
+      "durationMs": 1025
     },
     "nodejs-security": {
       "ok": true,
       "fetched": 6,
-      "durationMs": 257
+      "durationMs": 139
     },
     "php-security": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 1299
+      "durationMs": 1847
     },
     "github-security-lab": {
       "ok": true,
       "fetched": 2,
-      "durationMs": 542
+      "durationMs": 450
     },
     "project-zero": {
       "ok": true,
       "fetched": 1,
-      "durationMs": 2364
+      "durationMs": 1367
     },
     "cisa-alerts": {
       "ok": true,
       "fetched": 30,
-      "durationMs": 414
-    },
-    "cisa-vulnrichment": {
-      "ok": true,
-      "fetched": 135,
-      "durationMs": 12722
+      "durationMs": 360
     },
     "cloudflare-blog": {
       "ok": true,
       "fetched": 2,
-      "durationMs": 928
+      "durationMs": 952
     },
     "vercel-changelog": {
       "ok": true,
       "fetched": 2,
-      "durationMs": 880
+      "durationMs": 895
+    },
+    "arxiv-cs-cr": {
+      "ok": true,
+      "fetched": 82,
+      "durationMs": 443
     }
   },
   "errors": []
