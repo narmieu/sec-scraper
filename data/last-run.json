@@ -1,15 +1,96 @@
 {
-  "startedAt": "2026-05-28T21:46:16.356Z",
-  "finishedAt": "2026-05-28T21:47:11.711Z",
-  "durationMs": 55355,
+  "startedAt": "2026-05-28T22:40:21.534Z",
+  "finishedAt": "2026-05-28T22:41:35.068Z",
+  "durationMs": 73534,
   "stats": {
-    "newCount": 1,
-    "updatedCount": 3361,
-    "archivedCount": 1310,
+    "newCount": 58,
+    "updatedCount": 3355,
+    "archivedCount": 1476,
     "droppedCount": 0,
-    "filteredCount": 0,
+    "filteredCount": 18,
     "alertCount": 0
   },
-  "sources": {},
+  "sources": {
+    "ghsa": {
+      "ok": true,
+      "fetched": 100,
+      "durationMs": 719
+    },
+    "osv": {
+      "ok": true,
+      "fetched": 311,
+      "durationMs": 19020
+    },
+    "nvd": {
+      "ok": true,
+      "fetched": 84,
+      "durationMs": 394
+    },
+    "cve-org": {
+      "ok": true,
+      "fetched": 31,
+      "durationMs": 4556
+    },
+    "packagist": {
+      "ok": true,
+      "fetched": 219,
+      "durationMs": 307
+    },
+    "friendsofphp-advisories": {
+      "ok": true,
+      "fetched": 12,
+      "durationMs": 372
+    },
+    "symfony-security": {
+      "ok": true,
+      "fetched": 5,
+      "durationMs": 407
+    },
+    "github-repo-advisories": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 10850
+    },
+    "nextjs-releases": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1104
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 6,
+      "durationMs": 288
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1551
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 669
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 2263
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 547
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 686
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 1090
+    }
+  },
   "errors": []
 }
