@@ -1,15 +1,96 @@
 {
-  "startedAt": "2026-05-29T19:55:03.745Z",
-  "finishedAt": "2026-05-29T19:56:04.182Z",
-  "durationMs": 60437,
+  "startedAt": "2026-05-29T20:58:30.419Z",
+  "finishedAt": "2026-05-29T21:00:01.368Z",
+  "durationMs": 90949,
   "stats": {
-    "newCount": 1,
-    "updatedCount": 3734,
-    "archivedCount": 1310,
+    "newCount": 125,
+    "updatedCount": 3722,
+    "archivedCount": 1476,
     "droppedCount": 0,
-    "filteredCount": 0,
+    "filteredCount": 16,
     "alertCount": 0
   },
-  "sources": {},
+  "sources": {
+    "ghsa": {
+      "ok": true,
+      "fetched": 40,
+      "durationMs": 859
+    },
+    "osv": {
+      "ok": true,
+      "fetched": 316,
+      "durationMs": 15497
+    },
+    "nvd": {
+      "ok": true,
+      "fetched": 179,
+      "durationMs": 485
+    },
+    "cve-org": {
+      "ok": true,
+      "fetched": 112,
+      "durationMs": 17560
+    },
+    "packagist": {
+      "ok": true,
+      "fetched": 219,
+      "durationMs": 352
+    },
+    "friendsofphp-advisories": {
+      "ok": true,
+      "fetched": 14,
+      "durationMs": 327
+    },
+    "symfony-security": {
+      "ok": true,
+      "fetched": 8,
+      "durationMs": 194
+    },
+    "github-repo-advisories": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 11811
+    },
+    "nextjs-releases": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1350
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 6,
+      "durationMs": 315
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1750
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 381
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1337
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 296
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 849
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 4,
+      "durationMs": 804
+    }
+  },
   "errors": []
 }
