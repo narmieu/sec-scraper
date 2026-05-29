@@ -32,8 +32,8 @@
   "arxiv-cs-cr": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-29T17:21:22.420Z",
-    "lastFetchedAt": "2026-05-29T17:21:22.420Z"
+    "lastSuccess": "2026-05-29T23:37:42.660Z",
+    "lastFetchedAt": "2026-05-29T23:37:42.660Z"
   },
   "nodejs-security": {
     "consecutiveFailures": 0,
@@ -110,7 +110,7 @@
   "ghsa-stack": {
     "consecutiveFailures": 0,
     "state": "closed",
-    "lastSuccess": "2026-05-29T17:21:22.420Z",
-    "lastFetchedAt": "2026-05-29T17:21:22.420Z"
+    "lastSuccess": "2026-05-29T23:37:42.660Z",
+    "lastFetchedAt": "2026-05-29T23:37:42.660Z"
   }
 }
