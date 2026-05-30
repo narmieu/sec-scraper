@@ -1,20 +1,95 @@
 {
-  "startedAt": "2026-05-30T11:37:51.500Z",
-  "finishedAt": "2026-05-30T11:39:28.314Z",
-  "durationMs": 96814,
+  "startedAt": "2026-05-30T12:39:56.715Z",
+  "finishedAt": "2026-05-30T12:41:21.761Z",
+  "durationMs": 85046,
   "stats": {
-    "newCount": 4,
-    "updatedCount": 3940,
-    "archivedCount": 1310,
+    "newCount": 59,
+    "updatedCount": 3920,
+    "archivedCount": 1476,
     "droppedCount": 0,
-    "filteredCount": 0,
+    "filteredCount": 16,
     "alertCount": 0
   },
   "sources": {
-    "cisa-vulnrichment": {
+    "ghsa": {
       "ok": true,
-      "fetched": 83,
-      "durationMs": 23242
+      "fetched": 100,
+      "durationMs": 695
+    },
+    "osv": {
+      "ok": true,
+      "fetched": 317,
+      "durationMs": 17229
+    },
+    "nvd": {
+      "ok": true,
+      "fetched": 134,
+      "durationMs": 225
+    },
+    "cve-org": {
+      "ok": true,
+      "fetched": 142,
+      "durationMs": 8132
+    },
+    "packagist": {
+      "ok": true,
+      "fetched": 219,
+      "durationMs": 236
+    },
+    "friendsofphp-advisories": {
+      "ok": true,
+      "fetched": 14,
+      "durationMs": 210
+    },
+    "symfony-security": {
+      "ok": true,
+      "fetched": 7,
+      "durationMs": 195
+    },
+    "github-repo-advisories": {
+      "ok": true,
+      "fetched": 4,
+      "durationMs": 8319
+    },
+    "nextjs-releases": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 683
+    },
+    "nodejs-security": {
+      "ok": true,
+      "fetched": 6,
+      "durationMs": 95
+    },
+    "php-security": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1193
+    },
+    "github-security-lab": {
+      "ok": true,
+      "fetched": 1,
+      "durationMs": 237
+    },
+    "project-zero": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 1047
+    },
+    "cisa-alerts": {
+      "ok": true,
+      "fetched": 30,
+      "durationMs": 171
+    },
+    "cloudflare-blog": {
+      "ok": true,
+      "fetched": 2,
+      "durationMs": 315
+    },
+    "vercel-changelog": {
+      "ok": true,
+      "fetched": 5,
+      "durationMs": 647
     }
   },
   "errors": []
