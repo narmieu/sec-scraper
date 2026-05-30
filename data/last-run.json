@@ -1,11 +1,11 @@
 {
-  "startedAt": "2026-05-30T12:39:56.715Z",
-  "finishedAt": "2026-05-30T12:41:21.761Z",
-  "durationMs": 85046,
+  "startedAt": "2026-05-30T13:39:20.033Z",
+  "finishedAt": "2026-05-30T13:40:44.340Z",
+  "durationMs": 84307,
   "stats": {
-    "newCount": 59,
-    "updatedCount": 3920,
-    "archivedCount": 1476,
+    "newCount": 3,
+    "updatedCount": 3980,
+    "archivedCount": 1481,
     "droppedCount": 0,
     "filteredCount": 16,
     "alertCount": 0
@@ -14,82 +14,92 @@
     "ghsa": {
       "ok": true,
       "fetched": 100,
-      "durationMs": 695
+      "durationMs": 579
+    },
+    "ghsa-stack": {
+      "ok": true,
+      "fetched": 259,
+      "durationMs": 7302
     },
     "osv": {
       "ok": true,
       "fetched": 317,
-      "durationMs": 17229
+      "durationMs": 15565
     },
     "nvd": {
       "ok": true,
-      "fetched": 134,
-      "durationMs": 225
+      "fetched": 3,
+      "durationMs": 102
     },
     "cve-org": {
       "ok": true,
-      "fetched": 142,
-      "durationMs": 8132
+      "fetched": 1,
+      "durationMs": 570
     },
     "packagist": {
       "ok": true,
       "fetched": 219,
-      "durationMs": 236
+      "durationMs": 351
     },
     "friendsofphp-advisories": {
       "ok": true,
       "fetched": 14,
-      "durationMs": 210
+      "durationMs": 225
     },
     "symfony-security": {
       "ok": true,
       "fetched": 7,
-      "durationMs": 195
+      "durationMs": 210
     },
     "github-repo-advisories": {
       "ok": true,
-      "fetched": 4,
-      "durationMs": 8319
+      "fetched": 1,
+      "durationMs": 9107
     },
     "nextjs-releases": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 683
+      "durationMs": 1061
     },
     "nodejs-security": {
       "ok": true,
       "fetched": 6,
-      "durationMs": 95
+      "durationMs": 160
     },
     "php-security": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 1193
+      "durationMs": 1370
     },
     "github-security-lab": {
       "ok": true,
       "fetched": 1,
-      "durationMs": 237
+      "durationMs": 547
     },
     "project-zero": {
       "ok": true,
       "fetched": 0,
-      "durationMs": 1047
+      "durationMs": 1599
     },
     "cisa-alerts": {
       "ok": true,
       "fetched": 30,
-      "durationMs": 171
+      "durationMs": 523
     },
     "cloudflare-blog": {
       "ok": true,
       "fetched": 2,
-      "durationMs": 315
+      "durationMs": 595
     },
     "vercel-changelog": {
       "ok": true,
       "fetched": 5,
-      "durationMs": 647
+      "durationMs": 1038
+    },
+    "arxiv-cs-cr": {
+      "ok": true,
+      "fetched": 0,
+      "durationMs": 399
     }
   },
   "errors": []
