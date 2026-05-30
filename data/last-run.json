@@ -1,96 +1,15 @@
 {
-  "startedAt": "2026-05-30T14:40:52.153Z",
-  "finishedAt": "2026-05-30T14:42:14.483Z",
-  "durationMs": 82330,
+  "startedAt": "2026-05-30T15:34:23.154Z",
+  "finishedAt": "2026-05-30T15:35:33.635Z",
+  "durationMs": 70481,
   "stats": {
-    "newCount": 2,
-    "updatedCount": 3980,
-    "archivedCount": 1476,
+    "newCount": 1,
+    "updatedCount": 3981,
+    "archivedCount": 1310,
     "droppedCount": 0,
-    "filteredCount": 16,
+    "filteredCount": 0,
     "alertCount": 0
   },
-  "sources": {
-    "ghsa": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 250
-    },
-    "osv": {
-      "ok": true,
-      "fetched": 317,
-      "durationMs": 18134
-    },
-    "nvd": {
-      "ok": true,
-      "fetched": 3,
-      "durationMs": 149
-    },
-    "cve-org": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 309
-    },
-    "packagist": {
-      "ok": true,
-      "fetched": 219,
-      "durationMs": 259
-    },
-    "friendsofphp-advisories": {
-      "ok": true,
-      "fetched": 14,
-      "durationMs": 291
-    },
-    "symfony-security": {
-      "ok": true,
-      "fetched": 7,
-      "durationMs": 254
-    },
-    "github-repo-advisories": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 12255
-    },
-    "nextjs-releases": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1106
-    },
-    "nodejs-security": {
-      "ok": true,
-      "fetched": 6,
-      "durationMs": 80
-    },
-    "php-security": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 1965
-    },
-    "github-security-lab": {
-      "ok": true,
-      "fetched": 1,
-      "durationMs": 477
-    },
-    "project-zero": {
-      "ok": true,
-      "fetched": 0,
-      "durationMs": 865
-    },
-    "cisa-alerts": {
-      "ok": true,
-      "fetched": 30,
-      "durationMs": 226
-    },
-    "cloudflare-blog": {
-      "ok": true,
-      "fetched": 2,
-      "durationMs": 461
-    },
-    "vercel-changelog": {
-      "ok": true,
-      "fetched": 5,
-      "durationMs": 1096
-    }
-  },
+  "sources": {},
   "errors": []
 }
