@@ -1,4 +1,4 @@
-import type { Severity, Vuln } from '@sec/shared';
+import type { IndexEntry, Severity } from '@sec/shared';
 import type { SortKey } from './store';
 
 const SEV_RANK: Record<Severity, number> = {
@@ -9,7 +9,7 @@ const SEV_RANK: Record<Severity, number> = {
   unknown: 0,
 };
 
-const COMPARATORS: Record<SortKey, (a: Vuln, b: Vuln) => number> = {
+const COMPARATORS: Record<SortKey, (a: IndexEntry, b: IndexEntry) => number> = {
   'priority-desc': (a, b) => b.priority - a.priority || b.publishedAt.localeCompare(a.publishedAt),
   'priority-asc': (a, b) => a.priority - b.priority || b.publishedAt.localeCompare(a.publishedAt),
   'published-desc': (a, b) => b.publishedAt.localeCompare(a.publishedAt),
@@ -22,6 +22,6 @@ const COMPARATORS: Record<SortKey, (a: Vuln, b: Vuln) => number> = {
     b.stackMatch.score - a.stackMatch.score || b.priority - a.priority,
 };
 
-export function sortVulns(vulns: Vuln[], key: SortKey): Vuln[] {
+export function sortVulns(vulns: IndexEntry[], key: SortKey): IndexEntry[] {
   return [...vulns].sort(COMPARATORS[key]);
 }

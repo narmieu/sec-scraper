@@ -14,14 +14,14 @@
     "@sec/shared": "workspace:*",
     "cheerio": "^1.2.0",
     "rss-parser": "^3.13.0",
-    "semver": "^7.8.0",
+    "semver": "^7.8.5",
     "string-similarity-js": "^2.1.4",
-    "undici": "^8.3.0",
+    "undici": "^8.5.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1",
+    "@types/node": "^26.0.0",
     "@types/semver": "^7.7.1",
-    "tsx": "^4.22.3"
+    "tsx": "^4.22.4"
   }
 }

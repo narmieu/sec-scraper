@@ -5,6 +5,9 @@ import { SourceHealth } from '@/components/SourceHealth';
 import { AlertLog } from '@/components/AlertLog';
 import { FiltersTrigger } from '@/components/FiltersTrigger';
 import { NavLinks } from '@/components/NavLinks';
+import { MobileNav } from '@/components/MobileNav';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import { VulnPreviewModal } from '@/components/VulnPreviewModal';
 import { loadAlertedFile, loadLastRun, loadSourceHealth } from '@/lib/data';
 
 export const metadata = {
@@ -20,25 +23,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <header className="sticky top-0 z-30 border-b border-zinc-800 bg-[var(--color-bg)]/95 backdrop-blur px-4 py-3">
-          <div className="flex flex-wrap items-center gap-3">
-            <Link
-              href="/"
-              className="font-semibold tracking-tight text-[var(--color-fg)] hover:text-[var(--color-accent)]"
-            >
-              security-scraper
-            </Link>
-            <NavLinks />
-            <FiltersTrigger />
-            <div className="ml-auto">
-              <LastUpdated lastRun={lastRun} />
+        <TooltipProvider>
+          <header className="sticky top-0 z-30 border-b border-border bg-background/95 backdrop-blur-sm px-4 h-12 flex items-center">
+            <div className="flex w-full items-center gap-3">
+              <MobileNav />
+              <Link
+                href="/"
+                className="text-sm font-semibold tracking-tight text-foreground hover:text-primary transition-colors shrink-0"
+              >
+                security-scraper
+              </Link>
+              <div className="hidden md:flex md:items-center md:gap-3">
+                <Separator />
+                <NavLinks />
+              </div>
+              <FiltersTrigger />
+              <div className="ml-auto flex items-center gap-2">
+                <span className="hidden sm:inline-flex">
+                  <LastUpdated lastRun={lastRun} />
+                </span>
+                <AlertLog alerted={alerted} />
+              </div>
             </div>
-          </div>
-        </header>
-        <main className="min-h-[60vh]">{children}</main>
-        <AlertLog alerted={alerted} />
-        <SourceHealth sources={sources} />
+          </header>
+          <main className="min-h-[60vh]">{children}</main>
+          <SourceHealth sources={sources} />
+          <VulnPreviewModal />
+        </TooltipProvider>
       </body>
     </html>
   );
+}
+
+function Separator() {
+  return <span className="h-4 w-px bg-border shrink-0" aria-hidden />;
 }

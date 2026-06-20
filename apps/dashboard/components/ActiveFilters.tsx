@@ -1,5 +1,8 @@
 'use client';
+import { IconX } from '@tabler/icons-react';
 import { useStore, DEFAULT_FILTERS } from '@/lib/store';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 
 interface Chip {
   key: string;
@@ -74,22 +77,29 @@ export function ActiveFilters() {
   return (
     <div className="flex flex-wrap items-center gap-1.5">
       {chips.map((c) => (
-        <button
+        <Badge
           key={c.key}
-          type="button"
-          onClick={c.onRemove}
-          className="group inline-flex items-center gap-1 rounded-full border border-zinc-700 bg-[var(--color-surface)] px-2 py-0.5 text-[11px] text-[var(--color-fg)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
-          title={`Remove ${c.label}`}
+          variant="outline"
+          className="group inline-flex cursor-pointer items-center gap-1 rounded-full px-2 py-0.5 text-[11px] hover:border-ring hover:text-foreground"
         >
           <span className="truncate max-w-[160px]">{c.label}</span>
-          <span aria-hidden className="text-[var(--color-muted)] group-hover:text-[var(--color-accent)]">×</span>
-        </button>
+          <button
+            type="button"
+            onClick={c.onRemove}
+            aria-label={`Remove ${c.label}`}
+            className={cn(
+              'ml-0.5 rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
+            )}
+          >
+            <IconX className="size-3" />
+          </button>
+        </Badge>
       ))}
       {chips.length > 1 && (
         <button
           type="button"
           onClick={clearAll}
-          className="ml-1 rounded-full px-2 py-0.5 text-[11px] text-[var(--color-muted)] hover:text-[var(--color-fg)]"
+          className="ml-1 rounded-full px-2 py-0.5 text-[11px] text-muted-foreground hover:text-foreground transition-colors"
         >
           Clear all
         </button>

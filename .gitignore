@@ -10,3 +10,4 @@ coverage/
 .turbo/
 .vercel/
 .claude/settings.local.json
+apps/dashboard/public/data/

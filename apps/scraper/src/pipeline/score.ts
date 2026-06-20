@@ -15,7 +15,7 @@ export interface ScoreBreakdown {
   exploit: number;
   freshness: number;
   total: number;
-  floorApplied?: 'kev' | 'ai-llm';
+  floorApplied?: 'kev' | 'ai-llm' | 'affected';
   demoted: boolean;
 }
 
@@ -25,12 +25,16 @@ export function computePriority(vuln: Vuln): number {
 
 export function scoreWithBreakdown(vuln: Vuln): ScoreBreakdown {
   const severityBase = SEVERITY_BASE[vuln.severity];
+  const status = vuln.exposure?.status ?? 'unknown';
   const stackMatch = vuln.stackMatch.score * (SCORING_CONFIG.weights.stackMatch / 100);
 
+  const maturity = vuln.exploit?.maturity ?? (vuln.kev ? 'active' : 'none');
   let exploit = 0;
-  if (vuln.kev) exploit = 15;
-  else if (vuln.epss !== undefined && vuln.epss > 0.5) exploit = 10;
-  else if (vuln.epss !== undefined && vuln.epss > 0.1) exploit = 5;
+  if (maturity === 'active') exploit = SCORING_CONFIG.exploitMaturity.active;
+  else if (maturity === 'weaponized') exploit = SCORING_CONFIG.exploitMaturity.weaponized;
+  else if (maturity === 'poc') exploit = SCORING_CONFIG.exploitMaturity.poc;
+  else if (vuln.epss !== undefined && vuln.epss > 0.5) exploit = 8;
+  else if (vuln.epss !== undefined && vuln.epss > 0.1) exploit = 4;
 
   const ageDays = Math.max(
     0,
@@ -42,6 +46,8 @@ export function scoreWithBreakdown(vuln: Vuln): ScoreBreakdown {
   else if (ageDays < 90) freshness = 2;
 
   let total = severityBase + stackMatch + exploit + freshness;
+  const patchAvailable = vuln.affected.some((a) => a.fixedIn);
+  if (status === 'affected' && !patchAvailable) total += SCORING_CONFIG.noPatchAffectedBump;
   let demoted = false;
   let floorApplied: ScoreBreakdown['floorApplied'];
 
@@ -51,9 +57,19 @@ export function scoreWithBreakdown(vuln: Vuln): ScoreBreakdown {
     demoted = true;
   }
 
+  if (status === 'safe') {
+    total *= SCORING_CONFIG.demoteWhenSafeFactor;
+    demoted = true;
+  }
+
   if (vuln.kev) {
     total = Math.max(total, SCORING_CONFIG.floors.kev);
     floorApplied = 'kev';
+  }
+
+  if (status === 'affected' && (vuln.severity === 'critical' || vuln.severity === 'high')) {
+    total = Math.max(total, SCORING_CONFIG.floors.affected);
+    floorApplied = floorApplied ?? 'affected';
   }
 
   if (isAiLlm) {

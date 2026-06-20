@@ -35,6 +35,8 @@ export const ECOSYSTEMS = [
 
 export const SEVERITIES = ['critical', 'high', 'medium', 'low', 'unknown'] as const;
 
+export const EXPOSURE_STATUSES = ['affected', 'safe', 'potential', 'unknown'] as const;
+
 export const TAGS = [
   'frontend',
   'backend',
@@ -46,6 +48,8 @@ export const TAGS = [
   'nextjs',
   'general',
 ] as const;
+
+export const EXPLOIT_MATURITIES = ['active', 'weaponized', 'poc', 'none'] as const;
 
 export const ROLLING_WINDOW_DAYS = 90;
 

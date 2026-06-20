@@ -1,15 +1,19 @@
 'use client';
+import { IconFilter } from '@tabler/icons-react';
+import { Button } from '@/components/ui/button';
 import { useStore } from '../lib/store';
 
 export function FiltersTrigger() {
   const setOpen = useStore((s) => s.setFiltersOpen);
   return (
-    <button
-      type="button"
+    <Button
+      variant="outline"
+      size="sm"
       onClick={() => setOpen(true)}
-      className="lg:hidden rounded border border-zinc-700 px-3 py-2 text-sm min-h-[36px] text-[var(--color-fg)] hover:bg-[var(--color-surface)]"
+      className="lg:hidden gap-1.5"
     >
+      <IconFilter className="size-4" />
       Filters
-    </button>
+    </Button>
   );
 }

@@ -1,11 +1,11 @@
 'use client';
 import Fuse from 'fuse.js';
-import type { Vuln } from '@sec/shared';
+import type { IndexEntry } from '@sec/shared';
 
-let fuseInstance: Fuse<Vuln> | null = null;
-let indexedFor: Vuln[] | null = null;
+let fuseInstance: Fuse<IndexEntry> | null = null;
+let indexedFor: IndexEntry[] | null = null;
 
-function getFuse(vulns: Vuln[]): Fuse<Vuln> {
+function getFuse(vulns: IndexEntry[]): Fuse<IndexEntry> {
   if (fuseInstance && indexedFor === vulns) return fuseInstance;
   fuseInstance = new Fuse(vulns, {
     keys: [
@@ -13,7 +13,7 @@ function getFuse(vulns: Vuln[]): Fuse<Vuln> {
       { name: 'summary', weight: 1 },
       { name: 'cveId', weight: 1.5 },
       { name: 'ghsaId', weight: 1.5 },
-      { name: 'affected.package', weight: 1.5 },
+      { name: 'affectedPackages', weight: 1.5 },
       { name: 'stackMatch.packages', weight: 1.5 },
     ],
     threshold: 0.2,
@@ -25,9 +25,9 @@ function getFuse(vulns: Vuln[]): Fuse<Vuln> {
   return fuseInstance;
 }
 
-function substringMatches(vulns: Vuln[], q: string): Vuln[] {
+function substringMatches(vulns: IndexEntry[], q: string): IndexEntry[] {
   const needle = q.toLowerCase();
-  const out: Vuln[] = [];
+  const out: IndexEntry[] = [];
   for (const v of vulns) {
     if (v.title.toLowerCase().includes(needle)) {
       out.push(v);
@@ -37,7 +37,7 @@ function substringMatches(vulns: Vuln[], q: string): Vuln[] {
       out.push(v);
       continue;
     }
-    if (v.affected.some((a) => a.package.toLowerCase().includes(needle))) {
+    if (v.affectedPackages.some((p) => p.toLowerCase().includes(needle))) {
       out.push(v);
       continue;
     }
@@ -52,12 +52,10 @@ function substringMatches(vulns: Vuln[], q: string): Vuln[] {
   return out;
 }
 
-export function search(vulns: Vuln[], query: string): Vuln[] {
+export function search(vulns: IndexEntry[], query: string): IndexEntry[] {
   const q = query.trim();
   if (!q) return vulns;
-  // Substring scan first — fast and intuitive for exact package/CVE names.
   const exact = substringMatches(vulns, q);
   if (exact.length > 0) return exact;
-  // Fall back to fuzzy match for typos or partial keywords.
   return getFuse(vulns).search(q).map((r) => r.item);
 }

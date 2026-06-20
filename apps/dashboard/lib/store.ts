@@ -9,8 +9,11 @@ export interface Filters {
   sources: string[];
   stackMatchOnly: boolean;
   kevOnly: boolean;
+  affectedOnly: boolean;
   hideRead: boolean;
   showDismissed: boolean;
+  hasExploit: boolean;
+  noPatch: boolean;
 }
 
 export const DEFAULT_FILTERS: Filters = {
@@ -19,8 +22,11 @@ export const DEFAULT_FILTERS: Filters = {
   sources: [],
   stackMatchOnly: false,
   kevOnly: false,
+  affectedOnly: false,
   hideRead: false,
   showDismissed: false,
+  hasExploit: false,
+  noPatch: false,
 };
 
 export type SortKey =
@@ -86,7 +92,12 @@ export const useStore = create<State>()(
     }),
     {
       name: 'sec-scraper-store',
-      version: 2,
+      version: 4,
+      migrate: (persisted: unknown) => {
+        const s = (persisted ?? {}) as Record<string, unknown>;
+        const filters = (s.filters ?? {}) as Partial<Filters>;
+        return { ...s, filters: { ...DEFAULT_FILTERS, ...filters } } as never;
+      },
       partialize: (s) => ({
         readIds: s.readIds,
         hiddenIds: s.hiddenIds,

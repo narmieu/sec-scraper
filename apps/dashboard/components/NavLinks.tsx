@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 const NAV = [
   { href: '/', label: 'All' },
@@ -16,22 +17,32 @@ function isActive(pathname: string | null, href: string): boolean {
   return pathname === href || pathname === href.replace(/\/$/, '');
 }
 
-export function NavLinks() {
+export function NavLinks({
+  orientation = 'horizontal',
+  onNavigate,
+}: {
+  orientation?: 'horizontal' | 'vertical';
+  onNavigate?: () => void;
+}) {
   const pathname = usePathname();
+  const vertical = orientation === 'vertical';
   return (
-    <nav className="flex flex-wrap gap-1">
+    <nav className={cn(vertical ? 'flex flex-col gap-1' : 'flex flex-wrap gap-0.5')}>
       {NAV.map((n) => {
         const active = isActive(pathname, n.href);
         return (
           <Link
             key={n.href}
             href={n.href}
+            onClick={onNavigate}
             aria-current={active ? 'page' : undefined}
-            className={`rounded px-3 py-2 text-sm min-h-[36px] flex items-center md:px-2 md:py-1 md:min-h-0 ${
+            className={cn(
+              'flex items-center rounded-md text-sm font-medium transition-colors',
+              vertical ? 'px-3 py-2.5 min-h-[44px]' : 'px-3 py-1.5 min-h-[32px]',
               active
-                ? 'bg-[var(--color-surface)] text-[var(--color-fg)]'
-                : 'text-[var(--color-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-fg)]'
-            }`}
+                ? 'bg-accent text-accent-foreground'
+                : 'text-muted-foreground hover:bg-accent/60 hover:text-foreground',
+            )}
           >
             {n.label}
           </Link>

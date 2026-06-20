@@ -1,7 +1,7 @@
 import {
   CADENCE_MS,
   ROLLING_WINDOW_DAYS,
-  scoreStackMatch,
+  evaluateExposure,
   type LastRun,
   type SourcesFile,
   type Vuln,
@@ -132,8 +132,8 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   }
 
   combined = combined.map((v) => {
-    const sm = scoreStackMatch(v, stackIndex);
-    const withMatch: Vuln = { ...v, stackMatch: sm };
+    const { exposure, stackMatch } = evaluateExposure(v, stackIndex);
+    const withMatch: Vuln = { ...v, exposure, stackMatch };
     return { ...withMatch, priority: computePriority(withMatch) };
   });
 

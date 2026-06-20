@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ECOSYSTEMS, SEVERITIES, TAGS } from './constants';
+import { ECOSYSTEMS, EXPLOIT_MATURITIES, EXPOSURE_STATUSES, SEVERITIES, TAGS } from './constants';
 
 export const Severity = z.enum(SEVERITIES);
 export type Severity = z.infer<typeof Severity>;
@@ -36,6 +36,26 @@ export const Affected = z.object({
 });
 export type Affected = z.infer<typeof Affected>;
 
+export const ExposureStatus = z.enum(EXPOSURE_STATUSES);
+export type ExposureStatus = z.infer<typeof ExposureStatus>;
+
+export const Exposure = z.object({
+  status: ExposureStatus,
+  package: z.string().optional(),
+  ecosystem: Ecosystem.optional(),
+  installed: z.string().optional(),
+  vulnerableRange: z.string().optional(),
+  fixedIn: z.string().optional(),
+});
+export type Exposure = z.infer<typeof Exposure>;
+
+export const ExploitMaturity = z.enum(EXPLOIT_MATURITIES);
+export type ExploitMaturity = z.infer<typeof ExploitMaturity>;
+export const ExploitRef = z.object({ source: z.string(), url: z.string().url() });
+export type ExploitRef = z.infer<typeof ExploitRef>;
+export const Exploit = z.object({ maturity: ExploitMaturity, refs: z.array(ExploitRef).default([]) });
+export type Exploit = z.infer<typeof Exploit>;
+
 export const Vuln = z.object({
   id: z.string(),
   cveId: z.string().optional(),
@@ -57,6 +77,8 @@ export const Vuln = z.object({
   affected: z.array(Affected),
 
   stackMatch: StackMatch,
+  exposure: Exposure.optional(),
+  exploit: Exploit.optional(),
   priority: z.number().min(0).max(100),
 
   publishedAt: z.string().datetime(),

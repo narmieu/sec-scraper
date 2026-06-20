@@ -1,35 +1,81 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
 
-@theme {
-  --color-bg: oklch(0.15 0 0);
-  --color-surface: oklch(0.21 0 0);
-  --color-surface-2: oklch(0.27 0 0);
-  --color-fg: oklch(0.95 0 0);
-  --color-muted: oklch(0.65 0 0);
-  --color-accent: oklch(0.72 0.18 250);
-  --color-critical: oklch(0.65 0.21 25);
-  --color-high: oklch(0.7 0.19 50);
-  --color-medium: oklch(0.8 0.17 90);
-  --color-low: oklch(0.65 0.03 240);
-  --color-unknown: oklch(0.5 0 0);
+/* Tailwind v4 automatic source detection misses these in this monorepo layout,
+   so register them explicitly (paths are relative to this file). */
+@source "../app";
+@source "../components";
+@source "../lib";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  /* preserved severity/exposure tokens */
+  --color-critical: var(--critical);
+  --color-high: var(--high);
+  --color-medium: var(--medium);
+  --color-low: var(--low);
+  --color-unknown: var(--unknown);
 }
 
-html,
-body {
-  background-color: var(--color-bg);
-  color: var(--color-fg);
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.15 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.21 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.21 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.72 0.18 250);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.27 0 0);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.27 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.27 0 0);
+  --accent-foreground: oklch(0.95 0 0);
+  --destructive: oklch(0.65 0.21 25);
+  --border: oklch(0.34 0 0);
+  --input: oklch(0.34 0 0);
+  --ring: oklch(0.72 0.18 250);
+  --critical: oklch(0.65 0.21 25);
+  --high: oklch(0.7 0.19 50);
+  --medium: oklch(0.8 0.17 90);
+  --low: oklch(0.65 0.03 240);
+  --unknown: oklch(0.65 0 0);
 }
 
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+}
+
+html, body { background-color: var(--background); color: var(--foreground); }
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  min-height: 100vh;
+  font-size: 14px; line-height: 1.5; min-height: 100vh;
 }
-
-::selection {
-  background-color: oklch(0.72 0.18 250 / 0.35);
-}
+::selection { background-color: oklch(0.72 0.18 250 / 0.35); }
 
 * {
   scrollbar-width: thin;

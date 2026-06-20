@@ -8,6 +8,7 @@ import { makeCveOrgAdapter } from './cve-org.js';
 import { packagistAdapter } from './packagist.js';
 import { epssEnricher } from './epss.js';
 import { kevEnricher } from './cisa-kev.js';
+import { exploitIntelEnricher } from './exploit-intel.js';
 import { friendsofphpAdvisoriesAdapter } from './friendsofphp-advisories.js';
 import { symfonySecurityAdapter } from './symfony-security.js';
 import { makeGithubRepoAdvisoriesAdapter } from './github-repo-advisories.js';
@@ -46,4 +47,4 @@ export function buildAdapters(targets: StackTargets): Adapter[] {
   ];
 }
 
-export const ENRICHERS: Enricher[] = [epssEnricher, kevEnricher];
+export const ENRICHERS: Enricher[] = [epssEnricher, kevEnricher, exploitIntelEnricher];

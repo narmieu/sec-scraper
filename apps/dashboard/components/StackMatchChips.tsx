@@ -1,4 +1,5 @@
 import type { StackMatch } from '@sec/shared';
+import { StatusBadge } from './StatusBadge';
 
 const REASON_LABEL: Record<StackMatch['reason'], string> = {
   'direct-dep': 'direct',
@@ -12,14 +13,11 @@ export function StackMatchChips({ match }: { match: StackMatch }) {
   return (
     <div className="flex flex-wrap items-center gap-1">
       {match.packages.slice(0, 4).map((p) => (
-        <span
-          key={p}
-          className="rounded bg-[var(--color-accent)]/15 px-1.5 py-0.5 text-[11px] font-medium text-[var(--color-accent)]"
-        >
+        <StatusBadge key={p} variant="stack">
           {p}
-        </span>
+        </StatusBadge>
       ))}
-      <span className="text-[11px] text-[var(--color-muted)]">
+      <span className="text-[11px] text-muted-foreground">
         {REASON_LABEL[match.reason]} · {match.score}
       </span>
     </div>

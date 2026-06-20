@@ -1,3 +1,4 @@
+import { IconClock } from '@tabler/icons-react';
 import type { LastRun } from '@sec/shared';
 
 function relativeMin(iso: string): string {
@@ -13,8 +14,9 @@ function relativeMin(iso: string): string {
 export function LastUpdated({ lastRun }: { lastRun: LastRun | null }) {
   if (!lastRun || !lastRun.finishedAt) return null;
   return (
-    <span className="text-xs text-[var(--color-muted)]">
-      last scrape: {relativeMin(lastRun.finishedAt)}
+    <span className="flex items-center gap-1 text-xs text-muted-foreground">
+      <IconClock className="size-3.5 shrink-0" />
+      {relativeMin(lastRun.finishedAt)}
     </span>
   );
 }
