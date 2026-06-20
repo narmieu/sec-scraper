@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildPaths, loadVulns, persistVulns, loadStack } from '../src/pipeline/persist.js';
-import { buildStackIndex, Stack as StackSchema } from '@sec/shared';
+import { buildPaths, loadStack } from '../src/pipeline/persist.js';
+import { getClient, migrateSchema, loadLiveVulns, deleteVulns } from '@sec/db';
+import { buildStackIndex, ROLLING_WINDOW_DAYS, Stack as StackSchema } from '@sec/shared';
 import { filterByRelevance } from '../src/pipeline/relevance-filter.js';
 import { buildAdapters } from '../src/adapters/index.js';
 import { buildStackTargets } from '../src/pipeline/stack-targets.js';
@@ -13,7 +14,7 @@ function resolveDefaultDataRoot(): string {
   return resolve(here, '..', '..', '..', 'data');
 }
 
-function main(): void {
+async function main(): Promise<void> {
   const dataRoot = process.argv[2] ? resolve(process.argv[2]) : resolveDefaultDataRoot();
   const paths = buildPaths(dataRoot);
 
@@ -30,25 +31,26 @@ function main(): void {
   const adapters = buildAdapters(targets);
   const kindBySourceId = new Map<string, SourceKind>(adapters.map((a) => [a.id, a.kind]));
 
-  const vulns = loadVulns(paths);
+  const db = getClient();
+  await migrateSchema(db);
+  const cutoffIso = new Date(Date.now() - ROLLING_WINDOW_DAYS * 86_400_000).toISOString();
+  const vulns = await loadLiveVulns(db, cutoffIso);
   const before = vulns.length;
   const deltaBySource = new Map<string, number>();
 
-  const survivors = vulns.filter((v) => {
+  const droppedIds: string[] = [];
+  for (const v of vulns) {
     const sourceId = v.sources[0]?.source ?? 'unknown';
     const kind = kindBySourceId.get(sourceId) ?? 'advisory';
     const verdict = filterByRelevance(v, kind, stackIndex);
     if (!verdict.keep) {
       deltaBySource.set(sourceId, (deltaBySource.get(sourceId) ?? 0) + 1);
-      return false;
+      droppedIds.push(v.id);
     }
-    return true;
-  });
+  }
 
-  const after = survivors.length;
-  const dropped = before - after;
-
-  console.warn(`prune: ${before} -> ${after} (dropped ${dropped})`);
+  const dropped = droppedIds.length;
+  console.warn(`prune: ${before} -> ${before - dropped} (dropped ${dropped})`);
   const sorted = [...deltaBySource.entries()].sort((a, b) => b[1] - a[1]);
   for (const [src, n] of sorted) console.warn(`  - ${src}: -${n}`);
 
@@ -57,8 +59,11 @@ function main(): void {
     return;
   }
 
-  persistVulns(paths, survivors, new Date());
-  console.warn(`prune: wrote ${after} records to ${paths.vulns}`);
+  await deleteVulns(db, droppedIds);
+  console.warn(`prune: deleted ${dropped} records from the database`);
 }
 
-main();
+main().catch((e: unknown) => {
+  console.error(e);
+  process.exit(1);
+});

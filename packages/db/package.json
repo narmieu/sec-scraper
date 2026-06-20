@@ -1,28 +1,29 @@
 {
-  "name": "@sec/scraper",
+  "name": "@sec/db",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
   "scripts": {
-    "start": "tsx src/cli.ts",
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "tsx --test src/**/*.test.ts",
-    "prune": "tsx scripts/prune-irrelevant.ts"
+    "migrate": "tsx scripts/migrate-json-to-db.ts"
   },
   "dependencies": {
-    "@sec/db": "workspace:*",
+    "@libsql/client": "^0.17.4",
     "@sec/shared": "workspace:*",
-    "cheerio": "^1.2.0",
-    "rss-parser": "^3.13.0",
-    "semver": "^7.8.5",
-    "string-similarity-js": "^2.1.4",
-    "undici": "^8.5.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^26.0.0",
-    "@types/semver": "^7.7.1",
     "tsx": "^4.22.4"
   }
 }

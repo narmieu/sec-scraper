@@ -11,3 +11,7 @@ coverage/
 .vercel/
 .claude/settings.local.json
 apps/dashboard/public/data/
+
+# Local libSQL / SQLite database files (file: fallback for dev/tests)
+data/local.db*
+*.db

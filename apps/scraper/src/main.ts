@@ -11,15 +11,18 @@ import { buildAdapters, ENRICHERS } from './adapters/index.js';
 import { dedupeMerge } from '@/pipeline/dedupe.js';
 import { normalizeVuln } from '@/pipeline/normalize.js';
 import { computePriority } from '@/pipeline/score.js';
+import { buildPaths } from '@/pipeline/persist.js';
 import {
-  buildPaths,
+  getClient,
+  migrateSchema,
+  loadLiveVulns,
+  upsertVulns,
+  selectChanged,
+  loadSourceHealth,
+  saveSourceHealth,
   loadAlerted,
-  loadSources,
-  loadVulns,
-  persistVulns,
-  writeLastRun,
-  writeSources,
-} from '@/pipeline/persist.js';
+  saveLastRun,
+} from '@sec/db';
 import {
   defaultHealth,
   isAllowed,
@@ -64,8 +67,12 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   const startedAt = now.toISOString();
   const startedMs = now.getTime();
   const paths = buildPaths(opts.dataRoot);
-  const sources: SourcesFile = loadSources(paths);
-  const existing = loadVulns(paths);
+  const db = getClient();
+  await migrateSchema(db);
+  const cutoffMs = now.getTime() - ROLLING_WINDOW_DAYS * 86_400_000;
+  const cutoffIso = new Date(cutoffMs).toISOString();
+  const sources: SourcesFile = await loadSourceHealth(db);
+  const existing = await loadLiveVulns(db, cutoffIso);
   const { index: stackIndex, targets: stackTargets } = loadStackBundle(paths);
   const adapters = buildAdapters(stackTargets);
   const errors: LastRun['errors'] = [];
@@ -139,8 +146,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
 
   // Counts reflect the live (post-persist) set — items aged out by the
   // 90d rolling window aren't "new" from the dashboard's perspective.
-  const cutoff = now.getTime() - ROLLING_WINDOW_DAYS * 86_400_000;
-  const live = combined.filter((v) => new Date(v.modifiedAt).getTime() >= cutoff);
+  const live = combined.filter((v) => new Date(v.modifiedAt).getTime() >= cutoffMs);
   const archivedCount = combined.length - live.length;
   const existingLiveIds = new Set(existing.map((v) => v.id));
   const newCount = live.filter((v) => !existingLiveIds.has(v.id)).length;
@@ -148,15 +154,15 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
 
   let alertCount = 0;
   if (!opts.noNotify && !opts.dryRun) {
-    const alerted = loadAlerted(paths);
-    const dispatchResult = await dispatchAlerts(combined, alerted, paths, now);
+    const alerted = await loadAlerted(db);
+    const dispatchResult = await dispatchAlerts(combined, alerted, db, now);
     alertCount = dispatchResult.alertsFired;
   }
 
   if (!opts.dryRun) {
-    persistVulns(paths, combined, now);
+    await upsertVulns(db, selectChanged(existing, combined));
     pruneStaleSources(sources, adapters);
-    writeSources(paths, sources);
+    await saveSourceHealth(db, sources);
   }
 
   const finishedAt = new Date();
@@ -178,7 +184,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     ),
     errors,
   };
-  if (!opts.dryRun) writeLastRun(paths, lastRun);
+  if (!opts.dryRun) await saveLastRun(db, lastRun);
 
   return {
     newCount,

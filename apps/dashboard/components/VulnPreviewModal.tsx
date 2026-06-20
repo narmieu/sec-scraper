@@ -98,7 +98,7 @@ export function VulnPreviewModal() {
     return (
       <Dialog open={open} onOpenChange={(o) => { if (!o) close(); }}>
         <DialogContent
-          className="sm:max-w-3xl max-h-[85vh] overflow-y-auto p-0"
+          className="sm:max-w-3xl max-h-[85vh] overflow-y-auto overflow-x-hidden p-0"
           showCloseButton
         >
           <DialogHeader className="sr-only">
@@ -116,7 +116,7 @@ export function VulnPreviewModal() {
         <DrawerHeader className="sr-only">
           <DrawerTitle>{title}</DrawerTitle>
         </DrawerHeader>
-        <div className="overflow-y-auto flex-1">
+        <div className="overflow-y-auto overflow-x-hidden flex-1">
           {id && <ModalBody id={id} />}
         </div>
       </DrawerContent>

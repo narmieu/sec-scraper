@@ -38,7 +38,7 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
 
   if (args.alertTest) {
-    const result = await runAlertTest(args.dataRoot, args.dryRun);
+    const result = await runAlertTest(args.dryRun);
     console.warn(`alert-test: dispatched=${result.dispatched} dryRun=${args.dryRun}`);
     return;
   }

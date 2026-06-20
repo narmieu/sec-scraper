@@ -29,6 +29,9 @@ importers:
 
   apps/dashboard:
     dependencies:
+      '@sec/db':
+        specifier: workspace:*
+        version: link:../../packages/db
       '@sec/shared':
         specifier: workspace:*
         version: link:../../packages/shared
@@ -102,6 +105,9 @@ importers:
 
   apps/scraper:
     dependencies:
+      '@sec/db':
+        specifier: workspace:*
+        version: link:../../packages/db
       '@sec/shared':
         specifier: workspace:*
         version: link:../../packages/shared
@@ -130,6 +136,25 @@ importers:
       '@types/semver':
         specifier: ^7.7.1
         version: 7.7.1
+      tsx:
+        specifier: ^4.22.4
+        version: 4.22.4
+
+  packages/db:
+    dependencies:
+      '@libsql/client':
+        specifier: ^0.17.4
+        version: 0.17.4
+      '@sec/shared':
+        specifier: workspace:*
+        version: link:../shared
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
+    devDependencies:
+      '@types/node':
+        specifier: ^26.0.0
+        version: 26.0.0
       tsx:
         specifier: ^4.22.4
         version: 4.22.4
@@ -622,11 +647,71 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
+  '@libsql/client@0.17.4':
+    resolution: {integrity: sha512-lYayFWasDV78A+TjlEhr6ubb3odBV6OHjb+wdp8VQcyWWAEIjuwbCHaraEUS4m4yWoo0BvZo96It4VdzZRmRWw==}
+
+  '@libsql/core@0.17.4':
+    resolution: {integrity: sha512-LqF9gIvnJ38nmAH1y/ChizHqDO/MO1wLgA96XrraulEEbqXxLjleSH92YWTolbuJKgPUmGu4aJk9W3UnAcxLOQ==}
+
+  '@libsql/darwin-arm64@0.5.29':
+    resolution: {integrity: sha512-K+2RIB1OGFPYQbfay48GakLhqf3ArcbHqPFu7EZiaUcRgFcdw8RoltsMyvbj5ix2fY0HV3Q3Ioa/ByvQdaSM0A==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@libsql/darwin-x64@0.5.29':
+    resolution: {integrity: sha512-OtT+KFHsKFy1R5FVadr8FJ2Bb1mghtXTyJkxv0trocq7NuHntSki1eUbxpO5ezJesDvBlqFjnWaYYY516QNLhQ==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@libsql/hrana-client@0.10.0':
+    resolution: {integrity: sha512-OoA4EMqRAC7kn7V2P6EQqRcpZf2W+AjsNIyCizBg339Tq/aMC7sRnzs3SklderhmQWAqEzvv8A2vhxVmWpkVvw==}
+
+  '@libsql/isomorphic-ws@0.1.5':
+    resolution: {integrity: sha512-DtLWIH29onUYR00i0GlQ3UdcTRC6EP4u9w/h9LxpUZJWRMARk6dQwZ6Jkd+QdwVpuAOrdxt18v0K2uIYR3fwFg==}
+
+  '@libsql/linux-arm-gnueabihf@0.5.29':
+    resolution: {integrity: sha512-CD4n4zj7SJTHso4nf5cuMoWoMSS7asn5hHygsDuhRl8jjjCTT3yE+xdUvI4J7zsyb53VO5ISh4cwwOtf6k2UhQ==}
+    cpu: [arm]
+    os: [linux]
+
+  '@libsql/linux-arm-musleabihf@0.5.29':
+    resolution: {integrity: sha512-2Z9qBVpEJV7OeflzIR3+l5yAd4uTOLxklScYTwpZnkm2vDSGlC1PRlueLaufc4EFITkLKXK2MWBpexuNJfMVcg==}
+    cpu: [arm]
+    os: [linux]
+
+  '@libsql/linux-arm64-gnu@0.5.29':
+    resolution: {integrity: sha512-gURBqaiXIGGwFNEaUj8Ldk7Hps4STtG+31aEidCk5evMMdtsdfL3HPCpvys+ZF/tkOs2MWlRWoSq7SOuCE9k3w==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@libsql/linux-arm64-musl@0.5.29':
+    resolution: {integrity: sha512-fwgYZ0H8mUkyVqXZHF3mT/92iIh1N94Owi/f66cPVNsk9BdGKq5gVpoKO+7UxaNzuEH1roJp2QEwsCZMvBLpqg==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@libsql/linux-x64-gnu@0.5.29':
+    resolution: {integrity: sha512-y14V0vY0nmMC6G0pHeJcEarcnGU2H6cm21ZceRkacWHvQAEhAG0latQkCtoS2njFOXiYIg+JYPfAoWKbi82rkg==}
+    cpu: [x64]
+    os: [linux]
+
+  '@libsql/linux-x64-musl@0.5.29':
+    resolution: {integrity: sha512-gquqwA/39tH4pFl+J9n3SOMSymjX+6kZ3kWgY3b94nXFTwac9bnFNMffIomgvlFaC4ArVqMnOZD3nuJ3H3VO1w==}
+    cpu: [x64]
+    os: [linux]
+
+  '@libsql/win32-x64-msvc@0.5.29':
+    resolution: {integrity: sha512-4/0CvEdhi6+KjMxMaVbFM2n2Z44escBRoEYpR+gZg64DdetzGnYm8mcNLcoySaDJZNaBd6wz5DNdgRmcI4hXcg==}
+    cpu: [x64]
+    os: [win32]
+
   '@napi-rs/wasm-runtime@1.1.5':
     resolution: {integrity: sha512-AWPoBRJ9tsnVhor4sjO7rkni+7p+2IAEFj6cx06UgP10jkQHqay/36uRV/bFkgrh18D9vb4cr8Q0Pthskgzy+Q==}
     peerDependencies:
       '@emnapi/core': ^1.7.1
       '@emnapi/runtime': ^1.7.1
+
+  '@neon-rs/load@0.0.4':
+    resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
 
   '@next/env@16.2.9':
     resolution: {integrity: sha512-ki5VxxXfzD/9TDe13wyeTKIjQTAwBVpnr8KhRDUr8ltMUq1/NBpWNT5tiPoxiGl+PHM4X2ahSOiPk6iAimIzPg==}
@@ -1527,6 +1612,9 @@ packages:
   '@types/semver@7.7.1':
     resolution: {integrity: sha512-FmgJfu+MOcQ370SD0ev7EI8TlCAfKYU+B4m5T3yXc1CiRN94g/SZPtsCkk506aUDtlMnFZvasDwHHUcZUEaYuA==}
 
+  '@types/ws@8.18.1':
+    resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
+
   '@typescript-eslint/eslint-plugin@8.61.1':
     resolution: {integrity: sha512-ZPlVl3PB3et/59Ne0fv/sci6ZXz4T4Hp4nTJ56i/Y0gR89ARb+KphojTq6j+56E5PIezmOIOOWyY+aWQFd+IkQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1903,6 +1991,10 @@ packages:
   define-properties@1.2.1:
     resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==}
     engines: {node: '>= 0.4'}
+
+  detect-libc@2.0.2:
+    resolution: {integrity: sha512-UX6sGumvvqSaXgdKGUsgZWqcUyIXZ/vZTrlRT/iobiKhGL0zL4d3osHj3uqllWJK+i+sixDS/3COVEOFbupFyw==}
+    engines: {node: '>=8'}
 
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
@@ -2415,6 +2507,9 @@ packages:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
 
+  js-base64@3.7.8:
+    resolution: {integrity: sha512-hNngCeKxIUQiEUN3GPJOkz4wF/YvdUdbNL9hsBcMQTkKzboD7T/q3OYOuuPZLUE6dBxSGpwhk5mwuDud7JVAow==}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -2458,6 +2553,11 @@ packages:
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
+
+  libsql@0.5.29:
+    resolution: {integrity: sha512-8lMP8iMgiBzzoNbAPQ59qdVcj6UaE/Vnm+fiwX4doX4Narook0a4GPKWBEv+CR8a1OwbfkgL18uBfBjWdF0Fzg==}
+    cpu: [x64, arm64, wasm32, arm]
+    os: [darwin, linux, win32]
 
   lightningcss-android-arm64@1.32.0:
     resolution: {integrity: sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==}
@@ -2721,6 +2821,9 @@ packages:
     resolution: {integrity: sha512-N2MylSdi48+5N/6S5j+maeHbUSIzzZ5uOcX5Hm4QpV8Dkb1HFjfAKTKX6yNPJQD9AhcT3ifHNB66tWTTJDi11Q==}
     engines: {node: '>=14'}
     hasBin: true
+
+  promise-limit@2.7.0:
+    resolution: {integrity: sha512-7nJ6v5lnJsXwGprnGXga4wx6d1POjvi5Qmf1ivTRxTjH4Z/9Czja/UCMLVmB9N93GeWOU93XaFaEt6jbuoagNw==}
 
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -3098,6 +3201,18 @@ packages:
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
+
+  ws@8.21.0:
+    resolution: {integrity: sha512-Vsp28b7DRcimFQvrqu2Wek3z1iYxDCWqHYB8Qsnk/S4RfaCQzPGPyBNuVjJV3cd6UiKtUtp6sNM77gWvzcCH+g==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
 
   xml2js@0.5.0:
     resolution: {integrity: sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==}
@@ -3523,12 +3638,72 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@libsql/client@0.17.4':
+    dependencies:
+      '@libsql/core': 0.17.4
+      '@libsql/hrana-client': 0.10.0
+      js-base64: 3.7.8
+      libsql: 0.5.29
+      promise-limit: 2.7.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  '@libsql/core@0.17.4':
+    dependencies:
+      js-base64: 3.7.8
+
+  '@libsql/darwin-arm64@0.5.29':
+    optional: true
+
+  '@libsql/darwin-x64@0.5.29':
+    optional: true
+
+  '@libsql/hrana-client@0.10.0':
+    dependencies:
+      '@libsql/isomorphic-ws': 0.1.5
+      js-base64: 3.7.8
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  '@libsql/isomorphic-ws@0.1.5':
+    dependencies:
+      '@types/ws': 8.18.1
+      ws: 8.21.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  '@libsql/linux-arm-gnueabihf@0.5.29':
+    optional: true
+
+  '@libsql/linux-arm-musleabihf@0.5.29':
+    optional: true
+
+  '@libsql/linux-arm64-gnu@0.5.29':
+    optional: true
+
+  '@libsql/linux-arm64-musl@0.5.29':
+    optional: true
+
+  '@libsql/linux-x64-gnu@0.5.29':
+    optional: true
+
+  '@libsql/linux-x64-musl@0.5.29':
+    optional: true
+
+  '@libsql/win32-x64-msvc@0.5.29':
+    optional: true
+
   '@napi-rs/wasm-runtime@1.1.5(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
       '@emnapi/core': 1.10.0
       '@emnapi/runtime': 1.10.0
       '@tybys/wasm-util': 0.10.2
     optional: true
+
+  '@neon-rs/load@0.0.4': {}
 
   '@next/env@16.2.9': {}
 
@@ -4427,6 +4602,10 @@ snapshots:
 
   '@types/semver@7.7.1': {}
 
+  '@types/ws@8.18.1':
+    dependencies:
+      '@types/node': 26.0.0
+
   '@typescript-eslint/eslint-plugin@8.61.1(@typescript-eslint/parser@8.61.1(eslint@10.5.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.5.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.2
@@ -4828,6 +5007,8 @@ snapshots:
       define-data-property: 1.1.4
       has-property-descriptors: 1.0.2
       object-keys: 1.1.1
+
+  detect-libc@2.0.2: {}
 
   detect-libc@2.1.2: {}
 
@@ -5527,6 +5708,8 @@ snapshots:
 
   jiti@2.7.0: {}
 
+  js-base64@3.7.8: {}
+
   js-tokens@4.0.0: {}
 
   jsesc@3.1.0: {}
@@ -5564,6 +5747,21 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
+
+  libsql@0.5.29:
+    dependencies:
+      '@neon-rs/load': 0.0.4
+      detect-libc: 2.0.2
+    optionalDependencies:
+      '@libsql/darwin-arm64': 0.5.29
+      '@libsql/darwin-x64': 0.5.29
+      '@libsql/linux-arm-gnueabihf': 0.5.29
+      '@libsql/linux-arm-musleabihf': 0.5.29
+      '@libsql/linux-arm64-gnu': 0.5.29
+      '@libsql/linux-arm64-musl': 0.5.29
+      '@libsql/linux-x64-gnu': 0.5.29
+      '@libsql/linux-x64-musl': 0.5.29
+      '@libsql/win32-x64-msvc': 0.5.29
 
   lightningcss-android-arm64@1.32.0:
     optional: true
@@ -5805,6 +6003,8 @@ snapshots:
   prelude-ls@1.2.1: {}
 
   prettier@3.8.4: {}
+
+  promise-limit@2.7.0: {}
 
   prop-types@15.8.1:
     dependencies:
@@ -6359,6 +6559,8 @@ snapshots:
       isexe: 2.0.0
 
   word-wrap@1.2.5: {}
+
+  ws@8.21.0: {}
 
   xml2js@0.5.0:
     dependencies:

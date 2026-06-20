@@ -2,26 +2,40 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import type { AlertedFile, LastRun, SourcesFile } from '@sec/shared';
 
-const DATA_DIR = join(process.cwd(), '..', '..', 'data');
+// Source health, last-run, and the alert log are emitted to public/data/status.json
+// by the prebuild step (scripts/build-index.ts) from the database. These accessors
+// run at build time (static export) and read that snapshot — the dashboard bundle
+// never touches the database directly.
+interface StatusFile {
+  sources: SourcesFile;
+  lastRun: LastRun | null;
+  alerted: AlertedFile;
+}
 
-function readJson<T>(file: string, fallback: T): T {
-  const path = join(DATA_DIR, file);
-  if (!existsSync(path)) return fallback;
+const STATUS_PATH = join(process.cwd(), 'public', 'data', 'status.json');
+const EMPTY: StatusFile = { sources: {}, lastRun: null, alerted: {} };
+
+let cached: StatusFile | null = null;
+
+function loadStatus(): StatusFile {
+  if (cached) return cached;
+  if (!existsSync(STATUS_PATH)) return (cached = EMPTY);
   try {
-    return JSON.parse(readFileSync(path, 'utf8')) as T;
+    cached = JSON.parse(readFileSync(STATUS_PATH, 'utf8')) as StatusFile;
   } catch {
-    return fallback;
+    cached = EMPTY;
   }
+  return cached;
 }
 
 export function loadSourceHealth(): SourcesFile {
-  return readJson<SourcesFile>('sources.json', {});
+  return loadStatus().sources;
 }
 
 export function loadLastRun(): LastRun | null {
-  return readJson<LastRun | null>('last-run.json', null);
+  return loadStatus().lastRun;
 }
 
 export function loadAlertedFile(): AlertedFile {
-  return readJson<AlertedFile>('alerted.json', {});
+  return loadStatus().alerted;
 }

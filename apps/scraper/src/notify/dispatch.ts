@@ -1,11 +1,6 @@
 import { SCORING_CONFIG, type AlertEntry, type AlertedFile, type Vuln } from '@sec/shared';
 import { canonicalId } from '../pipeline/normalize.js';
-import {
-  buildPaths,
-  loadAlerted,
-  writeAlerted,
-  type DataPaths,
-} from '../pipeline/persist.js';
+import { getClient, migrateSchema, loadAlerted, saveAlerted, type Client } from '@sec/db';
 import { sendTeams } from './teams.js';
 import { sendConsole } from './console.js';
 
@@ -26,7 +21,7 @@ interface PendingAlert {
 export async function dispatchAlerts(
   vulns: Vuln[],
   alerted: AlertedFile,
-  paths: DataPaths,
+  db: Client,
   now: Date,
 ): Promise<DispatchResult> {
   const pending = pickAlerts(vulns, alerted);
@@ -54,7 +49,7 @@ export async function dispatchAlerts(
         };
     alerted[p.vuln.id] = entry;
   }
-  writeAlerted(paths, alerted);
+  await saveAlerted(db, alerted);
 
   for (const p of pending) {
     const entry = alerted[p.vuln.id]!;
@@ -66,7 +61,7 @@ export async function dispatchAlerts(
       entry.channels['console'] = r.ok ? 'ok' : 'fail';
     }
   }
-  writeAlerted(paths, alerted);
+  await saveAlerted(db, alerted);
 
   return { alertsFired: pending.length };
 }
@@ -94,7 +89,7 @@ function pickAlerts(vulns: Vuln[], alerted: AlertedFile): PendingAlert[] {
   return out;
 }
 
-export async function runAlertTest(dataRoot: string, dryRun: boolean): Promise<AlertTestResult> {
+export async function runAlertTest(dryRun: boolean): Promise<AlertTestResult> {
   const now = new Date();
   const fake: Vuln = {
     id: canonicalId({ cveId: 'CVE-TEST-1' }),
@@ -147,13 +142,14 @@ export async function runAlertTest(dataRoot: string, dryRun: boolean): Promise<A
     sendConsole(fake);
   }
 
-  const paths = buildPaths(dataRoot);
-  const alerted = loadAlerted(paths);
+  const db = getClient();
+  await migrateSchema(db);
+  const alerted = await loadAlerted(db);
   alerted[fake.id] = {
     alertedAt: now.toISOString(),
     channels: { [webhook ? 'teams' : 'console']: 'ok' },
     vulnSnapshot: { priority: fake.priority, kev: fake.kev, severity: fake.severity },
   };
-  writeAlerted(paths, alerted);
+  await saveAlerted(db, alerted);
   return { dispatched: true };
 }

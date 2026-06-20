@@ -55,6 +55,7 @@ export const DEFAULT_SORT: SortKey = 'priority-desc';
 interface State {
   readIds: string[];
   hiddenIds: string[];
+  readAlertIds: string[];
   filters: Filters;
   query: string;
   sort: SortKey;
@@ -62,6 +63,8 @@ interface State {
   markRead: (id: string) => void;
   unmarkRead: (id: string) => void;
   dismiss: (id: string) => void;
+  markAlertRead: (id: string) => void;
+  markAllAlertsRead: (ids: string[]) => void;
   setQuery: (q: string) => void;
   setFilters: (patch: Partial<Filters>) => void;
   setSort: (sort: SortKey) => void;
@@ -74,6 +77,7 @@ export const useStore = create<State>()(
     (set) => ({
       readIds: [],
       hiddenIds: [],
+      readAlertIds: [],
       filters: DEFAULT_FILTERS,
       query: '',
       sort: DEFAULT_SORT,
@@ -83,6 +87,12 @@ export const useStore = create<State>()(
       unmarkRead: (id) => set((s) => ({ readIds: s.readIds.filter((x) => x !== id) })),
       dismiss: (id) =>
         set((s) => ({ hiddenIds: s.hiddenIds.includes(id) ? s.hiddenIds : [...s.hiddenIds, id] })),
+      markAlertRead: (id) =>
+        set((s) => ({
+          readAlertIds: s.readAlertIds.includes(id) ? s.readAlertIds : [...s.readAlertIds, id],
+        })),
+      markAllAlertsRead: (ids) =>
+        set((s) => ({ readAlertIds: Array.from(new Set([...s.readAlertIds, ...ids])) })),
       setQuery: (query) => set({ query }),
       setFilters: (patch) => set((s) => ({ filters: { ...s.filters, ...patch } })),
       setSort: (sort) => set({ sort }),
@@ -92,7 +102,7 @@ export const useStore = create<State>()(
     }),
     {
       name: 'sec-scraper-store',
-      version: 4,
+      version: 5,
       migrate: (persisted: unknown) => {
         const s = (persisted ?? {}) as Record<string, unknown>;
         const filters = (s.filters ?? {}) as Partial<Filters>;
@@ -101,6 +111,7 @@ export const useStore = create<State>()(
       partialize: (s) => ({
         readIds: s.readIds,
         hiddenIds: s.hiddenIds,
+        readAlertIds: s.readAlertIds,
         filters: s.filters,
         query: s.query,
         sort: s.sort,
