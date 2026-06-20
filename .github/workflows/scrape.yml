@@ -50,7 +50,8 @@ jobs:
           fi
           NEW=$(jq '.stats.newCount // 0' data/last-run.json)
           UPD=$(jq '.stats.updatedCount // 0' data/last-run.json)
-          git commit -m "[bot] scrape: +${NEW} new, ${UPD} updated [skip ci]"
+          ARC=$(jq '.stats.archivedCount // 0' data/last-run.json)
+          git commit -m "[bot] scrape: +${NEW} new, ${UPD} updated, ${ARC} archived [skip ci]"
           # Survive concurrent pushes (Vercel-triggered rebuilds, manual edits)
           for attempt in 1 2 3; do
             git pull --rebase --autostash origin main || true
