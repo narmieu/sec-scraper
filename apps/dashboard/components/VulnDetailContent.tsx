@@ -60,7 +60,7 @@ export function VulnDetailContent({ vuln }: { vuln: Vuln }) {
       {/* Header */}
       <header className="flex items-start gap-4">
         <PriorityBadge priority={vuln.priority} />
-        <div className="flex-1">
+        <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
             <SeverityPill severity={vuln.severity} />
             {vuln.kev && (
@@ -71,7 +71,7 @@ export function VulnDetailContent({ vuln }: { vuln: Vuln }) {
               {vuln.cveId ?? vuln.ghsaId ?? vuln.id}
             </span>
           </div>
-          <h1 className="mt-2 text-xl font-semibold">{vuln.title}</h1>
+          <h1 className="mt-2 text-xl font-semibold break-words">{vuln.title}</h1>
         </div>
       </header>
 
