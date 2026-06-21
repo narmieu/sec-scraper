@@ -15,3 +15,10 @@ apps/dashboard/public/data/
 # Local libSQL / SQLite database files (file: fallback for dev/tests)
 data/local.db*
 *.db
+
+# Legacy scraper data — now in the database (Turso). See packages/db.
+data/vulns.json
+data/sources.json
+data/alerted.json
+data/last-run.json
+data/archive/
