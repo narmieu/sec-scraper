@@ -12,7 +12,6 @@ import {
 } from '@sec/shared';
 import {
   getClient,
-  migrateSchema,
   loadLiveVulns,
   loadSourceHealth,
   loadLastRun,
@@ -31,8 +30,9 @@ async function main() {
 
   // A DB blip must never hard-fail a deploy — fall back to empty, valid outputs.
   try {
+    // Read-only path: the dashboard build uses a read-only token, so it must not
+    // write. Schema creation is owned by the scraper and the migration script.
     const db = getClient();
-    await migrateSchema(db);
     const cutoffIso = new Date(Date.now() - ROLLING_WINDOW_DAYS * 86_400_000).toISOString();
     vulns = await loadLiveVulns(db, cutoffIso);
     [sources, lastRun, alerted] = await Promise.all([
