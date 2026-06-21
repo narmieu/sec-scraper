@@ -68,7 +68,7 @@ export const nvdAdapter: Adapter = {
       id: canonicalId({ cveId: r.id }),
       cveId: r.id,
       aliases: [r.id],
-      title: cleanText(descEn.slice(0, 200) || r.id),
+      title: cleanText(descEn || r.id),
       summary: cleanText(descEn),
       severity,
       ecosystems: ['generic'],

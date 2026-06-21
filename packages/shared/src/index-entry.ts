@@ -23,11 +23,15 @@ export interface IndexEntry {
 }
 
 const SUMMARY_MAX = 160;
+// Titles can now be the full description (NVD/CVE entries have no real title), so
+// cap what goes into the compact index. The list line-clamps and the detail view
+// reads the full title from the per-vuln shard, so this only bounds index size.
+const TITLE_MAX = 200;
 
 export function toIndexEntry(v: Vuln): IndexEntry {
   const entry: IndexEntry = {
     id: v.id,
-    title: v.title,
+    title: v.title.length > TITLE_MAX ? v.title.slice(0, TITLE_MAX) : v.title,
     severity: v.severity,
     kev: v.kev,
     priority: v.priority,

@@ -55,6 +55,19 @@ function ScoreBreakdown({
 // ---------------------------------------------------------------------------
 
 export function VulnDetailContent({ vuln }: { vuln: Vuln }) {
+  // NVD / CVE.org / CISA entries frequently have no vendor-supplied title, so the
+  // scraper synthesizes one from the first ~200 chars of the description. That stub
+  // surfaces here as a title cut off mid-word. When the title is just the leading
+  // slice of a longer summary, show the complete text as the heading instead (and
+  // skip the now-duplicate Summary card). The length gate keeps genuine short titles
+  // that merely open the summary (e.g. "Use-after-free in the WebRTC component").
+  const titleIsTruncatedDescription =
+    !!vuln.summary &&
+    vuln.title.length >= 140 &&
+    vuln.summary.length > vuln.title.length &&
+    vuln.summary.startsWith(vuln.title);
+  const heading = titleIsTruncatedDescription && vuln.summary ? vuln.summary : vuln.title;
+
   return (
     <article className="mx-auto max-w-3xl px-6 py-8 break-words">
       {/* Header */}
@@ -71,7 +84,7 @@ export function VulnDetailContent({ vuln }: { vuln: Vuln }) {
               {vuln.cveId ?? vuln.ghsaId ?? vuln.id}
             </span>
           </div>
-          <h1 className="mt-2 text-xl font-semibold break-words">{vuln.title}</h1>
+          <h1 className="mt-2 text-xl font-semibold break-words">{heading}</h1>
         </div>
       </header>
 
@@ -105,8 +118,8 @@ export function VulnDetailContent({ vuln }: { vuln: Vuln }) {
         </CardContent>
       </Card>
 
-      {/* Summary */}
-      {vuln.summary && (
+      {/* Summary — skipped when the heading already shows the full text */}
+      {vuln.summary && vuln.summary !== heading && (
         <Card className="mt-4">
           <CardHeader>
             <CardTitle className="text-xs uppercase tracking-wide text-muted-foreground">

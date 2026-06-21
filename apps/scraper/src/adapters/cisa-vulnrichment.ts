@@ -137,7 +137,7 @@ export const cisaVulnrichmentAdapter: Adapter = {
       id: canonicalId({ cveId: item.cveId }),
       cveId: item.cveId,
       aliases: [item.cveId],
-      title: cleanText((cna.title ?? descEn.slice(0, 200)) || item.cveId),
+      title: cleanText((cna.title ?? descEn) || item.cveId),
       summary: cleanText(descEn),
       severity,
       ecosystems: ['generic'],
