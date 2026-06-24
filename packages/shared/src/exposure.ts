@@ -19,21 +19,26 @@ export function evaluateExposure(
 
   for (const aff of vuln.affected) {
     const key = aff.package.toLowerCase();
-    const installed = idx.byName.get(key);
-    if (installed === undefined) continue;
+    const installedVersions = idx.byName.get(key);
+    if (installedVersions === undefined || installedVersions.length === 0) continue;
     const original = idx.originalCase.get(key) ?? aff.package;
     matched.push(original);
 
-    const status = classify(aff.ecosystem, installed, aff.versions, aff.fixedIn);
-    if (STATUS_RANK[status] > STATUS_RANK[best.status]) {
-      best = {
-        status,
-        package: original,
-        ecosystem: aff.ecosystem,
-        installed,
-        vulnerableRange: aff.versions,
-        ...(aff.fixedIn ? { fixedIn: aff.fixedIn } : {}),
-      };
+    // A package may run at several versions across our services (e.g. antd v4 in
+    // one app, v6 in another). Treat it as affected if ANY installed version is in
+    // range; keep the worst verdict and record the version that triggered it.
+    for (const installed of installedVersions) {
+      const status = classify(aff.ecosystem, installed, aff.versions, aff.fixedIn);
+      if (STATUS_RANK[status] > STATUS_RANK[best.status]) {
+        best = {
+          status,
+          package: original,
+          ecosystem: aff.ecosystem,
+          installed,
+          vulnerableRange: aff.versions,
+          ...(aff.fixedIn ? { fixedIn: aff.fixedIn } : {}),
+        };
+      }
     }
   }
 
