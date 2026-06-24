@@ -24,7 +24,7 @@ export async function dispatchAlerts(
   db: Client,
   now: Date,
 ): Promise<DispatchResult> {
-  const pending = pickAlerts(vulns, alerted);
+  const pending = pickAlerts(vulns, alerted, now);
   if (pending.length === 0) return { alertsFired: 0 };
 
   const webhook = process.env['TEAMS_WEBHOOK_URL'];
@@ -66,15 +66,19 @@ export async function dispatchAlerts(
   return { alertsFired: pending.length };
 }
 
-function pickAlerts(vulns: Vuln[], alerted: AlertedFile): PendingAlert[] {
+export function pickAlerts(vulns: Vuln[], alerted: AlertedFile, now: Date): PendingAlert[] {
   const thresholds = SCORING_CONFIG.thresholds.push;
+  const maxAgeMs = thresholds.maxAgeHours * 3_600_000;
   const out: PendingAlert[] = [];
   for (const v of vulns) {
     const meetsBar = v.priority >= thresholds.priority && v.stackMatch.score >= thresholds.stackMatch;
     if (!meetsBar) continue;
     const prior = alerted[v.id];
     if (!prior) {
-      out.push({ vuln: v, prefix: '', isKevFollowup: false });
+      // Freshness gate: a first-time push only fires for a recently published
+      // vuln. KEV bypasses it — active exploitation is age-independent.
+      const fresh = now.getTime() - new Date(v.publishedAt).getTime() <= maxAgeMs;
+      if (fresh || v.kev) out.push({ vuln: v, prefix: '', isKevFollowup: false });
       continue;
     }
     if (v.kev && !prior.vulnSnapshot.kev && !prior.kevAlertedAt) {
