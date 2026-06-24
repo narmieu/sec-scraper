@@ -57,9 +57,9 @@ describe('pickAlerts: freshness gate', () => {
     assert.equal(out.length, 1);
   });
 
-  it('fires for a vuln published 23h ago but not one published 25h ago', () => {
-    assert.equal(pickAlerts([v({ publishedAt: hoursAgo(23) })], {}, NOW).length, 1);
-    assert.equal(pickAlerts([v({ publishedAt: hoursAgo(25) })], {}, NOW).length, 0);
+  it('fires for a vuln published 47h ago but not one published 49h ago', () => {
+    assert.equal(pickAlerts([v({ publishedAt: hoursAgo(47) })], {}, NOW).length, 1);
+    assert.equal(pickAlerts([v({ publishedAt: hoursAgo(49) })], {}, NOW).length, 0);
   });
 
   it('ignores vulns below the priority/stackMatch bar', () => {
