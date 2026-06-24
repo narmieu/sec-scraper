@@ -96,6 +96,8 @@ export function mergeRecords(a: Vuln, b: Vuln): Vuln {
 
   if (cvss !== undefined) merged.cvss = cvss;
   if (epss !== undefined) merged.epss = epss;
+  // A retraction sticks: once either side is withdrawn, the merged record is too.
+  if (a.withdrawn || b.withdrawn) merged.withdrawn = true;
 
   return merged;
 }

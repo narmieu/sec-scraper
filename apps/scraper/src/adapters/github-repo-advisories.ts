@@ -30,6 +30,7 @@ interface RepoAdvisory {
   references?: ({ url: string } | string)[];
   published_at: string;
   updated_at: string;
+  withdrawn_at?: string | null;
   html_url: string;
   state?: string;
 }
@@ -120,6 +121,7 @@ export function makeGithubRepoAdvisoriesAdapter(targets: StackTargets): Adapter 
         stackMatch: { score: 0, packages: [], reason: 'topic-mention' },
         priority: 0,
         kev: false,
+        withdrawn: Boolean(a.withdrawn_at),
         publishedAt: toIsoDate(a.published_at),
         modifiedAt: toIsoDate(a.updated_at),
         mergedAt: new Date().toISOString(),

@@ -86,6 +86,13 @@ describe('vulnToRow / rowToVuln', () => {
     assert.equal(row.exposure_status, 'affected');
     assert.equal(row.kev, 1);
   });
+
+  it('persists and reloads the withdrawn flag', async () => {
+    const db = await freshDb();
+    await upsertVulns(db, [makeVuln({ withdrawn: true })]);
+    const got = await getVuln(db, 'CVE-2026-1');
+    assert.equal(got?.withdrawn, true);
+  });
 });
 
 describe('upsertVulns', () => {
@@ -109,6 +116,16 @@ describe('loadLiveVulns', () => {
     ]);
     const live = await loadLiveVulns(db, '2026-03-23T00:00:00.000Z');
     assert.deepEqual(live.map((v) => v.id), ['B', 'A']);
+  });
+
+  it('excludes withdrawn advisories from the live set', async () => {
+    const db = await freshDb();
+    await upsertVulns(db, [
+      makeVuln({ id: 'LIVE', cveId: undefined, ghsaId: undefined }),
+      makeVuln({ id: 'GONE', cveId: undefined, ghsaId: undefined, withdrawn: true }),
+    ]);
+    const live = await loadLiveVulns(db, '2026-01-01T00:00:00.000Z');
+    assert.deepEqual(live.map((v) => v.id), ['LIVE']);
   });
 });
 

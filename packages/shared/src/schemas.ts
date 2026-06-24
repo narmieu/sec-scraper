@@ -71,6 +71,9 @@ export const Vuln = z.object({
   cvssVector: z.string().optional(),
   epss: z.number().min(0).max(1).optional(),
   kev: z.boolean().default(false),
+  // Set when the upstream advisory was retracted (GHSA withdrawn_at / OSV
+  // withdrawn). Withdrawn advisories are never alerted on.
+  withdrawn: z.boolean().optional(),
   ecosystems: z.array(Ecosystem),
   cwe: z.array(z.string()),
 

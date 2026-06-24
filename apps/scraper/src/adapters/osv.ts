@@ -19,6 +19,7 @@ interface OsvItem {
   aliases?: string[];
   modified?: string;
   published?: string;
+  withdrawn?: string;
   severity?: { type: string; score: string }[];
   affected?: {
     package?: { ecosystem?: string; name?: string };
@@ -122,6 +123,7 @@ export function makeOsvAdapter(targets: StackTargets): Adapter {
         stackMatch: { score: 0, packages: [], reason: 'topic-mention' },
         priority: 0,
         kev: false,
+        withdrawn: Boolean(r.withdrawn),
         publishedAt: toIsoDate(r.published),
         modifiedAt: toIsoDate(r.modified),
         mergedAt: new Date().toISOString(),

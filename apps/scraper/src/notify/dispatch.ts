@@ -71,13 +71,17 @@ export function pickAlerts(vulns: Vuln[], alerted: AlertedFile, now: Date): Pend
   const maxAgeMs = thresholds.maxAgeHours * 3_600_000;
   const out: PendingAlert[] = [];
   for (const v of vulns) {
+    // A withdrawn/retracted advisory is never actionable — never alert it,
+    // whatever its severity, KEV status, or prior failed-channel entry.
+    if (v.withdrawn) continue;
     const meetsBar = v.priority >= thresholds.priority && v.stackMatch.score >= thresholds.stackMatch;
     if (!meetsBar) continue;
+    // Freshness gate: only (re-)alert a vuln published within the window. KEV
+    // bypasses it — active exploitation is age-independent. Applies to first-time
+    // pushes AND failed-channel retries, so a stale backlog item never alerts.
+    const fresh = now.getTime() - new Date(v.publishedAt).getTime() <= maxAgeMs;
     const prior = alerted[v.id];
     if (!prior) {
-      // Freshness gate: a first-time push only fires for a recently published
-      // vuln. KEV bypasses it — active exploitation is age-independent.
-      const fresh = now.getTime() - new Date(v.publishedAt).getTime() <= maxAgeMs;
       if (fresh || v.kev) out.push({ vuln: v, prefix: '', isKevFollowup: false });
       continue;
     }
@@ -86,7 +90,7 @@ export function pickAlerts(vulns: Vuln[], alerted: AlertedFile, now: Date): Pend
       continue;
     }
     const allOk = Object.values(prior.channels).every((s) => s === 'ok');
-    if (!allOk) {
+    if (!allOk && (fresh || v.kev)) {
       out.push({ vuln: v, prefix: '', isKevFollowup: false });
     }
   }
