@@ -28,6 +28,7 @@ interface GhsaItem {
   references?: { url: string }[];
   published_at: string;
   updated_at: string;
+  withdrawn_at?: string | null;
   html_url: string;
 }
 
@@ -102,6 +103,7 @@ export const ghsaAdapter: Adapter = {
       stackMatch: { score: 0, packages: [], reason: 'topic-mention' },
       priority: 0,
       kev: false,
+      withdrawn: Boolean(r.withdrawn_at),
       publishedAt: toIsoDate(r.published_at),
       modifiedAt: toIsoDate(r.updated_at),
       mergedAt: new Date().toISOString(),

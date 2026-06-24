@@ -25,10 +25,11 @@ export async function upsertVulns(client: Client, vulns: Vuln[]): Promise<void> 
   }
 }
 
-/** The live working set: rows modified at/after the cutoff, highest priority first. */
+/** The live working set: non-withdrawn rows modified at/after the cutoff,
+ *  highest priority first. Withdrawn (retracted) advisories are excluded. */
 export async function loadLiveVulns(client: Client, cutoffIso: string): Promise<Vuln[]> {
   const res = await client.execute({
-    sql: 'SELECT * FROM vulns WHERE modified_at >= ? ORDER BY priority DESC, published_at DESC',
+    sql: 'SELECT * FROM vulns WHERE modified_at >= ? AND withdrawn = 0 ORDER BY priority DESC, published_at DESC',
     args: [cutoffIso],
   });
   return res.rows.map(rowToVuln);

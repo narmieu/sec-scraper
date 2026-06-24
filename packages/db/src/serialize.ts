@@ -3,7 +3,7 @@ import type { Row, Value } from '@libsql/client';
 
 export const VULN_COLUMNS = [
   'id', 'cve_id', 'ghsa_id', 'title', 'summary', 'details', 'severity', 'cvss',
-  'cvss_vector', 'epss', 'kev', 'priority', 'exploit_maturity', 'exposure_status',
+  'cvss_vector', 'epss', 'kev', 'withdrawn', 'priority', 'exploit_maturity', 'exposure_status',
   'published_at', 'modified_at', 'merged_at', 'aliases', 'ecosystems', 'cwe',
   'tags', 'affected', 'stack_match', 'exposure', 'exploit', 'sources',
 ] as const;
@@ -27,6 +27,7 @@ export function vulnToRow(v: Vuln): RowValues {
     cvss_vector: v.cvssVector ?? null,
     epss: v.epss ?? null,
     kev: v.kev ? 1 : 0,
+    withdrawn: v.withdrawn ? 1 : 0,
     priority: v.priority,
     exploit_maturity: v.exploit?.maturity ?? null,
     exposure_status: v.exposure?.status ?? null,
@@ -66,6 +67,9 @@ export function rowToVuln(row: Row): Vuln {
     cvssVector: optText(row.cvss_vector),
     epss: optNum(row.epss),
     kev: Boolean(row.kev),
+    // Absent (not `false`) when not withdrawn, so a normal advisory round-trips
+    // to an unset optional rather than an explicit flag.
+    withdrawn: row.withdrawn ? true : undefined,
     ecosystems: parseJson(row.ecosystems),
     cwe: parseJson(row.cwe),
     affected: parseJson(row.affected),

@@ -18,6 +18,7 @@ const STATEMENTS: string[] = [
      cvss_vector      TEXT,
      epss             REAL,
      kev              INTEGER NOT NULL DEFAULT 0,
+     withdrawn        INTEGER NOT NULL DEFAULT 0,
      priority         INTEGER NOT NULL,
      exploit_maturity TEXT,
      exposure_status  TEXT,
@@ -58,4 +59,19 @@ export async function migrateSchema(client: Client): Promise<void> {
   for (const sql of STATEMENTS) {
     await client.execute(sql);
   }
+  // Additive migrations for DBs created before a column existed. CREATE TABLE
+  // IF NOT EXISTS above only helps fresh DBs; existing ones need ALTER. libSQL
+  // has no ADD COLUMN IF NOT EXISTS, so guard on the live column set.
+  await ensureColumn(client, 'vulns', 'withdrawn', 'INTEGER NOT NULL DEFAULT 0');
+}
+
+async function ensureColumn(
+  client: Client,
+  table: string,
+  column: string,
+  ddl: string,
+): Promise<void> {
+  const info = await client.execute(`PRAGMA table_info(${table})`);
+  if (info.rows.some((r) => r.name === column)) return;
+  await client.execute(`ALTER TABLE ${table} ADD COLUMN ${column} ${ddl}`);
 }

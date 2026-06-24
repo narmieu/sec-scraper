@@ -1,5 +1,4 @@
 import { SCORING_CONFIG, type AlertEntry, type AlertedFile, type Vuln } from '@sec/shared';
-import { canonicalId } from '../pipeline/normalize.js';
 import { getClient, migrateSchema, loadAlerted, saveAlerted, type Client } from '@sec/db';
 import { sendTeams } from './teams.js';
 import { sendConsole } from './console.js';
@@ -71,13 +70,17 @@ export function pickAlerts(vulns: Vuln[], alerted: AlertedFile, now: Date): Pend
   const maxAgeMs = thresholds.maxAgeHours * 3_600_000;
   const out: PendingAlert[] = [];
   for (const v of vulns) {
+    // A withdrawn/retracted advisory is never actionable — never alert it,
+    // whatever its severity, KEV status, or prior failed-channel entry.
+    if (v.withdrawn) continue;
     const meetsBar = v.priority >= thresholds.priority && v.stackMatch.score >= thresholds.stackMatch;
     if (!meetsBar) continue;
+    // Freshness gate: only (re-)alert a vuln published within the window. KEV
+    // bypasses it — active exploitation is age-independent. Applies to first-time
+    // pushes AND failed-channel retries, so a stale backlog item never alerts.
+    const fresh = now.getTime() - new Date(v.publishedAt).getTime() <= maxAgeMs;
     const prior = alerted[v.id];
     if (!prior) {
-      // Freshness gate: a first-time push only fires for a recently published
-      // vuln. KEV bypasses it — active exploitation is age-independent.
-      const fresh = now.getTime() - new Date(v.publishedAt).getTime() <= maxAgeMs;
       if (fresh || v.kev) out.push({ vuln: v, prefix: '', isKevFollowup: false });
       continue;
     }
@@ -86,7 +89,7 @@ export function pickAlerts(vulns: Vuln[], alerted: AlertedFile, now: Date): Pend
       continue;
     }
     const allOk = Object.values(prior.channels).every((s) => s === 'ok');
-    if (!allOk) {
+    if (!allOk && (fresh || v.kev)) {
       out.push({ vuln: v, prefix: '', isKevFollowup: false });
     }
   }
@@ -95,65 +98,64 @@ export function pickAlerts(vulns: Vuln[], alerted: AlertedFile, now: Date): Pend
 
 export async function runAlertTest(dryRun: boolean): Promise<AlertTestResult> {
   const now = new Date();
-  const fake: Vuln = {
-    id: canonicalId({ cveId: 'CVE-TEST-1' }),
-    cveId: 'CVE-TEST-1',
-    aliases: ['CVE-TEST-1'],
-    title: 'Test critical vulnerability (alert pipeline check)',
-    summary: 'This is a synthetic alert produced by `pnpm scrape --alert-test`.',
+  const iso = now.toISOString();
+  const staleIso = new Date(now.getTime() - 365 * 86_400_000).toISOString();
+
+  const fake = (over: Partial<Vuln>): Vuln => ({
+    id: 'CVE-TEST',
+    aliases: [],
+    title: 'Test vulnerability',
+    summary: 'Synthetic alert produced by `pnpm scrape --alert-test`.',
     severity: 'critical',
     cvss: 9.8,
-    kev: true,
+    kev: false,
     ecosystems: ['npm'],
     cwe: ['CWE-89'],
-    affected: [
-      {
-        ecosystem: 'npm',
-        package: 'next',
-        versions: '<14.2.36',
-        fixedIn: '14.2.36',
-      },
-    ],
+    affected: [{ ecosystem: 'npm', package: 'next', versions: '<14.2.36', fixedIn: '14.2.36' }],
     stackMatch: { score: 100, packages: ['next'], reason: 'direct-dep' },
     priority: 95,
-    publishedAt: now.toISOString(),
-    modifiedAt: now.toISOString(),
-    mergedAt: now.toISOString(),
-    sources: [
-      {
-        source: 'cli',
-        externalId: 'alert-test',
-        url: 'https://example.com/alert-test',
-        fetchedAt: now.toISOString(),
-      },
-    ],
+    publishedAt: iso,
+    modifiedAt: iso,
+    mergedAt: iso,
+    sources: [{ source: 'cli', externalId: 'alert-test', url: 'https://example.com/alert-test', fetchedAt: iso }],
     tags: ['frontend', 'nextjs'],
-  };
+    ...over,
+  });
+
+  // Drive the real notification path (dispatchAlerts -> pickAlerts -> send) so
+  // the test exercises gating, not just transport. Exactly one should notify;
+  // the other two are negative controls for the withdrawn filter and the
+  // freshness gate. If either control arrives, a gate has regressed.
+  const fakes: Vuln[] = [
+    fake({ id: 'CVE-TEST-LIVE', cveId: 'CVE-TEST-LIVE', kev: true, title: 'TEST critical — SHOULD ALERT (fresh, in-scope)' }),
+    fake({ id: 'CVE-TEST-WITHDRAWN', cveId: 'CVE-TEST-WITHDRAWN', withdrawn: true, title: 'TEST withdrawn — should NOT alert' }),
+    fake({ id: 'CVE-TEST-STALE', cveId: 'CVE-TEST-STALE', publishedAt: staleIso, modifiedAt: staleIso, title: 'TEST stale non-KEV — should NOT alert' }),
+  ];
 
   if (dryRun) {
-    sendConsole(fake);
-    return { dispatched: true };
-  }
-
-  const webhook = process.env['TEAMS_WEBHOOK_URL'];
-  if (webhook) {
-    const r = await sendTeams(fake, webhook);
-    if (!r.ok) {
-      console.error(`alert-test failed: ${r.error}`);
-      return { dispatched: false };
-    }
-  } else {
-    sendConsole(fake);
+    const picked = pickAlerts(fakes, {}, now);
+    console.warn(
+      `alert-test (dry-run): ${picked.length}/3 would notify -> ${picked.map((p) => p.vuln.id).join(', ') || 'none'}`,
+    );
+    for (const p of picked) sendConsole(p.vuln, p.prefix);
+    return { dispatched: picked.length === 1 && picked[0]!.vuln.id === 'CVE-TEST-LIVE' };
   }
 
   const db = getClient();
   await migrateSchema(db);
   const alerted = await loadAlerted(db);
-  alerted[fake.id] = {
-    alertedAt: now.toISOString(),
-    channels: { [webhook ? 'teams' : 'console']: 'ok' },
-    vulnSnapshot: { priority: fake.priority, kev: fake.kev, severity: fake.severity },
-  };
-  await saveAlerted(db, alerted);
-  return { dispatched: true };
+  for (const f of fakes) delete alerted[f.id]; // fresh state so re-runs are predictable
+  const res = await dispatchAlerts(fakes, alerted, db, now);
+
+  const legit = alerted['CVE-TEST-LIVE'];
+  const delivered = !!legit && Object.values(legit.channels).every((s) => s === 'ok');
+  const suppressed = !alerted['CVE-TEST-WITHDRAWN'] && !alerted['CVE-TEST-STALE'];
+  if (!delivered) {
+    console.error(`alert-test: legit alert did not deliver — channels=${JSON.stringify(legit?.channels)}`);
+  }
+  if (!suppressed) {
+    console.error('alert-test: a negative control was notified — gate regressed');
+  }
+  console.warn(`alert-test: fired ${res.alertsFired}/3 (expected 1: CVE-TEST-LIVE)`);
+  return { dispatched: delivered && suppressed && res.alertsFired === 1 };
 }
