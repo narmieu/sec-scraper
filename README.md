@@ -22,7 +22,7 @@ pnpm dev                       # dashboard on http://localhost:3000
 pnpm scrape                    # full pipeline, writes data/*.json
 pnpm scrape --dry-run          # no writes, no notify
 pnpm scrape --source=ghsa      # single adapter, debug
-pnpm scrape --alert-test       # fake critical → notifiers
+pnpm scrape --alert-test       # end-to-end notify test: 1 of 3 synthetic vulns (fresh/withdrawn/stale) should alert
 ```
 
 ## Required secrets (GitHub Actions)
