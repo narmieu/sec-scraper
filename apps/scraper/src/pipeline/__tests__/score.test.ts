@@ -30,14 +30,14 @@ describe('scoreWithBreakdown: exposure verdict', () => {
     assert.equal(r.total, 9);
   });
 
-  it('floors an affected high-severity vuln to 75', () => {
-    // base 30 + 100*0.35 = 65, floored up to 75.
+  it('floors an affected high-severity vuln to the alert bar (80)', () => {
+    // base 30 + 100*0.35 + 8 no-patch bump = 73, floored up to 80.
     const r = scoreWithBreakdown(v({
       severity: 'high',
       stackMatch: { score: 100, packages: ['lodash'], reason: 'direct-dep' },
       exposure: { status: 'affected' },
     }));
-    assert.equal(r.total, 75);
+    assert.equal(r.total, 80);
     assert.equal(r.floorApplied, 'affected');
   });
 
