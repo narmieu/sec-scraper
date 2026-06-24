@@ -152,9 +152,14 @@ export const LastRun = z.object({
 });
 export type LastRun = z.infer<typeof LastRun>;
 
+// A package may be deployed at more than one version across our services (e.g.
+// antd v4 in one frontend, v6 in another). Allow either a single version string
+// or an array of versions; a name match is "affected" if ANY listed version
+// falls in the vulnerable range.
+const StackVersion = z.union([z.string().min(1), z.array(z.string().min(1)).min(1)]);
 export const Stack = z.object({
-  frontend: z.record(z.string(), z.string()),
-  backend: z.record(z.string(), z.string()),
-  tools: z.record(z.string(), z.string()),
+  frontend: z.record(z.string(), StackVersion),
+  backend: z.record(z.string(), StackVersion),
+  tools: z.record(z.string(), StackVersion),
 });
 export type Stack = z.infer<typeof Stack>;

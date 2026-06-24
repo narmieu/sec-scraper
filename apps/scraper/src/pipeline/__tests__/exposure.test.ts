@@ -117,3 +117,59 @@ describe('evaluateExposure', () => {
     assert.equal(stackMatch.score, 0);
   });
 });
+
+// A single package deployed at multiple versions across services.
+const multiStack: Stack = {
+  frontend: { antd: ['4.24.14', '6.4.3'], react: '18.3.1' },
+  backend: { 'doctrine/orm': ['^2.19', '^3.3'] },
+  tools: {},
+};
+const multiIdx = buildStackIndex(multiStack);
+
+describe('evaluateExposure — multiple installed versions of one package', () => {
+  it('affected when a v4-only CVE hits, even though v6 is also installed', () => {
+    const { exposure, stackMatch } = evaluateExposure(
+      vulnWith([{ ecosystem: 'npm', package: 'antd', versions: '>=4.0.0 <5.0.0' }]),
+      multiIdx,
+    );
+    assert.equal(exposure.status, 'affected');
+    assert.equal(exposure.installed, '4.24.14'); // reports the version that triggered
+    assert.equal(stackMatch.score, 100);
+  });
+
+  it('affected when a v6-only CVE hits, even though v4 is also installed', () => {
+    const { exposure } = evaluateExposure(
+      vulnWith([{ ecosystem: 'npm', package: 'antd', versions: '>=6.0.0 <7.0.0' }]),
+      multiIdx,
+    );
+    assert.equal(exposure.status, 'affected');
+    assert.equal(exposure.installed, '6.4.3');
+  });
+
+  it('safe only when NO installed version is in range (v5-only CVE)', () => {
+    const { exposure } = evaluateExposure(
+      vulnWith([{ ecosystem: 'npm', package: 'antd', versions: '>=5.0.0 <6.0.0' }]),
+      multiIdx,
+    );
+    assert.equal(exposure.status, 'safe');
+  });
+
+  it('composer: a 3.x-only advisory is caught via the ^3.3 entry', () => {
+    const { exposure, stackMatch } = evaluateExposure(
+      vulnWith([{ ecosystem: 'composer', package: 'doctrine/orm', versions: '>=3.0.0' }]),
+      multiIdx,
+    );
+    assert.equal(exposure.status, 'affected');
+    assert.equal(exposure.installed, '^3.3');
+    assert.equal(stackMatch.score, 100);
+  });
+
+  it('composer: a 2.x-only advisory is caught via the ^2.19 entry', () => {
+    const { exposure } = evaluateExposure(
+      vulnWith([{ ecosystem: 'composer', package: 'doctrine/orm', versions: '>=2.0.0 <3.0.0' }]),
+      multiIdx,
+    );
+    assert.equal(exposure.status, 'affected');
+    assert.equal(exposure.installed, '^2.19');
+  });
+});
