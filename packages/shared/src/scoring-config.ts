@@ -7,7 +7,10 @@ export const SCORING_CONFIG = {
   // retry, follow-up) — active exploitation is age-independent.
   thresholds: { push: { priority: 80, stackMatch: 60, maxAgeHours: 48 } },
   decay: { halfLifeDays: 30 },
-  floors: { kev: 85, affected: 75 },
+  // affected must match thresholds.push.priority (80) so a confirmed-affected
+  // critical/high always clears the alert bar on the floor alone; kev (85) sits
+  // just above it. Keep these two in lockstep — drift silences real alerts.
+  floors: { kev: 85, affected: 80 },
   demoteWhenIrrelevantFactor: 0.4,
   demoteWhenSafeFactor: 0.25,
   exploitMaturity: { active: 20, weaponized: 16, poc: 10 },
