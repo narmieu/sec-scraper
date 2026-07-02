@@ -1,5 +1,6 @@
 import type { Tag, Vuln } from '@sec/shared';
 import { fetchJson } from '../pipeline/fetch.js';
+import { mapPool } from '../pipeline/pool.js';
 import { githubHeaders } from '../pipeline/github.js';
 import {
   canonicalId,
@@ -10,6 +11,11 @@ import {
 import type { Adapter, FetchResult, SourceCursor } from './types.js';
 
 const REPO = 'cisagov/vulnrichment';
+
+// GitHub API commit-detail fetches bounded for secondary rate limits; raw CVE
+// records come from the raw.githubusercontent.com CDN and can run wider.
+const COMMIT_CONCURRENCY = 5;
+const RAW_CONCURRENCY = 10;
 
 interface CommitListItem {
   sha: string;
@@ -73,20 +79,25 @@ export const cisaVulnrichmentAdapter: Adapter = {
       return { raw: [] };
     }
 
-    const seen = new Set<string>();
-    const items: RawItem[] = [];
-
-    for (const c of commits) {
-      let detail: CommitDetail;
+    // Phase 1: fetch every commit's file list in parallel (bounded).
+    const details = await mapPool(commits, COMMIT_CONCURRENCY, async (c) => {
       try {
-        detail = await fetchJson<CommitDetail>(
+        return await fetchJson<CommitDetail>(
           `https://api.github.com/repos/${REPO}/commits/${c.sha}`,
           { headers, retries: 2 },
         );
       } catch {
-        continue;
+        return null;
       }
+    });
 
+    // Phase 2: dedupe by CVE id in commit order (in memory, deterministic).
+    const seen = new Set<string>();
+    const toFetch: { sha: string; filename: string; cveId: string }[] = [];
+    for (let i = 0; i < commits.length; i++) {
+      const detail = details[i];
+      if (!detail) continue;
+      const sha = commits[i]!.sha;
       for (const f of detail.files) {
         if (f.status === 'removed') continue;
         const m = f.filename.match(/\d{4}\/[^/]+\/(CVE-\d{4}-\d+)\.json$/);
@@ -94,18 +105,22 @@ export const cisaVulnrichmentAdapter: Adapter = {
         const cveId = m[1]!;
         if (seen.has(cveId)) continue;
         seen.add(cveId);
-
-        const rawUrl = `https://raw.githubusercontent.com/${REPO}/${c.sha}/${f.filename}`;
-        try {
-          const record = await fetchJson<VulnrichmentRecord>(rawUrl, { retries: 1 });
-          items.push({ sha: c.sha, path: f.filename, cveId, record });
-        } catch {
-          // skip individual failure
-        }
+        toFetch.push({ sha, filename: f.filename, cveId });
       }
     }
 
-    return { raw: items };
+    // Phase 3: fetch the raw records in parallel (CDN, wider bound).
+    const fetched = await mapPool(toFetch, RAW_CONCURRENCY, async (t) => {
+      const rawUrl = `https://raw.githubusercontent.com/${REPO}/${t.sha}/${t.filename}`;
+      try {
+        const record = await fetchJson<VulnrichmentRecord>(rawUrl, { retries: 1 });
+        return { sha: t.sha, path: t.filename, cveId: t.cveId, record } satisfies RawItem;
+      } catch {
+        return null; // skip individual failure
+      }
+    });
+
+    return { raw: fetched.filter((x): x is RawItem => x !== null) };
   },
 
   normalize(raw: unknown): Vuln | null {

@@ -10,6 +10,9 @@ import {
   saveAlerted,
   loadLastRun,
   saveLastRun,
+  loadEnricherState,
+  saveEnricherState,
+  type EnricherStateFile,
 } from './state.js';
 
 async function freshDb() {
@@ -71,6 +74,31 @@ describe('alerted state', () => {
   it('returns {} when empty', async () => {
     const db = await freshDb();
     assert.deepEqual(await loadAlerted(db), {});
+  });
+});
+
+describe('enricher_state', () => {
+  const STATE: EnricherStateFile = {
+    'exploit-intel': { lastFetchedAt: '2026-07-02T00:00:00.000Z' },
+    epss: { lastFetchedAt: '2026-07-02T11:00:00.000Z' },
+  };
+
+  it('round-trips an EnricherStateFile', async () => {
+    const db = await freshDb();
+    await saveEnricherState(db, STATE);
+    assert.deepEqual(norm(await loadEnricherState(db)), norm(STATE));
+  });
+
+  it('returns {} when empty', async () => {
+    const db = await freshDb();
+    assert.deepEqual(await loadEnricherState(db), {});
+  });
+
+  it('fully replaces on save', async () => {
+    const db = await freshDb();
+    await saveEnricherState(db, STATE);
+    await saveEnricherState(db, { epss: STATE.epss! });
+    assert.deepEqual(Object.keys(await loadEnricherState(db)), ['epss']);
   });
 });
 

@@ -53,6 +53,12 @@ const STATEMENTS: string[] = [
      id   INTEGER PRIMARY KEY CHECK (id = 1),
      data TEXT NOT NULL
    )`,
+  // Per-enricher last-run timestamps, kept separate from source_health so
+  // enrichers don't surface as dashboard "sources" and aren't pruned with them.
+  `CREATE TABLE IF NOT EXISTS enricher_state (
+     id   TEXT PRIMARY KEY,
+     data TEXT NOT NULL
+   )`,
 ];
 
 export async function migrateSchema(client: Client): Promise<void> {

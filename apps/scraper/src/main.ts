@@ -22,6 +22,8 @@ import {
   saveSourceHealth,
   loadAlerted,
   saveLastRun,
+  loadEnricherState,
+  saveEnricherState,
 } from '@sec/db';
 import {
   defaultHealth,
@@ -33,6 +35,7 @@ import {
 import { loadStackBundle } from '@/stack.js';
 import { dispatchAlerts } from '@/notify/dispatch.js';
 import { filterByRelevance } from '@/pipeline/relevance-filter.js';
+import { isDue } from '@/pipeline/cadence.js';
 
 export interface RunOpts {
   dryRun?: boolean;
@@ -72,6 +75,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   const cutoffMs = now.getTime() - ROLLING_WINDOW_DAYS * 86_400_000;
   const cutoffIso = new Date(cutoffMs).toISOString();
   const sources: SourcesFile = await loadSourceHealth(db);
+  const enricherState = await loadEnricherState(db);
   const existing = await loadLiveVulns(db, cutoffIso);
   const { index: stackIndex, targets: stackTargets } = loadStackBundle(paths);
   const adapters = buildAdapters(stackTargets);
@@ -118,6 +122,12 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   let combined = dedupeMerge(combinedBeforeDedupe);
 
   for (const enricher of ENRICHERS) {
+    // Respect each enricher's declared cadence (e.g. exploit-intel is daily) so
+    // the hourly run doesn't re-download large feeds every time. State lives in
+    // its own table, separate from adapter source-health.
+    if (!isDue(enricherState[enricher.id]?.lastFetchedAt, CADENCE_MS[enricher.cadence], now.getTime())) {
+      continue;
+    }
     try {
       const out = await enricher.enrich(combined);
       if (out.modifiedById.size > 0) {
@@ -129,6 +139,8 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
       if (out.addedVulns && out.addedVulns.length > 0) {
         combined = dedupeMerge([...combined, ...out.addedVulns]);
       }
+      // Record only on success; a thrown enricher stays due and retries next run.
+      enricherState[enricher.id] = { lastFetchedAt: now.toISOString() };
     } catch (e: unknown) {
       errors.push({
         source: enricher.id,
@@ -163,6 +175,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     await upsertVulns(db, selectChanged(existing, combined));
     pruneStaleSources(sources, adapters);
     await saveSourceHealth(db, sources);
+    await saveEnricherState(db, enricherState);
   }
 
   const finishedAt = new Date();
@@ -210,11 +223,7 @@ function pickEligibleAdapters(
     let h = health ?? defaultHealth();
     h = nextStateForAttempt(h, now.getTime());
     if (!isAllowed(h, now.getTime())) return false;
-    if (h.lastFetchedAt) {
-      const interval = CADENCE_MS[a.cadence];
-      const dt = now.getTime() - new Date(h.lastFetchedAt).getTime();
-      if (dt < interval - 60_000) return false;
-    }
+    if (!isDue(h.lastFetchedAt, CADENCE_MS[a.cadence], now.getTime())) return false;
     return true;
   });
 }

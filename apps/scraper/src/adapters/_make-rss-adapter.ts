@@ -1,7 +1,12 @@
 import type { Cadence, Ecosystem, Tag, Vuln } from '@sec/shared';
 import { fetchRss, isRecent, type RssItem } from '../pipeline/rss.js';
+import { conditionalSince } from '../pipeline/fetch.js';
 import type { Adapter, FetchResult, SourceCursor, SourceKind } from './types.js';
 import { rssItemToVuln } from './_rss-helpers.js';
+
+// Overlap window for If-Modified-Since so items published right around the last
+// fetch aren't dropped by a coarse server-side comparison.
+const IF_MODIFIED_MARGIN_MS = 30 * 60_000;
 
 export interface MakeRssAdapterOpts {
   id: string;
@@ -21,8 +26,9 @@ export function makeRssAdapter(opts: MakeRssAdapterOpts): Adapter {
     id,
     kind,
     cadence,
-    async fetch(_cursor: SourceCursor): Promise<FetchResult> {
-      const items = await fetchRss(url);
+    async fetch(cursor: SourceCursor): Promise<FetchResult> {
+      const since = conditionalSince(cursor.lastFetchedAt, IF_MODIFIED_MARGIN_MS);
+      const items = await fetchRss(url, since);
       const filtered = items.filter(
         (i) =>
           isRecent(i.isoDate ?? i.pubDate, maxAgeDays) &&

@@ -1,5 +1,6 @@
 import type { Ecosystem, Vuln } from '@sec/shared';
 import { fetchJson } from '@/pipeline/fetch.js';
+import { mapPool } from '@/pipeline/pool.js';
 import { mapEcosystem } from '@/pipeline/ecosystem.js';
 import { githubHeaders } from '@/pipeline/github.js';
 import {
@@ -39,6 +40,10 @@ const API_ECO: Record<'npm' | 'Packagist', string> = {
   Packagist: 'composer',
 };
 
+// Shared with the other GitHub API adapters; kept low to avoid tripping
+// GitHub's secondary (abuse) rate limits on concurrent bursts.
+const GHSA_STACK_CONCURRENCY = 5;
+
 export function makeGhsaStackAdapter(targets: StackTargets): Adapter {
   return {
     id: 'ghsa-stack',
@@ -47,9 +52,8 @@ export function makeGhsaStackAdapter(targets: StackTargets): Adapter {
 
     async fetch(_cursor: SourceCursor): Promise<FetchResult> {
       const headers = githubHeaders();
-      const seen = new Map<string, GhsaItem>();
 
-      for (const q of targets.osvQueries) {
+      const perQuery = await mapPool(targets.osvQueries, GHSA_STACK_CONCURRENCY, async (q) => {
         const ecosystem = API_ECO[q.ecosystem];
         const url =
           `https://api.github.com/advisories` +
@@ -57,12 +61,17 @@ export function makeGhsaStackAdapter(targets: StackTargets): Adapter {
           `&affects=${encodeURIComponent(q.name)}` +
           `&per_page=100&sort=updated&direction=desc`;
         try {
-          const items = await fetchJson<GhsaItem[]>(url, { headers, retries: 2 });
-          for (const it of items) {
-            if (it?.ghsa_id) seen.set(it.ghsa_id, it);
-          }
+          return await fetchJson<GhsaItem[]>(url, { headers, retries: 2 });
         } catch {
-          // per-package failure is non-fatal; continue with next package
+          return []; // per-package failure is non-fatal; continue with next package
+        }
+      });
+
+      // Replay in query order so last-write-wins dedupe stays deterministic.
+      const seen = new Map<string, GhsaItem>();
+      for (const items of perQuery) {
+        for (const it of items) {
+          if (it?.ghsa_id) seen.set(it.ghsa_id, it);
         }
       }
 
