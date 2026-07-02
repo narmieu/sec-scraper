@@ -38,6 +38,20 @@ export function saveAlerted(client: Client, alerted: AlertedFile): Promise<void>
   return replaceRecord(client, 'alerted', alerted);
 }
 
+export interface EnricherRun {
+  lastFetchedAt: string;
+}
+export type EnricherStateFile = Record<string, EnricherRun>;
+
+export function loadEnricherState(client: Client): Promise<EnricherStateFile> {
+  return loadRecord(client, 'enricher_state', (r) => ({
+    lastFetchedAt: String((r as { lastFetchedAt?: unknown }).lastFetchedAt ?? ''),
+  }));
+}
+export function saveEnricherState(client: Client, state: EnricherStateFile): Promise<void> {
+  return replaceRecord(client, 'enricher_state', state);
+}
+
 export async function loadLastRun(client: Client): Promise<LastRun | null> {
   const res = await client.execute('SELECT data FROM last_run WHERE id = 1');
   const row = res.rows[0];

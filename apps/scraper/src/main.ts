@@ -8,6 +8,7 @@ import {
 } from '@sec/shared';
 import type { Adapter } from './adapters/types.js';
 import { buildAdapters, ENRICHERS } from './adapters/index.js';
+import { fetchKevFeed } from './adapters/cisa-kev.js';
 import { dedupeMerge } from '@/pipeline/dedupe.js';
 import { normalizeVuln } from '@/pipeline/normalize.js';
 import { computePriority } from '@/pipeline/score.js';
@@ -15,13 +16,15 @@ import { buildPaths } from '@/pipeline/persist.js';
 import {
   getClient,
   migrateSchema,
-  loadLiveVulns,
+  loadVulnsByKeys,
   upsertVulns,
   selectChanged,
   loadSourceHealth,
   saveSourceHealth,
   loadAlerted,
   saveLastRun,
+  loadEnricherState,
+  saveEnricherState,
 } from '@sec/db';
 import {
   defaultHealth,
@@ -33,6 +36,14 @@ import {
 import { loadStackBundle } from '@/stack.js';
 import { dispatchAlerts } from '@/notify/dispatch.js';
 import { filterByRelevance } from '@/pipeline/relevance-filter.js';
+import { isDue } from '@/pipeline/cadence.js';
+
+// Opt-in per-source timing to stderr (SCRAPE_TRACE=1). Streams as each source
+// starts/finishes so a run killed by the CI cap still shows the culprit.
+const TRACE = Boolean(process.env['SCRAPE_TRACE']);
+function trace(msg: string): void {
+  if (TRACE) console.warn(`[trace +${process.uptime().toFixed(1)}s] ${msg}`);
+}
 
 export interface RunOpts {
   dryRun?: boolean;
@@ -66,19 +77,23 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   const now = opts.now ?? new Date();
   const startedAt = now.toISOString();
   const startedMs = now.getTime();
+  trace(`runScrape start`);
   const paths = buildPaths(opts.dataRoot);
   const db = getClient();
   await migrateSchema(db);
+  trace(`db connect+migrate done`);
   const cutoffMs = now.getTime() - ROLLING_WINDOW_DAYS * 86_400_000;
   const cutoffIso = new Date(cutoffMs).toISOString();
-  const sources: SourcesFile = await loadSourceHealth(db);
-  const existing = await loadLiveVulns(db, cutoffIso);
+  const [sources, enricherState] = await Promise.all([loadSourceHealth(db), loadEnricherState(db)]);
+  trace(`health+enricher state loaded`);
   const { index: stackIndex, targets: stackTargets } = loadStackBundle(paths);
   const adapters = buildAdapters(stackTargets);
   const errors: LastRun['errors'] = [];
 
   const eligible = pickEligibleAdapters(adapters, sources, opts.onlySource, now);
+  trace(`eligible adapters=${eligible.length}/${adapters.length}`);
   const results = await Promise.all(eligible.map((a) => runAdapter(a, sources)));
+  trace(`all adapters settled`);
 
   for (const r of results) {
     const health = sources[r.adapter.id] ?? defaultHealth();
@@ -114,12 +129,42 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     }
   }
 
+  trace(`normalize+filter done incoming=${incoming.length} dropped=${droppedCount} filtered=${filteredCount}`);
+
+  // Incremental working set: rather than loading the whole live table, fetch the
+  // KEV feed (the enricher needs it anyway) and load only existing rows whose
+  // id/cve/ghsa matches an incoming item or a KEV entry. Everything this run can
+  // touch — dedupe targets and KEV-markable rows — is present; the rest of the
+  // table stays untouched and is never transferred.
+  const kevEntries = await fetchKevFeed();
+  const loadKeys: string[] = [];
+  for (const v of incoming) {
+    loadKeys.push(v.id);
+    if (v.cveId) loadKeys.push(v.cveId);
+    if (v.ghsaId) loadKeys.push(v.ghsaId);
+    for (const a of v.aliases) loadKeys.push(a);
+  }
+  for (const e of kevEntries) loadKeys.push(e.cveID);
+  const existing = await loadVulnsByKeys(db, loadKeys, cutoffIso);
+  trace(`loaded related=${existing.length} from keys=${loadKeys.length} (kev=${kevEntries.length})`);
+
   const combinedBeforeDedupe = [...existing, ...incoming];
   let combined = dedupeMerge(combinedBeforeDedupe);
+  trace(`dedupe done n=${combined.length} (from ${combinedBeforeDedupe.length})`);
 
   for (const enricher of ENRICHERS) {
+    // Respect each enricher's declared cadence (e.g. exploit-intel is daily) so
+    // the hourly run doesn't re-download large feeds every time. State lives in
+    // its own table, separate from adapter source-health.
+    if (!isDue(enricherState[enricher.id]?.lastFetchedAt, CADENCE_MS[enricher.cadence], now.getTime())) {
+      trace(`enricher ${enricher.id} skip (not due)`);
+      continue;
+    }
+    const et0 = Date.now();
+    trace(`enricher ${enricher.id} start`);
     try {
-      const out = await enricher.enrich(combined);
+      const out = await enricher.enrich(combined, { kevEntries });
+      trace(`enricher ${enricher.id} ok ms=${Date.now() - et0}`);
       if (out.modifiedById.size > 0) {
         combined = combined.map((v) => {
           const patch = out.modifiedById.get(v.id);
@@ -129,6 +174,8 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
       if (out.addedVulns && out.addedVulns.length > 0) {
         combined = dedupeMerge([...combined, ...out.addedVulns]);
       }
+      // Record only on success; a thrown enricher stays due and retries next run.
+      enricherState[enricher.id] = { lastFetchedAt: now.toISOString() };
     } catch (e: unknown) {
       errors.push({
         source: enricher.id,
@@ -138,11 +185,20 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     }
   }
 
+  trace(`enrichers done; scoring n=${combined.length}`);
+  // Untouched existing records pass through dedupe and enrichers as the same
+  // object reference and keep their persisted exposure/stackMatch/priority.
+  // Only new or modified records need the (per-item costly) exposure evaluation.
+  const existingRefs = new Set<Vuln>(existing);
+  let rescored = 0;
   combined = combined.map((v) => {
+    if (existingRefs.has(v)) return v;
+    rescored++;
     const { exposure, stackMatch } = evaluateExposure(v, stackIndex);
     const withMatch: Vuln = { ...v, exposure, stackMatch };
     return { ...withMatch, priority: computePriority(withMatch) };
   });
+  trace(`scored ${rescored}/${combined.length} (skipped unchanged existing)`);
 
   // Counts reflect the live (post-persist) set — items aged out by the
   // 90d rolling window aren't "new" from the dashboard's perspective.
@@ -163,6 +219,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     await upsertVulns(db, selectChanged(existing, combined));
     pruneStaleSources(sources, adapters);
     await saveSourceHealth(db, sources);
+    await saveEnricherState(db, enricherState);
   }
 
   const finishedAt = new Date();
@@ -210,11 +267,7 @@ function pickEligibleAdapters(
     let h = health ?? defaultHealth();
     h = nextStateForAttempt(h, now.getTime());
     if (!isAllowed(h, now.getTime())) return false;
-    if (h.lastFetchedAt) {
-      const interval = CADENCE_MS[a.cadence];
-      const dt = now.getTime() - new Date(h.lastFetchedAt).getTime();
-      if (dt < interval - 60_000) return false;
-    }
+    if (!isDue(h.lastFetchedAt, CADENCE_MS[a.cadence], now.getTime())) return false;
     return true;
   });
 }
@@ -232,6 +285,7 @@ async function runAdapter(adapter: Adapter, sources: SourcesFile): Promise<Adapt
     lastFetchedAt: sources[adapter.id]?.lastFetchedAt,
     lastCursor: sources[adapter.id]?.lastCursor,
   };
+  trace(`adapter ${adapter.id} start`);
   try {
     const { raw } = await adapter.fetch(cursor);
     const items: Vuln[] = [];
@@ -243,6 +297,7 @@ async function runAdapter(adapter: Adapter, sources: SourcesFile): Promise<Adapt
         // single-item failure ignored
       }
     }
+    trace(`adapter ${adapter.id} ok fetched=${raw.length} kept=${items.length} ms=${Date.now() - t0}`);
     return {
       adapter,
       ok: true,
@@ -251,6 +306,7 @@ async function runAdapter(adapter: Adapter, sources: SourcesFile): Promise<Adapt
       items,
     };
   } catch (e: unknown) {
+    trace(`adapter ${adapter.id} ERR ms=${Date.now() - t0} ${e instanceof Error ? e.message : String(e)}`);
     return {
       adapter,
       ok: false,

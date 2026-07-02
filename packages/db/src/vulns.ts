@@ -25,6 +25,44 @@ export async function upsertVulns(client: Client, vulns: Vuln[]): Promise<void> 
   }
 }
 
+/** Loads only the live rows whose id, cve_id, or ghsa_id matches one of
+ *  `identifiers` — the incremental alternative to pulling the entire working
+ *  set. Same live filter as loadLiveVulns (non-withdrawn, within the window).
+ *  Deduped by id across the three column lookups. */
+export async function loadVulnsByKeys(
+  client: Client,
+  identifiers: string[],
+  cutoffIso: string,
+): Promise<Vuln[]> {
+  const uniq = [...new Set(identifiers.filter(Boolean))];
+  if (uniq.length === 0) return [];
+  // Separate per-column IN queries so each uses its index (id PK, idx_vulns_cve,
+  // idx_vulns_ghsa) rather than an OR that forces a full scan. All chunks go in
+  // one batch() so the whole lookup is a single round trip to Turso. Chunk wide
+  // (params stay under SQLite's limit) to minimize the statement count.
+  const KEY_CHUNK = 900;
+  const stmts: InStatement[] = [];
+  for (const col of ['id', 'cve_id', 'ghsa_id'] as const) {
+    for (let i = 0; i < uniq.length; i += KEY_CHUNK) {
+      const chunk = uniq.slice(i, i + KEY_CHUNK);
+      const ph = chunk.map(() => '?').join(', ');
+      stmts.push({
+        sql: `SELECT * FROM vulns WHERE ${col} IN (${ph}) AND withdrawn = 0 AND modified_at >= ?`,
+        args: [...chunk, cutoffIso],
+      });
+    }
+  }
+  const byId = new Map<string, Vuln>();
+  const results = await client.batch(stmts, 'read');
+  for (const res of results) {
+    for (const row of res.rows) {
+      const v = rowToVuln(row);
+      byId.set(v.id, v);
+    }
+  }
+  return [...byId.values()];
+}
+
 /** The live working set: non-withdrawn rows modified at/after the cutoff,
  *  highest priority first. Withdrawn (retracted) advisories are excluded. */
 export async function loadLiveVulns(client: Client, cutoffIso: string): Promise<Vuln[]> {

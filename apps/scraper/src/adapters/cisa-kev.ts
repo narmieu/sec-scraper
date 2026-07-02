@@ -1,42 +1,34 @@
 import type { Tag, Vuln } from '@sec/shared';
 import { fetchJson } from '../pipeline/fetch.js';
 import { canonicalId, cleanText, toIsoDate } from '../pipeline/normalize.js';
-import type { EnrichResult, Enricher } from './types.js';
+import type { EnrichContext, EnrichResult, Enricher, KevEntry } from './types.js';
 
 interface KevResponse {
   vulnerabilities?: KevEntry[];
 }
 
-interface KevEntry {
-  cveID: string;
-  vendorProject: string;
-  product: string;
-  vulnerabilityName: string;
-  dateAdded: string;
-  shortDescription: string;
-  requiredAction?: string;
-  dueDate?: string;
-  knownRansomwareCampaignUse?: string;
-}
-
 const KEV_URL = 'https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json';
+
+/** Fetches and parses the CISA KEV feed. Returns [] on failure. Shared so the
+ *  scrape can derive incremental-load keys before enrichment runs. */
+export async function fetchKevFeed(): Promise<KevEntry[]> {
+  try {
+    const data = await fetchJson<KevResponse>(KEV_URL, { retries: 2 });
+    return data.vulnerabilities ?? [];
+  } catch {
+    return [];
+  }
+}
 
 export const kevEnricher: Enricher = {
   id: 'cisa-kev',
   cadence: 'hourly',
 
-  async enrich(vulns: Vuln[]): Promise<EnrichResult> {
+  async enrich(vulns: Vuln[], ctx?: EnrichContext): Promise<EnrichResult> {
     const modifiedById = new Map<string, Partial<Vuln>>();
     const addedVulns: Vuln[] = [];
 
-    let data: KevResponse;
-    try {
-      data = await fetchJson<KevResponse>(KEV_URL, { retries: 2 });
-    } catch {
-      return { modifiedById };
-    }
-
-    const entries = data.vulnerabilities ?? [];
+    const entries = ctx?.kevEntries ?? (await fetchKevFeed());
     const existingByCve = new Map<string, Vuln>();
     for (const v of vulns) {
       if (v.cveId) existingByCve.set(v.cveId, v);

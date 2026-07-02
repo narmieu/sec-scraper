@@ -1,5 +1,6 @@
 import type { Ecosystem, Vuln } from '@sec/shared';
 import { fetchJson } from '@/pipeline/fetch.js';
+import { mapPool } from '@/pipeline/pool.js';
 import { mapEcosystem } from '@/pipeline/ecosystem.js';
 import {
   canonicalId,
@@ -11,6 +12,10 @@ import {
 } from '@/pipeline/normalize.js';
 import type { StackTargets } from '@/pipeline/stack-targets.js';
 import type { Adapter, FetchResult, SourceCursor } from './types.js';
+
+// api.osv.dev tolerates healthy parallelism; the per-package query fan-out is
+// the adapter-phase long pole, so keep this wide.
+const OSV_CONCURRENCY = 16;
 
 interface OsvItem {
   id: string;
@@ -55,8 +60,7 @@ export function makeOsvAdapter(targets: StackTargets): Adapter {
     cadence: 'hourly',
 
     async fetch(_cursor: SourceCursor): Promise<FetchResult> {
-      const all: OsvItem[] = [];
-      for (const q of targets.osvQueries) {
+      const perQuery = await mapPool(targets.osvQueries, OSV_CONCURRENCY, async (q) => {
         try {
           const body = JSON.stringify({ package: { name: q.name, ecosystem: q.ecosystem } });
           const r = await fetchJson<{ vulns?: OsvItem[] }>('https://api.osv.dev/v1/query', {
@@ -65,12 +69,12 @@ export function makeOsvAdapter(targets: StackTargets): Adapter {
             body,
             retries: 2,
           });
-          if (r.vulns) all.push(...r.vulns);
+          return r.vulns ?? [];
         } catch {
-          // ignore individual query failure
+          return []; // ignore individual query failure
         }
-      }
-      return { raw: all };
+      });
+      return { raw: perQuery.flat() };
     },
 
     normalize(raw: unknown): Vuln | null {

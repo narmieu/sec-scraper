@@ -1,5 +1,6 @@
 import type { Ecosystem, Vuln } from '@sec/shared';
 import { fetchJson } from '@/pipeline/fetch.js';
+import { mapPool } from '@/pipeline/pool.js';
 import { mapEcosystem } from '@/pipeline/ecosystem.js';
 import { githubHeaders } from '@/pipeline/github.js';
 import {
@@ -40,6 +41,9 @@ interface RawItem {
   advisory: RepoAdvisory;
 }
 
+// GitHub API adapter: keep concurrency low to stay clear of secondary limits.
+const REPO_ADVISORIES_CONCURRENCY = 5;
+
 export function makeGithubRepoAdvisoriesAdapter(targets: StackTargets): Adapter {
   return {
     id: 'github-repo-advisories',
@@ -51,25 +55,26 @@ export function makeGithubRepoAdvisoriesAdapter(targets: StackTargets): Adapter 
         ? new Date(cursor.lastFetchedAt).getTime() - 30 * 60_000
         : Date.now() - 30 * 24 * 3600_000;
       const headers = githubHeaders();
-      const all: RawItem[] = [];
 
-      for (const repo of targets.repoSlugs) {
+      const perRepo = await mapPool(targets.repoSlugs, REPO_ADVISORIES_CONCURRENCY, async (repo) => {
         try {
           const items = await fetchJson<RepoAdvisory[]>(
             `https://api.github.com/repos/${repo}/security-advisories?state=published&per_page=100`,
             { headers, retries: 2 },
           );
+          const out: RawItem[] = [];
           for (const a of items) {
             const t = new Date(a.updated_at).getTime();
             if (Number.isNaN(t) || t < sinceMs) continue;
-            all.push({ repo, advisory: a });
+            out.push({ repo, advisory: a });
           }
+          return out;
         } catch {
-          // per-repo failure is non-fatal; continue with the next repo
+          return []; // per-repo failure is non-fatal; continue with the next repo
         }
-      }
+      });
 
-      return { raw: all };
+      return { raw: perRepo.flat() };
     },
 
     normalize(raw: unknown): Vuln | null {

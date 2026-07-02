@@ -37,12 +37,22 @@ function indexAliases(v: Vuln, idx: number, aliasIndex: Map<string, number>) {
   for (const a of v.aliases) aliasIndex.set(a, idx);
 }
 
+function hasStrongId(v: Vuln): boolean {
+  return Boolean(v.cveId) || Boolean(v.ghsaId) || v.aliases.some((a) => /^(CVE|GHSA)-/i.test(a));
+}
+
 function findMatchIndex(item: Vuln, pool: Vuln[], aliasIndex: Map<string, number>): number {
   if (item.cveId && aliasIndex.has(item.cveId)) return aliasIndex.get(item.cveId)!;
   if (item.ghsaId && aliasIndex.has(item.ghsaId)) return aliasIndex.get(item.ghsaId)!;
   for (const a of item.aliases) {
     if (aliasIndex.has(a)) return aliasIndex.get(a)!;
   }
+
+  // Fuzzy title matching is an O(n) pool scan (expensive stringSimilarity), so
+  // it must stay bounded to the few id-less records (news/research/changelogs).
+  // Items carrying a CVE/GHSA id dedupe by id above; title-merging them across
+  // *different* ids would also wrongly conflate distinct vulnerabilities.
+  if (hasStrongId(item)) return -1;
 
   const itemTime = new Date(item.publishedAt).getTime();
   for (let i = 0; i < pool.length; i++) {

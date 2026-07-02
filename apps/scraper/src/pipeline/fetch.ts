@@ -22,6 +22,27 @@ export class HttpError extends Error {
 
 const DEFAULT_UA = 'security-scraper-bot/0.1 (+https://github.com)';
 
+/** Sentinel returned by {@link fetchTextIfModified} when the server answers 304. */
+export const NOT_MODIFIED = Symbol('not-modified');
+
+/** Equal-jitter exponential backoff: half fixed, half random. Jitter avoids a
+ *  thundering-herd of retries lining up against a recovering host. `rand` is
+ *  injectable for deterministic tests. */
+export function retryDelayMs(attempt: number, baseDelayMs: number, rand: () => number = Math.random): number {
+  const backoff = baseDelayMs * Math.pow(3, attempt);
+  return Math.round(backoff / 2 + rand() * (backoff / 2));
+}
+
+/** Builds an `If-Modified-Since` HTTP-date from a prior fetch time, shifted back
+ *  by `marginMs` so items published right around the last fetch aren't missed.
+ *  Returns undefined when there is no usable prior timestamp. */
+export function conditionalSince(lastFetchedAt: string | undefined, marginMs: number): string | undefined {
+  if (!lastFetchedAt) return undefined;
+  const t = new Date(lastFetchedAt).getTime();
+  if (Number.isNaN(t)) return undefined;
+  return new Date(t - marginMs).toUTCString();
+}
+
 export async function fetchText(url: string, opts: FetchOpts = {}): Promise<string> {
   const r = await fetchWithRetry(url, opts);
   return await r.text();
@@ -32,10 +53,21 @@ export async function fetchJson<T = unknown>(url: string, opts: FetchOpts = {}):
   return (await r.json()) as T;
 }
 
+/** Like {@link fetchText} but returns {@link NOT_MODIFIED} on a 304 response
+ *  instead of trying to read an empty body. Pair with `opts.ifModifiedSince`. */
+export async function fetchTextIfModified(
+  url: string,
+  opts: FetchOpts = {},
+): Promise<string | typeof NOT_MODIFIED> {
+  const r = await fetchWithRetry(url, opts);
+  if (r.status === 304) return NOT_MODIFIED;
+  return await r.text();
+}
+
 async function fetchWithRetry(url: string, opts: FetchOpts) {
   const retries = opts.retries ?? 3;
   const baseDelay = opts.baseDelayMs ?? 1000;
-  const timeout = opts.timeoutMs ?? 20_000;
+  const timeout = opts.timeoutMs ?? 12_000;
 
   const headers: Record<string, string> = {
     'user-agent': DEFAULT_UA,
@@ -69,7 +101,7 @@ async function fetchWithRetry(url: string, opts: FetchOpts) {
       lastErr = e;
     }
     if (attempt < retries - 1) {
-      const delay = baseDelay * Math.pow(3, attempt);
+      const delay = retryDelayMs(attempt, baseDelay);
       await new Promise((res) => setTimeout(res, delay));
     }
   }

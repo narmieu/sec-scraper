@@ -41,6 +41,7 @@ const STATEMENTS: string[] = [
   `CREATE INDEX IF NOT EXISTS idx_vulns_severity  ON vulns(severity)`,
   `CREATE INDEX IF NOT EXISTS idx_vulns_kev       ON vulns(kev)`,
   `CREATE INDEX IF NOT EXISTS idx_vulns_cve       ON vulns(cve_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_vulns_ghsa      ON vulns(ghsa_id)`,
   `CREATE TABLE IF NOT EXISTS source_health (
      id   TEXT PRIMARY KEY,
      data TEXT NOT NULL
@@ -51,6 +52,12 @@ const STATEMENTS: string[] = [
    )`,
   `CREATE TABLE IF NOT EXISTS last_run (
      id   INTEGER PRIMARY KEY CHECK (id = 1),
+     data TEXT NOT NULL
+   )`,
+  // Per-enricher last-run timestamps, kept separate from source_health so
+  // enrichers don't surface as dashboard "sources" and aren't pruned with them.
+  `CREATE TABLE IF NOT EXISTS enricher_state (
+     id   TEXT PRIMARY KEY,
      data TEXT NOT NULL
    )`,
 ];

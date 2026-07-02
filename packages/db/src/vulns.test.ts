@@ -4,7 +4,7 @@ import type { Vuln } from '@sec/shared';
 import { createClient } from './client.js';
 import { migrateSchema } from './schema.js';
 import { vulnToRow } from './serialize.js';
-import { upsertVulns, loadLiveVulns, getVuln, selectChanged, deleteVulns } from './vulns.js';
+import { upsertVulns, loadLiveVulns, loadVulnsByKeys, getVuln, selectChanged, deleteVulns } from './vulns.js';
 
 // Fully-specified so round-trip deep-equality has no absent-vs-undefined ambiguity.
 function makeVuln(p: Partial<Vuln> = {}): Vuln {
@@ -126,6 +126,45 @@ describe('loadLiveVulns', () => {
     ]);
     const live = await loadLiveVulns(db, '2026-01-01T00:00:00.000Z');
     assert.deepEqual(live.map((v) => v.id), ['LIVE']);
+  });
+});
+
+describe('loadVulnsByKeys', () => {
+  const CUTOFF = '2026-01-01T00:00:00.000Z';
+
+  it('matches on id, cve_id, or ghsa_id and dedupes by id', async () => {
+    const db = await freshDb();
+    await upsertVulns(db, [
+      makeVuln({ id: 'CVE-2026-1', cveId: 'CVE-2026-1', ghsaId: 'GHSA-1111-1111-1111', aliases: [] }),
+      makeVuln({ id: 'CVE-2026-2', cveId: 'CVE-2026-2', ghsaId: undefined, aliases: [] }),
+      makeVuln({ id: 'GHSA-xxxx-yyyy-zzzz', cveId: undefined, ghsaId: 'GHSA-xxxx-yyyy-zzzz', aliases: [] }),
+      makeVuln({ id: 'CVE-2026-9', cveId: 'CVE-2026-9', ghsaId: undefined, aliases: [] }),
+    ]);
+    // id match (CVE-2026-1 also matches its own ghsa — must not duplicate),
+    // cve_id match (CVE-2026-2), ghsa_id match (GHSA-xxxx...). CVE-2026-9 absent.
+    const got = await loadVulnsByKeys(
+      db,
+      ['CVE-2026-1', 'GHSA-1111-1111-1111', 'CVE-2026-2', 'GHSA-xxxx-yyyy-zzzz', 'not-present'],
+      CUTOFF,
+    );
+    assert.deepEqual(got.map((v) => v.id).sort(), ['CVE-2026-1', 'CVE-2026-2', 'GHSA-xxxx-yyyy-zzzz']);
+  });
+
+  it('applies the live filter (excludes withdrawn and pre-cutoff rows)', async () => {
+    const db = await freshDb();
+    await upsertVulns(db, [
+      makeVuln({ id: 'LIVE', cveId: 'CVE-L', ghsaId: undefined, aliases: [] }),
+      makeVuln({ id: 'GONE', cveId: 'CVE-G', ghsaId: undefined, aliases: [], withdrawn: true }),
+      makeVuln({ id: 'OLD', cveId: 'CVE-O', ghsaId: undefined, aliases: [], modifiedAt: '2020-01-01T00:00:00.000Z' }),
+    ]);
+    const got = await loadVulnsByKeys(db, ['CVE-L', 'CVE-G', 'CVE-O'], CUTOFF);
+    assert.deepEqual(got.map((v) => v.id), ['LIVE']);
+  });
+
+  it('returns [] for no identifiers', async () => {
+    const db = await freshDb();
+    await upsertVulns(db, [makeVuln({ id: 'A' })]);
+    assert.deepEqual(await loadVulnsByKeys(db, [], CUTOFF), []);
   });
 });
 

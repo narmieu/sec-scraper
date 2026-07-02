@@ -13,7 +13,7 @@ describe('migrateSchema', () => {
     );
     assert.deepEqual(
       res.rows.map((r) => r.name),
-      ['alerted', 'last_run', 'source_health', 'vulns'],
+      ['alerted', 'enricher_state', 'last_run', 'source_health', 'vulns'],
     );
   });
 
@@ -48,6 +48,7 @@ describe('migrateSchema', () => {
     const names = res.rows.map((r) => r.name as string);
     for (const expected of [
       'idx_vulns_cve',
+      'idx_vulns_ghsa',
       'idx_vulns_kev',
       'idx_vulns_modified',
       'idx_vulns_priority',

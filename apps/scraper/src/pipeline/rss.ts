@@ -1,5 +1,5 @@
 import Parser from 'rss-parser';
-import { fetchText } from './fetch.js';
+import { fetchTextIfModified, NOT_MODIFIED, type FetchOpts } from './fetch.js';
 
 const parser = new Parser({
   timeout: 20_000,
@@ -20,9 +20,15 @@ export interface RssItem {
   guid?: string;
 }
 
-export async function fetchRss(url: string): Promise<RssItem[]> {
-  const raw = await fetchText(url, { retries: 2 });
-  const feed = await parser.parseString(raw);
+/** Fetches and parses a feed. When `ifModifiedSince` is supplied and the server
+ *  answers 304, returns [] without downloading or parsing the body — cheap way
+ *  to skip unchanged feeds on the hourly run. */
+export async function fetchRss(url: string, ifModifiedSince?: string): Promise<RssItem[]> {
+  const opts: FetchOpts = { retries: 2 };
+  if (ifModifiedSince) opts.ifModifiedSince = ifModifiedSince;
+  const res = await fetchTextIfModified(url, opts);
+  if (res === NOT_MODIFIED) return [];
+  const feed = await parser.parseString(res);
   return feed.items as RssItem[];
 }
 
