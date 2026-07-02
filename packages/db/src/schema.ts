@@ -41,6 +41,7 @@ const STATEMENTS: string[] = [
   `CREATE INDEX IF NOT EXISTS idx_vulns_severity  ON vulns(severity)`,
   `CREATE INDEX IF NOT EXISTS idx_vulns_kev       ON vulns(kev)`,
   `CREATE INDEX IF NOT EXISTS idx_vulns_cve       ON vulns(cve_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_vulns_ghsa      ON vulns(ghsa_id)`,
   `CREATE TABLE IF NOT EXISTS source_health (
      id   TEXT PRIMARY KEY,
      data TEXT NOT NULL

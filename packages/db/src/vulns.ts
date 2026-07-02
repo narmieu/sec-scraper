@@ -36,18 +36,24 @@ export async function loadVulnsByKeys(
 ): Promise<Vuln[]> {
   const uniq = [...new Set(identifiers.filter(Boolean))];
   if (uniq.length === 0) return [];
-  // One query per chunk matching any of the three id columns, to keep the
-  // number of round trips low (params stay well under SQLite's 999 limit:
-  // 3 * KEY_CHUNK + 1).
+  // Separate per-column IN queries so each uses its index (id PK, idx_vulns_cve,
+  // idx_vulns_ghsa) rather than an OR that forces a full scan. All chunks go in
+  // one batch() so the whole lookup is a single round trip to Turso.
   const KEY_CHUNK = 256;
+  const stmts: InStatement[] = [];
+  for (const col of ['id', 'cve_id', 'ghsa_id'] as const) {
+    for (let i = 0; i < uniq.length; i += KEY_CHUNK) {
+      const chunk = uniq.slice(i, i + KEY_CHUNK);
+      const ph = chunk.map(() => '?').join(', ');
+      stmts.push({
+        sql: `SELECT * FROM vulns WHERE ${col} IN (${ph}) AND withdrawn = 0 AND modified_at >= ?`,
+        args: [...chunk, cutoffIso],
+      });
+    }
+  }
   const byId = new Map<string, Vuln>();
-  for (let i = 0; i < uniq.length; i += KEY_CHUNK) {
-    const chunk = uniq.slice(i, i + KEY_CHUNK);
-    const ph = chunk.map(() => '?').join(', ');
-    const res = await client.execute({
-      sql: `SELECT * FROM vulns WHERE (id IN (${ph}) OR cve_id IN (${ph}) OR ghsa_id IN (${ph})) AND withdrawn = 0 AND modified_at >= ?`,
-      args: [...chunk, ...chunk, ...chunk, cutoffIso],
-    });
+  const results = await client.batch(stmts, 'read');
+  for (const res of results) {
     for (const row of res.rows) {
       const v = rowToVuln(row);
       byId.set(v.id, v);
