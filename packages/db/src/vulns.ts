@@ -38,8 +38,9 @@ export async function loadVulnsByKeys(
   if (uniq.length === 0) return [];
   // Separate per-column IN queries so each uses its index (id PK, idx_vulns_cve,
   // idx_vulns_ghsa) rather than an OR that forces a full scan. All chunks go in
-  // one batch() so the whole lookup is a single round trip to Turso.
-  const KEY_CHUNK = 256;
+  // one batch() so the whole lookup is a single round trip to Turso. Chunk wide
+  // (params stay under SQLite's limit) to minimize the statement count.
+  const KEY_CHUNK = 900;
   const stmts: InStatement[] = [];
   for (const col of ['id', 'cve_id', 'ghsa_id'] as const) {
     for (let i = 0; i < uniq.length; i += KEY_CHUNK) {
