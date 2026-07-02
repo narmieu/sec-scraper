@@ -58,7 +58,7 @@ jobs:
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             echo "::notice::dry-run benchmark — no DB writes, alerts, or rebuild"
-            pnpm --filter @sec/scraper start --dry-run --no-notify
+            SCRAPE_TRACE=1 pnpm --filter @sec/scraper start --dry-run --no-notify
           else
             pnpm --filter @sec/scraper start
           fi

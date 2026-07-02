@@ -10,7 +10,9 @@ const BATCH_SIZE = 100;
 
 export const epssEnricher: Enricher = {
   id: 'epss',
-  cadence: 'hourly',
+  // EPSS scores are republished once a day, so hourly re-querying every CVE is
+  // wasted work; the enricher cadence gate skips this on the other 23 runs.
+  cadence: 'daily',
 
   async enrich(vulns: Vuln[]): Promise<EnrichResult> {
     const byCve = new Map<string, Vuln>();

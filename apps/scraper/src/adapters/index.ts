@@ -18,7 +18,7 @@ import { phpSecurityAdapter } from './php-security.js';
 import { githubSecurityLabAdapter } from './github-security-lab.js';
 import { projectZeroAdapter } from './project-zero.js';
 import { cisaAlertsAdapter } from './cisa-alerts.js';
-import { cisaVulnrichmentAdapter } from './cisa-vulnrichment.js';
+import { makeCisaVulnrichmentAdapter } from './cisa-vulnrichment.js';
 import { cloudflareBlogAdapter } from './cloudflare-blog.js';
 import { vercelChangelogAdapter } from './vercel-changelog.js';
 import { arxivCsCrAdapter } from './arxiv-cs-cr.js';
@@ -40,7 +40,7 @@ export function buildAdapters(targets: StackTargets): Adapter[] {
     githubSecurityLabAdapter,
     projectZeroAdapter,
     cisaAlertsAdapter,
-    cisaVulnrichmentAdapter,
+    makeCisaVulnrichmentAdapter(targets),
     cloudflareBlogAdapter,
     vercelChangelogAdapter,
     arxivCsCrAdapter,

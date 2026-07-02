@@ -2,6 +2,7 @@ import type { Tag, Vuln } from '@sec/shared';
 import { fetchJson } from '../pipeline/fetch.js';
 import { mapPool } from '../pipeline/pool.js';
 import { githubHeaders } from '../pipeline/github.js';
+import type { StackTargets } from '../pipeline/stack-targets.js';
 import {
   canonicalId,
   cleanText,
@@ -59,7 +60,8 @@ interface RawItem {
   record: VulnrichmentRecord;
 }
 
-export const cisaVulnrichmentAdapter: Adapter = {
+export function makeCisaVulnrichmentAdapter(targets: StackTargets): Adapter {
+  return {
   id: 'cisa-vulnrichment',
   kind: 'advisory',
   cadence: '6h',
@@ -146,6 +148,12 @@ export const cisaVulnrichmentAdapter: Adapter = {
       ),
     );
 
+    // vulnrichment covers every recent CVE; keep only stack-relevant records
+    // (matching cve-org's keyword gate) plus KEV entries, which are notable
+    // regardless of stack. Drops the generic bulk that otherwise floods dedupe.
+    const titleAndDesc = `${cna.title ?? ''} ${descEn}`;
+    if (!kev && !targets.keywordRegex.test(titleAndDesc)) return null;
+
     const tags: Tag[] = kev ? ['exploited'] : [];
 
     const vuln: Vuln = {
@@ -180,4 +188,5 @@ export const cisaVulnrichmentAdapter: Adapter = {
     if (vector) vuln.cvssVector = vector;
     return vuln;
   },
-};
+  };
+}

@@ -37,6 +37,13 @@ import { dispatchAlerts } from '@/notify/dispatch.js';
 import { filterByRelevance } from '@/pipeline/relevance-filter.js';
 import { isDue } from '@/pipeline/cadence.js';
 
+// Opt-in per-source timing to stderr (SCRAPE_TRACE=1). Streams as each source
+// starts/finishes so a run killed by the CI cap still shows the culprit.
+const TRACE = Boolean(process.env['SCRAPE_TRACE']);
+function trace(msg: string): void {
+  if (TRACE) console.warn(`[trace +${process.uptime().toFixed(1)}s] ${msg}`);
+}
+
 export interface RunOpts {
   dryRun?: boolean;
   noNotify?: boolean;
@@ -81,8 +88,11 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   const adapters = buildAdapters(stackTargets);
   const errors: LastRun['errors'] = [];
 
+  trace(`loaded existing=${existing.length}; dispatching adapters`);
   const eligible = pickEligibleAdapters(adapters, sources, opts.onlySource, now);
+  trace(`eligible adapters=${eligible.length}/${adapters.length}`);
   const results = await Promise.all(eligible.map((a) => runAdapter(a, sources)));
+  trace(`all adapters settled`);
 
   for (const r of results) {
     const health = sources[r.adapter.id] ?? defaultHealth();
@@ -118,18 +128,24 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     }
   }
 
+  trace(`normalize+filter done incoming=${incoming.length} dropped=${droppedCount} filtered=${filteredCount}`);
   const combinedBeforeDedupe = [...existing, ...incoming];
   let combined = dedupeMerge(combinedBeforeDedupe);
+  trace(`dedupe done n=${combined.length} (from ${combinedBeforeDedupe.length})`);
 
   for (const enricher of ENRICHERS) {
     // Respect each enricher's declared cadence (e.g. exploit-intel is daily) so
     // the hourly run doesn't re-download large feeds every time. State lives in
     // its own table, separate from adapter source-health.
     if (!isDue(enricherState[enricher.id]?.lastFetchedAt, CADENCE_MS[enricher.cadence], now.getTime())) {
+      trace(`enricher ${enricher.id} skip (not due)`);
       continue;
     }
+    const et0 = Date.now();
+    trace(`enricher ${enricher.id} start`);
     try {
       const out = await enricher.enrich(combined);
+      trace(`enricher ${enricher.id} ok ms=${Date.now() - et0}`);
       if (out.modifiedById.size > 0) {
         combined = combined.map((v) => {
           const patch = out.modifiedById.get(v.id);
@@ -150,11 +166,20 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     }
   }
 
+  trace(`enrichers done; scoring n=${combined.length}`);
+  // Untouched existing records pass through dedupe and enrichers as the same
+  // object reference and keep their persisted exposure/stackMatch/priority.
+  // Only new or modified records need the (per-item costly) exposure evaluation.
+  const existingRefs = new Set<Vuln>(existing);
+  let rescored = 0;
   combined = combined.map((v) => {
+    if (existingRefs.has(v)) return v;
+    rescored++;
     const { exposure, stackMatch } = evaluateExposure(v, stackIndex);
     const withMatch: Vuln = { ...v, exposure, stackMatch };
     return { ...withMatch, priority: computePriority(withMatch) };
   });
+  trace(`scored ${rescored}/${combined.length} (skipped unchanged existing)`);
 
   // Counts reflect the live (post-persist) set — items aged out by the
   // 90d rolling window aren't "new" from the dashboard's perspective.
@@ -241,6 +266,7 @@ async function runAdapter(adapter: Adapter, sources: SourcesFile): Promise<Adapt
     lastFetchedAt: sources[adapter.id]?.lastFetchedAt,
     lastCursor: sources[adapter.id]?.lastCursor,
   };
+  trace(`adapter ${adapter.id} start`);
   try {
     const { raw } = await adapter.fetch(cursor);
     const items: Vuln[] = [];
@@ -252,6 +278,7 @@ async function runAdapter(adapter: Adapter, sources: SourcesFile): Promise<Adapt
         // single-item failure ignored
       }
     }
+    trace(`adapter ${adapter.id} ok fetched=${raw.length} kept=${items.length} ms=${Date.now() - t0}`);
     return {
       adapter,
       ok: true,
@@ -260,6 +287,7 @@ async function runAdapter(adapter: Adapter, sources: SourcesFile): Promise<Adapt
       items,
     };
   } catch (e: unknown) {
+    trace(`adapter ${adapter.id} ERR ms=${Date.now() - t0} ${e instanceof Error ? e.message : String(e)}`);
     return {
       adapter,
       ok: false,
