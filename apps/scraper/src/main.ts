@@ -8,6 +8,7 @@ import {
 } from '@sec/shared';
 import type { Adapter } from './adapters/types.js';
 import { buildAdapters, ENRICHERS } from './adapters/index.js';
+import { fetchKevFeed } from './adapters/cisa-kev.js';
 import { dedupeMerge } from '@/pipeline/dedupe.js';
 import { normalizeVuln } from '@/pipeline/normalize.js';
 import { computePriority } from '@/pipeline/score.js';
@@ -15,7 +16,7 @@ import { buildPaths } from '@/pipeline/persist.js';
 import {
   getClient,
   migrateSchema,
-  loadLiveVulns,
+  loadVulnsByKeys,
   upsertVulns,
   selectChanged,
   loadSourceHealth,
@@ -85,8 +86,6 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   const cutoffIso = new Date(cutoffMs).toISOString();
   const [sources, enricherState] = await Promise.all([loadSourceHealth(db), loadEnricherState(db)]);
   trace(`health+enricher state loaded`);
-  const existing = await loadLiveVulns(db, cutoffIso);
-  trace(`loadLiveVulns done n=${existing.length}`);
   const { index: stackIndex, targets: stackTargets } = loadStackBundle(paths);
   const adapters = buildAdapters(stackTargets);
   const errors: LastRun['errors'] = [];
@@ -131,6 +130,24 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   }
 
   trace(`normalize+filter done incoming=${incoming.length} dropped=${droppedCount} filtered=${filteredCount}`);
+
+  // Incremental working set: rather than loading the whole live table, fetch the
+  // KEV feed (the enricher needs it anyway) and load only existing rows whose
+  // id/cve/ghsa matches an incoming item or a KEV entry. Everything this run can
+  // touch — dedupe targets and KEV-markable rows — is present; the rest of the
+  // table stays untouched and is never transferred.
+  const kevEntries = await fetchKevFeed();
+  const loadKeys: string[] = [];
+  for (const v of incoming) {
+    loadKeys.push(v.id);
+    if (v.cveId) loadKeys.push(v.cveId);
+    if (v.ghsaId) loadKeys.push(v.ghsaId);
+    for (const a of v.aliases) loadKeys.push(a);
+  }
+  for (const e of kevEntries) loadKeys.push(e.cveID);
+  const existing = await loadVulnsByKeys(db, loadKeys, cutoffIso);
+  trace(`loaded related=${existing.length} from keys=${loadKeys.length} (kev=${kevEntries.length})`);
+
   const combinedBeforeDedupe = [...existing, ...incoming];
   let combined = dedupeMerge(combinedBeforeDedupe);
   trace(`dedupe done n=${combined.length} (from ${combinedBeforeDedupe.length})`);
@@ -146,7 +163,7 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
     const et0 = Date.now();
     trace(`enricher ${enricher.id} start`);
     try {
-      const out = await enricher.enrich(combined);
+      const out = await enricher.enrich(combined, { kevEntries });
       trace(`enricher ${enricher.id} ok ms=${Date.now() - et0}`);
       if (out.modifiedById.size > 0) {
         combined = combined.map((v) => {

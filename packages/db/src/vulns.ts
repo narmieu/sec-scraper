@@ -25,6 +25,37 @@ export async function upsertVulns(client: Client, vulns: Vuln[]): Promise<void> 
   }
 }
 
+/** Loads only the live rows whose id, cve_id, or ghsa_id matches one of
+ *  `identifiers` — the incremental alternative to pulling the entire working
+ *  set. Same live filter as loadLiveVulns (non-withdrawn, within the window).
+ *  Deduped by id across the three column lookups. */
+export async function loadVulnsByKeys(
+  client: Client,
+  identifiers: string[],
+  cutoffIso: string,
+): Promise<Vuln[]> {
+  const uniq = [...new Set(identifiers.filter(Boolean))];
+  if (uniq.length === 0) return [];
+  // One query per chunk matching any of the three id columns, to keep the
+  // number of round trips low (params stay well under SQLite's 999 limit:
+  // 3 * KEY_CHUNK + 1).
+  const KEY_CHUNK = 256;
+  const byId = new Map<string, Vuln>();
+  for (let i = 0; i < uniq.length; i += KEY_CHUNK) {
+    const chunk = uniq.slice(i, i + KEY_CHUNK);
+    const ph = chunk.map(() => '?').join(', ');
+    const res = await client.execute({
+      sql: `SELECT * FROM vulns WHERE (id IN (${ph}) OR cve_id IN (${ph}) OR ghsa_id IN (${ph})) AND withdrawn = 0 AND modified_at >= ?`,
+      args: [...chunk, ...chunk, ...chunk, cutoffIso],
+    });
+    for (const row of res.rows) {
+      const v = rowToVuln(row);
+      byId.set(v.id, v);
+    }
+  }
+  return [...byId.values()];
+}
+
 /** The live working set: non-withdrawn rows modified at/after the cutoff,
  *  highest priority first. Withdrawn (retracted) advisories are excluded. */
 export async function loadLiveVulns(client: Client, cutoffIso: string): Promise<Vuln[]> {
