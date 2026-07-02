@@ -13,9 +13,9 @@ import {
 import type { StackTargets } from '@/pipeline/stack-targets.js';
 import type { Adapter, FetchResult, SourceCursor } from './types.js';
 
-// api.osv.dev tolerates modest parallelism; keeps the per-package query
-// fan-out from running one-at-a-time across the whole stack.
-const OSV_CONCURRENCY = 8;
+// api.osv.dev tolerates healthy parallelism; the per-package query fan-out is
+// the adapter-phase long pole, so keep this wide.
+const OSV_CONCURRENCY = 16;
 
 interface OsvItem {
   id: string;

@@ -76,19 +76,21 @@ export async function runScrape(opts: RunOpts): Promise<RunReport> {
   const now = opts.now ?? new Date();
   const startedAt = now.toISOString();
   const startedMs = now.getTime();
+  trace(`runScrape start`);
   const paths = buildPaths(opts.dataRoot);
   const db = getClient();
   await migrateSchema(db);
+  trace(`db connect+migrate done`);
   const cutoffMs = now.getTime() - ROLLING_WINDOW_DAYS * 86_400_000;
   const cutoffIso = new Date(cutoffMs).toISOString();
-  const sources: SourcesFile = await loadSourceHealth(db);
-  const enricherState = await loadEnricherState(db);
+  const [sources, enricherState] = await Promise.all([loadSourceHealth(db), loadEnricherState(db)]);
+  trace(`health+enricher state loaded`);
   const existing = await loadLiveVulns(db, cutoffIso);
+  trace(`loadLiveVulns done n=${existing.length}`);
   const { index: stackIndex, targets: stackTargets } = loadStackBundle(paths);
   const adapters = buildAdapters(stackTargets);
   const errors: LastRun['errors'] = [];
 
-  trace(`loaded existing=${existing.length}; dispatching adapters`);
   const eligible = pickEligibleAdapters(adapters, sources, opts.onlySource, now);
   trace(`eligible adapters=${eligible.length}/${adapters.length}`);
   const results = await Promise.all(eligible.map((a) => runAdapter(a, sources)));
